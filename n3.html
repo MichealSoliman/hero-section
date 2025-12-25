@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>استثمر في مستقبل المملكة - رؤية 2030</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            overflow-x: hidden;
+            background: #0a0a0a;
+        }
+
+        /* Hero Container */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            min-height: 700px;
+            overflow: hidden;
+        }
+
+        /* Background Slider */
+        .hero-slider {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1),
+                        visibility 0s linear 1.5s;
+        }
+
+        .slide.active {
+            opacity: 1;
+            visibility: visible;
+            z-index: 1;
+            transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1),
+                        visibility 0s linear 0s;
+        }
+
+        /* Different animations for each slide */
+        .slide[data-slide="0"] .slide-bg {
+            animation: zoomInSlow 2s ease-out forwards;
+        }
+
+        .slide[data-slide="1"] .slide-bg {
+            animation: slideFromRight 2s ease-out forwards;
+        }
+
+        .slide[data-slide="2"] .slide-bg {
+            animation: fadeInScale 2s ease-out forwards;
+        }
+
+        .slide[data-slide="3"] .slide-bg {
+            animation: slideFromLeft 2s ease-out forwards;
+        }
+
+        .slide[data-slide="4"] .slide-bg {
+            animation: zoomOutFadeIn 2s ease-out forwards;
+        }
+
+        .slide.active[data-slide="0"] .slide-bg {
+            animation: zoomInSlow 2s ease-out forwards;
+        }
+
+        .slide.active[data-slide="1"] .slide-bg {
+            animation: slideFromRight 2s ease-out forwards;
+        }
+
+        .slide.active[data-slide="2"] .slide-bg {
+            animation: fadeInScale 2s ease-out forwards;
+        }
+
+        .slide.active[data-slide="3"] .slide-bg {
+            animation: slideFromLeft 2s ease-out forwards;
+        }
+
+        .slide.active[data-slide="4"] .slide-bg {
+            animation: zoomOutFadeIn 2s ease-out forwards;
+        }
+
+        .slide-bg {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            transform: scale(1.05);
+            opacity: 0;
+            transition: transform 0.3s ease-out;
+            will-change: transform;
+        }
+
+        .slide-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 102, 51, 0.85) 0%, rgba(10, 10, 10, 0.9) 50%, rgba(0, 0, 0, 0.95) 100%);
+        }
+
+        /* Header */
+        .hero-header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 25px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
+        }
+
+        .logo-text {
+            font-size: 22px;
+            font-weight: 800;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .lang-btn {
+            padding: 8px 18px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .lang-btn:hover, .lang-btn.active {
+            background: #006633;
+            border-color: #006633;
+        }
+
+        /* Content Container */
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 50px 180px;
+        }
+
+        .content-wrapper {
+            max-width: 1400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Main Card */
+        .main-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            padding: 60px 80px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+            margin-bottom: 50px;
+            opacity: 0;
+            transform: translateY(50px) scale(0.95);
+        }
+
+        .slide.active .main-card {
+            animation: cardFadeIn 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.3s;
+        }
+
+        .slide-title {
+            font-size: 72px;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 30px;
+            line-height: 1.2;
+            opacity: 0;
+            transform: translateY(60px);
+        }
+
+        .slide.active .slide-title {
+            animation: slideUpFadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.5s;
+        }
+
+        .slide-subtitle {
+            font-size: 28px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 25px;
+            line-height: 1.6;
+            opacity: 0;
+            transform: translateY(60px);
+        }
+
+        .slide.active .slide-subtitle {
+            animation: slideUpFadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.8s;
+        }
+
+        .slide-description {
+            font-size: 20px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto 40px;
+            opacity: 0;
+            transform: translateY(60px);
+        }
+
+        .slide.active .slide-description {
+            animation: slideUpFadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards 1.1s;
+        }
+
+        /* Stats */
+        .stats-row {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+            opacity: 0;
+        }
+
+        .slide.active .stats-row {
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards 1.4s;
+        }
+
+        .stat-item {
+            text-align: center;
+            opacity: 0;
+            transform: translateY(30px) scale(0.9);
+        }
+
+        .slide.active .stat-item:nth-child(1) {
+            animation: popIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards 1.6s;
+        }
+
+        .slide.active .stat-item:nth-child(2) {
+            animation: popIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards 1.8s;
+        }
+
+        .slide.active .stat-item:nth-child(3) {
+            animation: popIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards 2s;
+        }
+
+        .stat-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #006633 0%, #009944 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 32px;
+            box-shadow: 0 10px 30px rgba(0, 102, 51, 0.4);
+        }
+
+        .stat-number {
+            font-size: 52px;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 500;
+        }
+
+        /* CTA Buttons */
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 45px;
+            opacity: 0;
+        }
+
+        .slide.active .cta-buttons {
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards 2.2s;
+        }
+
+        .cta-btn {
+            padding: 18px 45px;
+            font-size: 20px;
+            font-weight: 700;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-primary {
+            background: linear-gradient(135deg, #006633 0%, #009944 100%);
+            color: #fff;
+            box-shadow: 0 15px 40px rgba(0, 102, 51, 0.4);
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0, 102, 51, 0.6);
+        }
+
+        .cta-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .cta-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-5px);
+        }
+
+        /* Navigation Arrows */
+        .nav-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 50;
+            transition: all 0.3s ease;
+            font-size: 24px;
+            color: #fff;
+        }
+
+        .nav-arrow:hover {
+            background: rgba(0, 102, 51, 0.8);
+            border-color: #006633;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .nav-arrow.prev {
+            left: 30px;
+        }
+
+        .nav-arrow.next {
+            right: 30px;
+        }
+
+        /* Thumbnail Gallery */
+        .thumbnail-gallery {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            z-index: 50;
+            padding: 20px 40px;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .thumbnail {
+            width: 180px;
+            height: 110px;
+            border-radius: 15px;
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.4s ease;
+            border: 3px solid transparent;
+        }
+
+        .thumbnail:hover {
+            transform: translateY(-8px);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .thumbnail.active {
+            border-color: #006633;
+            box-shadow: 0 10px 30px rgba(0, 102, 51, 0.5);
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .thumbnail:hover img {
+            transform: scale(1.1);
+        }
+
+        .thumbnail::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
+            z-index: 1;
+        }
+
+        .thumbnail-label {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            z-index: 2;
+            text-align: center;
+        }
+
+        /* Progress Bar */
+        .progress-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #006633 0%, #009944 100%);
+            width: 0%;
+            z-index: 60;
+            transition: width 0.1s linear;
+        }
+
+        /* Background Animations - Different for each slide */
+        @keyframes cardFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(50px) scale(0.95);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes zoomInSlow {
+            0% {
+                opacity: 0;
+                transform: scale(1.3);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slideFromRight {
+            0% {
+                opacity: 0;
+                transform: translateX(100px) scale(1.1);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0) scale(1);
+            }
+        }
+
+        @keyframes fadeInScale {
+            0% {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slideFromLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-100px) scale(1.1);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0) scale(1);
+            }
+        }
+
+        @keyframes zoomOutFadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Content Animations - Smooth and gentle */
+        @keyframes slideUpFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(60px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes popIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px) scale(0.8);
+            }
+            70% {
+                transform: translateY(-5px) scale(1.05);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .slide-title {
+                font-size: 56px;
+            }
+            .slide-subtitle {
+                font-size: 24px;
+            }
+            .main-card {
+                padding: 50px 60px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-header {
+                padding: 20px;
+            }
+            .slide-title {
+                font-size: 40px;
+            }
+            .slide-subtitle {
+                font-size: 20px;
+            }
+            .slide-description {
+                font-size: 16px;
+            }
+            .main-card {
+                padding: 40px 30px;
+            }
+            .stats-row {
+                gap: 30px;
+            }
+            .stat-number {
+                font-size: 36px;
+            }
+            .thumbnail-gallery {
+                flex-wrap: wrap;
+                gap: 10px;
+                padding: 15px 20px;
+                bottom: 20px;
+            }
+            .thumbnail {
+                width: 120px;
+                height: 80px;
+            }
+            .cta-buttons {
+                flex-direction: column;
+            }
+            .nav-arrow {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-section">
+        <!-- Progress Bar -->
+        <div class="progress-bar" id="progressBar"></div>
+
+        <!-- Header -->
+        <div class="hero-header">
+            <div class="logo-text">
+                <span>🇸🇦</span>
+                <span>رؤية السعودية 2030</span>
+            </div>
+            <div class="lang-switch">
+                <button class="lang-btn active">العربية</button>
+                <button class="lang-btn">English</button>
+                <button class="lang-btn">Русский</button>
+            </div>
+        </div>
+
+        <!-- Slider Container -->
+        <div class="hero-slider" id="heroSlider">
+            <!-- Slide 1 - Vision 2030 -->
+            <div class="slide active" data-slide="0">
+                <div class="slide-bg" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80');">
+                    <div class="hero-content">
+                        <div class="content-wrapper">
+                            <div class="main-card">
+                                <h1 class="slide-title">استثمر في مستقبل المملكة</h1>
+                                <h2 class="slide-subtitle">رؤية 2030 تفتح أفاقاً جديدة</h2>
+                                <p class="slide-description">
+                                    اكتشف فرصاً استثمارية في أكبر اقتصاد عربي واستفد من أكبر المشاريع التنموية في المنطقة
+                                    الدعم الى رفع مؤشر الأعمال الحرة واستثمر في أكبر المشاريع التنموية في المنطقة
+                                </p>
+                                <div class="stats-row">
+                                    <div class="stat-item">
+                                        <div class="stat-icon">🎯</div>
+                                        <span class="stat-number" data-target="2030">0</span>
+                                        <div class="stat-label">رؤية المستقبل</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-icon">📊</div>
+                                        <span class="stat-number" data-target="500">0+</span>
+                                        <div class="stat-label">مشروع متوفر</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-icon">🌍</div>
+                                        <span class="stat-number" data-target="13">0</span>
+                                        <div class="stat-label">منطقة اقتصادية</div>
+                                    </div>
+                                </div>
+                                <div class="cta-buttons">
+                                    <button class="cta-btn cta-primary">بدء الاستثمار الآن</button>
+                                    <button class="cta-btn cta-secondary">تصفح محفظة الفرص</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 - Technology & Innovation -->
+            <div class="slide" data-slide="1">
+                <div class="slide-bg" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&q=80');">
+                    <div class="hero-content">
+                        <div class="content-wrapper">
+                            <div class="main-card">
+                                <h1 class="slide-title">مشاريع التقنية والابتكار</h1>
+                                <h2 class="slide-subtitle">منظومة الابتكار الرقمي</h2>
+                                <p class="slide-description">
+                                    استثمر في مستقبل التقنية مع مشاريع NEOM والمدن الذكية والذكاء الاصطناعي
+                                    فرص استثمارية غير محدودة في عالم التحول الرقمي والثورة التقنية
+                                </p>
+                                <div class="stats-row">
+                                    <div class="stat-item">
+                                        <div class="stat-icon">💻</div>
+                                        <span class="stat-number" data-target="100">0+</span>
+                                        <div class="stat-label">شركة تقنية</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-icon">🚀</div>
+                                        <span class="stat-number" data-target="250">0+</span>
+                                        <div class="stat-label">مشروع ابتكاري</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-icon">⚡</div>
+                                        <span class="stat-number" data-target="85">0%</span>
+                                        <div class="stat-label">نسبة النمو</div>
+                                    </div>
+                                </div>
+                                <div class="cta-buttons">
+                                    <button class="cta-btn cta-primary">استكشف الفرص</button>
+                                    <button class="cta-btn cta-secondary">تواصل مع الخبراء</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 - Infrastructure -->
+            <div class="slide" data-slide="2">
+                <div class="slide-bg" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=1920&q=80');">
+                    <div class="hero-content">
+                        <div class="content-wrapper">
+                            <div class="main-card">
+                                <h1 class="slide-title">قطاع البنية التحتية</h1>
+                                <h2 class="slide-subtitle">مشاريع البنية التحتية المتقدمة</h2>
+                                <p class="slide-description">
+                                    انضم إلى أضخم مشاريع البنية التحتية في الشرق الأوسط من طرق ومطارات وموانئ
+                                    استثمارات بمليارات الدولارات تفتح أبواب الفرص أمام المستثمرين
+                                </p>
+                                <div class="stats-row">
+                                    <div class="stat-item">
+                                        <div class="stat-icon">🏗️</div>
+                                        <span class="stat-number" data-target="300">0+</span>
+                                        <div class="stat-label">مشروع تحت الإنشاء</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-icon">🌆</div>
+                                        <span class="stat-number" data-target="45">0</span>
+                                        <div class="stat-label">مدينة جديدة</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-icon">💰</div>
+                                        <span class="stat-number" data-target="500">0</span>
+                                        <div class="stat-label">مليار دولار</div>
+                                    </div>
+                                </div>
+                                <div class="cta-buttons">
+                                    <button class="cta-btn cta-primary">اكتشف المشاريع</button>
+                                    <button class="cta-btn cta-secondary">احجز استشارة</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4 - Business & Economy -->
+            <div class="slide" data-slide="3">
+                <div class="slide-bg" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&q=80');">
+                    <div class="hero-content">
+                        <div class="content-wrapper">
+                            <div class="main-card">
+                                <h1 class="slide-title">الاقتصاد الحرّ والريادة</h1>
+                                <h2 class="slide-subtitle">دعم الشركات الناشئة والمبتكرين</h2>
+                                <p class="slide-description">
+                                    برامج دعم شاملة للمستثمرين ورواد الأعمال مع تسهيلات استثنائية
+                                    ابدأ مشروعك في بيئة اقتصادية محفزة مع دعم حكومي وتمويل متنوع
+                                </p>
+                                <div class="stats-row">
+                                    <div class="stat-item">
+                                        <div class="stat-icon">📈</div>
+                                        <span class="stat-number" data-target="1200">0+</span>
+                                        <div class="stat-label">شركة ناشئة</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-icon">💡</div>
+                                        <span class="stat-number" data-target="50">0</span>
+                                        <div class="stat-label">مليار دولار تمويل</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-icon">🎯</div>
+                                        <span class="stat-number" data-target="95">0%</span>
+                                        <div class="stat-label">معدل النجاح</div>
+                                    </div>
+                                </div>
+                                <div class="cta-buttons">
+                                    <button class="cta-btn cta-primary">ابدأ مشروعك</button>
+                                    <button class="cta-btn cta-secondary">استشارة مجانية</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5 - Tourism & Entertainment -->
+            <div class="slide" data-slide="4">
+                <div class="slide-bg" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=1920&q=80');">
+                    <div class="hero-content">
+                        <div class="content-wrapper">
+                            <div class="main-card">
+                                <h1 class="slide-title">السياحة والترفيه</h1>
+                                <h2 class="slide-subtitle">مشاريع السياحة الترفيهية المستقبلية</h2>
+                                <p class="slide-description">
+                                    استثمر في قطاع السياحة المتنامي مع مشاريع ضخمة مثل البحر الأحمر والقدية
+                                    فرص استثمارية واعدة في صناعة الضيافة والترفيه والثقافة
+                                </p>
+                                <div class="stats-row">
+                                    <div class="stat-item">
+                                        <div class="stat-icon">🏖️</div>
+                                        <span class="stat-number" data-target="120">0+</span>
+                                        <div class="stat-label">وجهة سياحية</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-icon">🏨</div>
+                                        <span class="stat-number" data-target="800">0+</span>
+                                        <div class="stat-label">فندق ومنتجع</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-icon">✈️</div>
+                                        <span class="stat-number" data-target="100">0</span>
+                                        <div class="stat-label">مليون زائر</div>
+                                    </div>
+                                </div>
+                                <div class="cta-buttons">
+                                    <button class="cta-btn cta-primary">اكتشف الفرص السياحية</button>
+                                    <button class="cta-btn cta-secondary">شاهد المشاريع</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <div class="nav-arrow prev" id="prevBtn">❮</div>
+        <div class="nav-arrow next" id="nextBtn">❯</div>
+
+        <!-- Thumbnail Gallery -->
+        <div class="thumbnail-gallery" id="thumbnailGallery">
+            <div class="thumbnail active" data-slide="0">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&q=80" alt="رؤية 2030">
+                <div class="thumbnail-label">رؤية المستقبل</div>
+            </div>
+            <div class="thumbnail" data-slide="1">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80" alt="التقنية">
+                <div class="thumbnail-label">التقنية والابتكار</div>
+            </div>
+            <div class="thumbnail" data-slide="2">
+                <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=400&q=80" alt="البنية التحتية">
+                <div class="thumbnail-label">البنية التحتية</div>
+            </div>
+            <div class="thumbnail" data-slide="3">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&q=80" alt="الاقتصاد">
+                <div class="thumbnail-label">الاقتصاد والريادة</div>
+            </div>
+            <div class="thumbnail" data-slide="4">
+                <img src="https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=400&q=80" alt="السياحة">
+                <div class="thumbnail-label">السياحة والترفيه</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Slider Configuration
+        const slides = document.querySelectorAll('.slide');
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const progressBar = document.getElementById('progressBar');
+        
+        let currentSlide = 0;
+        let autoSlideInterval;
+        let progressInterval;
+        const slideDuration = 8000; // 8 seconds per slide (increased for smoother experience)
+        const progressStep = 100 / (slideDuration / 100);
+
+        // Animate Stats Function
+        function animateStats() {
+            const statNumbers = document.querySelectorAll('.slide.active .stat-number');
+            
+            statNumbers.forEach(stat => {
+                const target = parseInt(stat.getAttribute('data-target'));
+                const suffix = stat.textContent.includes('+') ? '+' : stat.textContent.includes('%') ? '%' : '';
+                const duration = 1500;
+                const step = target / (duration / 16);
+                let current = 0;
+
+                const timer = setInterval(() => {
+                    current += step;
+                    if (current >= target) {
+                        stat.textContent = target + suffix;
+                        clearInterval(timer);
+                    } else {
+                        stat.textContent = Math.floor(current) + suffix;
+                    }
+                }, 16);
+            });
+        }
+
+        // Change Slide Function
+        function changeSlide(index) {
+            // Remove active class from all slides and thumbnails
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+                // Reset all content animations
+                const title = slide.querySelector('.slide-title');
+                const subtitle = slide.querySelector('.slide-subtitle');
+                const description = slide.querySelector('.slide-description');
+                const stats = slide.querySelector('.stats-row');
+                const statItems = slide.querySelectorAll('.stat-item');
+                const buttons = slide.querySelector('.cta-buttons');
+                const mainCard = slide.querySelector('.main-card');
+                
+                if (title) title.style.animation = 'none';
+                if (subtitle) subtitle.style.animation = 'none';
+                if (description) description.style.animation = 'none';
+                if (stats) stats.style.animation = 'none';
+                if (buttons) buttons.style.animation = 'none';
+                if (mainCard) mainCard.style.animation = 'none';
+                statItems.forEach(item => item.style.animation = 'none');
+            });
+            
+            thumbnails.forEach(thumb => thumb.classList.remove('active'));
+
+            // Force reflow to restart animations
+            void slides[index].offsetWidth;
+
+            // Add active class to current slide and thumbnail
+            slides[index].classList.add('active');
+            thumbnails[index].classList.add('active');
+
+            currentSlide = index;
+
+            // Animate stats for new slide with delay for smooth appearance
+            setTimeout(() => {
+                animateStats();
+            }, 2200);
+
+            // Reset and restart progress bar
+            resetProgress();
+            startProgress();
+        }
+
+        // Next Slide
+        function nextSlide() {
+            let next = (currentSlide + 1) % slides.length;
+            changeSlide(next);
+        }
+
+        // Previous Slide
+        function prevSlide() {
+            let prev = (currentSlide - 1 + slides.length) % slides.length;
+            changeSlide(prev);
+        }
+
+        // Progress Bar Functions
+        function startProgress() {
+            let progress = 0;
+            progressInterval = setInterval(() => {
+                progress += progressStep;
+                progressBar.style.width = progress + '%';
+                if (progress >= 100) {
+                    clearInterval(progressInterval);
+                }
+            }, 100);
+        }
+
+        function resetProgress() {
+            clearInterval(progressInterval);
+            progressBar.style.width = '0%';
+        }
+
+        // Auto Slide Function
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(nextSlide, slideDuration);
+        }
+
+        function stopAutoSlide() {
+            clearInterval(autoSlideInterval);
+        }
+
+        function restartAutoSlide() {
+            stopAutoSlide();
+            startAutoSlide();
+        }
+
+        // Event Listeners
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            restartAutoSlide();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            restartAutoSlide();
+        });
+
+        // Thumbnail Click Events
+        thumbnails.forEach((thumb, index) => {
+            thumb.addEventListener('click', () => {
+                changeSlide(index);
+                restartAutoSlide();
+            });
+        });
+
+        // Pause on Hover
+        const heroSection = document.querySelector('.hero-section');
+        heroSection.addEventListener('mouseenter', () => {
+            stopAutoSlide();
+            clearInterval(progressInterval);
+        });
+
+        heroSection.addEventListener('mouseleave', () => {
+            restartAutoSlide();
+            resetProgress();
+            startProgress();
+        });
+
+        // Keyboard Navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+                e.key === 'ArrowLeft' ? nextSlide() : prevSlide();
+                restartAutoSlide();
+            }
+        });
+
+        // Initialize
+        animateStats();
+        startAutoSlide();
+        startProgress();
+
+        // Parallax effect on mouse move
+        let mouseX = 0, mouseY = 0;
+        let currentX = 0, currentY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = (e.clientX / window.innerWidth - 0.5) * 20;
+            mouseY = (e.clientY / window.innerHeight - 0.5) * 20;
+        });
+
+        function animateParallax() {
+            currentX += (mouseX - currentX) * 0.05;
+            currentY += (mouseY - currentY) * 0.05;
+
+            const activeSlideBg = document.querySelector('.slide.active .slide-bg');
+            if (activeSlideBg) {
+                activeSlideBg.style.transform = `translate(${currentX}px, ${currentY}px) scale(1.05)`;
+            }
+
+            requestAnimationFrame(animateParallax);
+        }
+
+        animateParallax();
+
+        // Smooth scroll for CTA buttons
+        document.querySelectorAll('.cta-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                console.log('Button clicked:', e.target.textContent);
+                // Add your navigation logic here
+            });
+        });
+    </script>
+</body>
+</html>

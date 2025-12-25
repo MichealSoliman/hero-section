@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>استمر في مستقبل المملكة - رؤية 2030</title>
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🇸🇦</text></svg>">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome للايقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts للخط العربي -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #2d3748;
+            --accent-color: #c53030;
+        }
+        
+        body {
+            font-family: 'Noto Sans Arabic', sans-serif;
+        }
+        
+        .text-primary {
+            color: var(--primary-color) !important;
+        }
+        
+        .bg-primary {
+            background-color: var(--primary-color) !important;
+        }
+        
+        .border-primary {
+            border-color: var(--primary-color) !important;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(26, 54, 93, 0.9) 0%, rgba(45, 55, 72, 0.9) 100%), url('https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .stat-box {
+            transition: all 0.3s ease;
+            border-right: 3px solid transparent;
+        }
+        
+        .stat-box:hover {
+            transform: translateY(-5px);
+            border-right-color: var(--accent-color);
+        }
+        
+        .gallery-thumbnail {
+            transition: all 0.3s ease;
+            cursor: pointer;
+            opacity: 0.7;
+        }
+        
+        .gallery-thumbnail:hover {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+        
+        .gallery-thumbnail.active {
+            opacity: 1;
+            border: 3px solid var(--accent-color);
+        }
+        
+        .main-image-container {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .main-image {
+            transition: opacity 0.5s ease-in-out;
+        }
+        
+        .content-container {
+            transition: all 0.5s ease-in-out;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .slide-in-right {
+            animation: slideInRight 0.5s ease-in-out;
+        }
+        
+        @keyframes slideInRight {
+            from { transform: translateX(20px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- الهيرو سكشن -->
+    <section class="hero-bg text-white min-h-screen flex items-center py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- النص الرئيسي -->
+                <div class="fade-in">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                        استمر في مستقبل المملكة
+                    </h1>
+                    
+                    <div class="mb-8">
+                        <h2 class="text-2xl md:text-3xl font-semibold mb-4 text-yellow-300">رؤية 2030 أثناء أعمال صبيرة</h2>
+                        <p class="text-lg md:text-xl mb-6 text-gray-200 leading-relaxed">
+                            المقدمة: رؤية مستشفى، خليل عامي، القدمات المستوى، المدير نحن بريدك بالمشاريع والإعداد والمصادرات، السنة الإجمالية، التسويق، الجهاز العامة، الأداء العامة، الأفعالية، الأجهزة العامة.
+                        </p>
+                    </div>
+                    
+                    <div class="mb-10">
+                        <p class="text-xl font-medium mb-6">
+                            انضم إلى رحلة التحول الاجتماعي الخري واستثمر في آخر المشاريع للتسويق في المنطقة:
+                        </p>
+                        
+                        <div class="grid grid-cols-3 gap-6">
+                            <!-- إحصائية 1 -->
+                            <div class="stat-box bg-white/10 backdrop-blur-sm p-6 rounded-lg text-center">
+                                <div class="text-4xl md:text-5xl font-bold text-yellow-300 mb-2">+500</div>
+                                <div class="text-lg font-medium">مشروع منجز</div>
+                            </div>
+                            
+                            <!-- إحصائية 2 -->
+                            <div class="stat-box bg-white/10 backdrop-blur-sm p-6 rounded-lg text-center">
+                                <div class="text-4xl md:text-5xl font-bold text-yellow-300 mb-2">2030</div>
+                                <div class="text-lg font-medium">رؤية المملكة</div>
+                            </div>
+                            
+                            <!-- إحصائية 3 -->
+                            <div class="stat-box bg-white/10 backdrop-blur-sm p-6 rounded-lg text-center">
+                                <div class="text-4xl md:text-5xl font-bold text-yellow-300 mb-2">13</div>
+                                <div class="text-lg font-medium">منطقة إدارية</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- الأزرار -->
+                    <div class="flex flex-wrap gap-4">
+                        <button class="btn-primary px-8 py-4 rounded-lg text-lg font-semibold flex items-center">
+                            <span>استثمر الآن</span>
+                            <i class="fas fa-arrow-left mr-3"></i>
+                        </button>
+                        
+                        <button class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold transition duration-300 flex items-center">
+                            <span>تصفح محافظتنا</span>
+                            <i class="fas fa-map-marked-alt mr-3"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- معرض الصور -->
+                <div class="fade-in">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 shadow-2xl">
+                        <h3 class="text-2xl font-bold mb-6 text-center text-yellow-300">مشاريع رؤية 2030</h3>
+                        
+                        <!-- الصورة الرئيسية -->
+                        <div class="main-image-container mb-6 rounded-lg overflow-hidden">
+                            <img id="mainImage" src="https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                                 alt="مشاريع رؤية 2030" 
+                                 class="main-image w-full h-80 object-cover">
+                        </div>
+                        
+                        <!-- محتوى الصورة الرئيسية -->
+                        <div id="mainContent" class="content-container bg-white/20 p-6 rounded-lg mb-6 slide-in-right">
+                            <h4 id="imageTitle" class="text-xl font-bold mb-3 text-white">مشاريع البنية التحتية</h4>
+                            <p id="imageDescription" class="text-gray-200 leading-relaxed">
+                                مشاريع البنية التحتية المتطورة تشمل شبكات الطرق الحديثة، والجسور، والمطارات، والموانئ التي تعزز من كفاءة النقل والمواصلات في المملكة وتدعم النمو الاقتصادي.
+                            </p>
+                            <div class="mt-4 flex items-center">
+                                <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-white mr-3">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="مدير المشروع" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <div class="font-medium text-white">المهندس أحمد العلي</div>
+                                    <div class="text-sm text-gray-300">مدير مشاريع البنية التحتية</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- معرض الصور المصغرة -->
+                        <div class="grid grid-cols-3 gap-4">
+                            <!-- صورة 1 -->
+                            <div class="gallery-thumbnail active rounded-lg overflow-hidden" data-index="0">
+                                <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
+                                     alt="البنية التحتية" 
+                                     class="w-full h-28 object-cover">
+                                <div class="absolute bottom-0 right-0 left-0 bg-black/60 text-white text-xs p-2 text-center">البنية التحتية</div>
+                            </div>
+                            
+                            <!-- صورة 2 -->
+                            <div class="gallery-thumbnail rounded-lg overflow-hidden relative" data-index="1">
+                                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
+                                     alt="المدن الذكية" 
+                                     class="w-full h-28 object-cover">
+                                <div class="absolute bottom-0 right-0 left-0 bg-black/60 text-white text-xs p-2 text-center">المدن الذكية</div>
+                            </div>
+                            
+                            <!-- صورة 3 -->
+                            <div class="gallery-thumbnail rounded-lg overflow-hidden relative" data-index="2">
+                                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
+                                     alt="الطاقة المتجددة" 
+                                     class="w-full h-28 object-cover">
+                                <div class="absolute bottom-0 right-0 left-0 bg-black/60 text-white text-xs p-2 text-center">الطاقة المتجددة</div>
+                            </div>
+                            
+                            <!-- صورة 4 -->
+                            <div class="gallery-thumbnail rounded-lg overflow-hidden relative" data-index="3">
+                                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
+                                     alt="الرعاية الصحية" 
+                                     class="w-full h-28 object-cover">
+                                <div class="absolute bottom-0 right-0 left-0 bg-black/60 text-white text-xs p-2 text-center">الرعاية الصحية</div>
+                            </div>
+                            
+                            <!-- صورة 5 -->
+                            <div class="gallery-thumbnail rounded-lg overflow-hidden relative" data-index="4">
+                                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
+                                     alt="التعليم والتدريب" 
+                                     class="w-full h-28 object-cover">
+                                <div class="absolute bottom-0 right-0 left-0 bg-black/60 text-white text-xs p-2 text-center">التعليم والتدريب</div>
+                            </div>
+                            
+                            <!-- صورة 6 -->
+                            <div class="gallery-thumbnail rounded-lg overflow-hidden relative" data-index="5">
+                                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
+                                     alt="السياحة والترفيه" 
+                                     class="w-full h-28 object-cover">
+                                <div class="absolute bottom-0 right-0 left-0 bg-black/60 text-white text-xs p-2 text-center">السياحة والترفيه</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- زر التمرير للأسفل -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+            <a href="#info" class="text-white text-3xl animate-bounce">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- قسم معلومات إضافية -->
+    <section id="info" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-primary">مشاريع رؤية 2030</h2>
+                <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto text-lg">نعمل على تنفيذ رؤية المملكة 2030 من خلال مشاريع تنموية شاملة تغطي جميع القطاعات وتخدم جميع مناطق المملكة.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-primary">البنية التحتية</h3>
+                    <p class="text-gray-600 mb-6">تطوير شبكات الطرق والمواصلات والنقل العام لتسهيل التنقل ودعم النمو الاقتصادي.</p>
+                    <a href="#" class="text-primary font-semibold hover:text-accent transition flex items-center">
+                        <span>المزيد من التفاصيل</span>
+                        <i class="fas fa-arrow-left mr-3"></i>
+                    </a>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-city"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-primary">المدن الذكية</h3>
+                    <p class="text-gray-600 mb-6">بناء مدن ذكية مستدامة تستخدم التكنولوجيا الحديثة لتحسين جودة الحياة.</p>
+                    <a href="#" class="text-primary font-semibold hover:text-accent transition flex items-center">
+                        <span>المزيد من التفاصيل</span>
+                        <i class="fas fa-arrow-left mr-3"></i>
+                    </a>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-primary">الطاقة المتجددة</h3>
+                    <p class="text-gray-600 mb-6">استثمارات ضخمة في مشاريع الطاقة الشمسية وطاقة الرياح لتحقيق الاستدامة البيئية.</p>
+                    <a href="#" class="text-primary font-semibold hover:text-accent transition flex items-center">
+                        <span>المزيد من التفاصيل</span>
+                        <i class="fas fa-arrow-left mr-3"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer class="bg-primary text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-10 h-10 bg-white text-primary rounded-full flex items-center justify-center text-xl font-bold mr-3">
+                            ٢٠٣٠
+                        </div>
+                        <div class="text-2xl font-bold">رؤية المملكة</div>
+                    </div>
+                    <p class="text-gray-300 mb-6">نساهم في تحقيق رؤية المملكة 2030 من خلال مشاريع تنموية شاملة تخدم حاضر المملكة ومستقبلها.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6">روابط سريعة</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-yellow-300 transition">الرئيسية</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-yellow-300 transition">مشاريعنا</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-yellow-300 transition">الاستثمار</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-yellow-300 transition">الشركاء</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6">المشاريع</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-yellow-300 transition">البنية التحتية</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-yellow-300 transition">المدن الذكية</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-yellow-300 transition">الطاقة المتجددة</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-yellow-300 transition">الرعاية الصحية</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6">تواصل معنا</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-yellow-300 ml-3"></i>
+                            <span class="text-gray-300">+966 11 123 4567</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-yellow-300 ml-3"></i>
+                            <span class="text-gray-300">info@vision2030.gov.sa</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-yellow-300 ml-3"></i>
+                            <span class="text-gray-300">الرياض، المملكة العربية السعودية</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-400">
+                <p>جميع الحقوق محفوظة © رؤية المملكة 2030</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // بيانات الصور والمحتوى
+        const galleryData = [
+            {
+                id: 0,
+                title: "مشاريع البنية التحتية",
+                description: "مشاريع البنية التحتية المتطورة تشمل شبكات الطرق الحديثة، والجسور، والمطارات، والموانئ التي تعزز من كفاءة النقل والمواصلات في المملكة وتدعم النمو الاقتصادي.",
+                image: "https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+                person: {
+                    name: "المهندس أحمد العلي",
+                    role: "مدير مشاريع البنية التحتية",
+                    image: "https://randomuser.me/api/portraits/men/32.jpg"
+                }
+            },
+            {
+                id: 1,
+                title: "المدن الذكية",
+                description: "بناء مدن ذكية تستخدم التكنولوجيا الحديثة لتحسين جودة الحياة، مع التركيز على الاستدامة البيئية وكفاءة استخدام الموارد.",
+                image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+                person: {
+                    name: "الدكتورة سارة القحطاني",
+                    role: "خبيرة المدن الذكية",
+                    image: "https://randomuser.me/api/portraits/women/44.jpg"
+                }
+            },
+            {
+                id: 2,
+                title: "الطاقة المتجددة",
+                description: "استثمارات ضخمة في مشاريع الطاقة الشمسية وطاقة الرياح لتحقيق الاستدامة البيئية وتنويع مصادر الطاقة في المملكة.",
+                image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+                person: {
+                    name: "المهندس خالد الشمري",
+                    role: "مدير مشاريع الطاقة المتجددة",
+                    image: "https://randomuser.me/api/portraits/men/75.jpg"
+                }
+            },
+            {
+                id: 3,
+                title: "الرعاية الصحية",
+                description: "تطوير البنية التحتية الصحية وإنشاء مستشفيات ومستوصفات متطورة لتقديم أفضل الخدمات الطبية للمواطنين والمقيمين.",
+                image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1153&q=80",
+                person: {
+                    name: "الدكتور محمد الأحمدي",
+                    role: "مدير تطوير الخدمات الصحية",
+                    image: "https://randomuser.me/api/portraits/men/22.jpg"
+                }
+            },
+            {
+                id: 4,
+                title: "التعليم والتدريب",
+                description: "إنشاء جامعات ومدارس ومعاهد تدريب متطورة لتأهيل الكوادر الوطنية وتمكينهم من قيادة مستقبل المملكة.",
+                image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+                person: {
+                    name: "الدكتورة نورة السديري",
+                    role: "مديرة تطوير التعليم",
+                    image: "https://randomuser.me/api/portraits/women/33.jpg"
+                }
+            },
+            {
+                id: 5,
+                title: "السياحة والترفيه",
+                description: "تنمية قطاع السياحة والترفيه من خلال مشاريع ضخمة تجذب الزوار من جميع أنحاء العالم وتعزز الاقتصاد المحلي.",
+                image: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1194&q=80",
+                person: {
+                    name: "الأستاذ فيصل الناصر",
+                    role: "مدير مشاريع السياحة",
+                    image: "https://randomuser.me/api/portraits/men/55.jpg"
+                }
+            }
+        ];
+
+        // عناصر DOM
+        const mainImage = document.getElementById('mainImage');
+        const mainContent = document.getElementById('mainContent');
+        const imageTitle = document.getElementById('imageTitle');
+        const imageDescription = document.getElementById('imageDescription');
+        const thumbnails = document.querySelectorAll('.gallery-thumbnail');
+        
+        // تغيير الصورة والمحتوى
+        function changeGalleryItem(index) {
+            const item = galleryData[index];
+            
+            // إضافة تأثير التلاشي للصورة
+            mainImage.style.opacity = '0';
+            
+            setTimeout(() => {
+                // تغيير الصورة
+                mainImage.src = item.image;
+                mainImage.alt = item.title;
+                
+                // إعادة الظهور مع تأثير
+                mainImage.style.opacity = '1';
+                
+                // إضافة تأثير للمحتوى
+                mainContent.classList.remove('slide-in-right');
+                void mainContent.offsetWidth; // إعادة التدفق لتفعيل الأنيميشن
+                mainContent.classList.add('slide-in-right');
+                
+                // تغيير المحتوى النصي
+                imageTitle.textContent = item.title;
+                imageDescription.textContent = item.description;
+                
+                // تحديث صورة الشخص
+                const personImage = mainContent.querySelector('img');
+                if (personImage) {
+                    personImage.src = item.person.image;
+                    personImage.alt = item.person.name;
+                }
+                
+                // تحديث اسم الشخص ودوره
+                const personName = mainContent.querySelector('.font-medium.text-white');
+                const personRole = mainContent.querySelector('.text-sm.text-gray-300');
+                
+                if (personName) personName.textContent = item.person.name;
+                if (personRole) personRole.textContent = item.person.role;
+                
+            }, 300); // وقت الانتظار لتأثير التلاشي
+        }
+        
+        // إضافة حدث النقر على الصور المصغرة
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', function() {
+                const index = parseInt(this.getAttribute('data-index'));
+                
+                // تحديث الصورة النشطة
+                thumbnails.forEach(thumb => thumb.classList.remove('active'));
+                this.classList.add('active');
+                
+                // تغيير المحتوى
+                changeGalleryItem(index);
+            });
+        });
+        
+        // تفعيل التمرير السلس للروابط
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // تأثيرات الأزرار
+        document.querySelectorAll('.btn-primary').forEach(button => {
+            button.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px)';
+            });
+            
+            button.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+        
+        // تفعيل تغيير تلقائي للصور كل 5 ثوانٍ
+        let currentIndex = 0;
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % galleryData.length;
+            
+            // تحديث الصورة النشطة
+            thumbnails.forEach(thumb => thumb.classList.remove('active'));
+            thumbnails[currentIndex].classList.add('active');
+            
+            // تغيير المحتوى
+            changeGalleryItem(currentIndex);
+        }, 5000); // كل 5 ثوانٍ
+        
+        // إضافة تأثيرات للصناديق الإحصائية عند التمرير
+        const statBoxes = document.querySelectorAll('.stat-box');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        statBoxes.forEach(box => {
+            box.style.opacity = '0';
+            box.style.transform = 'translateY(20px)';
+            box.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(box);
+        });
+    </script>
+</body>
+</html>
