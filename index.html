@@ -3,569 +3,3186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>استمر في مستقبل المملكة - رؤية 2030</title>
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🇸🇦</text></svg>">
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome للايقونات -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts للخط العربي -->
+    <title>استثمر في مستقبل المملكة - رؤية 2030</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root {
-            --primary-color: #1a365d;
-            --secondary-color: #2d3748;
-            --accent-color: #c53030;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        
+
         body {
-            font-family: 'Noto Sans Arabic', sans-serif;
+            font-family: 'Tajawal', sans-serif;
+            overflow-x: hidden;
+            background: white;
+            line-height: 1.6;
         }
-        
-        .text-primary {
-            color: var(--primary-color) !important;
+
+        /* Navigation Styles - Transparent at first */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 15px 0;
+            margin-bottom: 20px;
+            background: transparent;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
         }
-        
-        .bg-primary {
-            background-color: var(--primary-color) !important;
+
+        nav.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 30px rgba(0,0,0,0.15);
         }
-        
-        .border-primary {
-            border-color: var(--primary-color) !important;
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        
-        .hero-bg {
-            background: linear-gradient(135deg, rgba(26, 54, 93, 0.9) 0%, rgba(45, 55, 72, 0.9) 100%), url('https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            font-weight: 800;
+            color: #006633;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #006633, #00994d);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: 900;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 16px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #006633;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background: #006633;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: linear-gradient(135deg, #d4af37, #f4d03f);
+            padding: 12px 30px;
+            border-radius: 30px;
+            color: #000;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+        }
+
+        .lang-switcher {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .lang-btn {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            background: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 13px;
+            color: #666;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        .lang-btn.active,
+        .lang-btn:hover {
+            background: #006633;
+            color: white;
+            border-color: #006633;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background: #006633;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(8px, -8px);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            margin-top: 0;
+        }
+
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1.2s ease-in-out;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+            z-index: 1;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
+            animation: kenburns 20s ease-out infinite;
         }
-        
-        .stat-box {
+
+        @keyframes kenburns {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 102, 51, 0.85) 0%, rgba(0, 51, 26, 0.7) 100%);
+            z-index: 2;
+        }
+
+        .hero-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+            z-index: 3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 50px;
+        }
+
+        .hero-text {
+            flex: 1;
+            max-width: 700px;
+            animation: slideInRight 1s ease-out;
+            position: relative;
+            z-index: 11;
+            padding-top: 110px;
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .hero-title {
+            font-size: 52px;
+            font-weight: 900;
+            color: white;
+            line-height: 1.2;
+            margin-bottom: 25px;
+            text-shadow: 2px 4px 8px rgba(0,0,0,0.5);
+            letter-spacing: -0.5px;
+        }
+
+        .hero-subtitle {
+            font-size: 28px;
+            color: #d4af37;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-shadow: 1px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-description {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.95);
+            line-height: 1.8;
+            margin-bottom: 40px;
+            font-weight: 400;
+            max-width: 600px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .hero-btn {
+            padding: 18px 40px;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 50px;
+            text-decoration: none;
             transition: all 0.3s ease;
-            border-right: 3px solid transparent;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Tajawal', sans-serif;
         }
-        
-        .stat-box:hover {
+
+        .hero-btn-primary {
+            background: linear-gradient(135deg, #d4af37, #f4d03f);
+            color: #000;
+            box-shadow: 0 6px 25px rgba(212, 175, 55, 0.4);
+        }
+
+        .hero-btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 35px rgba(212, 175, 55, 0.6);
+        }
+
+        .hero-btn-secondary {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-3px);
+        }
+
+        /* Stats Section */
+        .hero-stats {
+            display: flex;
+            gap: 30px;
+            margin-top: 50px;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 25px 35px;
+            text-align: center;
+            transition: all 0.3s ease;
+            min-width: 180px;
+        }
+
+        .stat-card:hover {
             transform: translateY(-5px);
-            border-right-color: var(--accent-color);
+            background: rgba(255, 255, 255, 0.18);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
-        
-        .gallery-thumbnail {
-            transition: all 0.3s ease;
+
+        .stat-number {
+            font-size: 42px;
+            font-weight: 900;
+            color: #d4af37;
+            display: block;
+            margin-bottom: 8px;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            color: white;
+            font-weight: 600;
+        }
+
+        .stat-icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        /* Hero Image Side */
+        .hero-image-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: slideInLeft 1s ease-out;
+            position: relative;
+            z-index: 11;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .hero-featured-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 25px;
+            padding: 30px;
+            max-width: 450px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+        }
+
+        .featured-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .featured-title {
+            font-size: 28px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .featured-description {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+        }
+
+        /* Thumbnail Carousel */
+        .thumbnail-carousel {
+            position: absolute;
+            bottom: -80px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 12;
+            width: 90%;
+            padding: 10;
+            max-width: 1300px;
+        }
+
+        .carousel-container {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 10px 0;
+            scrollbar-width: thin;
+            scrollbar-color: #d4af37 rgba(255, 255, 255, 0.2);
+        }
+
+        .carousel-container::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .carousel-container::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        .carousel-container::-webkit-scrollbar-thumb {
+            background: #d4af37;
+            border-radius: 10px;
+        }
+
+        .thumbnail-item {
+            min-width: 250px;
+            height: 140px;
+            border-radius: 15px;
+            overflow: hidden;
             cursor: pointer;
-            opacity: 0.7;
+            position: relative;
+            transition: all 0.4s ease;
+            border: 3px solid transparent;
+        }
+
+        .thumbnail-item:hover {
+            transform: translateY(-10px) scale(1.05);
+            border-color: #d4af37;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+        }
+
+        .thumbnail-item.active {
+            border-color: #d4af37;
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
+        }
+
+        .thumbnail-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .thumbnail-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+        }
+
+        .thumbnail-title {
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .thumbnail-subtitle {
+            color: #d4af37;
+            font-size: 13px;
+            font-weight: 500;
+            margin-top: 3px;
+        }
+
+        /* Navigation Arrows */
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 13;
+        }
+
+        .carousel-nav:hover {
+            background: rgba(212, 175, 55, 0.8);
+            border-color: #d4af37;
+        }
+
+        .carousel-nav.prev {
+            left: 20px;
+        }
+
+        .carousel-nav.next {
+            right: 20px;
+        }
+
+        .carousel-nav svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 1000;
+            background: #25D366;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 25px rgba(37, 211, 102, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.15);
+            box-shadow: 0 8px 35px rgba(37, 211, 102, 0.6);
+        }
+
+        .whatsapp-float svg {
+            width: 35px;
+            height: 35px;
+            fill: white;
+        }
+
+        /* Slide Counter */
+        .slide-counter {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            z-index: 100;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Auto Slide Indicator */
+        .auto-slide-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            color: white;
+            font-size: 14px;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 5px 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Progress Bar */
+        .progress-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.2);
+            z-index: 100;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(to right, #d4af37, #f4d03f);
+            width: 0%;
+            transition: width 5s linear;
+        }
+
+        .progress-bar-fill.active {
+            width: 100%;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .hero-content {
+                padding: 0 30px;
+            }
+            
+            .hero-title {
+                font-size: 60px;
+            }
+            
+            .hero-subtitle {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .hero-content {
+                flex-direction: column;
+                padding: 30px;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .hero-text {
+                max-width: 100%;
+                margin-bottom: 40px;
+            }
+
+            .hero-title {
+                font-size: 52px;
+            }
+
+            .hero-subtitle {
+                font-size: 24px;
+            }
+
+            .hero-description {
+                margin: 0 auto 40px;
+            }
+
+            .hero-stats {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .hero-image-container {
+                display: none;
+            }
+
+            .thumbnail-item {
+                min-width: 200px;
+                height: 120px;
+            }
+
+            .slide-counter {
+                right: 20px;
+                bottom: 20px;
+            }
+
+            .auto-slide-indicator {
+                left: 20px;
+                bottom: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links,
+            .lang-switcher {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: rgba(255, 255, 255, 0.98);
+                flex-direction: column;
+                padding: 30px;
+                transition: right 0.4s ease;
+                backdrop-filter: blur(10px);
+                gap: 20px;
+            }
+
+            .nav-links {
+                padding-top: 50px;
+            }
+
+            .nav-links li {
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-links a {
+                font-size: 18px;
+                display: block;
+                padding: 12px 0;
+            }
+
+            .nav-links.active,
+            .lang-switcher.active {
+                right: 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero-title {
+                font-size: 42px;
+            }
+
+            .hero-subtitle {
+                font-size: 20px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .stat-card {
+                width: 100%;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .hero-btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .thumbnail-item {
+                min-width: 180px;
+                height: 100px;
+            }
+
+            .thumbnail-title {
+                font-size: 14px;
+            }
+
+            .carousel-nav {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .carousel-nav.prev {
+                left: 10px;
+            }
+            
+            .carousel-nav.next {
+                right: 10px;
+            }
+
+            .slide-counter,
+            .auto-slide-indicator {
+                font-size: 12px;
+                padding: 4px 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 0 15px;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+
+            .logo-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+
+            .hero-content {
+                padding: 20px;
+            }
+
+            .hero-title {
+                font-size: 32px;
+            }
+
+            .hero-subtitle {
+                font-size: 18px;
+            }
+
+            .hero-description {
+                font-size: 15px;
+            }
+
+            .hero-btn {
+                padding: 15px 30px;
+                font-size: 16px;
+            }
+
+            .stat-number {
+                font-size: 32px;
+            }
+
+            .thumbnail-carousel {
+                width: 95%;
+                bottom: 20px;
+            }
+
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                bottom: 20px;
+                left: 20px;
+            }
+
+            .slide-counter,
+            .auto-slide-indicator {
+                display: none;
+            }
+        }
+    </style>
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Cairo', sans-serif;
         }
         
-        .gallery-thumbnail:hover {
-            opacity: 1;
+        .dareen-card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .dareen-card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .dareen-slide-transition {
+            transition: opacity 1s ease-in-out;
+        }
+        
+        .dareen-btn-glow {
+            box-shadow: 0 0 20px rgba(0, 102, 51, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .dareen-btn-glow:hover {
+            box-shadow: 0 0 30px rgba(0, 102, 51, 0.5);
             transform: scale(1.05);
         }
         
-        .gallery-thumbnail.active {
-            opacity: 1;
-            border: 3px solid var(--accent-color);
+        .dareen-overlay {
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.2) 100%);
         }
         
-        .main-image-container {
+        .dareen-project-badge {
+            background: linear-gradient(135deg, #0f4c3a 0%, #1a7a5e 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        /* تحسينات للعرض على الجوال */
+        @media (max-width: 768px) {
+            .dareen-mobile-flex-col {
+                flex-direction: column;
+            }
+            
+            .dareen-mobile-text-center {
+                text-align: center;
+            }
+            
+            .dareen-mobile-full-width {
+                width: 100%;
+            }
+        }
+    </style>
+    <!-- about  -->
+         <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .about-gradient-bg {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f1f3f5 100%);
+        }
+        
+        .about-card-shadow {
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .about-card-shadow:hover {
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+            transform: translateY(-5px);
+        }
+        
+        .about-accent-line {
+            position: relative;
+            padding-right: 20px;
+        }
+        
+        .about-accent-line::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(to bottom, #0f4c3a, #1a7a5e);
+            border-radius: 10px;
+        }
+        
+        .about-stat-card {
+            background: linear-gradient(135deg, #0f4c3a 0%, #1a7a5e 100%);
+            color: white;
+            border-radius: 20px;
+            padding: 25px;
             position: relative;
             overflow: hidden;
         }
         
-        .main-image {
-            transition: opacity 0.5s ease-in-out;
+        .about-stat-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1%, transparent 1%);
+            background-size: 20px 20px;
+            opacity: 0.3;
         }
         
-        .content-container {
-            transition: all 0.5s ease-in-out;
-        }
-        
-        .fade-in {
-            animation: fadeIn 0.5s ease-in-out;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .slide-in-right {
-            animation: slideInRight 0.5s ease-in-out;
-        }
-        
-        @keyframes slideInRight {
-            from { transform: translateX(20px); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-        
-        .btn-primary {
-            background-color: var(--primary-color);
+        .about-badge {
+            background: linear-gradient(135deg, #0f4c3a, #1a7a5e);
             color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-block;
+        }
+        
+        .about-icon-circle {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #0f4c3a, #1a7a5e);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .about-timeline {
+            position: relative;
+            padding-right: 30px;
+        }
+        
+        .about-timeline::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 3px;
+            background: linear-gradient(to bottom, #0f4c3a, #1a7a5e);
+        }
+        
+        .about-timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        
+        .about-timeline-item::before {
+            content: '';
+            position: absolute;
+            right: -36px;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            background: #0f4c3a;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px rgba(15, 76, 58, 0.2);
+        }
+        
+        .about-partner-logo {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            height: 120px;
+        }
+        
+        .about-partner-logo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-achievement-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            border-left: 5px solid #0f4c3a;
             transition: all 0.3s ease;
         }
         
-        .btn-primary:hover {
-            background-color: var(--accent-color);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        .about-achievement-card:hover {
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            border-left-color: #1a7a5e;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
+    <!-- Director's Message Section -->
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .director-gradient-bg {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f1f3f5 100%);
+        }
+        
+        .director-card {
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .director-card:hover {
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+            transform: translateY(-5px);
+        }
+        
+        .director-accent-border {
+            border-right: 5px solid transparent;
+            border-image: linear-gradient(to bottom, #0f4c3a, #1a7a5e);
+            border-image-slice: 1;
+        }
+        
+        .director-quote-icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: rgba(15, 76, 58, 0.1);
+            font-size: 80px;
+            z-index: 0;
+        }
+        
+        .director-signature {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-style: italic;
+            font-weight: bold;
+            color: #0f4c3a;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .director-signature::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 0;
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(to left, #0f4c3a, #1a7a5e);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .director-highlight {
+            background: linear-gradient(120deg, rgba(15, 76, 58, 0.1) 0%, rgba(15, 76, 58, 0.05) 100%);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+            border-right: 4px solid #0f4c3a;
+        }
+        
+        .director-title-badge {
+            background: linear-gradient(135deg, #0f4c3a, #1a7a5e);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+    </style>
+    <!-- Services Section -->
+         <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .services-gradient-bg {
+            background: linear-gradient(135deg, #f5f7fa 0%, #f0f4f8 100%);
+        }
+        
+        .service-card {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border-radius: 16px;
+            overflow: hidden;
+            background: white;
+            opacity: 0;
+            transform: translateY(50px);
+            height: 100%;
+        }
+        
+        .service-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .service-card:hover {
+            box-shadow: 0 20px 50px rgba(15, 76, 58, 0.15);
+            transform: translateY(-12px);
+        }
+        
+        .service-image-container {
+            height: 240px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .service-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+        
+        .service-card:hover .service-image {
+            transform: scale(1.1);
+        }
+        
+        .service-overlay {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, rgba(15, 76, 58, 0.8));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+        }
+        
+        .service-card:hover .service-overlay {
+            opacity: 1;
+        }
+        
+        .service-badge {
+            background: linear-gradient(135deg, #0f4c3a, #1a7a5e);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .btn-call {
+            background: linear-gradient(135deg, #0f4c3a, #1a7a5e);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+        }
+        
+        .btn-call:hover {
+            background: linear-gradient(135deg, #0a382a, #14624b);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(15, 76, 58, 0.3);
+        }
+        
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+        }
+        
+        .btn-whatsapp:hover {
+            background: linear-gradient(135deg, #1da851, #0e796d);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: -10px;
+            width: 60%;
+            height: 4px;
+            background: linear-gradient(to left, #0f4c3a, #1a7a5e);
+            border-radius: 10px;
+        }
+        
+        .service-category {
+            background: white;
+            border-radius: 12px;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-right: 4px solid #0f4c3a;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .service-category:hover {
+            transform: translateX(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        .service-number {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(15, 76, 58, 0.9);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+            z-index: 2;
+        }
+        
+        .service-type-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #0f4c3a;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            z-index: 2;
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-    <!-- الهيرو سكشن -->
-    <section class="hero-bg text-white min-h-screen flex items-center py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <!-- النص الرئيسي -->
-                <div class="fade-in">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                        استمر في مستقبل المملكة
-                    </h1>
-                    
-                    <div class="mb-8">
-                        <h2 class="text-2xl md:text-3xl font-semibold mb-4 text-yellow-300">رؤية 2030 أثناء أعمال صبيرة</h2>
-                        <p class="text-lg md:text-xl mb-6 text-gray-200 leading-relaxed">
-                            المقدمة: رؤية مستشفى، خليل عامي، القدمات المستوى، المدير نحن بريدك بالمشاريع والإعداد والمصادرات، السنة الإجمالية، التسويق، الجهاز العامة، الأداء العامة، الأفعالية، الأجهزة العامة.
-                        </p>
-                    </div>
-                    
-                    <div class="mb-10">
-                        <p class="text-xl font-medium mb-6">
-                            انضم إلى رحلة التحول الاجتماعي الخري واستثمر في آخر المشاريع للتسويق في المنطقة:
-                        </p>
-                        
-                        <div class="grid grid-cols-3 gap-6">
-                            <!-- إحصائية 1 -->
-                            <div class="stat-box bg-white/10 backdrop-blur-sm p-6 rounded-lg text-center">
-                                <div class="text-4xl md:text-5xl font-bold text-yellow-300 mb-2">+500</div>
-                                <div class="text-lg font-medium">مشروع منجز</div>
-                            </div>
-                            
-                            <!-- إحصائية 2 -->
-                            <div class="stat-box bg-white/10 backdrop-blur-sm p-6 rounded-lg text-center">
-                                <div class="text-4xl md:text-5xl font-bold text-yellow-300 mb-2">2030</div>
-                                <div class="text-lg font-medium">رؤية المملكة</div>
-                            </div>
-                            
-                            <!-- إحصائية 3 -->
-                            <div class="stat-box bg-white/10 backdrop-blur-sm p-6 rounded-lg text-center">
-                                <div class="text-4xl md:text-5xl font-bold text-yellow-300 mb-2">13</div>
-                                <div class="text-lg font-medium">منطقة إدارية</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- الأزرار -->
-                    <div class="flex flex-wrap gap-4">
-                        <button class="btn-primary px-8 py-4 rounded-lg text-lg font-semibold flex items-center">
-                            <span>استثمر الآن</span>
-                            <i class="fas fa-arrow-left mr-3"></i>
-                        </button>
-                        
-                        <button class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold transition duration-300 flex items-center">
-                            <span>تصفح محافظتنا</span>
-                            <i class="fas fa-map-marked-alt mr-3"></i>
-                        </button>
-                    </div>
-                </div>
-                
-                <!-- معرض الصور -->
-                <div class="fade-in">
-                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 shadow-2xl">
-                        <h3 class="text-2xl font-bold mb-6 text-center text-yellow-300">مشاريع رؤية 2030</h3>
-                        
-                        <!-- الصورة الرئيسية -->
-                        <div class="main-image-container mb-6 rounded-lg overflow-hidden">
-                            <img id="mainImage" src="https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
-                                 alt="مشاريع رؤية 2030" 
-                                 class="main-image w-full h-80 object-cover">
-                        </div>
-                        
-                        <!-- محتوى الصورة الرئيسية -->
-                        <div id="mainContent" class="content-container bg-white/20 p-6 rounded-lg mb-6 slide-in-right">
-                            <h4 id="imageTitle" class="text-xl font-bold mb-3 text-white">مشاريع البنية التحتية</h4>
-                            <p id="imageDescription" class="text-gray-200 leading-relaxed">
-                                مشاريع البنية التحتية المتطورة تشمل شبكات الطرق الحديثة، والجسور، والمطارات، والموانئ التي تعزز من كفاءة النقل والمواصلات في المملكة وتدعم النمو الاقتصادي.
-                            </p>
-                            <div class="mt-4 flex items-center">
-                                <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-white mr-3">
-                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="مدير المشروع" class="w-full h-full object-cover">
-                                </div>
-                                <div>
-                                    <div class="font-medium text-white">المهندس أحمد العلي</div>
-                                    <div class="text-sm text-gray-300">مدير مشاريع البنية التحتية</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- معرض الصور المصغرة -->
-                        <div class="grid grid-cols-3 gap-4">
-                            <!-- صورة 1 -->
-                            <div class="gallery-thumbnail active rounded-lg overflow-hidden" data-index="0">
-                                <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
-                                     alt="البنية التحتية" 
-                                     class="w-full h-28 object-cover">
-                                <div class="absolute bottom-0 right-0 left-0 bg-black/60 text-white text-xs p-2 text-center">البنية التحتية</div>
-                            </div>
-                            
-                            <!-- صورة 2 -->
-                            <div class="gallery-thumbnail rounded-lg overflow-hidden relative" data-index="1">
-                                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
-                                     alt="المدن الذكية" 
-                                     class="w-full h-28 object-cover">
-                                <div class="absolute bottom-0 right-0 left-0 bg-black/60 text-white text-xs p-2 text-center">المدن الذكية</div>
-                            </div>
-                            
-                            <!-- صورة 3 -->
-                            <div class="gallery-thumbnail rounded-lg overflow-hidden relative" data-index="2">
-                                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
-                                     alt="الطاقة المتجددة" 
-                                     class="w-full h-28 object-cover">
-                                <div class="absolute bottom-0 right-0 left-0 bg-black/60 text-white text-xs p-2 text-center">الطاقة المتجددة</div>
-                            </div>
-                            
-                            <!-- صورة 4 -->
-                            <div class="gallery-thumbnail rounded-lg overflow-hidden relative" data-index="3">
-                                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
-                                     alt="الرعاية الصحية" 
-                                     class="w-full h-28 object-cover">
-                                <div class="absolute bottom-0 right-0 left-0 bg-black/60 text-white text-xs p-2 text-center">الرعاية الصحية</div>
-                            </div>
-                            
-                            <!-- صورة 5 -->
-                            <div class="gallery-thumbnail rounded-lg overflow-hidden relative" data-index="4">
-                                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
-                                     alt="التعليم والتدريب" 
-                                     class="w-full h-28 object-cover">
-                                <div class="absolute bottom-0 right-0 left-0 bg-black/60 text-white text-xs p-2 text-center">التعليم والتدريب</div>
-                            </div>
-                            
-                            <!-- صورة 6 -->
-                            <div class="gallery-thumbnail rounded-lg overflow-hidden relative" data-index="5">
-                                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
-                                     alt="السياحة والترفيه" 
-                                     class="w-full h-28 object-cover">
-                                <div class="absolute bottom-0 right-0 left-0 bg-black/60 text-white text-xs p-2 text-center">السياحة والترفيه</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- زر التمرير للأسفل -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-            <a href="#info" class="text-white text-3xl animate-bounce">
-                <i class="fas fa-chevron-down"></i>
-            </a>
-        </div>
-    </section>
-
-    <!-- قسم معلومات إضافية -->
-    <section id="info" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-primary">مشاريع رؤية 2030</h2>
-                <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
-                <p class="text-gray-600 max-w-3xl mx-auto text-lg">نعمل على تنفيذ رؤية المملكة 2030 من خلال مشاريع تنموية شاملة تغطي جميع القطاعات وتخدم جميع مناطق المملكة.</p>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">🏛️</div>
+                <span>الاستثمار</span>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl mb-6">
-                        <i class="fas fa-road"></i>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#projects">المشاريع</a></li>
+                <li><a href="#opportunities">الفرص الاستثمارية</a></li>
+                <li><a href="#about">من نحن</a></li>
+                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+                <li><a href="#" class="nav-cta">ابدأ الاستثمار الآن</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+            <div class="progress-bar-fill" id="progressBar"></div>
+        </div>
+
+        <!-- Slide 1 -->
+        <div class="hero-slide active" data-slide="0">
+            <div class="hero-background" style="background-image: url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1920&h=1080&fit=crop');"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-pattern"></div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">استثمر في مستقبل المملكة</h1>
+                    <p class="hero-subtitle">رؤية 2030 تفتح آفاقاً جديدة</p>
+                    <p class="hero-description">
+                        اكتشف فرصاً استثمارية في ظل نمو الاقتصاد السعودي المتنوع. نحن نربطك بالمشاريع الواعدة والشركاء الاستراتيجيين لتحقيق أهدافك.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#" class="hero-btn hero-btn-primary">
+                            ابدأ الاستثمار الآن ←
+                        </a>
+                        <a href="#" class="hero-btn hero-btn-secondary">
+                            تصفح محفظة المشاريع
+                        </a>
                     </div>
-                    <h3 class="text-xl font-bold mb-4 text-primary">البنية التحتية</h3>
-                    <p class="text-gray-600 mb-6">تطوير شبكات الطرق والمواصلات والنقل العام لتسهيل التنقل ودعم النمو الاقتصادي.</p>
-                    <a href="#" class="text-primary font-semibold hover:text-accent transition flex items-center">
-                        <span>المزيد من التفاصيل</span>
-                        <i class="fas fa-arrow-left mr-3"></i>
-                    </a>
+                 
                 </div>
-                
-                <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl mb-6">
-                        <i class="fas fa-city"></i>
+                <div class="hero-image-container">
+                    <div class="hero-featured-card">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=500&h=300&fit=crop" alt="Vision 2030" class="featured-image">
+                        <h3 class="featured-title">استثمر في مستقبل المملكة</h3>
+                        <p class="featured-description">انضم إلى رحلة التحول الاقتصادي الكبرى واستثمر في أكبر المشاريع التنموية في المنطقة</p>
                     </div>
-                    <h3 class="text-xl font-bold mb-4 text-primary">المدن الذكية</h3>
-                    <p class="text-gray-600 mb-6">بناء مدن ذكية مستدامة تستخدم التكنولوجيا الحديثة لتحسين جودة الحياة.</p>
-                    <a href="#" class="text-primary font-semibold hover:text-accent transition flex items-center">
-                        <span>المزيد من التفاصيل</span>
-                        <i class="fas fa-arrow-left mr-3"></i>
-                    </a>
-                </div>
-                
-                <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl mb-6">
-                        <i class="fas fa-solar-panel"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-primary">الطاقة المتجددة</h3>
-                    <p class="text-gray-600 mb-6">استثمارات ضخمة في مشاريع الطاقة الشمسية وطاقة الرياح لتحقيق الاستدامة البيئية.</p>
-                    <a href="#" class="text-primary font-semibold hover:text-accent transition flex items-center">
-                        <span>المزيد من التفاصيل</span>
-                        <i class="fas fa-arrow-left mr-3"></i>
-                    </a>
                 </div>
             </div>
         </div>
+
+        <!-- Slide 2 -->
+        <div class="hero-slide" data-slide="1">
+            <div class="hero-background" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&h=1080&fit=crop');"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-pattern"></div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">مشاريع البنية التحتية المتقدمة</h1>
+                    <p class="hero-subtitle">استثمارات تصل إلى +500 مليار ريال</p>
+                    <p class="hero-description">
+                        شارك في بناء المدن الذكية والبنية التحتية الحديثة التي تشكل مستقبل المملكة وتحقق عوائد استثنائية للمستثمرين.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#" class="hero-btn hero-btn-primary">
+                            استكشف المشاريع ←
+                        </a>
+                        <a href="#" class="hero-btn hero-btn-secondary">
+                            تحميل دليل المستثمر
+                        </a>
+                    </div>
+                  
+                </div>
+                <div class="hero-image-container">
+                    <div class="hero-featured-card">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&h=300&fit=crop" alt="Infrastructure" class="featured-image">
+                        <h3 class="featured-title">مشاريع البنية التحتية</h3>
+                        <p class="featured-description">استثمر في المشاريع التي تبني مستقبل المملكة وتحقق عوائد طويلة الأجل</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="hero-slide" data-slide="2">
+            <div class="hero-background" style="background-image: url('https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=1920&h=1080&fit=crop');"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-pattern"></div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">الطاقة المتجددة والاستدامة</h1>
+                    <p class="hero-subtitle">نحو مستقبل أخضر ومستدام</p>
+                    <p class="hero-description">
+                        استثمر في مشاريع الطاقة المتجددة والطاقة الشمسية التي تدعم رؤية السعودية الخضراء وتحقق عوائد مستدامة.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#" class="hero-btn hero-btn-primary">
+                            مشاريع الطاقة النظيفة ←
+                        </a>
+                        <a href="#" class="hero-btn hero-btn-secondary">
+                            معرفة المزيد
+                        </a>
+                    </div>
+                  
+                </div>
+                <div class="hero-image-container">
+                    <div class="hero-featured-card">
+                        <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=500&h=300&fit=crop" alt="Green Energy" class="featured-image">
+                        <h3 class="featured-title">الطاقة المتجددة</h3>
+                        <p class="featured-description">انضم إلى مستقبل الطاقة النظيفة واستثمر في مشاريع مستدامة تحقق عوائد مضمونة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="hero-slide" data-slide="3">
+            <div class="hero-background" style="background-image: url('https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=1920&h=1080&fit=crop');"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-pattern"></div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">التكنولوجيا والابتكار</h1>
+                    <p class="hero-subtitle">قيادة التحول الرقمي في المنطقة</p>
+                    <p class="hero-description">
+                        استثمر في مشاريع التقنية والذكاء الاصطناعي التي تقود التحول الرقمي وتبني اقتصاد المستقبل.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#" class="hero-btn hero-btn-primary">
+                            مشاريع التقنية ←
+                        </a>
+                        <a href="#" class="hero-btn hero-btn-secondary">
+                            تواصل مع الخبراء
+                        </a>
+                    </div>
+                   
+                </div>
+                <div class="hero-image-container">
+                    <div class="hero-featured-card">
+                        <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=500&h=300&fit=crop" alt="Technology" class="featured-image">
+                        <h3 class="featured-title">التكنولوجيا والابتكار</h3>
+                        <p class="featured-description">كن جزءاً من ثورة التقنية واستثمر في مشاريع تشكل مستقبل المنطقة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="hero-slide" data-slide="4">
+            <div class="hero-background" style="background-image: url('https://images.unsplash.com/photo-1551818255-e6e10975bc17?w=1920&h=1080&fit=crop');"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-pattern"></div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">السياحة والترفيه</h1>
+                    <p class="hero-subtitle">وجهات عالمية تجذب الملايين</p>
+                    <p class="hero-description">
+                        استثمر في قطاع السياحة المتنامي والمشاريع الترفيهية العملاقة التي تستقطب السياح من جميع أنحاء العالم.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#" class="hero-btn hero-btn-primary">
+                            مشاريع السياحة ←
+                        </a>
+                        <a href="#" class="hero-btn hero-btn-secondary">
+                            عرض الفرص
+                        </a>
+                    </div>
+                    
+                </div>
+                <div class="hero-image-container">
+                    <div class="hero-featured-card">
+                        <img src="https://images.unsplash.com/photo-1551818255-e6e10975bc17?w=500&h=300&fit=crop" alt="Tourism" class="featured-image">
+                        <h3 class="featured-title">السياحة والترفيه</h3>
+                        <p class="featured-description">استثمر في قطاع السياحة المزدهر وحقق عوائد استثنائية في أسرع القطاعات نمواً</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <div class="carousel-nav prev" onclick="changeSlide(-1)">
+            <svg viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg>
+        </div>
+        <div class="carousel-nav next" onclick="changeSlide(1)">
+            <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+        </div>
+
+        <!-- Thumbnail Carousel -->
+        <div class="thumbnail-carousel">
+            <div class="carousel-container">
+                <div class="thumbnail-item active" onclick="goToSlide(0)">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=300&h=200&fit=crop" alt="Vision 2030" class="thumbnail-image">
+                    <div class="thumbnail-overlay">
+                        <div class="thumbnail-title">استثمر في مستقبل المملكة</div>
+                        <div class="thumbnail-subtitle">رؤية 2030</div>
+                    </div>
+                </div>
+                <div class="thumbnail-item" onclick="goToSlide(1)">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=300&h=200&fit=crop" alt="Infrastructure" class="thumbnail-image">
+                    <div class="thumbnail-overlay">
+                        <div class="thumbnail-title">مشاريع البنية التحتية</div>
+                        <div class="thumbnail-subtitle">+500 مليار ريال</div>
+                    </div>
+                </div>
+                <div class="thumbnail-item" onclick="goToSlide(2)">
+                    <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=300&h=200&fit=crop" alt="Green Energy" class="thumbnail-image">
+                    <div class="thumbnail-overlay">
+                        <div class="thumbnail-title">الطاقة المتجددة</div>
+                        <div class="thumbnail-subtitle">مستقبل أخضر</div>
+                    </div>
+                </div>
+                <div class="thumbnail-item" onclick="goToSlide(3)">
+                    <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=300&h=200&fit=crop" alt="Technology" class="thumbnail-image">
+                    <div class="thumbnail-overlay">
+                        <div class="thumbnail-title">التكنولوجيا والابتكار</div>
+                        <div class="thumbnail-subtitle">التحول الرقمي</div>
+                    </div>
+                </div>
+                <div class="thumbnail-item" onclick="goToSlide(4)">
+                    <img src="https://images.unsplash.com/photo-1551818255-e6e10975bc17?w=300&h=200&fit=crop" alt="Tourism" class="thumbnail-image">
+                    <div class="thumbnail-overlay">
+                        <div class="thumbnail-title">السياحة والترفيه</div>
+                        <div class="thumbnail-subtitle">100 مليون سائح</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide Counter -->
+        <div class="slide-counter" id="slideCounter">
+            <span id="currentSlideNumber">1</span> / <span id="totalSlides">5</span>
+        </div>
+
+       
     </section>
 
-    <!-- الفوتر -->
-    <footer class="bg-primary text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <div class="flex items-center mb-6">
-                        <div class="w-10 h-10 bg-white text-primary rounded-full flex items-center justify-center text-xl font-bold mr-3">
-                            ٢٠٣٠
-                        </div>
-                        <div class="text-2xl font-bold">رؤية المملكة</div>
-                    </div>
-                    <p class="text-gray-300 mb-6">نساهم في تحقيق رؤية المملكة 2030 من خلال مشاريع تنموية شاملة تخدم حاضر المملكة ومستقبلها.</p>
-                </div>
-                
-                <div>
-                    <h3 class="text-xl font-bold mb-6">روابط سريعة</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-300 hover:text-yellow-300 transition">الرئيسية</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-yellow-300 transition">مشاريعنا</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-yellow-300 transition">الاستثمار</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-yellow-300 transition">الشركاء</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-xl font-bold mb-6">المشاريع</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-300 hover:text-yellow-300 transition">البنية التحتية</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-yellow-300 transition">المدن الذكية</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-yellow-300 transition">الطاقة المتجددة</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-yellow-300 transition">الرعاية الصحية</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-xl font-bold mb-6">تواصل معنا</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-center">
-                            <i class="fas fa-phone text-yellow-300 ml-3"></i>
-                            <span class="text-gray-300">+966 11 123 4567</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-envelope text-yellow-300 ml-3"></i>
-                            <span class="text-gray-300">info@vision2030.gov.sa</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-map-marker-alt text-yellow-300 ml-3"></i>
-                            <span class="text-gray-300">الرياض، المملكة العربية السعودية</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-400">
-                <p>جميع الحقوق محفوظة © رؤية المملكة 2030</p>
-            </div>
-        </div>
-    </footer>
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float">
+        <svg viewBox="0 0 32 32">
+            <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-4.713 1.262 1.262-4.669-0.292-0.508c-1.207-2.100-1.847-4.507-1.847-6.957 0-7.51 6.11-13.62 13.62-13.62s13.62 6.11 13.62 13.62-6.11 13.62-13.62 13.62zM21.305 19.26c-0.346-0.174-2.049-1.007-2.366-1.123-0.316-0.117-0.547-0.174-0.776 0.174s-0.892 1.123-1.094 1.347c-0.201 0.231-0.403 0.26-0.749 0.087s-1.46-0.538-2.779-1.715c-1.027-0.915-1.72-2.045-1.922-2.391s-0.022-0.536 0.152-0.709c0.156-0.155 0.346-0.403 0.518-0.605s0.231-0.346 0.346-0.577c0.116-0.231 0.058-0.433-0.028-0.605s-0.776-1.87-1.063-2.565c-0.28-0.672-0.56-0.58-0.776-0.591-0.2-0.010-0.431-0.012-0.661-0.012s-0.603 0.087-0.92 0.433c-0.316 0.346-1.206 1.179-1.206 2.873s1.235 3.333 1.406 3.561c0.172 0.231 2.395 3.654 5.799 5.125 0.811 0.352 1.445 0.562 1.938 0.719 0.814 0.257 1.555 0.221 2.141 0.134 0.653-0.097 2.049-0.831 2.337-1.636s0.289-1.494 0.202-1.636c-0.086-0.14-0.317-0.231-0.663-0.403z"/>
+        </svg>
+    </div>
 
-    <!-- JavaScript -->
     <script>
-        // بيانات الصور والمحتوى
-        const galleryData = [
-            {
-                id: 0,
-                title: "مشاريع البنية التحتية",
-                description: "مشاريع البنية التحتية المتطورة تشمل شبكات الطرق الحديثة، والجسور، والمطارات، والموانئ التي تعزز من كفاءة النقل والمواصلات في المملكة وتدعم النمو الاقتصادي.",
-                image: "https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-                person: {
-                    name: "المهندس أحمد العلي",
-                    role: "مدير مشاريع البنية التحتية",
-                    image: "https://randomuser.me/api/portraits/men/32.jpg"
-                }
-            },
-            {
-                id: 1,
-                title: "المدن الذكية",
-                description: "بناء مدن ذكية تستخدم التكنولوجيا الحديثة لتحسين جودة الحياة، مع التركيز على الاستدامة البيئية وكفاءة استخدام الموارد.",
-                image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-                person: {
-                    name: "الدكتورة سارة القحطاني",
-                    role: "خبيرة المدن الذكية",
-                    image: "https://randomuser.me/api/portraits/women/44.jpg"
-                }
-            },
-            {
-                id: 2,
-                title: "الطاقة المتجددة",
-                description: "استثمارات ضخمة في مشاريع الطاقة الشمسية وطاقة الرياح لتحقيق الاستدامة البيئية وتنويع مصادر الطاقة في المملكة.",
-                image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-                person: {
-                    name: "المهندس خالد الشمري",
-                    role: "مدير مشاريع الطاقة المتجددة",
-                    image: "https://randomuser.me/api/portraits/men/75.jpg"
-                }
-            },
-            {
-                id: 3,
-                title: "الرعاية الصحية",
-                description: "تطوير البنية التحتية الصحية وإنشاء مستشفيات ومستوصفات متطورة لتقديم أفضل الخدمات الطبية للمواطنين والمقيمين.",
-                image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1153&q=80",
-                person: {
-                    name: "الدكتور محمد الأحمدي",
-                    role: "مدير تطوير الخدمات الصحية",
-                    image: "https://randomuser.me/api/portraits/men/22.jpg"
-                }
-            },
-            {
-                id: 4,
-                title: "التعليم والتدريب",
-                description: "إنشاء جامعات ومدارس ومعاهد تدريب متطورة لتأهيل الكوادر الوطنية وتمكينهم من قيادة مستقبل المملكة.",
-                image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-                person: {
-                    name: "الدكتورة نورة السديري",
-                    role: "مديرة تطوير التعليم",
-                    image: "https://randomuser.me/api/portraits/women/33.jpg"
-                }
-            },
-            {
-                id: 5,
-                title: "السياحة والترفيه",
-                description: "تنمية قطاع السياحة والترفيه من خلال مشاريع ضخمة تجذب الزوار من جميع أنحاء العالم وتعزز الاقتصاد المحلي.",
-                image: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1194&q=80",
-                person: {
-                    name: "الأستاذ فيصل الناصر",
-                    role: "مدير مشاريع السياحة",
-                    image: "https://randomuser.me/api/portraits/men/55.jpg"
-                }
-            }
-        ];
-
-        // عناصر DOM
-        const mainImage = document.getElementById('mainImage');
-        const mainContent = document.getElementById('mainContent');
-        const imageTitle = document.getElementById('imageTitle');
-        const imageDescription = document.getElementById('imageDescription');
-        const thumbnails = document.querySelectorAll('.gallery-thumbnail');
+        // حل المشكلة: تم تبسيط الكود لإزالة التعقيدات
         
-        // تغيير الصورة والمحتوى
-        function changeGalleryItem(index) {
-            const item = galleryData[index];
+        // Variables
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-slide');
+        const thumbnails = document.querySelectorAll('.thumbnail-item');
+        let autoSlideInterval;
+        const SLIDE_DURATION = 5000; // 5 ثواني
+
+        // Navigation Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Set navbar to transparent on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.remove('scrolled');
+        });
+
+        // Slide Functions - SIMPLIFIED
+        function showSlide(index) {
+            // Hide all slides
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+
+            // Update thumbnails
+            thumbnails.forEach((thumb, i) => {
+                thumb.classList.remove('active');
+                if (i === index) {
+                    thumb.classList.add('active');
+                }
+            });
+
+            currentSlide = index;
             
-            // إضافة تأثير التلاشي للصورة
-            mainImage.style.opacity = '0';
+            // Update slide counter
+            updateSlideCounter();
+        }
+
+        function changeSlide(direction) {
+            let newIndex = currentSlide + direction;
             
-            setTimeout(() => {
-                // تغيير الصورة
-                mainImage.src = item.image;
-                mainImage.alt = item.title;
+            if (newIndex >= slides.length) {
+                newIndex = 0;
+            } else if (newIndex < 0) {
+                newIndex = slides.length - 1;
+            }
+            
+            showSlide(newIndex);
+        }
+
+        function goToSlide(index) {
+            showSlide(index);
+        }
+
+        // Update slide counter
+        function updateSlideCounter() {
+            const currentSlideNumber = document.getElementById('currentSlideNumber');
+            const totalSlides = document.getElementById('totalSlides');
+            
+            if (currentSlideNumber && totalSlides) {
+                currentSlideNumber.textContent = currentSlide + 1;
+                totalSlides.textContent = slides.length;
+            }
+        }
+
+        // Auto slide function - SIMPLIFIED
+        function startAutoSlide() {
+            console.log('بدء التغيير التلقائي - كل 5 ثواني');
+            autoSlideInterval = setInterval(() => {
+                console.log('تغيير الشريحة تلقائياً...');
                 
-                // إعادة الظهور مع تأثير
-                mainImage.style.opacity = '1';
-                
-                // إضافة تأثير للمحتوى
-                mainContent.classList.remove('slide-in-right');
-                void mainContent.offsetWidth; // إعادة التدفق لتفعيل الأنيميشن
-                mainContent.classList.add('slide-in-right');
-                
-                // تغيير المحتوى النصي
-                imageTitle.textContent = item.title;
-                imageDescription.textContent = item.description;
-                
-                // تحديث صورة الشخص
-                const personImage = mainContent.querySelector('img');
-                if (personImage) {
-                    personImage.src = item.person.image;
-                    personImage.alt = item.person.name;
+                let nextSlide = currentSlide + 1;
+                if (nextSlide >= slides.length) {
+                    nextSlide = 0;
                 }
                 
-                // تحديث اسم الشخص ودوره
-                const personName = mainContent.querySelector('.font-medium.text-white');
-                const personRole = mainContent.querySelector('.text-sm.text-gray-300');
+                showSlide(nextSlide);
+            }, SLIDE_DURATION);
+        }
+
+        // Initialize - SIMPLIFIED
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('تهيئة عرض الشرائح...');
+            
+            // Initialize slide counter
+            updateSlideCounter();
+            
+            // Show first slide
+            showSlide(0);
+            
+            // Start auto slide immediately
+            startAutoSlide();
+            
+            // Add click events to thumbnails
+            thumbnails.forEach((thumbnail, index) => {
+                thumbnail.addEventListener('click', () => {
+                    // Reset auto slide when user interacts
+                    clearInterval(autoSlideInterval);
+                    goToSlide(index);
+                    startAutoSlide();
+                });
+            });
+            
+            // Pause auto-slide on hover (optional)
+            const heroSection = document.querySelector('.hero-section');
+            
+            heroSection.addEventListener('mouseenter', () => {
+                clearInterval(autoSlideInterval);
+                console.log('التغيير التلقائي متوقف مؤقتاً');
+            });
+            
+            heroSection.addEventListener('mouseleave', () => {
+                startAutoSlide();
+                console.log('التغيير التلقائي مستأنف');
+            });
+        });
+        
+        // Make functions globally accessible
+        window.changeSlide = function(direction) {
+            clearInterval(autoSlideInterval);
+            changeSlide(direction);
+            startAutoSlide();
+        };
+        
+        window.goToSlide = function(index) {
+            clearInterval(autoSlideInterval);
+            goToSlide(index);
+            startAutoSlide();
+        };
+    </script>
+
+    <section class="bg-white min-h-screen py-8 md:py-16 px-4">
+         <div class="max-w-7xl mx-auto">
+        <!-- Header Section -->
+        <div class="text-center mb-12 md:mb-16">
+            <div class="flex items-center justify-center gap-3 mb-6 flex-wrap">
+                <span class="dareen-project-badge">
+                    ⭐ مشاريع حصرية
+                </span>
+                <span class="dareen-project-badge">
+                    🏗️ درين للمقاولات
+                </span>
+                <span class="dareen-project-badge">
+                    📍 المملكة العربية السعودية
+                </span>
+            </div>
+            
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 md:mb-6">
+                المشاريع الهندسية الكبرى
+            </h1>
+            
+            <p class="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-4">
+                نفخر بتقديم حلول هندسية متكاملة لأضخم المشاريع في المملكة العربية السعودية
+            </p>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
+            <!-- Left Side - Featured Project Slideshow -->
+            <div class="order-2 lg:order-1">
+                <!-- Slideshow Container -->
+                <div class="relative rounded-2xl md:rounded-3xl overflow-hidden shadow-xl dareen-card-hover h-[500px] md:h-[600px] bg-gray-100">
+                    <div class="absolute inset-0" id="dareenSlideshow">
+                        <!-- مشروع 1 -->
+                        <div class="dareen-slide absolute inset-0 w-full h-full dareen-slide-transition opacity-100" data-dareen-slide="1">
+                            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1200&h=800&fit=crop" 
+                                 alt="مشروع ناطحة السحاب" 
+                                 class="w-full h-full object-cover">
+                            <div class="absolute inset-0 dareen-overlay flex flex-col justify-end p-6 md:p-8">
+                                <div class="flex gap-2 mb-3 md:mb-4 flex-wrap">
+                                    <span class="px-3 py-1 bg-green-600 rounded-full text-white text-xs md:text-sm font-medium">
+                                        🏗️ جاري التنفيذ
+                                    </span>
+                                    <span class="px-3 py-1 bg-blue-600 rounded-full text-white text-xs md:text-sm">
+                                        🏙️ ناطحة سحاب
+                                    </span>
+                                    <span class="px-3 py-1 bg-gray-800/80 backdrop-blur-sm rounded-full text-white text-xs md:text-sm">
+                                        📍 الرياض
+                                    </span>
+                                </div>
+                                
+                                <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-3">
+                                    برج درين للأعمال
+                                </h2>
+                                
+                                <p class="text-white/90 text-sm md:text-base lg:text-lg mb-3 md:mb-4 max-w-lg">
+                                    أطول برج للأعمال في المملكة بارتفاع 350 متراً، يضم 80 طابقاً من المكاتب الفاخرة والمرافق التجارية المتطورة
+                                </p>
+                                
+                                <div class="grid grid-cols-2 gap-4 mb-4">
+                                    <div class="text-white">
+                                        <div class="text-lg font-bold">2.8 مليار</div>
+                                        <div class="text-sm">قيمة المشروع</div>
+                                    </div>
+                                    <div class="text-white">
+                                        <div class="text-lg font-bold">36 شهر</div>
+                                        <div class="text-sm">مدة التنفيذ</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex gap-3">
+                                    <button class="flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 bg-white/20 backdrop-blur-md rounded-xl text-white hover:bg-white/30 transition-all text-sm md:text-base">
+                                        <span>📋</span>
+                                        <span>تفاصيل المشروع</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- مشروع 2 -->
+                        <div class="dareen-slide absolute inset-0 w-full h-full dareen-slide-transition opacity-0" data-dareen-slide="2">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop" 
+                                 alt="مشروع مجمع تجاري" 
+                                 class="w-full h-full object-cover">
+                            <div class="absolute inset-0 dareen-overlay flex flex-col justify-end p-6 md:p-8">
+                                <div class="flex gap-2 mb-3 md:mb-4 flex-wrap">
+                                    <span class="px-3 py-1 bg-green-500 rounded-full text-white text-xs md:text-sm font-medium">
+                                        ✅ منجز
+                                    </span>
+                                    <span class="px-3 py-1 bg-yellow-600 rounded-full text-white text-xs md:text-sm">
+                                        🛍️ مجمع تجاري
+                                    </span>
+                                    <span class="px-3 py-1 bg-gray-800/80 backdrop-blur-sm rounded-full text-white text-xs md:text-sm">
+                                        📍 جدة
+                                    </span>
+                                </div>
+                                
+                                <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-3">
+                                    مجمع درين التجاري العالمي
+                                </h2>
+                                
+                                <p class="text-white/90 text-sm md:text-base lg:text-lg mb-3 md:mb-4 max-w-lg">
+                                    أكبر مجمع تجاري في المنطقة الغربية بمساحة 500,000 متر مربع، يضم أكثر من 500 محل تجاري عالمي
+                                </p>
+                                
+                                <div class="grid grid-cols-2 gap-4 mb-4">
+                                    <div class="text-white">
+                                        <div class="text-lg font-bold">1.5 مليار</div>
+                                        <div class="text-sm">قيمة المشروع</div>
+                                    </div>
+                                    <div class="text-white">
+                                        <div class="text-lg font-bold">28 شهر</div>
+                                        <div class="text-sm">مدة التنفيذ</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex gap-3">
+                                    <button class="flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 bg-white/20 backdrop-blur-md rounded-xl text-white hover:bg-white/30 transition-all text-sm md:text-base">
+                                        <span>📊</span>
+                                        <span>تقرير المشروع</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- مشروع 3 -->
+                        <div class="dareen-slide absolute inset-0 w-full h-full dareen-slide-transition opacity-0" data-dareen-slide="3">
+                            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&h=800&fit=crop" 
+                                 alt="مشروع مدينة طبية" 
+                                 class="w-full h-full object-cover">
+                            <div class="absolute inset-0 dareen-overlay flex flex-col justify-end p-6 md:p-8">
+                                <div class="flex gap-2 mb-3 md:mb-4 flex-wrap">
+                                    <span class="px-3 py-1 bg-green-600 rounded-full text-white text-xs md:text-sm font-medium">
+                                        🏗️ جاري التنفيذ
+                                    </span>
+                                    <span class="px-3 py-1 bg-red-600 rounded-full text-white text-xs md:text-sm">
+                                        🏥 مدينة طبية
+                                    </span>
+                                    <span class="px-3 py-1 bg-gray-800/80 backdrop-blur-sm rounded-full text-white text-xs md:text-sm">
+                                        📍 الدمام
+                                    </span>
+                                </div>
+                                
+                                <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-3">
+                                    مدينة درين الطبية المتخصصة
+                                </h2>
+                                
+                                <p class="text-white/90 text-sm md:text-base lg:text-lg mb-3 md:mb-4 max-w-lg">
+                                    أول مدينة طبية متكاملة في المنطقة الشرقية تضم 5 مستشفيات تخصصية ومراكز بحثية عالمية
+                                </p>
+                                
+                                <div class="grid grid-cols-2 gap-4 mb-4">
+                                    <div class="text-white">
+                                        <div class="text-lg font-bold">3.2 مليار</div>
+                                        <div class="text-sm">قيمة المشروع</div>
+                                    </div>
+                                    <div class="text-white">
+                                        <div class="text-lg font-bold">42 شهر</div>
+                                        <div class="text-sm">مدة التنفيذ</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex gap-3">
+                                    <button class="flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 bg-white/20 backdrop-blur-md rounded-xl text-white hover:bg-white/30 transition-all text-sm md:text-base">
+                                        <span>⚕️</span>
+                                        <span>المرافق الطبية</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- مشروع 4 -->
+                        <div class="dareen-slide absolute inset-0 w-full h-full dareen-slide-transition opacity-0" data-dareen-slide="4">
+                            <img src="https://images.unsplash.com/photo-1590959651373-a3db0f38a961?w=1200&h=800&fit=crop" 
+                                 alt="مشروع مجمع سكني" 
+                                 class="w-full h-full object-cover">
+                            <div class="absolute inset-0 dareen-overlay flex flex-col justify-end p-6 md:p-8">
+                                <div class="flex gap-2 mb-3 md:mb-4 flex-wrap">
+                                    <span class="px-3 py-1 bg-green-500 rounded-full text-white text-xs md:text-sm font-medium">
+                                        ✅ منجز
+                                    </span>
+                                    <span class="px-3 py-1 bg-purple-600 rounded-full text-white text-xs md:text-sm">
+                                        🏘️ مجمع سكني
+                                    </span>
+                                    <span class="px-3 py-1 bg-gray-800/80 backdrop-blur-sm rounded-full text-white text-xs md:text-sm">
+                                        📍 المدينة المنورة
+                                    </span>
+                                </div>
+                                
+                                <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-3">
+                                    مجمع درين السكني الفاخر
+                                </h2>
+                                
+                                <p class="text-white/90 text-sm md:text-base lg:text-lg mb-3 md:mb-4 max-w-lg">
+                                    مجمع سكني فاخر يضم 1200 وحدة سكنية مع مرافق ترفيهية وتعليمية متكاملة على مساحة 800,000 م²
+                                </p>
+                                
+                                <div class="grid grid-cols-2 gap-4 mb-4">
+                                    <div class="text-white">
+                                        <div class="text-lg font-bold">2.1 مليار</div>
+                                        <div class="text-sm">قيمة المشروع</div>
+                                    </div>
+                                    <div class="text-white">
+                                        <div class="text-lg font-bold">30 شهر</div>
+                                        <div class="text-sm">مدة التنفيذ</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex gap-3">
+                                    <button class="flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 bg-white/20 backdrop-blur-md rounded-xl text-white hover:bg-white/30 transition-all text-sm md:text-base">
+                                        <span>🏠</span>
+                                        <span>الوحدات السكنية</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- مشروع 5 -->
+                        <div class="dareen-slide absolute inset-0 w-full h-full dareen-slide-transition opacity-0" data-dareen-slide="5">
+                            <img src="https://images.unsplash.com/photo-1448630360428-65456885c650?w=1200&h=800&fit=crop" 
+                                 alt="مشروع الطاقة المتجددة" 
+                                 class="w-full h-full object-cover">
+                            <div class="absolute inset-0 dareen-overlay flex flex-col justify-end p-6 md:p-8">
+                                <div class="flex gap-2 mb-3 md:mb-4 flex-wrap">
+                                    <span class="px-3 py-1 bg-green-600 rounded-full text-white text-xs md:text-sm font-medium">
+                                        🏗️ جاري التنفيذ
+                                    </span>
+                                    <span class="px-3 py-1 bg-yellow-500 rounded-full text-white text-xs md:text-sm">
+                                        ☀️ طاقة متجددة
+                                    </span>
+                                    <span class="px-3 py-1 bg-gray-800/80 backdrop-blur-sm rounded-full text-white text-xs md:text-sm">
+                                        📍 تبوك
+                                    </span>
+                                </div>
+                                
+                                <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-3">
+                                    محطة درين للطاقة الشمسية
+                                </h2>
+                                
+                                <p class="text-white/90 text-sm md:text-base lg:text-lg mb-3 md:mb-4 max-w-lg">
+                                    أكبر محطة للطاقة الشمسية في الشرق الأوسط بقدرة إنتاجية 2 جيجاوات، تغذي 500,000 منزل بالطاقة النظيفة
+                                </p>
+                                
+                                <div class="grid grid-cols-2 gap-4 mb-4">
+                                    <div class="text-white">
+                                        <div class="text-lg font-bold">4.5 مليار</div>
+                                        <div class="text-sm">قيمة المشروع</div>
+                                    </div>
+                                    <div class="text-white">
+                                        <div class="text-lg font-bold">48 شهر</div>
+                                        <div class="text-sm">مدة التنفيذ</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex gap-3">
+                                    <button class="flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 bg-white/20 backdrop-blur-md rounded-xl text-white hover:bg-white/30 transition-all text-sm md:text-base">
+                                        <span>🔋</span>
+                                        <span>معلومات الطاقة</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slideshow Controls -->
+                    <div class="absolute bottom-6 left-6 flex items-center gap-4">
+                        <button id="dareenPrevBtn" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all">
+                            ←
+                        </button>
+                        <button id="dareenNextBtn" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all">
+                            →
+                        </button>
+                    </div>
+                    
+                    <!-- Slideshow Indicators -->
+                    <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-2">
+                        <button class="dareen-slide-indicator w-3 h-3 rounded-full bg-white" data-dareen-slide="1"></button>
+                        <button class="dareen-slide-indicator w-3 h-3 rounded-full bg-white/50" data-dareen-slide="2"></button>
+                        <button class="dareen-slide-indicator w-3 h-3 rounded-full bg-white/50" data-dareen-slide="3"></button>
+                        <button class="dareen-slide-indicator w-3 h-3 rounded-full bg-white/50" data-dareen-slide="4"></button>
+                        <button class="dareen-slide-indicator w-3 h-3 rounded-full bg-white/50" data-dareen-slide="5"></button>
+                    </div>
+                </div>
                 
-                if (personName) personName.textContent = item.person.name;
-                if (personRole) personRole.textContent = item.person.role;
+                <!-- Project Counter -->
+                <div class="mt-6 flex items-center justify-between">
+                    <div class="text-gray-700">
+                        <span class="font-bold text-green-700">5</span> مشروع استراتيجي
+                    </div>
+                   
+                </div>
+            </div>
+
+            <!-- Right Side Content -->
+            <div class="order-1 lg:order-2 space-y-6 md:space-y-8">
+                <!-- Company Intro Card -->
+                <div class="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 border border-gray-200 shadow-lg">
+                    <h3 class="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 md:mb-4">
+                        أسرع طريق لتأسيس مشروعك
+                    </h3>
+                    <h4 class="text-lg md:text-xl lg:text-2xl font-semibold text-green-700 mb-4 md:mb-6">
+                        مع شركة درين للمقاولات
+                    </h4>
+                    <p class="text-gray-600 text-base md:text-lg mb-6 md:mb-8">
+                        إجراءات مبسطة وسريعة للحصول على تراخيص البناء والتنفيذ الفوري
+                    </p>
+                    
+                    <!-- Statistics Grid -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-6 md:mb-8">
+                        <div class="bg-green-50 rounded-xl md:rounded-2xl p-3 md:p-4 text-center border border-green-100">
+                            <div class="text-2xl md:text-3xl font-bold text-green-700 mb-1 md:mb-2">25</div>
+                            <div class="text-gray-700 text-xs md:text-sm">منطقة إدارية</div>
+                        </div>
+                        <div class="bg-green-50 rounded-xl md:rounded-2xl p-3 md:p-4 text-center border border-green-100">
+                            <div class="text-2xl md:text-3xl font-bold text-green-700 mb-1 md:mb-2">+80</div>
+                            <div class="text-gray-700 text-xs md:text-sm">مشروع كبير</div>
+                        </div>
+                        <div class="bg-green-50 rounded-xl md:rounded-2xl p-3 md:p-4 text-center border border-green-100">
+                            <div class="text-2xl md:text-3xl font-bold text-green-700 mb-1 md:mb-2">+14B</div>
+                            <div class="text-gray-700 text-xs md:text-sm">ريال استثمارات</div>
+                        </div>
+                        <div class="bg-green-50 rounded-xl md:rounded-2xl p-3 md:p-4 text-center border border-green-100">
+                            <div class="text-2xl md:text-3xl font-bold text-green-700 mb-1 md:mb-2">2030</div>
+                            <div class="text-gray-700 text-xs md:text-sm">رؤية المملكة</div>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-3 md:gap-4">
+                        <button class="flex-1 px-6 md:px-8 py-3 md:py-4 bg-green-600 text-white rounded-xl font-bold text-base md:text-lg dareen-btn-glow hover:bg-green-700">
+                            ابدأ الاستثمار الآن
+                        </button>
+                        <button class="flex-1 px-6 md:px-8 py-3 md:py-4 bg-gray-100 text-gray-800 rounded-xl font-semibold border-2 border-gray-200 hover:bg-gray-200 transition-all text-base md:text-lg">
+                            دليل المستثمر
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="grid sm:grid-cols-2 gap-4 md:gap-6">
+                    <!-- Project Card 1 -->
+                    <div class="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 border border-gray-200 shadow-md dareen-card-hover" data-dareen-project="1">
+                        <div class="mb-3 md:mb-4">
+                            <span class="px-2 md:px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs md:text-sm font-medium">
+                                🏢 برج أعمال
+                            </span>
+                        </div>
+                        <h4 class="text-lg md:text-xl font-bold text-gray-900 mb-1 md:mb-2">
+                            برج درين للأعمال
+                        </h4>
+                        <p class="text-gray-600 mb-3 md:mb-4 text-sm md:text-base">
+                            أطول برج للأعمال في المملكة بارتفاع 350 متراً
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-green-700 text-xs md:text-sm font-medium">📍 الرياض</span>
+                            <button class="text-green-600 hover:text-green-800 transition-colors text-sm md:text-base dareen-project-detail-btn" data-dareen-project="1">
+                                عرض التفاصيل →
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 border border-gray-200 shadow-md dareen-card-hover" data-dareen-project="2">
+                        <div class="mb-3 md:mb-4">
+                            <span class="px-2 md:px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-xs md:text-sm font-medium">
+                                🛍️ مجمع تجاري
+                            </span>
+                        </div>
+                        <h4 class="text-lg md:text-xl font-bold text-gray-900 mb-1 md:mb-2">
+                            مجمع درين التجاري
+                        </h4>
+                        <p class="text-gray-600 mb-3 md:mb-4 text-sm md:text-base">
+                            أكبر مجمع تجاري في المنطقة الغربية
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-green-700 text-xs md:text-sm font-medium">📍 جدة</span>
+                            <button class="text-green-600 hover:text-green-800 transition-colors text-sm md:text-base dareen-project-detail-btn" data-dareen-project="2">
+                                عرض التفاصيل →
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 border border-gray-200 shadow-md dareen-card-hover" data-dareen-project="3">
+                        <div class="mb-3 md:mb-4">
+                            <span class="px-2 md:px-3 py-1 bg-red-100 text-red-700 rounded-full text-xs md:text-sm font-medium">
+                                🏥 مدينة طبية
+                            </span>
+                        </div>
+                        <h4 class="text-lg md:text-xl font-bold text-gray-900 mb-1 md:mb-2">
+                            مدينة درين الطبية
+                        </h4>
+                        <p class="text-gray-600 mb-3 md:mb-4 text-sm md:text-base">
+                            أول مدينة طبية متكاملة في المنطقة الشرقية
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-green-700 text-xs md:text-sm font-medium">📍 الدمام</span>
+                            <button class="text-green-600 hover:text-green-800 transition-colors text-sm md:text-base dareen-project-detail-btn" data-dareen-project="3">
+                                عرض التفاصيل →
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 4 -->
+                    <div class="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 border border-gray-200 shadow-md dareen-card-hover" data-dareen-project="4">
+                        <div class="mb-3 md:mb-4">
+                            <span class="px-2 md:px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs md:text-sm font-medium">
+                                🏘️ مجمع سكني
+                            </span>
+                        </div>
+                        <h4 class="text-lg md:text-xl font-bold text-gray-900 mb-1 md:mb-2">
+                            مجمع درين السكني
+                        </h4>
+                        <p class="text-gray-600 mb-3 md:mb-4 text-sm md:text-base">
+                            مجمع سكني فاخر بمرافق متكاملة
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-green-700 text-xs md:text-sm font-medium">📍 المدينة</span>
+                            <button class="text-green-600 hover:text-green-800 transition-colors text-sm md:text-base dareen-project-detail-btn" data-dareen-project="4">
+                                عرض التفاصيل →
+                            </button>
+                        </div>
+                    </div>
+                </div>
                 
-            }, 300); // وقت الانتظار لتأثير التلاشي
+                <!-- Project Features -->
+                <div class="bg-green-50 rounded-2xl p-6 border border-green-100">
+                    <h4 class="text-lg md:text-xl font-bold text-gray-900 mb-4">مميزات مشاريع درين</h4>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center gap-2">
+                            <span class="text-green-600">✓</span>
+                            <span class="text-sm md:text-base text-gray-700">تصميم عصري</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-green-600">✓</span>
+                            <span class="text-sm md:text-base text-gray-700">مواد عالية الجودة</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-green-600">✓</span>
+                            <span class="text-sm md:text-base text-gray-700">تسليم في الوقت المحدد</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-green-600">✓</span>
+                            <span class="text-sm md:text-base text-gray-700">ضمان 10 سنوات</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+     <script>
+        // Dareen Slideshow Functionality
+        let dareenCurrentSlide = 1;
+        const dareenTotalSlides = 5;
+        let dareenSlideInterval;
+        
+        function dareenShowSlide(slideNumber) {
+            // Hide all dareen slides
+            document.querySelectorAll('.dareen-slide').forEach(slide => {
+                slide.style.opacity = '0';
+            });
+            
+            // Show the selected slide
+            const slideToShow = document.querySelector(`.dareen-slide[data-dareen-slide="${slideNumber}"]`);
+            if (slideToShow) {
+                slideToShow.style.opacity = '1';
+            }
+            
+            // Update indicators
+            document.querySelectorAll('.dareen-slide-indicator').forEach(indicator => {
+                if (parseInt(indicator.getAttribute('data-dareen-slide')) === slideNumber) {
+                    indicator.classList.remove('bg-white/50');
+                    indicator.classList.add('bg-white');
+                } else {
+                    indicator.classList.remove('bg-white');
+                    indicator.classList.add('bg-white/50');
+                }
+            });
+            
+            dareenCurrentSlide = slideNumber;
         }
         
-        // إضافة حدث النقر على الصور المصغرة
-        thumbnails.forEach(thumbnail => {
-            thumbnail.addEventListener('click', function() {
-                const index = parseInt(this.getAttribute('data-index'));
-                
-                // تحديث الصورة النشطة
-                thumbnails.forEach(thumb => thumb.classList.remove('active'));
-                this.classList.add('active');
-                
-                // تغيير المحتوى
-                changeGalleryItem(index);
-            });
-        });
+        function dareenNextSlide() {
+            let next = dareenCurrentSlide + 1;
+            if (next > dareenTotalSlides) next = 1;
+            dareenShowSlide(next);
+        }
         
-        // تفعيل التمرير السلس للروابط
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
+        function dareenPrevSlide() {
+            let prev = dareenCurrentSlide - 1;
+            if (prev < 1) prev = dareenTotalSlides;
+            dareenShowSlide(prev);
+        }
         
-        // تأثيرات الأزرار
-        document.querySelectorAll('.btn-primary').forEach(button => {
-            button.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-3px)';
+        // Initialize dareen slideshow
+        document.addEventListener('DOMContentLoaded', function() {
+            dareenShowSlide(1);
+            
+            // Auto slide every 5 seconds
+            dareenSlideInterval = setInterval(dareenNextSlide, 5000);
+            
+            // Button controls
+            document.getElementById('dareenPrevBtn').addEventListener('click', function() {
+                clearInterval(dareenSlideInterval);
+                dareenPrevSlide();
+                dareenSlideInterval = setInterval(dareenNextSlide, 5000);
             });
             
-            button.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
+            document.getElementById('dareenNextBtn').addEventListener('click', function() {
+                clearInterval(dareenSlideInterval);
+                dareenNextSlide();
+                dareenSlideInterval = setInterval(dareenNextSlide, 5000);
             });
-        });
-        
-        // تفعيل تغيير تلقائي للصور كل 5 ثوانٍ
-        let currentIndex = 0;
-        setInterval(() => {
-            currentIndex = (currentIndex + 1) % galleryData.length;
             
-            // تحديث الصورة النشطة
-            thumbnails.forEach(thumb => thumb.classList.remove('active'));
-            thumbnails[currentIndex].classList.add('active');
-            
-            // تغيير المحتوى
-            changeGalleryItem(currentIndex);
-        }, 5000); // كل 5 ثوانٍ
-        
-        // إضافة تأثيرات للصناديق الإحصائية عند التمرير
-        const statBoxes = document.querySelectorAll('.stat-box');
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
+            // Indicator controls
+            document.querySelectorAll('.dareen-slide-indicator').forEach(indicator => {
+                indicator.addEventListener('click', function() {
+                    clearInterval(dareenSlideInterval);
+                    const slideNumber = parseInt(this.getAttribute('data-dareen-slide'));
+                    dareenShowSlide(slideNumber);
+                    dareenSlideInterval = setInterval(dareenNextSlide, 5000);
+                });
             });
-        }, { threshold: 0.1 });
-        
-        statBoxes.forEach(box => {
-            box.style.opacity = '0';
-            box.style.transform = 'translateY(20px)';
-            box.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-            observer.observe(box);
+            
+            // Project card click events
+            document.querySelectorAll('.dareen-project-detail-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const projectNumber = this.getAttribute('data-dareen-project');
+                    clearInterval(dareenSlideInterval);
+                    dareenShowSlide(parseInt(projectNumber));
+                    dareenSlideInterval = setInterval(dareenNextSlide, 5000);
+                    
+                    // Scroll to slideshow if on mobile
+                    if (window.innerWidth < 1024) {
+                        document.querySelector('#dareenSlideshow').scrollIntoView({ 
+                            behavior: 'smooth',
+                            block: 'center'
+                        });
+                    }
+                });
+            });
+            
+            // Project card hover events
+            document.querySelectorAll('[data-dareen-project]').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    const projectNumber = this.getAttribute('data-dareen-project');
+                    const projectBtn = this.querySelector('.dareen-project-detail-btn');
+                    projectBtn.style.color = '#0f4c3a';
+                    projectBtn.style.fontWeight = 'bold';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    const projectBtn = this.querySelector('.dareen-project-detail-btn');
+                    projectBtn.style.color = '';
+                    projectBtn.style.fontWeight = '';
+                });
+            });
+            
+            // Pause auto-slide on hover
+            const dareenSlideshowContainer = document.querySelector('#dareenSlideshow').parentElement;
+            dareenSlideshowContainer.addEventListener('mouseenter', () => {
+                clearInterval(dareenSlideInterval);
+            });
+            
+            dareenSlideshowContainer.addEventListener('mouseleave', () => {
+                dareenSlideInterval = setInterval(dareenNextSlide, 5000);
+            });
+            
+            // Add scroll animations
+            const dareenObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+    
+            document.querySelectorAll('.dareen-card-hover').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'all 0.6s ease-out';
+                dareenObserver.observe(card);
+            });
         });
     </script>
+        <!-- About Us Section -->
+    <section id="about" class="py-16 md:py-24 px-4 md:px-8">
+        <div class="max-w-7xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-16 md:mb-20">
+                <span class="about-badge mb-4">
+                    <i class="fas fa-building mr-2"></i> مؤسسة رائدة منذ 2005
+                </span>
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                    <span class="text-[#0f4c3a]">من نحن</span> في مؤسسة درين للمقاولات
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+                    نخبة من الخبراء والمتخصصين في مجال الصيانة والنظافة وتشغيل المشاريع الحكومية
+                </p>
+            </div>
+
+            <!-- Main Content -->
+            <div class="grid lg:grid-cols-2 gap-12 mb-16">
+                <!-- Left Column - Experience & Stats -->
+                <div class="space-y-8">
+                    <!-- Experience Card -->
+                    <div class="about-card-shadow bg-white rounded-2xl md:rounded-3xl p-6 md:p-8">
+                        <div class="about-icon-circle">
+                            <i class="fas fa-award text-2xl text-white"></i>
+                        </div>
+                        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4 about-accent-line">
+                            خبرتنا الواسعة
+                        </h2>
+                        <p class="text-gray-700 text-lg mb-6">
+                            نمتلك في مؤسسة درين للمقاولات خبرة واسعة وكبيرة في مجال الصيانة والنظافة، وتشغيل المشاريع الحكومية مع الكثير من القطاعات الحكومية والخاصة.
+                        </p>
+                        
+                        <!-- Stats Grid -->
+                        <div class="grid grid-cols-2 gap-4 mt-8">
+                            <div class="about-stat-card animate-fadeInUp" style="animation-delay: 0.1s;">
+                                <div class="text-3xl md:text-4xl font-bold mb-2">+18</div>
+                                <div class="text-sm md:text-base">سنة خبرة</div>
+                            </div>
+                            <div class="about-stat-card animate-fadeInUp" style="animation-delay: 0.2s;">
+                                <div class="text-3xl md:text-4xl font-bold mb-2">623+</div>
+                                <div class="text-sm md:text-base">عامل وفني</div>
+                            </div>
+                            <div class="about-stat-card animate-fadeInUp" style="animation-delay: 0.3s;">
+                                <div class="text-3xl md:text-4xl font-bold mb-2">50+</div>
+                                <div class="text-sm md:text-base">مشروع منجز</div>
+                            </div>
+                            <div class="about-stat-card animate-fadeInUp" style="animation-delay: 0.4s;">
+                                <div class="text-3xl md:text-4xl font-bold mb-2">100%</div>
+                                <div class="text-sm md:text-base">رضا العملاء</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Workforce Card -->
+                    <div class="about-card-shadow bg-white rounded-2xl md:rounded-3xl p-6 md:p-8">
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-6">
+                            <i class="fas fa-users text-[#0f4c3a] ml-2"></i>
+                            كوادرنا المتخصصة
+                        </h3>
+                        <p class="text-gray-700 mb-6">
+                            نمتلك عمالة بعدد يتجاوز <span class="font-bold text-[#0f4c3a]">(623) عاملًا وفنيين</span> متخصصين في:
+                        </p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-[#f8f9fa] rounded-xl p-4 border-r-4 border-[#0f4c3a]">
+                                <i class="fas fa-snowflake text-[#0f4c3a] mb-2"></i>
+                                <div class="font-semibold">التكييف والتبريد</div>
+                            </div>
+                            <div class="bg-[#f8f9fa] rounded-xl p-4 border-r-4 border-[#1a7a5e]">
+                                <i class="fas fa-bolt text-[#1a7a5e] mb-2"></i>
+                                <div class="font-semibold">الكهرباء</div>
+                            </div>
+                            <div class="bg-[#f8f9fa] rounded-xl p-4 border-r-4 border-[#0f4c3a]">
+                                <i class="fas fa-laptop-house text-[#0f4c3a] mb-2"></i>
+                                <div class="font-semibold">أنظمة التحكم</div>
+                            </div>
+                            <div class="bg-[#f8f9fa] rounded-xl p-4 border-r-4 border-[#1a7a5e]">
+                                <i class="fas fa-user-hard-hat text-[#1a7a5e] mb-2"></i>
+                                <div class="font-semibold">مهندسين متخصصين</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Projects & Timeline -->
+                <div class="space-y-8">
+                    <!-- Major Projects -->
+                    <div class="about-card-shadow bg-white rounded-2xl md:rounded-3xl p-6 md:p-8">
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-6">
+                            <i class="fas fa-project-diagram text-[#0f4c3a] ml-2"></i>
+                            مشاريعنا البارزة
+                        </h3>
+                        <p class="text-gray-700 mb-6">
+                            تشغيل وصيانة المشاريع الحكومية مع العديد من القطاعات الهامة:
+                        </p>
+                        
+                        <div class="about-timeline">
+                            <!-- Timeline Item 1 -->
+                            <div class="about-timeline-item">
+                                <h4 class="text-lg font-bold text-gray-900 mb-2">فرع الجامعة بمحافظة الأفلاج</h4>
+                                <p class="text-gray-600">خدمات الصيانة والنظافة الشاملة</p>
+                            </div>
+                            
+                            <!-- Timeline Item 2 -->
+                            <div class="about-timeline-item">
+                                <h4 class="text-lg font-bold text-gray-900 mb-2">مدينة الرياضية بالوادي</h4>
+                                <p class="text-gray-600">تشغيل وصيانة المرافق الرياضية</p>
+                            </div>
+                            
+                            <!-- Timeline Item 3 -->
+                            <div class="about-timeline-item">
+                                <h4 class="text-lg font-bold text-gray-900 mb-2">مبنى هيئة حقوق الإنسان بالرياض</h4>
+                                <p class="text-gray-600">خدمات الصيانة المتكاملة</p>
+                            </div>
+                            
+                            <!-- Timeline Item 4 -->
+                            <div class="about-timeline-item">
+                                <h4 class="text-lg font-bold text-gray-900 mb-2">كليات السليل</h4>
+                                <p class="text-gray-600">تشغيل وصيانة المنشآت التعليمية</p>
+                            </div>
+                            
+                            <!-- Timeline Item 5 -->
+                            <div class="about-timeline-item">
+                                <h4 class="text-lg font-bold text-gray-900 mb-2">نادي الشعلة بالخرج</h4>
+                                <p class="text-gray-600">خدمات الصيانة والنظافة</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Current Projects -->
+                    <div class="about-card-shadow bg-white rounded-2xl md:rounded-3xl p-6 md:p-8">
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-6">
+                            <i class="fas fa-hard-hat text-[#0f4c3a] ml-2"></i>
+                            مشاريعنا الحالية
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="about-achievement-card">
+                                <div class="flex items-start">
+                                    <i class="fas fa-university text-[#0f4c3a] text-xl mt-1 ml-3"></i>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900 mb-1">الحرس الوطني بمكة المكرمة</h4>
+                                        <p class="text-gray-600 text-sm">خدمات الصيانة والتشغيل</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="about-achievement-card">
+                                <div class="flex items-start">
+                                    <i class="fas fa-graduation-cap text-[#1a7a5e] text-xl mt-1 ml-3"></i>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900 mb-1">وزارة التعليم</h4>
+                                        <p class="text-gray-600 text-sm">تشغيل وصيانة المنشآت التعليمية</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="about-achievement-card">
+                                <div class="flex items-start">
+                                    <i class="fas fa-landmark text-[#0f4c3a] text-xl mt-1 ml-3"></i>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900 mb-1">جهات حكومية أخرى</h4>
+                                        <p class="text-gray-600 text-sm">شراكات استراتيجية متعددة</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        
+
+         
+
+            <!-- Partners -->
+            <div class="about-card-shadow bg-white rounded-2xl md:rounded-3xl p-8">
+                <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-10">شركاؤنا</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="about-partner-logo">
+                        <div class="text-center">
+                            <i class="fas fa-university text-3xl text-[#0f4c3a] mb-2"></i>
+                            <div class="font-bold text-gray-800">الجامعات</div>
+                        </div>
+                    </div>
+                    <div class="about-partner-logo">
+                        <div class="text-center">
+                            <i class="fas fa-landmark text-3xl text-[#1a7a5e] mb-2"></i>
+                            <div class="font-bold text-gray-800">الهيئات الحكومية</div>
+                        </div>
+                    </div>
+                    <div class="about-partner-logo">
+                        <div class="text-center">
+                            <i class="fas fa-graduation-cap text-3xl text-[#0f4c3a] mb-2"></i>
+                            <div class="font-bold text-gray-800">وزارة التعليم</div>
+                        </div>
+                    </div>
+                    <div class="about-partner-logo">
+                        <div class="text-center">
+                            <i class="fas fa-shield-alt text-3xl text-[#1a7a5e] mb-2"></i>
+                            <div class="font-bold text-gray-800">الحرس الوطني</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add animation class to elements when they come into view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fadeInUp');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            // Observe elements to animate
+            document.querySelectorAll('.about-stat-card, .about-achievement-card, .about-partner-logo').forEach((el) => {
+                observer.observe(el);
+            });
+
+            // Add hover effects
+            document.querySelectorAll('.about-card-shadow').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+
+        <!-- Director's Message Section -->
+    <section id="director-message" class="py-16 md:py-20 px-4 md:px-8">
+        <div class="max-w-5xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-12 md:mb-16">
+                <span class="director-title-badge">
+                    <i class="fas fa-user-tie mr-2"></i> كلمة المدير العام
+                </span>
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    رسالة من <span class="text-[#0f4c3a]">قيادتنا</span>
+                </h1>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    نظرة مستقبلية ورؤية طموحة لمسيرة مؤسسة درين للمقاولات
+                </p>
+            </div>
+
+            <!-- Main Message Card -->
+            <div class="director-card bg-white p-6 md:p-10 animate-fadeInUp">
+                <i class="fas fa-quote-right director-quote-icon"></i>
+                
+                <div class="relative z-10">
+                    <!-- Opening Statement -->
+                    <div class="director-highlight">
+                        <p class="text-lg md:text-xl text-gray-800 leading-relaxed">
+                            <span class="font-bold text-[#0f4c3a]">البداية كانت حلمًا،</span> ثم أصبحت – بفضل الله – واقعًا ملموسًا، وبجهد العاملين المخلصين، حيث عبرنا الصعاب في مؤسسة درين للمقاولات، وحققنا النجاحات تلو النجاحات، حتى وصلنا إلى مقدمة الصفوة من الشركات في المملكة.
+                        </p>
+                    </div>
+                    
+                    <!-- First Paragraph -->
+                    <div class="mb-8">
+                        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                            لم نألُ جهدًا حتى نحافظ على موقعنا في الصدارة، وفي ظل النمو الاقتصادي والنهضة العمرانية الكبرى التي تمر بها المملكة، والموقع الجغرافي المتميز، واكبت المملكة تحركات اقتصادية حديثة ومتطورة ساعدت على جذب المستثمرين وزيادة النشاط الاقتصادي في البلاد.
+                        </p>
+                    </div>
+                    
+                    <!-- Second Paragraph -->
+                    <div class="mb-8">
+                        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                            ولذلك فقد حرصنا على التطوير المستمر لرفع كفاءة مؤسسة درين للمقاولات، بسياسات وخطط استراتيجية نطمح من خلالها إلى المساهمة الفعّالة في إثراء مجالتنا، وكسب ثقة عملائنا، من خلال ترسيخ مبادئ المصداقية والمهنية والالتزام.
+                        </p>
+                    </div>
+                    
+                    <!-- Third Paragraph -->
+                    <div class="mb-8">
+                        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                            منذ أن بدأنا في مؤسسة درين للمقاولات ممارسة نشاطنا، ونمت سمعتنا لدى عملائنا كإحدى أبرز الشركات في المملكة في جودة الأداء على كافة الأصعدة، وهو ما نلمسه من رضا عملائنا، والذي يُعد أساس نجاحنا ومبعث فخرنا.
+                        </p>
+                    </div>
+                    
+                    <!-- Final Paragraph -->
+                    <div class="director-accent-border pr-4">
+                        <p class="text-gray-700 text-lg leading-relaxed">
+                            ويقف خلف كل ذلك فريق عمل يعمل بروح واحدة، لدى كل فرد منه إحساس قوي بالمسؤولية، ويبذل كل ما بوسعه ليقدم أفضل ما يمكن الحصول عليه.
+                        </p>
+                    </div>
+                    
+                    <!-- Signature -->
+                    <div class="text-left mt-10">
+                        <div class="director-signature">
+                            المدير العام
+                        </div>
+                        <p class="text-gray-600 mt-2">مؤسسة درين للمقاولات</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Key Principles -->
+            <div class="grid md:grid-cols-3 gap-6 mt-12">
+                <div class="bg-white rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-[#0f4c3a] to-[#1a7a5e] rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-handshake text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">المصداقية</h3>
+                    <p class="text-gray-600">الشفافية والصدق في جميع تعاملاتنا</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-[#0f4c3a] to-[#1a7a5e] rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-medal text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">المهنية</h3>
+                    <p class="text-gray-600">التخصص والخبرة في تنفيذ المشاريع</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-[#0f4c3a] to-[#1a7a5e] rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-clock text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">الالتزام</h3>
+                    <p class="text-gray-600">الالتزام بالمواعيد والجودة المتفق عليها</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add hover effects
+            const cards = document.querySelectorAll('.director-card, .bg-white.rounded-xl');
+            
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+            
+            // Add scroll animation
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fadeInUp');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            document.querySelectorAll('.bg-white.rounded-xl').forEach((el) => {
+                observer.observe(el);
+            });
+        });
+    </script>
+
+        <!-- Services Section -->
+    <section id="services" class="py-16 md:py-24 px-4 md:px-8">
+        <div class="max-w-7xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-16 md:mb-20">
+                <span class="service-badge mb-4">
+                    <i class="fas fa-cogs mr-2"></i> خبرة واسعة في مجالات متعددة
+                </span>
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 section-title">
+                    <span class="text-[#0f4c3a]">خدماتنا</span> المتكاملة
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto">
+                    نتمتع في مؤسسة درين للمقاولات بخبرة واسعة اكتسبناها من خلال تنفيذنا للعديد من المشاريع الضخمة في مجالات متعددة
+                </p>
+            </div>
+
+            <!-- Categories -->
+            <div class="mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">مجالات تخصصنا</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                    <div class="service-category">
+                        <div class="flex items-center">
+                            <i class="fas fa-road text-[#0f4c3a] text-xl ml-3"></i>
+                            <h3 class="text-lg font-bold text-gray-900">البنية التحتية</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="service-category">
+                        <div class="flex items-center">
+                            <i class="fas fa-tools text-[#1a7a5e] text-xl ml-3"></i>
+                            <h3 class="text-lg font-bold text-gray-900">التشغيل والصيانة</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="service-category">
+                        <div class="flex items-center">
+                            <i class="fas fa-hard-hat text-[#0f4c3a] text-xl ml-3"></i>
+                            <h3 class="text-lg font-bold text-gray-900">أعمال المقاولات الخاصة</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="service-category">
+                        <div class="flex items-center">
+                            <i class="fas fa-building text-[#1a7a5e] text-xl ml-3"></i>
+                            <h3 class="text-lg font-bold text-gray-900">المباني السكنية والتجارية</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="service-category">
+                        <div class="flex items-center">
+                            <i class="fas fa-bolt text-[#0f4c3a] text-xl ml-3"></i>
+                            <h3 class="text-lg font-bold text-gray-900">أعمال تمديدات الكهرباء</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="service-category">
+                        <div class="flex items-center">
+                            <i class="fas fa-cogs text-[#1a7a5e] text-xl ml-3"></i>
+                            <h3 class="text-lg font-bold text-gray-900">الأعمال الميكانيكية</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-r from-[#0f4c3a] to-[#1a7a5e] rounded-2xl p-8 text-white">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-2/3 mb-6 md:mb-0">
+                            <h3 class="text-xl md:text-2xl font-bold mb-4">خبرة متخصصة في التشغيل والصيانة</h3>
+                            <p class="opacity-90">
+                                نفذنا العديد من الأعمال المتخصصة في مجال التشغيل والصيانة، مما أكسبنا خبرة كبيرة في تلبية احتياجات المباني بعد تسليمها وضمان استمرارية كفاءتها.
+                            </p>
+                        </div>
+                        <div class="md:w-1/3 text-center">
+                            <div class="inline-block bg-white/20 rounded-full p-6 backdrop-blur-sm">
+                                <i class="fas fa-certificate text-4xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Our Services -->
+            <div>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-12 text-center">خدماتنا المتخصصة</h2>
+                
+                <!-- Services Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="services-grid">
+                    
+                    <!-- Service 1: Government Buildings -->
+                    <div class="service-card animate-fadeInUp" style="animation-delay: 0.1s">
+                        <div class="service-image-container">
+                            <div class="service-number">01</div>
+                            <div class="service-type-badge">
+                                <i class="fas fa-landmark ml-1"></i> حكومي
+                            </div>
+                            <!-- هنا ضع رابط الصورة الفعلية -->
+                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                                 alt="المباني الحكومية" 
+                                 class="service-image">
+                            <div class="service-overlay">
+                                <div class="text-right">
+                                    <h4 class="text-white text-xl font-bold mb-2">المباني الحكومية</h4>
+                                    <p class="text-white text-sm opacity-90">تشغيل وصيانة متكاملة</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">المباني الحكومية</h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                تشغيل وصيانة المباني الحكومية وفق أحدث المعايير الفنية والهندسية المعتمدة، مع ضمان الكفاءة التشغيلية العالية والالتزام بمواصفات السلامة.
+                            </p>
+                            <div class="flex space-x-4 space-x-reverse">
+                                <button class="btn-call flex-1">
+                                    <i class="fas fa-phone ml-2"></i>
+                                    إتصل بنا
+                                </button>
+                                <button class="btn-whatsapp flex-1">
+                                    <i class="fab fa-whatsapp ml-2"></i>
+                                    واتساب
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Service 2: Commercial Buildings -->
+                    <div class="service-card animate-fadeInUp" style="animation-delay: 0.2s">
+                        <div class="service-image-container">
+                            <div class="service-number">02</div>
+                            <div class="service-type-badge">
+                                <i class="fas fa-store ml-1"></i> تجاري
+                            </div>
+                            <!-- هنا ضع رابط الصورة الفعلية -->
+                            <img src="https://images.unsplash.com/photo-1487956382158-bb926046304a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                                 alt="المباني التجارية" 
+                                 class="service-image">
+                            <div class="service-overlay">
+                                <div class="text-right">
+                                    <h4 class="text-white text-xl font-bold mb-2">المباني التجارية</h4>
+                                    <p class="text-white text-sm opacity-90">صيانة مستمرة وتشغيل فعال</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">المباني التجارية</h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                خدمات متكاملة لتشغيل وصيانة المباني التجارية لضمان استمرارية العمل وتحسين تجربة المستخدمين والعملاء.
+                            </p>
+                            <div class="flex space-x-4 space-x-reverse">
+                                <button class="btn-call flex-1">
+                                    <i class="fas fa-phone ml-2"></i>
+                                    إتصل بنا
+                                </button>
+                                <button class="btn-whatsapp flex-1">
+                                    <i class="fab fa-whatsapp ml-2"></i>
+                                    واتساب
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Service 3: Industrial Buildings -->
+                    <div class="service-card animate-fadeInUp" style="animation-delay: 0.3s">
+                        <div class="service-image-container">
+                            <div class="service-number">03</div>
+                            <div class="service-type-badge">
+                                <i class="fas fa-industry ml-1"></i> صناعي
+                            </div>
+                            <!-- هنا ضع رابط الصورة الفعلية -->
+                            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                                 alt="المباني الصناعية" 
+                                 class="service-image">
+                            <div class="service-overlay">
+                                <div class="text-right">
+                                    <h4 class="text-white text-xl font-bold mb-2">المباني الصناعية</h4>
+                                    <p class="text-white text-sm opacity-90">صيانة وتشغيل متخصص</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">المباني الصناعية</h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                صيانة وتشغيل المنشآت الصناعية بكفاءة عالية، مع التركيز على السلامة والاستدامة التشغيلية والحد من الأعطال.
+                            </p>
+                            <div class="flex space-x-4 space-x-reverse">
+                                <button class="btn-call flex-1">
+                                    <i class="fas fa-phone ml-2"></i>
+                                    إتصل بنا
+                                </button>
+                                <button class="btn-whatsapp flex-1">
+                                    <i class="fab fa-whatsapp ml-2"></i>
+                                    واتساب
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Service 4: Educational Buildings -->
+                    <div class="service-card animate-fadeInUp" style="animation-delay: 0.4s">
+                        <div class="service-image-container">
+                            <div class="service-number">04</div>
+                            <div class="service-type-badge">
+                                <i class="fas fa-graduation-cap ml-1"></i> تعليمي
+                            </div>
+                            <!-- هنا ضع رابط الصورة الفعلية -->
+                            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                                 alt="المباني التعليمية" 
+                                 class="service-image">
+                            <div class="service-overlay">
+                                <div class="text-right">
+                                    <h4 class="text-white text-xl font-bold mb-2">المباني التعليمية</h4>
+                                    <p class="text-white text-sm opacity-90">بيئة تعليمية آمنة</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">المباني التعليمية</h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                تشغيل وصيانة المنشآت التعليمية لتوفير بيئة آمنة ومناسبة للعملية التعليمية والتعلمية بجميع مرافقها.
+                            </p>
+                            <div class="flex space-x-4 space-x-reverse">
+                                <button class="btn-call flex-1">
+                                    <i class="fas fa-phone ml-2"></i>
+                                    إتصل بنا
+                                </button>
+                                <button class="btn-whatsapp flex-1">
+                                    <i class="fab fa-whatsapp ml-2"></i>
+                                    واتساب
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Service 5: Operation & Maintenance -->
+                    <div class="service-card animate-fadeInUp" style="animation-delay: 0.5s">
+                        <div class="service-image-container">
+                            <div class="service-number">05</div>
+                            <div class="service-type-badge">
+                                <i class="fas fa-cogs ml-1"></i> تشغيل وصيانة
+                            </div>
+                            <!-- هنا ضع رابط الصورة الفعلية -->
+                            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                                 alt="التشغيل والصيانة" 
+                                 class="service-image">
+                            <div class="service-overlay">
+                                <div class="text-right">
+                                    <h4 class="text-white text-xl font-bold mb-2">التشغيل والصيانة</h4>
+                                    <p class="text-white text-sm opacity-90">خدمات متكاملة</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">التشغيل والصيانة المتكاملة</h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                نبدأ بدراسة الجدوى مروراً بالتصميم الأولي والتفصيلي وصولاً إلى التنفيذ بأعلى معايير الجودة والكفاءة.
+                            </p>
+                            <div class="flex space-x-4 space-x-reverse">
+                                <button class="btn-call flex-1">
+                                    <i class="fas fa-phone ml-2"></i>
+                                    إتصل بنا
+                                </button>
+                                <button class="btn-whatsapp flex-1">
+                                    <i class="fab fa-whatsapp ml-2"></i>
+                                    واتساب
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Service 6: Electrical Works -->
+                    <div class="service-card animate-fadeInUp" style="animation-delay: 0.6s">
+                        <div class="service-image-container">
+                            <div class="service-number">06</div>
+                            <div class="service-type-badge">
+                                <i class="fas fa-bolt ml-1"></i> كهرباء
+                            </div>
+                            <!-- هنا ضع رابط الصورة الفعلية -->
+                            <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                                 alt="تمديدات الكهرباء" 
+                                 class="service-image">
+                            <div class="service-overlay">
+                                <div class="text-right">
+                                    <h4 class="text-white text-xl font-bold mb-2">تمديدات الكهرباء</h4>
+                                    <p class="text-white text-sm opacity-90">أنظمة متطورة وآمنة</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">أعمال تمديدات الكهرباء</h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                تصميم وتنفيذ أنظمة الكهرباء بكافة أنواعها مع ضمان السلامة والكفاءة التشغيلية العالية والالتزام بالمواصفات القياسية.
+                            </p>
+                            <div class="flex space-x-4 space-x-reverse">
+                                <button class="btn-call flex-1">
+                                    <i class="fas fa-phone ml-2"></i>
+                                    إتصل بنا
+                                </button>
+                                <button class="btn-whatsapp flex-1">
+                                    <i class="fab fa-whatsapp ml-2"></i>
+                                    واتساب
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Process Section -->
+            <div class="mt-20 bg-white rounded-2xl p-8 shadow-xl">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">مراحل العمل في مشاريعنا</h2>
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="text-center p-6 border-2 border-[#0f4c3a] border-dashed rounded-xl">
+                        <div class="text-3xl font-bold text-[#0f4c3a] mb-3">1</div>
+                        <h3 class="font-bold text-gray-900 mb-2">دراسة الجدوى</h3>
+                        <p class="text-gray-600 text-sm">تحليل شامل للمشروع</p>
+                    </div>
+                    
+                    <div class="text-center p-6 border-2 border-[#1a7a5e] border-dashed rounded-xl">
+                        <div class="text-3xl font-bold text-[#1a7a5e] mb-3">2</div>
+                        <h3 class="font-bold text-gray-900 mb-2">التصميم الأولي</h3>
+                        <p class="text-gray-600 text-sm">وضع المخططات الأولية</p>
+                    </div>
+                    
+                    <div class="text-center p-6 border-2 border-[#0f4c3a] border-dashed rounded-xl">
+                        <div class="text-3xl font-bold text-[#0f4c3a] mb-3">3</div>
+                        <h3 class="font-bold text-gray-900 mb-2">التصميم التفصيلي</h3>
+                        <p class="text-gray-600 text-sm">إعداد المخططات التنفيذية</p>
+                    </div>
+                    
+                    <div class="text-center p-6 border-2 border-[#1a7a5e] border-dashed rounded-xl">
+                        <div class="text-3xl font-bold text-[#1a7a5e] mb-3">4</div>
+                        <h3 class="font-bold text-gray-900 mb-2">التنفيذ والصيانة</h3>
+                        <p class="text-gray-600 text-sm">التنفيذ ثم التشغيل الدائم</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Call to Action -->
+            <div class="mt-20 text-center">
+                <div class="bg-gradient-to-r from-[#0f4c3a] to-[#1a7a5e] rounded-2xl p-10 text-white">
+                    <h3 class="text-2xl md:text-3xl font-bold mb-6">هل لديك مشروع أو تحتاج إلى استشارة؟</h3>
+                    <p class="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
+                        فريقنا من الخبراء جاهز لمساعدتك في تقديم الحلول المناسبة لمشروعك
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <button class="btn-call px-10 py-4 text-lg">
+                            <i class="fas fa-phone ml-3"></i>
+                            إتصل بنا الآن
+                        </button>
+                        <button class="btn-whatsapp px-10 py-4 text-lg">
+                            <i class="fab fa-whatsapp ml-3"></i>
+                            تواصل عبر واتساب
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add scroll animation for service cards
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe all service cards
+            document.querySelectorAll('.service-card').forEach((card) => {
+                observer.observe(card);
+            });
+            
+            // Add hover animation delay to service categories
+            const categories = document.querySelectorAll('.service-category');
+            categories.forEach((category, index) => {
+                category.style.transitionDelay = `${index * 0.05}s`;
+            });
+            
+            // Add click functionality for buttons
+            document.querySelectorAll('.btn-call').forEach(button => {
+                button.addEventListener('click', function() {
+                    // هنا يمكنك إضافة رقم الهاتف الفعلي
+                    window.location.href = 'tel:+966500000000';
+                });
+            });
+            
+            document.querySelectorAll('.btn-whatsapp').forEach(button => {
+                button.addEventListener('click', function() {
+                    // هنا يمكنك إضافة رقم الواتساب الفعلي
+                    window.open('https://wa.me/966500000000', '_blank');
+                });
+            });
+            
+            // Preload images for better user experience
+            const imageUrls = [
+                'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
+                'https://images.unsplash.com/photo-1487956382158-bb926046304a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
+                'https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
+                'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
+                'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80'
+            ];
+            
+            imageUrls.forEach(url => {
+                const img = new Image();
+                img.src = url;
+            });
+        });
+    </script>
+</body>
+
+
+
 </body>
 </html>

@@ -3,860 +3,391 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>استثمر في مستقبل المملكة - رؤية 2030</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <title>مشاريع شركة درين للمقاولات</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap');
+        
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
         }
-
-        body {
-            font-family: 'Tajawal', sans-serif;
-            overflow-x: hidden;
-            background: #0a0a0a;
+        
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-
-        /* Hero Container */
-        .hero-section {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            min-height: 700px;
-            overflow: hidden;
-        }
-
-        /* Background Slider */
-        .hero-slider {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-        }
-
-        .slide {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            opacity: 0;
-            transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .slide.active {
-            opacity: 1;
-            z-index: 1;
-        }
-
-        .slide-bg {
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-
-        .slide-bg::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(0, 102, 51, 0.85) 0%, rgba(10, 10, 10, 0.9) 50%, rgba(0, 0, 0, 0.95) 100%);
-        }
-
-        /* Header */
-        .hero-header {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 25px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 100;
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
-        }
-
-        .logo-text {
-            font-size: 22px;
-            font-weight: 800;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .lang-switch {
-            display: flex;
-            gap: 15px;
-            align-items: center;
-        }
-
-        .lang-btn {
-            padding: 8px 18px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: #fff;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 14px;
-            font-weight: 500;
-        }
-
-        .lang-btn:hover, .lang-btn.active {
-            background: #006633;
-            border-color: #006633;
-        }
-
-        /* Content Container */
-        .hero-content {
-            position: relative;
-            z-index: 10;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 100px 50px 180px;
-        }
-
-        .content-wrapper {
-            max-width: 1400px;
-            width: 100%;
-            text-align: center;
-        }
-
-        /* Main Card */
-        .main-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 30px;
-            padding: 60px 80px;
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
-            margin-bottom: 50px;
-        }
-
-        .slide-title {
-            font-size: 72px;
-            font-weight: 800;
-            color: #fff;
-            margin-bottom: 30px;
-            line-height: 1.2;
-            opacity: 0;
-            transform: translateY(40px);
-            animation: slideUp 0.8s ease forwards 0.2s;
-        }
-
-        .slide-subtitle {
-            font-size: 28px;
-            font-weight: 500;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 25px;
-            line-height: 1.6;
-            opacity: 0;
-            transform: translateY(40px);
-            animation: slideUp 0.8s ease forwards 0.4s;
-        }
-
-        .slide-description {
-            font-size: 20px;
-            font-weight: 400;
-            color: rgba(255, 255, 255, 0.8);
-            line-height: 1.8;
-            max-width: 900px;
-            margin: 0 auto 40px;
-            opacity: 0;
-            transform: translateY(40px);
-            animation: slideUp 0.8s ease forwards 0.6s;
-        }
-
-        /* Stats */
-        .stats-row {
-            display: flex;
-            justify-content: center;
-            gap: 60px;
-            margin-top: 50px;
-            flex-wrap: wrap;
-            opacity: 0;
-            transform: translateY(40px);
-            animation: slideUp 0.8s ease forwards 0.8s;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, #006633 0%, #009944 100%);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 15px;
-            font-size: 32px;
-            box-shadow: 0 10px 30px rgba(0, 102, 51, 0.4);
-        }
-
-        .stat-number {
-            font-size: 52px;
-            font-weight: 800;
-            color: #fff;
-            margin-bottom: 8px;
-            display: block;
-        }
-
-        .stat-label {
-            font-size: 18px;
-            color: rgba(255, 255, 255, 0.7);
-            font-weight: 500;
-        }
-
-        /* CTA Buttons */
-        .cta-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 45px;
-            opacity: 0;
-            transform: translateY(40px);
-            animation: slideUp 0.8s ease forwards 1s;
-        }
-
-        .cta-btn {
-            padding: 18px 45px;
-            font-size: 20px;
-            font-weight: 700;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.4s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .cta-primary {
-            background: linear-gradient(135deg, #006633 0%, #009944 100%);
-            color: #fff;
-            box-shadow: 0 15px 40px rgba(0, 102, 51, 0.4);
-        }
-
-        .cta-primary:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 50px rgba(0, 102, 51, 0.6);
-        }
-
-        .cta-secondary {
-            background: rgba(255, 255, 255, 0.1);
-            color: #fff;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(10px);
-        }
-
-        .cta-secondary:hover {
-            background: rgba(255, 255, 255, 0.2);
-            border-color: rgba(255, 255, 255, 0.5);
-            transform: translateY(-5px);
-        }
-
-        /* Navigation Arrows */
-        .nav-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 60px;
-            height: 60px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            z-index: 50;
-            transition: all 0.3s ease;
-            font-size: 24px;
-            color: #fff;
-        }
-
-        .nav-arrow:hover {
-            background: rgba(0, 102, 51, 0.8);
-            border-color: #006633;
-            transform: translateY(-50%) scale(1.1);
-        }
-
-        .nav-arrow.prev {
-            left: 30px;
-        }
-
-        .nav-arrow.next {
-            right: 30px;
-        }
-
-        /* Thumbnail Gallery */
-        .thumbnail-gallery {
-            position: absolute;
-            bottom: 40px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 20px;
-            z-index: 50;
-            padding: 20px 40px;
-            background: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(20px);
-            border-radius: 25px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .thumbnail {
-            width: 180px;
-            height: 110px;
-            border-radius: 15px;
-            overflow: hidden;
-            cursor: pointer;
-            position: relative;
-            transition: all 0.4s ease;
-            border: 3px solid transparent;
-        }
-
-        .thumbnail:hover {
+        
+        .card-hover:hover {
             transform: translateY(-8px);
-            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
         }
-
-        .thumbnail.active {
-            border-color: #006633;
-            box-shadow: 0 10px 30px rgba(0, 102, 51, 0.5);
+        
+        .slide {
+            animation: fadeIn 1s ease-in-out;
         }
-
-        .thumbnail img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-
-        .thumbnail:hover img {
-            transform: scale(1.1);
-        }
-
-        .thumbnail::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
-            z-index: 1;
-        }
-
-        .thumbnail-label {
-            position: absolute;
-            bottom: 10px;
-            left: 10px;
-            right: 10px;
-            color: #fff;
-            font-size: 14px;
-            font-weight: 600;
-            z-index: 2;
-            text-align: center;
-        }
-
-        /* Progress Bar */
-        .progress-bar {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #006633 0%, #009944 100%);
-            width: 0%;
-            z-index: 60;
-            transition: width 0.1s linear;
-        }
-
-        /* Animations */
-        @keyframes slideUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
+        
         @keyframes fadeIn {
             from {
                 opacity: 0;
+                transform: scale(1.1);
             }
             to {
                 opacity: 1;
+                transform: scale(1);
             }
         }
-
-        /* Responsive */
-        @media (max-width: 1200px) {
-            .slide-title {
-                font-size: 56px;
-            }
-            .slide-subtitle {
-                font-size: 24px;
-            }
-            .main-card {
-                padding: 50px 60px;
-            }
+        
+        .btn-glow {
+            box-shadow: 0 0 20px rgba(0, 102, 51, 0.3);
+            transition: all 0.3s ease;
         }
-
+        
+        .btn-glow:hover {
+            box-shadow: 0 0 30px rgba(0, 102, 51, 0.5);
+            transform: scale(1.05);
+        }
+        
+        .overlay {
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.2) 100%);
+        }
+        
+        /* تحسينات للعرض على الجوال */
         @media (max-width: 768px) {
-            .hero-header {
-                padding: 20px;
-            }
-            .slide-title {
-                font-size: 40px;
-            }
-            .slide-subtitle {
-                font-size: 20px;
-            }
-            .slide-description {
-                font-size: 16px;
-            }
-            .main-card {
-                padding: 40px 30px;
-            }
-            .stats-row {
-                gap: 30px;
-            }
-            .stat-number {
-                font-size: 36px;
-            }
-            .thumbnail-gallery {
-                flex-wrap: wrap;
-                gap: 10px;
-                padding: 15px 20px;
-                bottom: 20px;
-            }
-            .thumbnail {
-                width: 120px;
-                height: 80px;
-            }
-            .cta-buttons {
+            .mobile-flex-col {
                 flex-direction: column;
             }
-            .nav-arrow {
-                width: 50px;
-                height: 50px;
+            
+            .mobile-text-center {
+                text-align: center;
+            }
+            
+            .mobile-full-width {
+                width: 100%;
             }
         }
     </style>
 </head>
-<body>
-    <div class="hero-section">
-        <!-- Progress Bar -->
-        <div class="progress-bar" id="progressBar"></div>
-
-        <!-- Header -->
-        <div class="hero-header">
-            <div class="logo-text">
-                <span>🇸🇦</span>
-                <span>رؤية السعودية 2030</span>
+<body class="bg-white min-h-screen py-8 md:py-16 px-4">
+    <div class="max-w-7xl mx-auto">
+        <!-- Header Section -->
+        <div class="text-center mb-12 md:mb-16">
+            <div class="flex items-center justify-center gap-3 mb-6 flex-wrap">
+                <span class="px-4 py-2 bg-green-50 text-green-700 border border-green-200 rounded-full text-sm font-medium">
+                    ⭐ استشارات هندسية متكاملة
+                </span>
+                <span class="px-4 py-2 bg-green-50 text-green-700 border border-green-200 rounded-full text-sm font-medium">
+                    🏗️ شركة درين للمقاولات
+                </span>
             </div>
-            <div class="lang-switch">
-                <button class="lang-btn active">العربية</button>
-                <button class="lang-btn">English</button>
-                <button class="lang-btn">Русский</button>
-            </div>
+            
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 md:mb-6">
+                المشاريع الهندسية الكبرى
+            </h1>
+            
+            <p class="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-4">
+                نفخر بتقديم حلول هندسية متكاملة لأضخم المشاريع في المملكة العربية السعودية
+            </p>
         </div>
 
-        <!-- Slider Container -->
-        <div class="hero-slider" id="heroSlider">
-            <!-- Slide 1 -->
-            <div class="slide active" data-slide="0">
-                <div class="slide-bg" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1590642916589-592bca10dfbf?w=1920&q=80');">
-                    <div class="hero-content">
-                        <div class="content-wrapper">
-                            <div class="main-card">
-                                <h1 class="slide-title">استثمر في مستقبل المملكة</h1>
-                                <h2 class="slide-subtitle">رؤية 2030 تفتح أفاقاً جديدة</h2>
-                                <p class="slide-description">
-                                    اكتشف فرصاً استثمارية في أكبر اقتصاد عربي واستفد من أكبر المشاريع التنموية في المنطقة
-                                    الدعم الى رفع مؤشر الأعمال الحرة واستثمر في أكبر المشاريع التنموية في المنطقة
-                                </p>
-                                <div class="stats-row">
-                                    <div class="stat-item">
-                                        <div class="stat-icon">🎯</div>
-                                        <span class="stat-number" data-target="2030">0</span>
-                                        <div class="stat-label">رؤية المستقبل</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-icon">📊</div>
-                                        <span class="stat-number" data-target="500">0+</span>
-                                        <div class="stat-label">مشروع متوفر</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-icon">🌍</div>
-                                        <span class="stat-number" data-target="13">0</span>
-                                        <div class="stat-label">منطقة اقتصادية</div>
-                                    </div>
-                                </div>
-                                <div class="cta-buttons">
-                                    <button class="cta-btn cta-primary">بدء الاستثمار الآن</button>
-                                    <button class="cta-btn cta-secondary">تصفح محفظة الفرص</button>
-                                </div>
-                            </div>
+        <!-- Main Content Grid -->
+        <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
+            <!-- Left Side - Featured Project Card with Slideshow (الآن على اليسار) -->
+            <div class="order-2 lg:order-1">
+                <div class="relative rounded-2xl md:rounded-3xl overflow-hidden shadow-xl card-hover h-[400px] md:h-[500px] bg-gray-100">
+                    <!-- Slideshow Container -->
+                    <div class="absolute inset-0" id="slideshow">
+                        <!-- Slides will be inserted here by JavaScript -->
+                    </div>
+                    
+                    <!-- Overlay Content -->
+                    <div class="absolute inset-0 overlay flex flex-col justify-end p-6 md:p-8">
+                        <div class="flex gap-2 mb-3 md:mb-4 flex-wrap">
+                            <span class="px-3 py-1 bg-green-600 rounded-full text-white text-xs md:text-sm font-medium">
+                                🏗️ جاري التنفيذ
+                            </span>
+                            <span class="px-3 py-1 bg-gray-800/80 backdrop-blur-sm rounded-full text-white text-xs md:text-sm">
+                                📍 الرياض
+                            </span>
+                        </div>
+                        
+                        <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-3">
+                            مشروع البوابة الشمالية السكني
+                        </h2>
+                        
+                        <p class="text-white/90 text-sm md:text-base lg:text-lg mb-3 md:mb-4 max-w-lg">
+                            أكبر مجمع سكني متكامل يضم وحدات سكنية عصرية ومرافق خدمية شاملة
+                        </p>
+                        
+                        <div class="flex gap-3">
+                            <button class="flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 bg-white/20 backdrop-blur-md rounded-xl text-white hover:bg-white/30 transition-all text-sm md:text-base">
+                                <span>⚙️</span>
+                                <span>استكشف تفاصيل المشروع</span>
+                            </button>
+                        </div>
+                        
+                        <div class="mt-3 md:mt-4 text-white text-xs md:text-sm">
+                            <span class="font-bold">مدة المشروع:</span> مدينة البوابة الشمالية للطاقة
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Slide 2 -->
-            <div class="slide" data-slide="1">
-                <div class="slide-bg" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=1920&q=80');">
-                    <div class="hero-content">
-                        <div class="content-wrapper">
-                            <div class="main-card">
-                                <h1 class="slide-title">مشاريع التقنية والابتكار</h1>
-                                <h2 class="slide-subtitle">منظومة الابتكار الرقمي</h2>
-                                <p class="slide-description">
-                                    استثمر في مستقبل التقنية مع مشاريع NEOM والمدن الذكية والذكاء الاصطناعي
-                                    فرص استثمارية غير محدودة في عالم التحول الرقمي والثورة التقنية
-                                </p>
-                                <div class="stats-row">
-                                    <div class="stat-item">
-                                        <div class="stat-icon">💻</div>
-                                        <span class="stat-number" data-target="100">0+</span>
-                                        <div class="stat-label">شركة تقنية</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-icon">🚀</div>
-                                        <span class="stat-number" data-target="250">0+</span>
-                                        <div class="stat-label">مشروع ابتكاري</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-icon">⚡</div>
-                                        <span class="stat-number" data-target="85">0%</span>
-                                        <div class="stat-label">نسبة النمو</div>
-                                    </div>
-                                </div>
-                                <div class="cta-buttons">
-                                    <button class="cta-btn cta-primary">استكشف الفرص</button>
-                                    <button class="cta-btn cta-secondary">تواصل مع الخبراء</button>
-                                </div>
-                            </div>
+            <!-- Right Side Content (الآن على اليمين) -->
+            <div class="order-1 lg:order-2 space-y-6 md:space-y-8">
+                <!-- Company Intro Card -->
+                <div class="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 border border-gray-200 shadow-lg">
+                    <h3 class="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 md:mb-4">
+                        أسرع طريق لتأسيس مشروعك
+                    </h3>
+                    <h4 class="text-lg md:text-xl lg:text-2xl font-semibold text-green-700 mb-4 md:mb-6">
+                        مع شركة درين للمقاولات
+                    </h4>
+                    <p class="text-gray-600 text-base md:text-lg mb-6 md:mb-8">
+                        إجراءات مبسطة وسريعة للحصول على تراخيص البناء والتنفيذ الفوري
+                    </p>
+                    
+                    <!-- Statistics Grid -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-6 md:mb-8">
+                        <div class="bg-green-50 rounded-xl md:rounded-2xl p-3 md:p-4 text-center border border-green-100">
+                            <div class="text-2xl md:text-3xl font-bold text-green-700 mb-1 md:mb-2">25</div>
+                            <div class="text-gray-700 text-xs md:text-sm">منطقة إدارية</div>
+                        </div>
+                        <div class="bg-green-50 rounded-xl md:rounded-2xl p-3 md:p-4 text-center border border-green-100">
+                            <div class="text-2xl md:text-3xl font-bold text-green-700 mb-1 md:mb-2">+80</div>
+                            <div class="text-gray-700 text-xs md:text-sm">مشروع كبير</div>
+                        </div>
+                        <div class="bg-green-50 rounded-xl md:rounded-2xl p-3 md:p-4 text-center border border-green-100">
+                            <div class="text-2xl md:text-3xl font-bold text-green-700 mb-1 md:mb-2">+2.5B</div>
+                            <div class="text-gray-700 text-xs md:text-sm">ريال استثمارات</div>
+                        </div>
+                        <div class="bg-green-50 rounded-xl md:rounded-2xl p-3 md:p-4 text-center border border-green-100">
+                            <div class="text-2xl md:text-3xl font-bold text-green-700 mb-1 md:mb-2">2030</div>
+                            <div class="text-gray-700 text-xs md:text-sm">رؤية المملكة</div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="slide" data-slide="2">
-                <div class="slide-bg" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80');">
-                    <div class="hero-content">
-                        <div class="content-wrapper">
-                            <div class="main-card">
-                                <h1 class="slide-title">قطاع البنية التحتية</h1>
-                                <h2 class="slide-subtitle">مشاريع البنية التحتية المتقدمة</h2>
-                                <p class="slide-description">
-                                    انضم إلى أضخم مشاريع البنية التحتية في الشرق الأوسط من طرق ومطارات وموانئ
-                                    استثمارات بمليارات الدولارات تفتح أبواب الفرص أمام المستثمرين
-                                </p>
-                                <div class="stats-row">
-                                    <div class="stat-item">
-                                        <div class="stat-icon">🏗️</div>
-                                        <span class="stat-number" data-target="300">0+</span>
-                                        <div class="stat-label">مشروع تحت الإنشاء</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-icon">🌆</div>
-                                        <span class="stat-number" data-target="45">0</span>
-                                        <div class="stat-label">مدينة جديدة</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-icon">💰</div>
-                                        <span class="stat-number" data-target="500">0</span>
-                                        <div class="stat-label">مليار دولار</div>
-                                    </div>
-                                </div>
-                                <div class="cta-buttons">
-                                    <button class="cta-btn cta-primary">اكتشف المشاريع</button>
-                                    <button class="cta-btn cta-secondary">احجز استشارة</button>
-                                </div>
-                            </div>
-                        </div>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-3 md:gap-4">
+                        <button class="flex-1 px-6 md:px-8 py-3 md:py-4 bg-green-600 text-white rounded-xl font-bold text-base md:text-lg btn-glow hover:bg-green-700">
+                            ابدأ الاستثمار الآن
+                        </button>
+                        <button class="flex-1 px-6 md:px-8 py-3 md:py-4 bg-gray-100 text-gray-800 rounded-xl font-semibold border-2 border-gray-200 hover:bg-gray-200 transition-all text-base md:text-lg">
+                            دليل المستثمر
+                        </button>
                     </div>
                 </div>
-            </div>
 
-            <!-- Slide 4 -->
-            <div class="slide" data-slide="3">
-                <div class="slide-bg" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1920&q=80');">
-                    <div class="hero-content">
-                        <div class="content-wrapper">
-                            <div class="main-card">
-                                <h1 class="slide-title">الاقتصاد الحرّ والريادة</h1>
-                                <h2 class="slide-subtitle">دعم الشركات الناشئة والمبتكرين</h2>
-                                <p class="slide-description">
-                                    برامج دعم شاملة للمستثمرين ورواد الأعمال مع تسهيلات استثنائية
-                                    ابدأ مشروعك في بيئة اقتصادية محفزة مع دعم حكومي وتمويل متنوع
-                                </p>
-                                <div class="stats-row">
-                                    <div class="stat-item">
-                                        <div class="stat-icon">📈</div>
-                                        <span class="stat-number" data-target="1200">0+</span>
-                                        <div class="stat-label">شركة ناشئة</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-icon">💡</div>
-                                        <span class="stat-number" data-target="50">0</span>
-                                        <div class="stat-label">مليار دولار تمويل</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-icon">🎯</div>
-                                        <span class="stat-number" data-target="95">0%</span>
-                                        <div class="stat-label">معدل النجاح</div>
-                                    </div>
-                                </div>
-                                <div class="cta-buttons">
-                                    <button class="cta-btn cta-primary">ابدأ مشروعك</button>
-                                    <button class="cta-btn cta-secondary">استشارة مجانية</button>
-                                </div>
-                            </div>
+                <!-- Projects Grid -->
+                <div class="grid sm:grid-cols-2 gap-4 md:gap-6">
+                    <!-- Project Card 1 -->
+                    <div class="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 border border-gray-200 shadow-md card-hover">
+                        <div class="mb-3 md:mb-4">
+                            <span class="px-2 md:px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs md:text-sm">
+                                🏢 تجاري
+                            </span>
+                        </div>
+                        <h4 class="text-lg md:text-xl font-bold text-gray-900 mb-1 md:mb-2">
+                            مشروع المركز التجاري
+                        </h4>
+                        <p class="text-gray-600 mb-3 md:mb-4 text-sm md:text-base">
+                            مجمع تجاري متكامل بمساحات واسعة ومرافق عصرية
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-green-700 text-xs md:text-sm font-medium">📍 جدة</span>
+                            <button class="text-green-600 hover:text-green-800 transition-colors text-sm md:text-base">
+                                اعرف المزيد ←
+                            </button>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <!-- Slide 5 -->
-            <div class="slide" data-slide="4">
-                <div class="slide-bg" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1541532713592-79a0317b6b77?w=1920&q=80');">
-                    <div class="hero-content">
-                        <div class="content-wrapper">
-                            <div class="main-card">
-                                <h1 class="slide-title">السياحة والترفيه</h1>
-                                <h2 class="slide-subtitle">مشاريع السياحة الترفيهية المستقبلية</h2>
-                                <p class="slide-description">
-                                    استثمر في قطاع السياحة المتنامي مع مشاريع ضخمة مثل البحر الأحمر والقدية
-                                    فرص استثمارية واعدة في صناعة الضيافة والترفيه والثقافة
-                                </p>
-                                <div class="stats-row">
-                                    <div class="stat-item">
-                                        <div class="stat-icon">🏖️</div>
-                                        <span class="stat-number" data-target="120">0+</span>
-                                        <div class="stat-label">وجهة سياحية</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-icon">🏨</div>
-                                        <span class="stat-number" data-target="800">0+</span>
-                                        <div class="stat-label">فندق ومنتجع</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-icon">✈️</div>
-                                        <span class="stat-number" data-target="100">0</span>
-                                        <div class="stat-label">مليون زائر</div>
-                                    </div>
-                                </div>
-                                <div class="cta-buttons">
-                                    <button class="cta-btn cta-primary">اكتشف الفرص السياحية</button>
-                                    <button class="cta-btn cta-secondary">شاهد المشاريع</button>
-                                </div>
-                            </div>
+                    <!-- Project Card 2 -->
+                    <div class="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 border border-gray-200 shadow-md card-hover">
+                        <div class="mb-3 md:mb-4">
+                            <span class="px-2 md:px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs md:text-sm">
+                                🏥 صحي
+                            </span>
+                        </div>
+                        <h4 class="text-lg md:text-xl font-bold text-gray-900 mb-1 md:mb-2">
+                            مشروع المجمع الطبي
+                        </h4>
+                        <p class="text-gray-600 mb-3 md:mb-4 text-sm md:text-base">
+                            مركز طبي متخصص بأحدث التقنيات الطبية والخدمات الصحية
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-green-700 text-xs md:text-sm font-medium">📍 الدمام</span>
+                            <button class="text-green-600 hover:text-green-800 transition-colors text-sm md:text-base">
+                                اعرف المزيد ←
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 border border-gray-200 shadow-md card-hover">
+                        <div class="mb-3 md:mb-4">
+                            <span class="px-2 md:px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs md:text-sm">
+                                🏫 تعليمي
+                            </span>
+                        </div>
+                        <h4 class="text-lg md:text-xl font-bold text-gray-900 mb-1 md:mb-2">
+                            مشروع المدينة الجامعية
+                        </h4>
+                        <p class="text-gray-600 mb-3 md:mb-4 text-sm md:text-base">
+                            حرم جامعي متكامل بمرافق تعليمية وبحثية متطورة
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-green-700 text-xs md:text-sm font-medium">📍 مكة المكرمة</span>
+                            <button class="text-green-600 hover:text-green-800 transition-colors text-sm md:text-base">
+                                اعرف المزيد ←
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 4 -->
+                    <div class="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 border border-gray-200 shadow-md card-hover">
+                        <div class="mb-3 md:mb-4">
+                            <span class="px-2 md:px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-xs md:text-sm">
+                                ⚡ طاقة
+                            </span>
+                        </div>
+                        <h4 class="text-lg md:text-xl font-bold text-gray-900 mb-1 md:mb-2">
+                            مشروع محطة الطاقة المتجددة
+                        </h4>
+                        <p class="text-gray-600 mb-3 md:mb-4 text-sm md:text-base">
+                            محطة توليد كهرباء من الطاقة الشمسية بسعة إنتاجية عالية
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-green-700 text-xs md:text-sm font-medium">📍 تبوك</span>
+                            <button class="text-green-600 hover:text-green-800 transition-colors text-sm md:text-base">
+                                اعرف المزيد ←
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Navigation Arrows -->
-        <div class="nav-arrow prev" id="prevBtn">❮</div>
-        <div class="nav-arrow next" id="nextBtn">❯</div>
-
-        <!-- Thumbnail Gallery -->
-        <div class="thumbnail-gallery" id="thumbnailGallery">
-            <div class="thumbnail active" data-slide="0">
-                <img src="https://images.unsplash.com/photo-1590642916589-592bca10dfbf?w=400&q=80" alt="رؤية 2030">
-                <div class="thumbnail-label">رؤية المستقبل</div>
-            </div>
-            <div class="thumbnail" data-slide="1">
-                <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=400&q=80" alt="التقنية">
-                <div class="thumbnail-label">التقنية والابتكار</div>
-            </div>
-            <div class="thumbnail" data-slide="2">
-                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&q=80" alt="البنية التحتية">
-                <div class="thumbnail-label">البنية التحتية</div>
-            </div>
-            <div class="thumbnail" data-slide="3">
-                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&q=80" alt="الاقتصاد">
-                <div class="thumbnail-label">الاقتصاد والريادة</div>
-            </div>
-            <div class="thumbnail" data-slide="4">
-                <img src="https://images.unsplash.com/photo-1541532713592-79a0317b6b77?w=400&q=80" alt="السياحة">
-                <div class="thumbnail-label">السياحة والترفيه</div>
+        
+        <!-- Additional Info Section -->
+        <div class="mt-12 md:mt-16 bg-green-50 rounded-2xl md:rounded-3xl p-6 md:p-8 border border-green-100">
+            <div class="grid md:grid-cols-2 gap-6 md:gap-8 items-center">
+                <div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4">لماذا تختار شركة درين للمقاولات؟</h3>
+                    <ul class="space-y-2 md:space-y-3">
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-600 mt-1">✓</span>
+                            <span class="text-gray-700 text-sm md:text-base">خبرة تزيد عن 25 عاماً في مجال المقاولات</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-600 mt-1">✓</span>
+                            <span class="text-gray-700 text-sm md:text-base">فريق هندسي متخصص وحاصل على أعلى الشهادات</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-600 mt-1">✓</span>
+                            <span class="text-gray-700 text-sm md:text-base">استخدام أحدث التقنيات والمواد في الإنشاء</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-600 mt-1">✓</span>
+                            <span class="text-gray-700 text-sm md:text-base">التزام كامل بمعايير الجودة والسلامة</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="text-center">
+                    <div class="inline-block p-4 md:p-6 bg-white rounded-2xl shadow-lg">
+                        <div class="text-2xl md:text-3xl font-bold text-green-700 mb-2">100%</div>
+                        <div class="text-gray-700 text-sm md:text-base">رضا العملاء</div>
+                        <div class="text-gray-500 text-xs md:text-sm mt-2">متوسط تقييم 4.9/5</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <script>
-        // Slider Configuration
-        const slides = document.querySelectorAll('.slide');
-        const thumbnails = document.querySelectorAll('.thumbnail');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        const progressBar = document.getElementById('progressBar');
-        
-        let currentSlide = 0;
-        let autoSlideInterval;
-        let progressInterval;
-        const slideDuration = 6000; // 6 seconds per slide
-        const progressStep = 100 / (slideDuration / 100);
-
-        // Animate Stats Function
-        function animateStats() {
-            const statNumbers = document.querySelectorAll('.slide.active .stat-number');
-            
-            statNumbers.forEach(stat => {
-                const target = parseInt(stat.getAttribute('data-target'));
-                const suffix = stat.textContent.includes('+') ? '+' : stat.textContent.includes('%') ? '%' : '';
-                const duration = 1500;
-                const step = target / (duration / 16);
-                let current = 0;
-
-                const timer = setInterval(() => {
-                    current += step;
-                    if (current >= target) {
-                        stat.textContent = target + suffix;
-                        clearInterval(timer);
-                    } else {
-                        stat.textContent = Math.floor(current) + suffix;
-                    }
-                }, 16);
-            });
-        }
-
-        // Change Slide Function
-        function changeSlide(index) {
-            // Remove active class from all slides and thumbnails
-            slides.forEach(slide => slide.classList.remove('active'));
-            thumbnails.forEach(thumb => thumb.classList.remove('active'));
-
-            // Add active class to current slide and thumbnail
-            slides[index].classList.add('active');
-            thumbnails[index].classList.add('active');
-
-            currentSlide = index;
-
-            // Animate stats for new slide
-            setTimeout(() => {
-                animateStats();
-            }, 400);
-
-            // Reset and restart progress bar
-            resetProgress();
-            startProgress();
-        }
-
-        // Next Slide
-        function nextSlide() {
-            let next = (currentSlide + 1) % slides.length;
-            changeSlide(next);
-        }
-
-        // Previous Slide
-        function prevSlide() {
-            let prev = (currentSlide - 1 + slides.length) % slides.length;
-            changeSlide(prev);
-        }
-
-        // Progress Bar Functions
-        function startProgress() {
-            let progress = 0;
-            progressInterval = setInterval(() => {
-                progress += progressStep;
-                progressBar.style.width = progress + '%';
-                if (progress >= 100) {
-                    clearInterval(progressInterval);
-                }
-            }, 100);
-        }
-
-        function resetProgress() {
-            clearInterval(progressInterval);
-            progressBar.style.width = '0%';
-        }
-
-        // Auto Slide Function
-        function startAutoSlide() {
-            autoSlideInterval = setInterval(nextSlide, slideDuration);
-        }
-
-        function stopAutoSlide() {
-            clearInterval(autoSlideInterval);
-        }
-
-        function restartAutoSlide() {
-            stopAutoSlide();
-            startAutoSlide();
-        }
-
-        // Event Listeners
-        prevBtn.addEventListener('click', () => {
-            prevSlide();
-            restartAutoSlide();
-        });
-
-        nextBtn.addEventListener('click', () => {
-            nextSlide();
-            restartAutoSlide();
-        });
-
-        // Thumbnail Click Events
-        thumbnails.forEach((thumb, index) => {
-            thumb.addEventListener('click', () => {
-                changeSlide(index);
-                restartAutoSlide();
-            });
-        });
-
-        // Pause on Hover
-        const heroSection = document.querySelector('.hero-section');
-        heroSection.addEventListener('mouseenter', () => {
-            stopAutoSlide();
-            clearInterval(progressInterval);
-        });
-
-        heroSection.addEventListener('mouseleave', () => {
-            restartAutoSlide();
-            resetProgress();
-            startProgress();
-        });
-
-        // Keyboard Navigation
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
-                e.key === 'ArrowLeft' ? nextSlide() : prevSlide();
-                restartAutoSlide();
+        // Slideshow configuration
+        const slidesTow = [
+            {
+                url: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&h=600&fit=crop',
+                alt: 'مشروع سكني 1'
+            },
+            {
+                url: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop',
+                alt: 'مشروع تجاري'
+            },
+            {
+                url: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&h=600&fit=crop',
+                alt: 'مشروع إنشائي'
+            },
+            {
+                url: 'https://images.unsplash.com/photo-1590959651373-a3db0f38a961?w=800&h=600&fit=crop',
+                alt: 'مشروع سكني 2'
             }
+        ];
+
+        let currentSlide = 0;
+        const slideshowContainer = document.getElementById('slideshow');
+
+        // Initialize slideshow
+        function initSlideshow() {
+            slidesTow.forEach((slide, index) => {
+                const slideDiv = document.createElement('div');
+                slideDiv.className = `absolute inset-0 transition-opacity duration-1000 ${index === 0 ? 'opacity-100' : 'opacity-0'}`;
+                slideDiv.innerHTML = `
+                    <img src="${slide.url}" 
+                         alt="${slide.alt}" 
+                         class="w-full h-full object-cover"
+                         loading="lazy">
+                `;
+                slideshowContainer.appendChild(slideDiv);
+            });
+        }
+
+        // Change slide function
+        function changeSlide() {
+            const allSlides = slideshowContainer.children;
+            
+            if (allSlides.length === 0) return;
+            
+            // Fade out current slide
+            allSlides[currentSlide].classList.remove('opacity-100');
+            allSlides[currentSlide].classList.add('opacity-0');
+            
+            // Move to next slide
+            currentSlide = (currentSlide + 1) % allSlides.length;
+            
+            // Fade in next slide
+            allSlides[currentSlide].classList.remove('opacity-0');
+            allSlides[currentSlide].classList.add('opacity-100');
+        }
+
+        // Start slideshow
+        initSlideshow();
+        setInterval(changeSlide, 4000); // Change slide every 4 seconds
+
+        // Add scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, {
+            threshold: 0.1
         });
 
-        // Initialize
-        animateStats();
-        startAutoSlide();
-        startProgress();
-
-        // Smooth scroll for CTA buttons
-        document.querySelectorAll('.cta-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                console.log('Button clicked:', e.target.textContent);
-                // Add your navigation logic here
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.6s ease-out';
+            observer.observe(card);
+        });
+        
+        // Add hover effects to buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+            });
+            
+            button.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
             });
         });
     </script>
