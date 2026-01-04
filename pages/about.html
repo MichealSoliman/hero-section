@@ -649,35 +649,165 @@
 </head>
 <body>
     
-    <!-- Header -->
-    <header class="header">
-        <div class="container mx-auto px-4">
-            <div class="flex items-center justify-between">
-                <!-- Logo -->
-                <div class="logo-container">
-                    <div class="logo">
-                        <img src="../asstes/img/logo-icon.png" alt="">
-                    </div>
-                    <div class="logo-text">
-                        <h2>درين للمقاولات</h2>
-                        <p>  افضل شركة مقاولات</p>
-                    </div>
+     <!-- Navigation -->
+    <nav class="projects-nav" id="projectsNavbar">
+        <div class="projects-nav-container">
+            <div class="projects-logo flex items-center gap-3">
+                <!-- أيقونة اللوجو -->
+                <div>
+                    <img src="../asstes/img/logo-icon.png" alt="درين للمقاولات" class="w-16 h-16 object-contain">
                 </div>
-                
-                <!-- Header Buttons -->
-                <div class="header-buttons">
-                    <a href="../index.html" class="btn-home">
-                        <i class="fas fa-home"></i>
-                        <span>العودة للرئيسية</span>
-                    </a>
-                    <a href="tel:0508090790" class="btn-contact">
-                        <i class="fas fa-phone"></i>
-                        <span>اتصل بنا</span>
-                    </a>
+
+                <!-- اسم الشركة -->
+                <div class="projects-logo-text">
+                    <h1 class="logo-title text-3xl font-bold text-white leading-tight transition-colors duration-300">
+                        درين للمقاولات
+                    </h1>
+                    <p class="logo-desc text-white text-sm transition-colors duration-300">
+                        خبرة احترافية في مجال المقاولات
+                    </p>
                 </div>
             </div>
+
+
+
+
+
+            <ul class="projects-nav-links">
+                <li><a href="../index.html">الرئيسية</a></li>
+                <li><a href="../index.html#projects">المشاريع</a></li> 
+                <li><a href="../pages/services.html">خدماتنا</a></li>
+
+                <li><a href="../pages/service-request.html"> طلب خدمة</a></li>
+                <li><a href="../pages/contact-us.html">تواصل معنا</a></li>
+                <li><a href="tel:0508090790" class="projects-nav-cta">اتصل الآن</a></li>
+            </ul>
+
+            <div class="projects-hamburger" id="projectsHamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-    </header>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="projects-mobile-menu" id="projectsMobileMenu">
+        <button class="projects-mobile-close" id="projectsCloseMobile">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="projects-mobile-nav-links">
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#projects">المشاريع</a></li>    
+            <li><a href="../pages/services.html">خدماتنا</a></li>
+            <li><a href="../pages/service-request.html"> طلب خدمة </a></li>
+            <li><a href="../pages/contact-us.html">تواصل معنا</a></li>
+            <li><a href="tel:0508090790" class="projects-mobile-nav-cta">اتصل الآن</a></li>
+        </ul>
+    </div>
+
+
+
+    <script>
+        // Navigation functionality
+        const projectsNavbar = document.getElementById('projectsNavbar');
+        const projectsHamburger = document.getElementById('projectsHamburger');
+        const projectsMobileMenu = document.getElementById('projectsMobileMenu');
+        const projectsCloseMobile = document.getElementById('projectsCloseMobile');
+        const projectsMobileLinks = document.querySelectorAll('.projects-mobile-nav-links a');
+
+        // Handle scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                projectsNavbar.classList.add('scrolled');
+            } else {
+                projectsNavbar.classList.remove('scrolled');
+            }
+        });
+
+        // Handle hamburger click
+        projectsHamburger.addEventListener('click', () => {
+            projectsHamburger.classList.toggle('active');
+            projectsMobileMenu.classList.toggle('active');
+            document.body.classList.toggle('projects-mobile-open');
+        });
+
+        // Handle close button click
+        projectsCloseMobile.addEventListener('click', () => {
+            closeProjectsMobileMenu();
+        });
+
+        // Close mobile menu when clicking on a link
+        projectsMobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                closeProjectsMobileMenu();
+            });
+        });
+
+        // Function to close mobile menu
+        function closeProjectsMobileMenu() {
+            projectsHamburger.classList.remove('active');
+            projectsMobileMenu.classList.remove('active');
+            document.body.classList.remove('projects-mobile-open');
+        }
+
+        // Close menu when clicking outside
+        projectsMobileMenu.addEventListener('click', (e) => {
+            if (e.target === projectsMobileMenu) {
+                closeProjectsMobileMenu();
+            }
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 900) {
+                closeProjectsMobileMenu();
+            }
+        });
+
+        // Language switcher functionality
+        const projectsLangBtns = document.querySelectorAll('.projects-lang-btn');
+        projectsLangBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                projectsLangBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Here you would implement actual language switching
+                console.log(`Language changed to: ${btn.textContent}`);
+            });
+        });
+
+        // Initialize navbar state
+        document.addEventListener('DOMContentLoaded', () => {
+            // Check initial scroll position
+            if (window.scrollY > 50) {
+                projectsNavbar.classList.add('scrolled');
+            } else {
+                projectsNavbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+    <!-- script logo -->
+    <script>
+        const title = document.querySelector('.logo-title');
+        const desc = document.querySelector('.logo-desc');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                title.classList.remove('text-white');
+                title.style.color = '#164582';
+
+                desc.classList.remove('text-white');
+                desc.classList.add('text-gray-600');
+            } else {
+                title.style.color = '';
+                title.classList.add('text-white');
+
+                desc.classList.remove('text-gray-600');
+                desc.classList.add('text-white');
+            }
+        });
+    </script>
 
 
     
@@ -685,7 +815,7 @@
 
 <!-- Hero Section -->
 
-<section class="hero-section">
+<section class="hero-section mt-0">
     <div class="container mx-auto px-4">
         <div class="hero-content animate-fadeInUp">
             <h1 class="hero-title">
@@ -1106,9 +1236,9 @@
                 <!-- Company Info -->
                 <div class="animate-fadeInUp">
                     <div class="footer-card p-6 h-full">
-                        <div class="flex items-center mb-6">
-                            <div class="footer-icon-circle">
-                               <img src="../asstes/img/logo-icon.png" alt="">
+                          <div class="flex items-center mb-6">
+                            <div class="">
+                                <img src="../asstes/img/logo-icon.png" alt="" class="w-16 h-16 object-contain">
                             </div>
                             <div class="mr-4">
                                 <h3 class="text-xl font-bold">درين للمقاولات</h3>
@@ -1314,18 +1444,19 @@
                     </p>
                 </div>
                 
-                <!-- Logo -->
-                <div class="text-center">
-                    <div class="inline-flex items-center">
-                        <div class="w-10 h-10   rounded-lg flex items-center justify-center ml-3">
-                            <img class="rounded-full" src="./asstes/img/logo-2.png" alt="">
-                        </div>
-                        <div class="text-right">
-                            <div class="font-bold text-xl">درين</div>
-                            <div class="text-gray-400 text-sm">للمقاولات</div>
-                        </div>
+                   <!-- Logo -->
+                    <div class="text-center relative z-[9999]">
+                        <a href="../index.html"
+                        class="inline-flex items-center cursor-pointer pointer-events-auto">
+                            <div class="w-10 h-10 rounded-lg flex items-center justify-center ml-3">
+                                <img class="rounded-full" src="../asstes/img/logo-2.png" alt="درين للمقاولات">
+                            </div>
+                            <div class="text-right">
+                                <div class="font-bold text-xl">درين</div>
+                                <div class="text-gray-400 text-sm">للمقاولات</div>
+                            </div>
+                        </a>
                     </div>
-                </div>
                 
                 <!-- Policies -->
                 <div class="text-center md:text-left">

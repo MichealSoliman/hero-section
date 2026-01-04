@@ -296,22 +296,22 @@
     <!-- Navigation -->
     <nav class="projects-nav" id="projectsNavbar">
         <div class="projects-nav-container">
-           <div class="projects-logo flex items-center gap-3">
-    <!-- أيقونة اللوجو -->
-    <div>
-        <img src="./asstes/img/logo-icon.png" alt="درين للمقاولات" class="w-16 h-16 object-contain">
-    </div>
+            <div class="projects-logo flex items-center gap-3">
+                <!-- أيقونة اللوجو -->
+                <div>
+                    <img src="./asstes/img/logo-icon.png" alt="درين للمقاولات" class="w-16 h-16 object-contain">
+                </div>
 
-    <!-- اسم الشركة -->
-    <div class="projects-logo-text">
-        <h1 class="logo-title text-3xl font-bold text-white leading-tight transition-colors duration-300">
-            درين للمقاولات
-        </h1>
-        <p class="logo-desc text-white text-sm transition-colors duration-300">
-            خبرة احترافية في مجال المقاولات
-        </p>
-    </div>
-</div>
+                <!-- اسم الشركة -->
+                <div class="projects-logo-text">
+                    <h1 class="logo-title text-3xl font-bold text-white leading-tight transition-colors duration-300">
+                        درين للمقاولات
+                    </h1>
+                    <p class="logo-desc text-white text-sm transition-colors duration-300">
+                        خبرة احترافية في مجال المقاولات
+                    </p>
+                </div>
+            </div>
 
 
 
@@ -322,7 +322,6 @@
                 <li><a href="#projects">المشاريع</a></li>
                 <li><a href="./pages/about.html">من نحن</a></li>
                 <li><a href="./pages/services.html">خدماتنا</a></li>
-
                 <li><a href="./pages/service-request.html"> طلب خدمة</a></li>
                 <li><a href="./pages/contact-us.html">تواصل معنا</a></li>
                 <li><a href="tel:0508090790" class="projects-nav-cta">اتصل الآن</a></li>
@@ -434,26 +433,26 @@
         });
     </script>
     <!-- script logo -->
-     <script>
-  const title = document.querySelector('.logo-title');
-  const desc = document.querySelector('.logo-desc');
+    <script>
+        const title = document.querySelector('.logo-title');
+        const desc = document.querySelector('.logo-desc');
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      title.classList.remove('text-white');
-      title.style.color = '#164582';
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                title.classList.remove('text-white');
+                title.style.color = '#164582';
 
-      desc.classList.remove('text-white');
-      desc.classList.add('text-gray-600');
-    } else {
-      title.style.color = '';
-      title.classList.add('text-white');
+                desc.classList.remove('text-white');
+                desc.classList.add('text-gray-600');
+            } else {
+                title.style.color = '';
+                title.classList.add('text-white');
 
-      desc.classList.remove('text-gray-600');
-      desc.classList.add('text-white');
-    }
-  });
-</script>
+                desc.classList.remove('text-gray-600');
+                desc.classList.add('text-white');
+            }
+        });
+    </script>
 
 
     <!-- Projects Hero Section -->
@@ -882,45 +881,56 @@
                         class="relative rounded-2xl md:rounded-3xl overflow-hidden shadow-xl dareen-card-hover h-[500px] md:h-[600px] bg-gray-100">
                         <div class="absolute inset-0" id="dareenSlideshow">
                             <!-- مشروع 1 -->
+                           <!-- مشروع: المستشفى العسكري -->
                             <div class="dareen-slide absolute inset-0 w-full h-full dareen-slide-transition opacity-100"
                                 data-dareen-slide="1">
-                                <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1200&h=800&fit=crop"
-                                    alt="مشروع ناطحة السحاب" class="w-full h-full object-cover">
+                                
+                                <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=1200&h=800&fit=crop"
+                                    alt="المستشفى العسكري بالخرج ووادي الدواسر" class="w-full h-full object-cover">
+
                                 <div class="absolute inset-0 dareen-overlay flex flex-col justify-end p-6 md:p-8">
+
+                                    <!-- التصنيفات -->
                                     <div class="flex gap-2 mb-3 md:mb-4 flex-wrap">
                                         <span
-                                            class="px-3 py-1 bg-blue-700 rounded-full text-white text-xs md:text-sm font-medium">
-                                            🏗️ جاري التنفيذ
+                                            class="px-3 py-1 bg-green-700 rounded-full text-white text-xs md:text-sm font-medium">
+                                            🏥 منشأة صحية
                                         </span>
-                                        <span class="px-3 py-1 bg-blue-600 rounded-full text-white text-xs md:text-sm">
-                                            🏙️ ناطحة سحاب
+                                        <span
+                                            class="px-3 py-1 bg-blue-600 rounded-full text-white text-xs md:text-sm">
+                                            ⚙️ مشروع حكومي
                                         </span>
                                         <span
                                             class="px-3 py-1 bg-gray-800/80 backdrop-blur-sm rounded-full text-white text-xs md:text-sm">
-                                            📍 الرياض
+                                            📍 الخرج – وادي الدواسر
                                         </span>
                                     </div>
 
+                                    <!-- العنوان -->
                                     <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-3">
-                                        برج درين للأعمال
+                                        المستشفى العسكري بالخرج ووادي الدواسر
                                     </h2>
 
+                                    <!-- الوصف -->
                                     <p class="text-white/90 text-sm md:text-base lg:text-lg mb-3 md:mb-4 max-w-lg">
-                                        أطول برج للأعمال في المملكة بارتفاع 350 متراً، يضم 80 طابقاً من المكاتب الفاخرة
-                                        والمرافق التجارية المتطورة
+                                        تنفيذ وتطوير مجمع طبي عسكري متكامل يخدم منسوبي القوات المسلحة، يضم
+                                        أقسام الطوارئ والعيادات الخارجية وغرف العمليات وأحدث التجهيزات الطبية
+                                        وفق أعلى معايير الجودة والسلامة.
                                     </p>
 
+                                    <!-- الإحصائيات -->
                                     <div class="grid grid-cols-2 gap-4 mb-4">
                                         <div class="text-white">
-                                            <div class="text-lg font-bold">2.8 مليار</div>
+                                            <div class="text-lg font-bold">1.6 مليار</div>
                                             <div class="text-sm">قيمة المشروع</div>
                                         </div>
                                         <div class="text-white">
-                                            <div class="text-lg font-bold">36 شهر</div>
+                                            <div class="text-lg font-bold">30 شهر</div>
                                             <div class="text-sm">مدة التنفيذ</div>
                                         </div>
                                     </div>
 
+                                    <!-- زر -->
                                     <div class="flex gap-3">
                                         <button
                                             class="flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 bg-white/20 backdrop-blur-md rounded-xl text-white hover:bg-white/30 transition-all text-sm md:text-base">
@@ -928,15 +938,20 @@
                                             <span>تفاصيل المشروع</span>
                                         </button>
                                     </div>
+
                                 </div>
                             </div>
 
-                            <!-- مشروع 2 -->
+
+                           <!-- مشروع 2 -->
                             <div class="dareen-slide absolute inset-0 w-full h-full dareen-slide-transition opacity-0"
                                 data-dareen-slide="2">
-                                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop"
-                                    alt="مشروع مجمع تجاري" class="w-full h-full object-cover">
+                                
+                                <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?w=1200&h=800&fit=crop"
+                                    alt="جامعة الأمير سطام بالخرج" class="w-full h-full object-cover">
+
                                 <div class="absolute inset-0 dareen-overlay flex flex-col justify-end p-6 md:p-8">
+                                    
                                     <div class="flex gap-2 mb-3 md:mb-4 flex-wrap">
                                         <span
                                             class="px-3 py-1 bg-green-500 rounded-full text-white text-xs md:text-sm font-medium">
@@ -944,30 +959,31 @@
                                         </span>
                                         <span
                                             class="px-3 py-1 bg-yellow-600 rounded-full text-white text-xs md:text-sm">
-                                            🛍️ مجمع تجاري
+                                            🎓 منشآت تعليمية
                                         </span>
                                         <span
                                             class="px-3 py-1 bg-gray-800/80 backdrop-blur-sm rounded-full text-white text-xs md:text-sm">
-                                            📍 جدة
+                                            📍 الخرج
                                         </span>
                                     </div>
 
                                     <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-3">
-                                        مجمع درين التجاري العالمي
+                                        جامعة الأمير سطام بن عبدالعزيز – الخرج
                                     </h2>
 
                                     <p class="text-white/90 text-sm md:text-base lg:text-lg mb-3 md:mb-4 max-w-lg">
-                                        أكبر مجمع تجاري في المنطقة الغربية بمساحة 500,000 متر مربع، يضم أكثر من 500 محل
-                                        تجاري عالمي
+                                        تنفيذ وتطوير مباني جامعة الأمير سطام بالخرج، ويشمل ذلك كلية المجتمع،
+                                        كلية التربية، وكلية العلوم الطبية، وفق أحدث المعايير التعليمية
+                                        والهندسية.
                                     </p>
 
                                     <div class="grid grid-cols-2 gap-4 mb-4">
                                         <div class="text-white">
-                                            <div class="text-lg font-bold">1.5 مليار</div>
+                                            <div class="text-lg font-bold">900 مليون</div>
                                             <div class="text-sm">قيمة المشروع</div>
                                         </div>
                                         <div class="text-white">
-                                            <div class="text-lg font-bold">28 شهر</div>
+                                            <div class="text-lg font-bold">24 شهر</div>
                                             <div class="text-sm">مدة التنفيذ</div>
                                         </div>
                                     </div>
@@ -979,45 +995,51 @@
                                             <span>تقرير المشروع</span>
                                         </button>
                                     </div>
+
                                 </div>
                             </div>
+
 
                             <!-- مشروع 3 -->
                             <div class="dareen-slide absolute inset-0 w-full h-full dareen-slide-transition opacity-0"
                                 data-dareen-slide="3">
-                                <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&h=800&fit=crop"
-                                    alt="مشروع مدينة طبية" class="w-full h-full object-cover">
+                                
+                                <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?w=1200&h=800&fit=crop"
+                                    alt="المدينة الرياضية بوادي الدواسر" class="w-full h-full object-cover">
+
                                 <div class="absolute inset-0 dareen-overlay flex flex-col justify-end p-6 md:p-8">
+                                    
                                     <div class="flex gap-2 mb-3 md:mb-4 flex-wrap">
                                         <span
                                             class="px-3 py-1 bg-blue-700 rounded-full text-white text-xs md:text-sm font-medium">
                                             🏗️ جاري التنفيذ
                                         </span>
                                         <span class="px-3 py-1 bg-red-600 rounded-full text-white text-xs md:text-sm">
-                                            🏥 مدينة طبية
+                                            🏟️ مدينة رياضية
                                         </span>
                                         <span
                                             class="px-3 py-1 bg-gray-800/80 backdrop-blur-sm rounded-full text-white text-xs md:text-sm">
-                                            📍 الدمام
+                                            📍 وادي الدواسر
                                         </span>
                                     </div>
 
                                     <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-3">
-                                        مدينة درين الطبية المتخصصة
+                                        المدينة الرياضية بوادي الدواسر
                                     </h2>
 
                                     <p class="text-white/90 text-sm md:text-base lg:text-lg mb-3 md:mb-4 max-w-lg">
-                                        أول مدينة طبية متكاملة في المنطقة الشرقية تضم 5 مستشفيات تخصصية ومراكز بحثية
-                                        عالمية
+                                        تنفيذ مدينة رياضية متكاملة تضم استادًا رئيسيًا، ملاعب تدريب متعددة،
+                                        صالات رياضية مغلقة، ومرافق خدمية وفق أعلى المعايير الرياضية
+                                        والهندسية.
                                     </p>
 
                                     <div class="grid grid-cols-2 gap-4 mb-4">
                                         <div class="text-white">
-                                            <div class="text-lg font-bold">3.2 مليار</div>
+                                            <div class="text-lg font-bold">1.9 مليار</div>
                                             <div class="text-sm">قيمة المشروع</div>
                                         </div>
                                         <div class="text-white">
-                                            <div class="text-lg font-bold">42 شهر</div>
+                                            <div class="text-lg font-bold">32 شهر</div>
                                             <div class="text-sm">مدة التنفيذ</div>
                                         </div>
                                     </div>
@@ -1025,19 +1047,24 @@
                                     <div class="flex gap-3">
                                         <button
                                             class="flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 bg-white/20 backdrop-blur-md rounded-xl text-white hover:bg-white/30 transition-all text-sm md:text-base">
-                                            <span>⚕️</span>
-                                            <span>المرافق الطبية</span>
+                                            <span>🏟️</span>
+                                            <span>مرافق المدينة</span>
                                         </button>
                                     </div>
+
                                 </div>
                             </div>
 
-                            <!-- مشروع 4 -->
+
+                           <!-- مشروع 4 -->
                             <div class="dareen-slide absolute inset-0 w-full h-full dareen-slide-transition opacity-0"
                                 data-dareen-slide="4">
+                                
                                 <img src="https://images.unsplash.com/photo-1590959651373-a3db0f38a961?w=1200&h=800&fit=crop"
-                                    alt="مشروع مجمع سكني" class="w-full h-full object-cover">
+                                    alt="مشروع نظافة مدينة الدلم" class="w-full h-full object-cover">
+
                                 <div class="absolute inset-0 dareen-overlay flex flex-col justify-end p-6 md:p-8">
+                                    
                                     <div class="flex gap-2 mb-3 md:mb-4 flex-wrap">
                                         <span
                                             class="px-3 py-1 bg-green-500 rounded-full text-white text-xs md:text-sm font-medium">
@@ -1045,30 +1072,30 @@
                                         </span>
                                         <span
                                             class="px-3 py-1 bg-purple-600 rounded-full text-white text-xs md:text-sm">
-                                            🏘️ مجمع سكني
+                                            🧹 مشروع نظافة
                                         </span>
                                         <span
                                             class="px-3 py-1 bg-gray-800/80 backdrop-blur-sm rounded-full text-white text-xs md:text-sm">
-                                            📍 المدينة المنورة
+                                            📍 الدلم
                                         </span>
                                     </div>
 
                                     <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-3">
-                                        مجمع درين السكني الفاخر
+                                        مشروع نظافة مدينة الدلم
                                     </h2>
 
                                     <p class="text-white/90 text-sm md:text-base lg:text-lg mb-3 md:mb-4 max-w-lg">
-                                        مجمع سكني فاخر يضم 1200 وحدة سكنية مع مرافق ترفيهية وتعليمية متكاملة على مساحة
-                                        800,000 م²
+                                        تنفيذ مشروع نظافة شامل يغطي كافة أحياء مدينة الدلم، يشمل جمع النفايات،
+                                        تنظيف الشوارع والمرافق العامة، مع معدات حديثة وفرق متخصصة.
                                     </p>
 
                                     <div class="grid grid-cols-2 gap-4 mb-4">
                                         <div class="text-white">
-                                            <div class="text-lg font-bold">2.1 مليار</div>
+                                            <div class="text-lg font-bold">150 مليون</div>
                                             <div class="text-sm">قيمة المشروع</div>
                                         </div>
                                         <div class="text-white">
-                                            <div class="text-lg font-bold">30 شهر</div>
+                                            <div class="text-lg font-bold">12 شهر</div>
                                             <div class="text-sm">مدة التنفيذ</div>
                                         </div>
                                     </div>
@@ -1076,19 +1103,24 @@
                                     <div class="flex gap-3">
                                         <button
                                             class="flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 bg-white/20 backdrop-blur-md rounded-xl text-white hover:bg-white/30 transition-all text-sm md:text-base">
-                                            <span>🏠</span>
-                                            <span>الوحدات السكنية</span>
+                                            <span>🧹</span>
+                                            <span>تفاصيل المشروع</span>
                                         </button>
                                     </div>
+
                                 </div>
                             </div>
+
 
                             <!-- مشروع 5 -->
                             <div class="dareen-slide absolute inset-0 w-full h-full dareen-slide-transition opacity-0"
                                 data-dareen-slide="5">
+                                
                                 <img src="https://images.unsplash.com/photo-1448630360428-65456885c650?w=1200&h=800&fit=crop"
-                                    alt="مشروع الطاقة المتجددة" class="w-full h-full object-cover">
+                                    alt="مشروع إدارة التعليم" class="w-full h-full object-cover">
+
                                 <div class="absolute inset-0 dareen-overlay flex flex-col justify-end p-6 md:p-8">
+                                    
                                     <div class="flex gap-2 mb-3 md:mb-4 flex-wrap">
                                         <span
                                             class="px-3 py-1 bg-blue-700 rounded-full text-white text-xs md:text-sm font-medium">
@@ -1096,30 +1128,30 @@
                                         </span>
                                         <span
                                             class="px-3 py-1 bg-yellow-500 rounded-full text-white text-xs md:text-sm">
-                                            ☀️ طاقة متجددة
+                                            🏫 إدارة تعليمية
                                         </span>
                                         <span
                                             class="px-3 py-1 bg-gray-800/80 backdrop-blur-sm rounded-full text-white text-xs md:text-sm">
-                                            📍 تبوك
+                                            📍 الخرج
                                         </span>
                                     </div>
 
                                     <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-3">
-                                        محطة درين للطاقة الشمسية
+                                        مشاريع إدارة التعليم بالخرج
                                     </h2>
 
                                     <p class="text-white/90 text-sm md:text-base lg:text-lg mb-3 md:mb-4 max-w-lg">
-                                        أكبر محطة للطاقة الشمسية في الشرق الأوسط بقدرة إنتاجية 2 جيجاوات، تغذي 500,000
-                                        منزل بالطاقة النظيفة
+                                        تنفيذ مشاريع تعليمية متكاملة تشمل المباني الإدارية والمدارس والمرافق التعليمية
+                                        وفق أحدث المعايير الهندسية والتربوية.
                                     </p>
 
                                     <div class="grid grid-cols-2 gap-4 mb-4">
                                         <div class="text-white">
-                                            <div class="text-lg font-bold">4.5 مليار</div>
+                                            <div class="text-lg font-bold">250 مليون</div>
                                             <div class="text-sm">قيمة المشروع</div>
                                         </div>
                                         <div class="text-white">
-                                            <div class="text-lg font-bold">48 شهر</div>
+                                            <div class="text-lg font-bold">18 شهر</div>
                                             <div class="text-sm">مدة التنفيذ</div>
                                         </div>
                                     </div>
@@ -1127,12 +1159,14 @@
                                     <div class="flex gap-3">
                                         <button
                                             class="flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 bg-white/20 backdrop-blur-md rounded-xl text-white hover:bg-white/30 transition-all text-sm md:text-base">
-                                            <span>🔋</span>
-                                            <span>معلومات الطاقة</span>
+                                            <span>🏫</span>
+                                            <span>تفاصيل المشروع</span>
                                         </button>
                                     </div>
+
                                 </div>
                             </div>
+
                         </div>
 
                         <!-- Slideshow Controls -->
@@ -1224,23 +1258,31 @@
 
                     <!-- Projects Grid -->
                     <div class="grid sm:grid-cols-2 gap-4 md:gap-6">
+                        
                         <!-- Project Card 1 -->
                         <div class="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 border border-gray-200 shadow-md dareen-card-hover"
                             data-dareen-project="1">
+
                             <div class="mb-3 md:mb-4">
                                 <span
                                     class="px-2 md:px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs md:text-sm font-medium">
-                                    🏢 برج أعمال
+                                    🏥 مستشفى عسكري
                                 </span>
                             </div>
+
                             <h4 class="text-lg md:text-xl font-bold text-gray-900 mb-1 md:mb-2">
-                                برج درين للأعمال
+                                المستشفى العسكري
                             </h4>
+
                             <p class="text-gray-600 mb-3 md:mb-4 text-sm md:text-base">
-                                أطول برج للأعمال في المملكة بارتفاع 350 متراً
+                                تنفيذ وتطوير مستشفى عسكري متكامل يخدم منسوبي القوات المسلحة
                             </p>
+
                             <div class="flex items-center justify-between">
-                                <span class="text-blue-700 text-xs md:text-sm font-medium">📍 الرياض</span>
+                                <span class="text-blue-700 text-xs md:text-sm font-medium">
+                                    📍 الخرج – وادي الدواسر
+                                </span>
+
                                 <button
                                     class="text-blue-700 hover:text-green-800 transition-colors text-sm md:text-base dareen-project-detail-btn"
                                     data-dareen-project="1">
@@ -1249,23 +1291,24 @@
                             </div>
                         </div>
 
-                        <!-- Project Card 2 -->
+
+                      <!-- Project Card 2 -->
                         <div class="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 border border-gray-200 shadow-md dareen-card-hover"
                             data-dareen-project="2">
                             <div class="mb-3 md:mb-4">
                                 <span
                                     class="px-2 md:px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-xs md:text-sm font-medium">
-                                    🛍️ مجمع تجاري
+                                    🎓 منشآت تعليمية
                                 </span>
                             </div>
                             <h4 class="text-lg md:text-xl font-bold text-gray-900 mb-1 md:mb-2">
-                                مجمع درين التجاري
+                                جامعة الأمير سطام بن عبدالعزيز
                             </h4>
                             <p class="text-gray-600 mb-3 md:mb-4 text-sm md:text-base">
-                                أكبر مجمع تجاري في المنطقة الغربية
+                                تنفيذ وتطوير مباني كلية المجتمع وكلية التربية وكلية العلوم الطبية
                             </p>
                             <div class="flex items-center justify-between">
-                                <span class="text-blue-700 text-xs md:text-sm font-medium">📍 جدة</span>
+                                <span class="text-blue-700 text-xs md:text-sm font-medium">📍 الخرج</span>
                                 <button
                                     class="text-blue-700 hover:text-green-800 transition-colors text-sm md:text-base dareen-project-detail-btn"
                                     data-dareen-project="2">
@@ -1274,23 +1317,28 @@
                             </div>
                         </div>
 
-                        <!-- Project Card 3 -->
+                       <!-- Project Card 3 -->
                         <div class="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 border border-gray-200 shadow-md dareen-card-hover"
                             data-dareen-project="3">
+                            
                             <div class="mb-3 md:mb-4">
                                 <span
                                     class="px-2 md:px-3 py-1 bg-red-100 text-red-700 rounded-full text-xs md:text-sm font-medium">
-                                    🏥 مدينة طبية
+                                    🏟️ مدينة رياضية
                                 </span>
                             </div>
+
                             <h4 class="text-lg md:text-xl font-bold text-gray-900 mb-1 md:mb-2">
-                                مدينة درين الطبية
+                                المدينة الرياضية بوادي الدواسر
                             </h4>
+
                             <p class="text-gray-600 mb-3 md:mb-4 text-sm md:text-base">
-                                أول مدينة طبية متكاملة في المنطقة الشرقية
+                                تنفيذ مدينة رياضية متكاملة تشمل استاد رئيسي، ملاعب تدريب، وصالات رياضية
+                                متعددة وفق أعلى المعايير.
                             </p>
+
                             <div class="flex items-center justify-between">
-                                <span class="text-blue-700 text-xs md:text-sm font-medium">📍 الدمام</span>
+                                <span class="text-blue-700 text-xs md:text-sm font-medium">📍 وادي الدواسر</span>
                                 <button
                                     class="text-blue-700 hover:text-green-800 transition-colors text-sm md:text-base dareen-project-detail-btn"
                                     data-dareen-project="3">
@@ -1299,23 +1347,29 @@
                             </div>
                         </div>
 
+
                         <!-- Project Card 4 -->
+                         
                         <div class="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 border border-gray-200 shadow-md dareen-card-hover"
                             data-dareen-project="4">
+                            
                             <div class="mb-3 md:mb-4">
                                 <span
                                     class="px-2 md:px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs md:text-sm font-medium">
-                                    🏘️ مجمع سكني
+                                    🧹 مشروع نظافة
                                 </span>
                             </div>
+                            
                             <h4 class="text-lg md:text-xl font-bold text-gray-900 mb-1 md:mb-2">
-                                مجمع درين السكني
+                                مشروع نظافة مدينة الدلم
                             </h4>
+
                             <p class="text-gray-600 mb-3 md:mb-4 text-sm md:text-base">
-                                مجمع سكني فاخر بمرافق متكاملة
+                                مشروع شامل لتغطية كافة أحياء مدينة الدلم، يشمل جمع النفايات وتنظيف الشوارع والمرافق العامة.
                             </p>
+
                             <div class="flex items-center justify-between">
-                                <span class="text-blue-700 text-xs md:text-sm font-medium">📍 المدينة</span>
+                                <span class="text-blue-700 text-xs md:text-sm font-medium">📍 الدلم</span>
                                 <button
                                     class="text-blue-700 hover:text-green-800 transition-colors text-sm md:text-base dareen-project-detail-btn"
                                     data-dareen-project="4">
@@ -1323,6 +1377,7 @@
                                 </button>
                             </div>
                         </div>
+
                     </div>
 
                     <!-- Project Features -->
@@ -2021,8 +2076,8 @@
                 <div class="animate-fadeInUp">
                     <div class="footer-card p-6 h-full">
                         <div class="flex items-center mb-6">
-                            <div class="footer-icon-circle">
-                                <img src="./asstes/img/logo-2.png" alt="">
+                            <div class="">
+                                <img src="./asstes/img/logo-icon.png" alt="" class="w-16 h-16 object-contain">
                             </div>
                             <div class="mr-4">
                                 <h3 class="text-xl font-bold">درين للمقاولات</h3>
@@ -2226,17 +2281,19 @@
             </div>
 
             <!-- Logo -->
-            <div class="text-center">
-                <div class="inline-flex items-center">
-                    <div class="w-10 h-10   rounded-lg flex items-center justify-center ml-3">
-                        <img class="rounded-full" src="./asstes/img/logo-2.png" alt="">
+                    <div class="text-center relative z-[9999]">
+                        <a href="./index.html"
+                        class="inline-flex items-center cursor-pointer pointer-events-auto">
+                            <div class="w-10 h-10 rounded-lg flex items-center justify-center ml-3">
+                                <img class="rounded-full" src="./asstes/img/logo-2.png" alt="درين للمقاولات">
+                            </div>
+                            <div class="text-right">
+                                <div class="font-bold text-xl">درين</div>
+                                <div class="text-gray-400 text-sm">للمقاولات</div>
+                            </div>
+                        </a>
                     </div>
-                    <div class="text-right">
-                        <div class="font-bold text-xl">درين</div>
-                        <div class="text-gray-400 text-sm">للمقاولات</div>
-                    </div>
-                </div>
-            </div>
+
 
             <!-- Policies -->
             <div class="text-center md:text-left">

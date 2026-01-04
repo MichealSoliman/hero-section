@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,14 +10,14 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/emailjs@4/dist/email.min.js"></script>
     <link rel="stylesheet" href="../asstes/css/style.css">
-    
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap');
-        
+
         * {
             font-family: 'Cairo', sans-serif;
         }
-        
+
         /* Header Styles */
         .header {
             background: white;
@@ -28,13 +29,13 @@
             z-index: 1000;
             padding: 15px 0;
         }
-        
+
         .logo-container {
             display: flex;
             align-items: center;
             gap: 10px;
         }
-        
+
         .logo {
             width: 45px;
             height: 45px;
@@ -43,30 +44,30 @@
             align-items: center;
             justify-content: center;
         }
-        
+
         .logo i {
             color: white;
             font-size: 20px;
         }
-        
+
         .logo-text h2 {
             color: #194480;
             font-weight: 800;
             font-size: 20px;
             margin: 0;
         }
-        
+
         .logo-text p {
             color: #666;
             font-size: 12px;
             margin: 0;
         }
-        
+
         .header-buttons {
             display: flex;
             gap: 15px;
         }
-        
+
         .btn-home {
             background: #f8fafc;
             color: #194480;
@@ -79,13 +80,13 @@
             align-items: center;
             gap: 8px;
         }
-        
+
         .btn-home:hover {
             background: #194480;
             color: white;
             border-color: #194480;
         }
-        
+
         .btn-contact {
             background: linear-gradient(135deg, #194480, #0f2f5f);
             color: white;
@@ -98,12 +99,12 @@
             align-items: center;
             gap: 8px;
         }
-        
+
         .btn-contact:hover {
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(25, 68, 128, 0.3);
         }
-        
+
         /* Hero Section - Simplified */
         .hero-section {
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(25, 68, 128, 0.8)), url('../asstes/img/logo.png');
@@ -116,13 +117,13 @@
             margin-top: 80px;
             padding: 40px 0;
         }
-        
+
         .hero-content {
             position: relative;
             z-index: 2;
             max-width: 800px;
         }
-        
+
         .hero-title {
             color: white;
             font-size: 32px;
@@ -130,26 +131,26 @@
             line-height: 1.4;
             margin-bottom: 20px;
         }
-        
+
         .hero-highlight {
             color: #ffd700;
             font-weight: 800;
         }
-        
+
         .hero-description {
             color: rgba(255, 255, 255, 0.9);
             font-size: 18px;
             line-height: 1.6;
             margin-bottom: 30px;
         }
-        
+
         .hero-features {
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
             margin-bottom: 30px;
         }
-        
+
         .hero-feature {
             background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(10px);
@@ -162,16 +163,16 @@
             gap: 8px;
             transition: all 0.3s;
         }
-        
+
         .hero-feature:hover {
             background: rgba(255, 255, 255, 0.25);
             transform: translateY(-2px);
         }
-        
+
         .hero-feature i {
             color: #ffd700;
         }
-        
+
         .hero-btn {
             background: linear-gradient(135deg, #ffd700, #ffaa00);
             color: #0f2f5f;
@@ -187,12 +188,12 @@
             gap: 10px;
             box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
         }
-        
+
         .hero-btn:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 35px rgba(255, 215, 0, 0.4);
         }
-        
+
         /* Form Section with Background */
         .form-section {
             background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.98)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
@@ -202,7 +203,7 @@
             padding: 60px 0;
             position: relative;
         }
-        
+
         /* Main Content */
         .main-content {
             display: grid;
@@ -212,14 +213,14 @@
             margin: 0 auto;
             padding: 0 20px;
         }
-        
+
         @media (max-width: 1024px) {
             .main-content {
                 grid-template-columns: 1fr;
                 gap: 30px;
             }
         }
-        
+
         /* Info Section */
         .info-section {
             padding: 30px;
@@ -229,7 +230,7 @@
             height: fit-content;
             backdrop-filter: blur(5px);
         }
-        
+
         .info-title {
             color: #194480;
             font-size: 24px;
@@ -241,7 +242,7 @@
             justify-content: center;
             gap: 10px;
         }
-        
+
         .info-card {
             background: white;
             border-radius: 15px;
@@ -251,13 +252,13 @@
             transition: all 0.3s ease;
             border-right: 4px solid transparent;
         }
-        
+
         .info-card:hover {
             transform: translateY(-5px);
             border-right-color: #194480;
             box-shadow: 0 15px 30px rgba(25, 68, 128, 0.1);
         }
-        
+
         .info-icon {
             width: 50px;
             height: 50px;
@@ -270,20 +271,20 @@
             font-size: 20px;
             margin-bottom: 15px;
         }
-        
+
         .info-card h3 {
             color: #1e293b;
             font-size: 18px;
             font-weight: 700;
             margin-bottom: 10px;
         }
-        
+
         .info-card p {
             color: #64748b;
             line-height: 1.6;
             font-size: 15px;
         }
-        
+
         /* Form Styles */
         .form-container {
             background: white;
@@ -293,28 +294,28 @@
             border-top: 8px solid #194480;
             height: fit-content;
         }
-        
+
         .form-header {
             background: linear-gradient(135deg, #194480, #0f2f5f);
             color: white;
             padding: 25px;
             text-align: center;
         }
-        
+
         .form-header h1 {
             font-size: 24px;
             font-weight: 700;
             margin-bottom: 10px;
         }
-        
+
         .form-body {
             padding: 25px;
         }
-        
+
         .form-group {
             margin-bottom: 20px;
         }
-        
+
         .form-label {
             display: block;
             font-size: 16px;
@@ -324,14 +325,16 @@
             display: flex;
             align-items: center;
         }
-        
+
         .form-label i {
             margin-left: 8px;
             color: #194480;
             font-size: 16px;
         }
-        
-        .form-input, .form-select, .form-textarea {
+
+        .form-input,
+        .form-select,
+        .form-textarea {
             width: 100%;
             padding: 14px 16px;
             border: 2px solid #e2e8f0;
@@ -340,41 +343,43 @@
             transition: all 0.3s ease;
             background: #f8fafc;
         }
-        
-        .form-input:focus, .form-select:focus, .form-textarea:focus {
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
             outline: none;
             border-color: #194480;
             background: white;
             box-shadow: 0 0 0 3px rgba(25, 68, 128, 0.1);
         }
-        
+
         .form-textarea {
             min-height: 120px;
             resize: vertical;
         }
-        
+
         .required-star {
             color: #ef4444;
             margin-right: 5px;
         }
-        
+
         .form-error {
             color: #ef4444;
             font-size: 13px;
             margin-top: 5px;
             display: none;
         }
-        
+
         .form-group.error .form-input,
         .form-group.error .form-select,
         .form-group.error .form-textarea {
             border-color: #ef4444;
         }
-        
+
         .form-group.error .form-error {
             display: block;
         }
-        
+
         .submit-btn {
             width: 100%;
             padding: 16px;
@@ -391,32 +396,32 @@
             justify-content: center;
             margin-top: 10px;
         }
-        
+
         .submit-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 25px rgba(25, 68, 128, 0.3);
         }
-        
+
         .submit-btn:disabled {
             opacity: 0.6;
             cursor: not-allowed;
             transform: none;
             box-shadow: none;
         }
-        
+
         /* Success Message */
         .success-message {
             display: none;
             text-align: center;
             padding: 30px 25px;
         }
-        
+
         .success-icon {
             font-size: 60px;
             color: #10b981;
             margin-bottom: 20px;
         }
-        
+
         /* Contact Info */
         .contact-info {
             background: #f8fafc;
@@ -425,7 +430,7 @@
             margin-top: 20px;
             border-right: 4px solid #194480;
         }
-        
+
         .contact-info h3 {
             color: #194480;
             font-size: 18px;
@@ -435,17 +440,17 @@
             align-items: center;
             gap: 10px;
         }
-        
+
         .info-item {
             display: flex;
             align-items: center;
             margin-bottom: 12px;
         }
-        
+
         .info-item:last-child {
             margin-bottom: 0;
         }
-        
+
         .info-icon-small {
             width: 40px;
             height: 40px;
@@ -458,18 +463,18 @@
             font-size: 16px;
             margin-left: 12px;
         }
-        
+
         .info-item div p:first-child {
             color: #1e293b;
             font-weight: 600;
             font-size: 14px;
         }
-        
+
         .info-item div p:last-child {
             color: #64748b;
             font-size: 14px;
         }
-        
+
         /* Footer */
         .footer {
             background: #194480;
@@ -477,13 +482,13 @@
             padding: 30px 0 20px;
             text-align: center;
         }
-        
+
         .footer-content {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
+
         .footer-logo {
             display: flex;
             align-items: center;
@@ -491,20 +496,20 @@
             gap: 10px;
             margin-bottom: 20px;
         }
-        
+
         .footer-logo h3 {
             color: white;
             font-size: 20px;
             font-weight: 700;
             margin: 0;
         }
-        
+
         .footer-logo p {
             color: rgba(255, 255, 255, 0.8);
             font-size: 12px;
             margin: 0;
         }
-        
+
         .footer-copyright {
             color: rgba(255, 255, 255, 0.7);
             font-size: 14px;
@@ -512,7 +517,7 @@
             padding-top: 20px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
+
         /* Floating Button */
         .floating-button {
             position: fixed;
@@ -533,87 +538,93 @@
             transition: all 0.3s ease;
             border: none;
         }
-        
+
         .floating-button:hover {
             transform: scale(1.1);
             box-shadow: 0 15px 35px rgba(25, 68, 128, 0.4);
         }
-        
+
         /* Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
+
         .animate-fadeInUp {
             animation: fadeInUp 0.6s ease forwards;
         }
-        
+
         @keyframes float {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0);
             }
+
             50% {
                 transform: translateY(-10px);
             }
         }
-        
+
         .animate-float {
             animation: float 3s ease-in-out infinite;
         }
-        
+
         /* Mobile Responsive */
         @media (max-width: 768px) {
             .header {
                 padding: 12px 0;
             }
-            
+
             .header-buttons {
                 gap: 10px;
             }
-            
-            .btn-home, .btn-contact {
+
+            .btn-home,
+            .btn-contact {
                 padding: 8px 15px;
                 font-size: 14px;
             }
-            
+
             .hero-section {
                 min-height: 50vh;
                 margin-top: 70px;
                 padding: 30px 0;
             }
-            
+
             .hero-title {
                 font-size: 24px;
             }
-            
+
             .hero-description {
                 font-size: 16px;
             }
-            
+
             .hero-feature {
                 font-size: 13px;
                 padding: 10px 15px;
             }
-            
+
             .main-content {
                 padding: 0 15px;
             }
-            
-            .info-section, .form-body {
+
+            .info-section,
+            .form-body {
                 padding: 20px;
             }
-            
+
             .form-header {
                 padding: 20px;
             }
-            
+
             .floating-button {
                 width: 50px;
                 height: 50px;
@@ -622,112 +633,245 @@
                 left: 20px;
             }
         }
-        
+
         /* Extra Small Screens */
         @media (max-width: 576px) {
             .logo-text h2 {
                 font-size: 18px;
             }
-            
-            .btn-home span, .btn-contact span {
+
+            .btn-home span,
+            .btn-contact span {
                 display: none;
             }
-            
-            .btn-home, .btn-contact {
+
+            .btn-home,
+            .btn-contact {
                 width: 40px;
                 height: 40px;
                 border-radius: 50%;
                 padding: 0;
                 justify-content: center;
             }
-            
+
             .hero-features {
                 flex-direction: column;
             }
         }
     </style>
 </head>
+
 <body>
-    
-    <!-- Header -->
-    <header class="header">
-        <div class="container mx-auto px-4">
-            <div class="flex items-center justify-between">
-                <!-- Logo -->
-                <div class="logo-container">
-                    <div class="logo">
-                        <img src="../asstes/img/logo-icon.png" alt="">
-                    </div>
-                    <div class="logo-text">
-                        <h2>درين للمقاولات</h2>
-                        <p>  افضل شركة مقاولات</p>
-                    </div>
-                </div>
-                
-                <!-- Header Buttons -->
-                <div class="header-buttons">
-                    <a href="../index.html" class="btn-home">
-                        <i class="fas fa-home"></i>
-                        <span>العودة للرئيسية</span>
-                    </a>
-                    <a href="tel:0508090790" class="btn-contact">
-                        <i class="fas fa-phone"></i>
-                        <span>اتصل بنا</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </header>
 
-<!-- Hero Section: خدمات درين للمقاولات -->
-<section class="hero-section">
-    <div class="container mx-auto px-4">
-        <div class="hero-content animate-fadeInUp">
-            <h1 class="hero-title">
-                خدمات <span class="hero-highlight">شركة درين للمقاولات</span>
-            </h1>
-            
-            <p class="hero-description">
-                تقدم شركة درين للمقاولات مجموعة متكاملة من الخدمات الهندسية والمقاولاتية لتلبية جميع احتياجات مشاريعك.  
-                فريقنا المتخصص يضمن الجودة والكفاءة في كل مرحلة من مراحل التنفيذ.
-            </p>
-            
-            <div class="hero-features">
-                <div class="hero-feature animate-fadeInUp" style="animation-delay: 0.2s">
-                    <i class="fas fa-tools"></i>
-                    <span>إدارة وتشغيل المشاريع</span>
+    <!-- Navigation -->
+    <nav class="projects-nav" id="projectsNavbar">
+        <div class="projects-nav-container">
+            <div class="projects-logo flex items-center gap-3">
+                <!-- أيقونة اللوجو -->
+                <div>
+                    <img src="../asstes/img/logo-icon.png" alt="درين للمقاولات" class="w-16 h-16 object-contain">
                 </div>
-                <div class="hero-feature animate-fadeInUp" style="animation-delay: 0.3s">
-                    <i class="fas fa-cogs"></i>
-                    <span>الصيانة والمرافق</span>
-                </div>
-                <div class="hero-feature animate-fadeInUp" style="animation-delay: 0.4s">
-                    <i class="fas fa-bolt"></i>
-                    <span>تمديدات الكهرباء والأعمال الميكانيكية</span>
-                </div>
-                <div class="hero-feature animate-fadeInUp" style="animation-delay: 0.5s">
-                    <i class="fas fa-building"></i>
-                    <span>التشييد والبناء والاستشارات الهندسية</span>
+
+                <!-- اسم الشركة -->
+                <div class="projects-logo-text">
+                    <h1 class="logo-title text-3xl font-bold text-white leading-tight transition-colors duration-300">
+                        درين للمقاولات
+                    </h1>
+                    <p class="logo-desc text-white text-sm transition-colors duration-300">
+                        خبرة احترافية في مجال المقاولات
+                    </p>
                 </div>
             </div>
-            
-            <div class="hero-buttons animate-fadeInUp animate-float" style="animation-delay: 0.6s">
-                <a href="tel:0508090790" class="hero-btn">
-                    <i class="fas fa-phone"></i>
-                    اتصل الآن
-                </a>
-                <a href="https://wa.me/966508090790" target="_blank" class="hero-btn hero-whatsapp">
-                    <i class="fab fa-whatsapp"></i>
-                    راسلنا على واتساب
-                </a>
+
+
+
+
+
+            <ul class="projects-nav-links">
+                <li><a href="../index.html">الرئيسية</a></li>
+                <li><a href="../index.html#projects">المشاريع</a></li>
+                <li><a href="../pages/about.html">من نحن</a></li>
+                <li><a href="../pages/service-request.html"> طلب خدمة</a></li>
+                <li><a href="../pages/contact-us.html">تواصل معنا</a></li>
+                <li><a href="tel:0508090790" class="projects-nav-cta">اتصل الآن</a></li>
+            </ul>
+
+            <div class="projects-hamburger" id="projectsHamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="projects-mobile-menu" id="projectsMobileMenu">
+        <button class="projects-mobile-close" id="projectsCloseMobile">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="projects-mobile-nav-links">
+            <li><a href="../index.html">الرئيسية</a></li>
+            <li><a href="../index.html#projects">المشاريع</a></li>
+            <li><a href="../pages/about.html">من نحن</a></li>
+            <li><a href="../pages/service-request.html"> طلب خدمة </a></li>
+            <li><a href="../pages/contact-us.html">تواصل معنا</a></li>
+            <li><a href="tel:0508090790" class="projects-mobile-nav-cta">اتصل الآن</a></li>
+        </ul>
     </div>
-</section>
 
 
 
-       <!-- Services Section -->
+    <script>
+        // Navigation functionality
+        const projectsNavbar = document.getElementById('projectsNavbar');
+        const projectsHamburger = document.getElementById('projectsHamburger');
+        const projectsMobileMenu = document.getElementById('projectsMobileMenu');
+        const projectsCloseMobile = document.getElementById('projectsCloseMobile');
+        const projectsMobileLinks = document.querySelectorAll('.projects-mobile-nav-links a');
+
+        // Handle scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                projectsNavbar.classList.add('scrolled');
+            } else {
+                projectsNavbar.classList.remove('scrolled');
+            }
+        });
+
+        // Handle hamburger click
+        projectsHamburger.addEventListener('click', () => {
+            projectsHamburger.classList.toggle('active');
+            projectsMobileMenu.classList.toggle('active');
+            document.body.classList.toggle('projects-mobile-open');
+        });
+
+        // Handle close button click
+        projectsCloseMobile.addEventListener('click', () => {
+            closeProjectsMobileMenu();
+        });
+
+        // Close mobile menu when clicking on a link
+        projectsMobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                closeProjectsMobileMenu();
+            });
+        });
+
+        // Function to close mobile menu
+        function closeProjectsMobileMenu() {
+            projectsHamburger.classList.remove('active');
+            projectsMobileMenu.classList.remove('active');
+            document.body.classList.remove('projects-mobile-open');
+        }
+
+        // Close menu when clicking outside
+        projectsMobileMenu.addEventListener('click', (e) => {
+            if (e.target === projectsMobileMenu) {
+                closeProjectsMobileMenu();
+            }
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 900) {
+                closeProjectsMobileMenu();
+            }
+        });
+
+        // Language switcher functionality
+        const projectsLangBtns = document.querySelectorAll('.projects-lang-btn');
+        projectsLangBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                projectsLangBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Here you would implement actual language switching
+                console.log(`Language changed to: ${btn.textContent}`);
+            });
+        });
+
+        // Initialize navbar state
+        document.addEventListener('DOMContentLoaded', () => {
+            // Check initial scroll position
+            if (window.scrollY > 50) {
+                projectsNavbar.classList.add('scrolled');
+            } else {
+                projectsNavbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+    <!-- script logo -->
+    <script>
+        const title = document.querySelector('.logo-title');
+        const desc = document.querySelector('.logo-desc');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                title.classList.remove('text-white');
+                title.style.color = '#164582';
+
+                desc.classList.remove('text-white');
+                desc.classList.add('text-gray-600');
+            } else {
+                title.style.color = '';
+                title.classList.add('text-white');
+
+                desc.classList.remove('text-gray-600');
+                desc.classList.add('text-white');
+            }
+        });
+    </script>
+
+    <!-- Hero Section: خدمات درين للمقاولات -->
+    <section class="hero-section mt-0">
+        <div class="container mx-auto px-4">
+            <div class="hero-content animate-fadeInUp">
+                <h1 class="hero-title">
+                    خدمات <span class="hero-highlight">شركة درين للمقاولات</span>
+                </h1>
+
+                <p class="hero-description">
+                    تقدم شركة درين للمقاولات مجموعة متكاملة من الخدمات الهندسية والمقاولاتية لتلبية جميع احتياجات
+                    مشاريعك.
+                    فريقنا المتخصص يضمن الجودة والكفاءة في كل مرحلة من مراحل التنفيذ.
+                </p>
+
+                <div class="hero-features">
+                    <div class="hero-feature animate-fadeInUp" style="animation-delay: 0.2s">
+                        <i class="fas fa-tools"></i>
+                        <span>إدارة وتشغيل المشاريع</span>
+                    </div>
+                    <div class="hero-feature animate-fadeInUp" style="animation-delay: 0.3s">
+                        <i class="fas fa-cogs"></i>
+                        <span>الصيانة والمرافق</span>
+                    </div>
+                    <div class="hero-feature animate-fadeInUp" style="animation-delay: 0.4s">
+                        <i class="fas fa-bolt"></i>
+                        <span>تمديدات الكهرباء والأعمال الميكانيكية</span>
+                    </div>
+                    <div class="hero-feature animate-fadeInUp" style="animation-delay: 0.5s">
+                        <i class="fas fa-building"></i>
+                        <span>التشييد والبناء والاستشارات الهندسية</span>
+                    </div>
+                </div>
+
+                <div class="hero-buttons animate-fadeInUp animate-float" style="animation-delay: 0.6s">
+                    <a href="tel:0508090790" class="hero-btn">
+                        <i class="fas fa-phone"></i>
+                        اتصل الآن
+                    </a>
+                    <a href="https://wa.me/966508090790" target="_blank" class="hero-btn hero-whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        راسلنا على واتساب
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Services Section -->
     <section id="services" class="py-16 md:py-24 px-4 md:px-8">
         <div class="max-w-7xl mx-auto">
             <!-- Section Header -->
@@ -739,7 +883,8 @@
                     <span class="text-[#194480]">خدماتنا</span> المتكاملة
                 </h1>
                 <p class="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto">
-                    نتمتع في درين للمقاولات بخبرة واسعة اكتسبناها من خلال تنفيذنا للعديد من المشاريع الضخمة في مجالات متعددة
+                    نتمتع في درين للمقاولات بخبرة واسعة اكتسبناها من خلال تنفيذنا للعديد من المشاريع الضخمة في مجالات
+                    متعددة
                 </p>
             </div>
 
@@ -753,35 +898,35 @@
                             <h3 class="text-lg font-bold text-gray-900">البنية التحتية</h3>
                         </div>
                     </div>
-                    
+
                     <div class="service-category">
                         <div class="flex items-center">
                             <i class="fas fa-tools text-[#194480] text-xl ml-3"></i>
                             <h3 class="text-lg font-bold text-gray-900">التشغيل والصيانة</h3>
                         </div>
                     </div>
-                    
+
                     <div class="service-category">
                         <div class="flex items-center">
                             <i class="fas fa-hard-hat text-[#194480] text-xl ml-3"></i>
                             <h3 class="text-lg font-bold text-gray-900">أعمال المقاولات الخاصة</h3>
                         </div>
                     </div>
-                    
+
                     <div class="service-category">
                         <div class="flex items-center">
                             <i class="fas fa-building text-[#194480] text-xl ml-3"></i>
                             <h3 class="text-lg font-bold text-gray-900">المباني السكنية والتجارية</h3>
                         </div>
                     </div>
-                    
+
                     <div class="service-category">
                         <div class="flex items-center">
                             <i class="fas fa-bolt text-[#194480] text-xl ml-3"></i>
                             <h3 class="text-lg font-bold text-gray-900">أعمال تمديدات الكهرباء</h3>
                         </div>
                     </div>
-                    
+
                     <div class="service-category">
                         <div class="flex items-center">
                             <i class="fas fa-cogs text-[#194480] text-xl ml-3"></i>
@@ -789,13 +934,14 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="bg-gradient-to-r from-[#194480] to-[#194480] rounded-2xl p-8 text-white">
                     <div class="flex flex-col md:flex-row items-center">
                         <div class="md:w-2/3 mb-6 md:mb-0">
                             <h3 class="text-xl md:text-2xl font-bold mb-4">خبرة متخصصة في التشغيل والصيانة</h3>
                             <p class="opacity-90">
-                                نفذنا العديد من الأعمال المتخصصة في مجال التشغيل والصيانة، مما أكسبنا خبرة كبيرة في تلبية احتياجات المباني بعد تسليمها وضمان استمرارية كفاءتها.
+                                نفذنا العديد من الأعمال المتخصصة في مجال التشغيل والصيانة، مما أكسبنا خبرة كبيرة في
+                                تلبية احتياجات المباني بعد تسليمها وضمان استمرارية كفاءتها.
                             </p>
                         </div>
                         <div class="md:w-1/3 text-center">
@@ -810,10 +956,10 @@
             <!-- Our Services -->
             <div>
                 <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-12 text-center">خدماتنا المتخصصة</h2>
-                
+
                 <!-- Services Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="services-grid">
-                    
+
                     <!-- Service 1: Government Buildings -->
                     <div class="service-card animate-fadeInUp" style="animation-delay: 0.1s">
                         <div class="service-image-container">
@@ -822,9 +968,8 @@
                                 <i class="fas fa-landmark ml-1"></i> حكومي
                             </div>
                             <!-- هنا ضع رابط الصورة الفعلية -->
-                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                                 alt="المباني الحكومية" 
-                                 class="service-image">
+                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                                alt="المباني الحكومية" class="service-image">
                             <div class="service-overlay">
                                 <div class="text-right">
                                     <h4 class="text-white text-xl font-bold mb-2">المباني الحكومية</h4>
@@ -835,10 +980,11 @@
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-gray-900 mb-3">المباني الحكومية</h3>
                             <p class="text-gray-600 mb-6 leading-relaxed">
-                                تشغيل وصيانة المباني الحكومية وفق أحدث المعايير الفنية والهندسية المعتمدة، مع ضمان الكفاءة التشغيلية العالية والالتزام بمواصفات السلامة.
+                                تشغيل وصيانة المباني الحكومية وفق أحدث المعايير الفنية والهندسية المعتمدة، مع ضمان
+                                الكفاءة التشغيلية العالية والالتزام بمواصفات السلامة.
                             </p>
                             <div class="flex space-x-4 space-x-reverse">
-                                <a  href="tel:0508090790" class="btn-call flex-1">
+                                <a href="tel:0508090790" class="btn-call flex-1">
                                     <i class="fas fa-phone ml-2"></i>
                                     إتصل بنا
                                 </a>
@@ -849,7 +995,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Service 2: Commercial Buildings -->
                     <div class="service-card animate-fadeInUp" style="animation-delay: 0.2s">
                         <div class="service-image-container">
@@ -858,9 +1004,8 @@
                                 <i class="fas fa-store ml-1"></i> تجاري
                             </div>
                             <!-- هنا ضع رابط الصورة الفعلية -->
-                            <img src="https://images.unsplash.com/photo-1487956382158-bb926046304a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                                 alt="المباني التجارية" 
-                                 class="service-image">
+                            <img src="https://images.unsplash.com/photo-1487956382158-bb926046304a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                                alt="المباني التجارية" class="service-image">
                             <div class="service-overlay">
                                 <div class="text-right">
                                     <h4 class="text-white text-xl font-bold mb-2">المباني التجارية</h4>
@@ -871,7 +1016,8 @@
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-gray-900 mb-3">المباني التجارية</h3>
                             <p class="text-gray-600 mb-6 leading-relaxed">
-                                خدمات متكاملة لتشغيل وصيانة المباني التجارية لضمان استمرارية العمل وتحسين تجربة المستخدمين والعملاء.
+                                خدمات متكاملة لتشغيل وصيانة المباني التجارية لضمان استمرارية العمل وتحسين تجربة
+                                المستخدمين والعملاء.
                             </p>
                             <div class="flex space-x-4 space-x-reverse">
                                 <a href="tel:0508090790" class="btn-call flex-1">
@@ -885,7 +1031,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Service 3: Industrial Buildings -->
                     <div class="service-card animate-fadeInUp" style="animation-delay: 0.3s">
                         <div class="service-image-container">
@@ -894,9 +1040,8 @@
                                 <i class="fas fa-industry ml-1"></i> صناعي
                             </div>
                             <!-- هنا ضع رابط الصورة الفعلية -->
-                            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                                 alt="المباني الصناعية" 
-                                 class="service-image">
+                            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                                alt="المباني الصناعية" class="service-image">
                             <div class="service-overlay">
                                 <div class="text-right">
                                     <h4 class="text-white text-xl font-bold mb-2">المباني الصناعية</h4>
@@ -907,7 +1052,8 @@
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-gray-900 mb-3">المباني الصناعية</h3>
                             <p class="text-gray-600 mb-6 leading-relaxed">
-                                صيانة وتشغيل المنشآت الصناعية بكفاءة عالية، مع التركيز على السلامة والاستدامة التشغيلية والحد من الأعطال.
+                                صيانة وتشغيل المنشآت الصناعية بكفاءة عالية، مع التركيز على السلامة والاستدامة التشغيلية
+                                والحد من الأعطال.
                             </p>
                             <div class="flex space-x-4 space-x-reverse">
                                 <a href="tel:0508090790" class="btn-call flex-1">
@@ -921,7 +1067,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Service 4: Educational Buildings -->
                     <div class="service-card animate-fadeInUp" style="animation-delay: 0.4s">
                         <div class="service-image-container">
@@ -930,9 +1076,8 @@
                                 <i class="fas fa-graduation-cap ml-1"></i> تعليمي
                             </div>
                             <!-- هنا ضع رابط الصورة الفعلية -->
-                            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                                 alt="المباني التعليمية" 
-                                 class="service-image">
+                            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                                alt="المباني التعليمية" class="service-image">
                             <div class="service-overlay">
                                 <div class="text-right">
                                     <h4 class="text-white text-xl font-bold mb-2">المباني التعليمية</h4>
@@ -943,7 +1088,8 @@
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-gray-900 mb-3">المباني التعليمية</h3>
                             <p class="text-gray-600 mb-6 leading-relaxed">
-                                تشغيل وصيانة المنشآت التعليمية لتوفير بيئة آمنة ومناسبة للعملية التعليمية والتعلمية بجميع مرافقها.
+                                تشغيل وصيانة المنشآت التعليمية لتوفير بيئة آمنة ومناسبة للعملية التعليمية والتعلمية
+                                بجميع مرافقها.
                             </p>
                             <div class="flex space-x-4 space-x-reverse">
                                 <a href="tel:0508090790" class="btn-call flex-1">
@@ -957,7 +1103,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Service 5: Operation & Maintenance -->
                     <div class="service-card animate-fadeInUp" style="animation-delay: 0.5s">
                         <div class="service-image-container">
@@ -966,9 +1112,8 @@
                                 <i class="fas fa-cogs ml-1"></i> تشغيل وصيانة
                             </div>
                             <!-- هنا ضع رابط الصورة الفعلية -->
-                            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                                 alt="التشغيل والصيانة" 
-                                 class="service-image">
+                            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                                alt="التشغيل والصيانة" class="service-image">
                             <div class="service-overlay">
                                 <div class="text-right">
                                     <h4 class="text-white text-xl font-bold mb-2">التشغيل والصيانة</h4>
@@ -979,7 +1124,8 @@
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-gray-900 mb-3">التشغيل والصيانة المتكاملة</h3>
                             <p class="text-gray-600 mb-6 leading-relaxed">
-                                نبدأ بدراسة الجدوى مروراً بالتصميم الأولي والتفصيلي وصولاً إلى التنفيذ بأعلى معايير الجودة والكفاءة.
+                                نبدأ بدراسة الجدوى مروراً بالتصميم الأولي والتفصيلي وصولاً إلى التنفيذ بأعلى معايير
+                                الجودة والكفاءة.
                             </p>
                             <div class="flex space-x-4 space-x-reverse">
                                 <a href="tel:0508090790" class="btn-call flex-1">
@@ -993,7 +1139,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Service 6: Electrical Works -->
                     <div class="service-card animate-fadeInUp" style="animation-delay: 0.6s">
                         <div class="service-image-container">
@@ -1002,9 +1148,8 @@
                                 <i class="fas fa-bolt ml-1"></i> كهرباء
                             </div>
                             <!-- هنا ضع رابط الصورة الفعلية -->
-                            <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                                 alt="تمديدات الكهرباء" 
-                                 class="service-image">
+                            <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                                alt="تمديدات الكهرباء" class="service-image">
                             <div class="service-overlay">
                                 <div class="text-right">
                                     <h4 class="text-white text-xl font-bold mb-2">تمديدات الكهرباء</h4>
@@ -1015,7 +1160,8 @@
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-gray-900 mb-3">أعمال تمديدات الكهرباء</h3>
                             <p class="text-gray-600 mb-6 leading-relaxed">
-                                تصميم وتنفيذ أنظمة الكهرباء بكافة أنواعها مع ضمان السلامة والكفاءة التشغيلية العالية والالتزام بالمواصفات القياسية.
+                                تصميم وتنفيذ أنظمة الكهرباء بكافة أنواعها مع ضمان السلامة والكفاءة التشغيلية العالية
+                                والالتزام بالمواصفات القياسية.
                             </p>
                             <div class="flex space-x-4 space-x-reverse">
                                 <a href="tel:0508090790" class="btn-call flex-1">
@@ -1031,7 +1177,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Process Section -->
             <div class="mt-20 bg-white rounded-2xl p-8 shadow-xl">
                 <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">مراحل العمل في مشاريعنا</h2>
@@ -1041,19 +1187,19 @@
                         <h3 class="font-bold text-gray-900 mb-2">دراسة الجدوى</h3>
                         <p class="text-gray-600 text-sm">تحليل شامل للمشروع</p>
                     </div>
-                    
+
                     <div class="text-center p-6 border-2 border-[#194480] border-dashed rounded-xl">
                         <div class="text-3xl font-bold text-[#194480] mb-3">2</div>
                         <h3 class="font-bold text-gray-900 mb-2">التصميم الأولي</h3>
                         <p class="text-gray-600 text-sm">وضع المخططات الأولية</p>
                     </div>
-                    
+
                     <div class="text-center p-6 border-2 border-[#194480] border-dashed rounded-xl">
                         <div class="text-3xl font-bold text-[#194480] mb-3">3</div>
                         <h3 class="font-bold text-gray-900 mb-2">التصميم التفصيلي</h3>
                         <p class="text-gray-600 text-sm">إعداد المخططات التنفيذية</p>
                     </div>
-                    
+
                     <div class="text-center p-6 border-2 border-[#194480] border-dashed rounded-xl">
                         <div class="text-3xl font-bold text-[#194480] mb-3">4</div>
                         <h3 class="font-bold text-gray-900 mb-2">التنفيذ والصيانة</h3>
@@ -1061,7 +1207,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Call to Action -->
             <div class="mt-20 text-center">
                 <div class="bg-gradient-to-r from-[#194480] to-[#194480] rounded-2xl p-10 text-white">
@@ -1085,13 +1231,13 @@
     </section>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Add scroll animation for service cards
             const observerOptions = {
                 threshold: 0.1,
                 rootMargin: '0px 0px -50px 0px'
             };
-            
+
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -1100,33 +1246,33 @@
                     }
                 });
             }, observerOptions);
-            
+
             // Observe all service cards
             document.querySelectorAll('.service-card').forEach((card) => {
                 observer.observe(card);
             });
-            
+
             // Add hover animation delay to service categories
             const categories = document.querySelectorAll('.service-category');
             categories.forEach((category, index) => {
                 category.style.transitionDelay = `${index * 0.05}s`;
             });
-            
+
             // Add click functionality for buttons
             document.querySelectorAll('.btn-call').forEach(button => {
-                button.addEventListener('click', function() {
+                button.addEventListener('click', function () {
                     // هنا يمكنك إضافة رقم الهاتف الفعلي
                     window.location.href = 'tel:+966500000000';
                 });
             });
-            
+
             document.querySelectorAll('.btn-whatsapp').forEach(button => {
-                button.addEventListener('click', function() {
+                button.addEventListener('click', function () {
                     // هنا يمكنك إضافة رقم الواتساب الفعلي
                     window.open('https://wa.me/966500000000', '_blank');
                 });
             });
-            
+
             // Preload images for better user experience
             const imageUrls = [
                 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
@@ -1135,7 +1281,7 @@
                 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
                 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80'
             ];
-            
+
             imageUrls.forEach(url => {
                 const img = new Image();
                 img.src = url;
@@ -1144,7 +1290,7 @@
     </script>
 
 
-        <!-- Vision Section -->
+    <!-- Vision Section -->
     <section id="our-vision" class="py-16 md:py-20 px-4 md:px-8">
         <div class="max-w-6xl mx-auto">
             <!-- Section Header -->
@@ -1171,13 +1317,12 @@
                                 <div class="floating-element"></div>
                                 <div class="floating-element"></div>
                             </div>
-                            
+
                             <!-- Image Container -->
                             <div class="vision-image-wrapper">
                                 <!-- هنا ضع رابط الصورة الفعلية -->
-                                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                                     alt="رؤية درين للمقاولات" 
-                                     class="vision-image">
+                                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                                    alt="رؤية درين للمقاولات" class="vision-image">
                                 <div class="vision-image-overlay">
                                     <div class="image-caption">
                                         <h4 class="font-bold text-gray-900">طموح نحو المستقبل</h4>
@@ -1185,14 +1330,15 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- Quote under image -->
                             <div class="image-quote">
                                 <div class="image-quote-icon">
                                     <i class="fas fa-quote-right text-white"></i>
                                 </div>
                                 <p class="text-gray-700 mb-4 italic">
-                                    "النجاح ليس صدفة، بل هو نتيجة التخطيط الاستراتيجي والعمل الدؤوب والالتزام بالتميز في كل ما نقدمه."
+                                    "النجاح ليس صدفة، بل هو نتيجة التخطيط الاستراتيجي والعمل الدؤوب والالتزام بالتميز في
+                                    كل ما نقدمه."
                                 </p>
                                 <div class="quote-author">
                                     <div class="author-avatar">
@@ -1204,7 +1350,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- Quick Stats under quote -->
                             <div class="mt-6 grid grid-cols-2 gap-3">
                                 <div class="bg-white rounded-lg p-4 text-center border border-gray-100 shadow-sm">
@@ -1218,7 +1364,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Content Column - Right Side -->
                     <div class="lg:col-span-2">
                         <div class="vision-content">
@@ -1227,11 +1373,13 @@
                                 <h2 class="text-2xl font-bold text-gray-900 mb-6 section-title">
                                     رؤيتنا
                                 </h2>
-                                <p class="text-gray-700 text-lg leading-relaxed mb-6 animate-fadeInUp" style="animation-delay: 0.4s">
-                                    نسعى لأن نكون شركة متميزة على مستوى المملكة، ذات استثمارات متعددة، وأن نتميز بقدراتنا على القيادة والمشاركة في تأسيس المشاريع والشركات بمنهجية علمية مدروسة.
+                                <p class="text-gray-700 text-lg leading-relaxed mb-6 animate-fadeInUp"
+                                    style="animation-delay: 0.4s">
+                                    نسعى لأن نكون شركة متميزة على مستوى المملكة، ذات استثمارات متعددة، وأن نتميز
+                                    بقدراتنا على القيادة والمشاركة في تأسيس المشاريع والشركات بمنهجية علمية مدروسة.
                                 </p>
                             </div>
-                            
+
                             <!-- Vision Points -->
                             <div class="mb-10">
                                 <div class="vision-point" style="transition-delay: 0.1s">
@@ -1240,63 +1388,69 @@
                                     </div>
                                     <h3 class="text-xl font-bold text-gray-900 mb-3">استثمارات استراتيجية كبرى</h3>
                                     <p class="text-gray-600 leading-relaxed">
-                                        نطمح إلى الدخول في استثمارات استراتيجية كبرى، وأن نكون الشركة الرائدة والمتخصصة في مجال المقاولات والتشغيل والصيانة.
+                                        نطمح إلى الدخول في استثمارات استراتيجية كبرى، وأن نكون الشركة الرائدة والمتخصصة
+                                        في مجال المقاولات والتشغيل والصيانة.
                                     </p>
                                 </div>
-                                
+
                                 <div class="vision-point" style="transition-delay: 0.2s">
                                     <div class="vision-icon">
                                         <i class="fas fa-medal text-white text-xl"></i>
                                     </div>
                                     <h3 class="text-xl font-bold text-gray-900 mb-3">الجودة والابتكار</h3>
                                     <p class="text-gray-600 leading-relaxed">
-                                        نتطلع لأن نكون من الشركات الرائدة في تقديم خدمات صيانة متكاملة تتميز بأعلى درجات الجودة والإتقان، مع الالتزام التام بالابتكار وتطوير جودة المنتجات.
+                                        نتطلع لأن نكون من الشركات الرائدة في تقديم خدمات صيانة متكاملة تتميز بأعلى درجات
+                                        الجودة والإتقان، مع الالتزام التام بالابتكار وتطوير جودة المنتجات.
                                     </p>
                                 </div>
-                                
+
                                 <div class="vision-point" style="transition-delay: 0.3s">
                                     <div class="vision-icon">
                                         <i class="fas fa-handshake text-white text-xl"></i>
                                     </div>
                                     <h3 class="text-xl font-bold text-gray-900 mb-3">ثقة العملاء</h3>
                                     <p class="text-gray-600 leading-relaxed">
-                                        لنكون الخيار الأول في مجال عملنا، وكسب ثقة الدولة والأفراد من خلال أدائنا المتميز وخدماتنا عالية الجودة.
+                                        لنكون الخيار الأول في مجال عملنا، وكسب ثقة الدولة والأفراد من خلال أدائنا
+                                        المتميز وخدماتنا عالية الجودة.
                                     </p>
                                 </div>
                             </div>
-                            
+
                             <!-- Vision 2030 -->
                             <div class="vision-2030" style="transition-delay: 0.4s">
                                 <div class="relative z-10">
                                     <div class="flex items-center mb-4">
-                                        <div class="bg-[#194480] text-white w-10 h-10 rounded-full flex items-center justify-center ml-3 animate-float">
+                                        <div
+                                            class="bg-[#194480] text-white w-10 h-10 rounded-full flex items-center justify-center ml-3 animate-float">
                                             <i class="fas fa-flag"></i>
                                         </div>
                                         <h3 class="text-xl font-bold text-gray-900">مساهمتنا في رؤية 2030</h3>
                                     </div>
                                     <p class="text-gray-700">
-                                        ونسعى لأن نكون أحد المساهمين الفاعلين في التحول الاقتصادي للمملكة، وفق رؤية المملكة 2030، من خلال تقديم حلول مبتكرة وخدمات متميزة تساهم في تحقيق أهداف الرؤية الطموحة.
+                                        ونسعى لأن نكون أحد المساهمين الفاعلين في التحول الاقتصادي للمملكة، وفق رؤية
+                                        المملكة 2030، من خلال تقديم حلول مبتكرة وخدمات متميزة تساهم في تحقيق أهداف
+                                        الرؤية الطموحة.
                                     </p>
                                 </div>
                             </div>
-                            
+
                             <!-- Stats -->
                             <div class="vision-stats">
                                 <div class="stat-box" style="transition-delay: 0.5s">
                                     <div class="text-2xl font-bold text-[#194480] mb-2">الريادة</div>
                                     <div class="text-sm text-gray-600">في مجال المقاولات</div>
                                 </div>
-                                
+
                                 <div class="stat-box" style="transition-delay: 0.6s">
                                     <div class="text-2xl font-bold text-[#194480] mb-2">الجودة</div>
                                     <div class="text-sm text-gray-600">أعلى معايير الإتقان</div>
                                 </div>
-                                
+
                                 <div class="stat-box" style="transition-delay: 0.7s">
                                     <div class="text-2xl font-bold text-[#194480] mb-2">الابتكار</div>
                                     <div class="text-sm text-gray-600">حلول مبتكرة ومتطورة</div>
                                 </div>
-                                
+
                                 <div class="stat-box" style="transition-delay: 0.8s">
                                     <div class="text-2xl font-bold text-[#194480] mb-2">الثقة</div>
                                     <div class="text-sm text-gray-600">ثقة الدولة والأفراد</div>
@@ -1309,13 +1463,16 @@
 
             <!-- Vision Values -->
             <div class="mt-16">
-                <h2 class="text-2xl font-bold text-gray-900 mb-10 text-center animate-fadeInUp" style="animation-delay: 0.5s">
+                <h2 class="text-2xl font-bold text-gray-900 mb-10 text-center animate-fadeInUp"
+                    style="animation-delay: 0.5s">
                     قيمنا نحو تحقيق الرؤية
                 </h2>
                 <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 border-t-4 border-[#194480] transform hover:-translate-y-2 animate-fadeInUp" style="animation-delay: 0.6s">
+                    <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 border-t-4 border-[#194480] transform hover:-translate-y-2 animate-fadeInUp"
+                        style="animation-delay: 0.6s">
                         <div class="flex items-center mb-6">
-                            <div class="bg-[#194480] text-white w-12 h-12 rounded-full flex items-center justify-center ml-4 animate-float">
+                            <div
+                                class="bg-[#194480] text-white w-12 h-12 rounded-full flex items-center justify-center ml-4 animate-float">
                                 <i class="fas fa-bullseye"></i>
                             </div>
                             <h3 class="text-xl font-bold text-gray-900">التركيز الاستراتيجي</h3>
@@ -1324,10 +1481,12 @@
                             نركز جهودنا على المجالات التي تمتلك فيها الميزة تنافسية واضحة، لتحقيق النمو المستدام.
                         </p>
                     </div>
-                    
-                    <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 border-t-4 border-[#194480] transform hover:-translate-y-2 animate-fadeInUp" style="animation-delay: 0.7s">
+
+                    <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 border-t-4 border-[#194480] transform hover:-translate-y-2 animate-fadeInUp"
+                        style="animation-delay: 0.7s">
                         <div class="flex items-center mb-6">
-                            <div class="bg-[#194480] text-white w-12 h-12 rounded-full flex items-center justify-center ml-4 animate-float" style="animation-delay: 0.2s">
+                            <div class="bg-[#194480] text-white w-12 h-12 rounded-full flex items-center justify-center ml-4 animate-float"
+                                style="animation-delay: 0.2s">
                                 <i class="fas fa-users"></i>
                             </div>
                             <h3 class="text-xl font-bold text-gray-900">التعاون والشراكات</h3>
@@ -1336,10 +1495,12 @@
                             نؤمن بأهمية الشراكات الاستراتيجية لتحقيق الرؤية المشتركة وتعزيز تأثيرنا في السوق.
                         </p>
                     </div>
-                    
-                    <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 border-t-4 border-[#194480] transform hover:-translate-y-2 animate-fadeInUp" style="animation-delay: 0.8s">
+
+                    <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 border-t-4 border-[#194480] transform hover:-translate-y-2 animate-fadeInUp"
+                        style="animation-delay: 0.8s">
                         <div class="flex items-center mb-6">
-                            <div class="bg-[#194480] text-white w-12 h-12 rounded-full flex items-center justify-center ml-4 animate-float" style="animation-delay: 0.4s">
+                            <div class="bg-[#194480] text-white w-12 h-12 rounded-full flex items-center justify-center ml-4 animate-float"
+                                style="animation-delay: 0.4s">
                                 <i class="fas fa-rocket"></i>
                             </div>
                             <h3 class="text-xl font-bold text-gray-900">النمو المستمر</h3>
@@ -1350,21 +1511,24 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Call to Action -->
             <div class="mt-16 text-center animate-fadeInUp" style="animation-delay: 0.9s">
                 <div class="inline-block bg-gradient-to-r from-[#194480] to-[#194480] rounded-2xl p-2 animate-float">
                     <div class="bg-white rounded-xl p-8 md:p-10">
                         <h3 class="text-2xl font-bold text-gray-900 mb-4">نحو مستقبل مشترك</h3>
                         <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
-                            نؤمن بأن تحقيق الرؤية يتطلب العمل الجماعي والشراكات الاستراتيجية. نرحب بفرص التعاون لتحقيق أهدافنا المشتركة.
+                            نؤمن بأن تحقيق الرؤية يتطلب العمل الجماعي والشراكات الاستراتيجية. نرحب بفرص التعاون لتحقيق
+                            أهدافنا المشتركة.
                         </p>
                         <div class="flex flex-wrap justify-center gap-4">
-                            <a href="https://wa.me/966114770705" class="bg-[#194480] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#194480] transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">
+                            <a href="https://wa.me/966114770705"
+                                class="bg-[#194480] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#194480] transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">
                                 <i class="fas fa-handshake ml-2"></i>
                                 تعرف على شراكاتنا
                             </a>
-                            <a href="tel:0508090790" class="bg-white text-[#194480] border border-[#194480] px-8 py-3 rounded-lg font-semibold hover:bg-[#194480] hover:text-white transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">
+                            <a href="tel:0508090790"
+                                class="bg-white text-[#194480] border border-[#194480] px-8 py-3 rounded-lg font-semibold hover:bg-[#194480] hover:text-white transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">
                                 <i class="fas fa-phone ml-2"></i>
                                 اتصل بنا
                             </a>
@@ -1376,13 +1540,13 @@
     </section>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Initialize Intersection Observer for animations
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        if (entry.target.classList.contains('vision-point') || 
-                            entry.target.classList.contains('vision-2030') || 
+                        if (entry.target.classList.contains('vision-point') ||
+                            entry.target.classList.contains('vision-2030') ||
                             entry.target.classList.contains('stat-box')) {
                             entry.target.classList.add('animated');
                         }
@@ -1402,23 +1566,23 @@
             // Image hover effect
             const visionImage = document.querySelector('.vision-image');
             if (visionImage) {
-                visionImage.parentElement.addEventListener('mouseenter', function() {
+                visionImage.parentElement.addEventListener('mouseenter', function () {
                     visionImage.style.transform = 'scale(1.05)';
                 });
-                
-                visionImage.parentElement.addEventListener('mouseleave', function() {
+
+                visionImage.parentElement.addEventListener('mouseleave', function () {
                     visionImage.style.transform = 'scale(1)';
                 });
             }
 
             // Icon hover effects
             document.querySelectorAll('.vision-icon').forEach(icon => {
-                icon.addEventListener('mouseenter', function() {
+                icon.addEventListener('mouseenter', function () {
                     this.style.transform = 'rotate(0deg) scale(1.1)';
                     this.style.boxShadow = '0 10px 20px rgba(15, 76, 58, 0.2)';
                 });
-                
-                icon.addEventListener('mouseleave', function() {
+
+                icon.addEventListener('mouseleave', function () {
                     this.style.transform = 'rotate(-5deg) scale(1)';
                     this.style.boxShadow = 'none';
                 });
@@ -1426,12 +1590,12 @@
 
             // Button click effects
             document.querySelectorAll('button').forEach(button => {
-                button.addEventListener('click', function() {
+                button.addEventListener('click', function () {
                     this.style.transform = 'scale(0.95)';
                     setTimeout(() => {
                         this.style.transform = '';
                     }, 200);
-                    
+
                     // Simulate action
                     if (this.textContent.includes('شراكاتنا')) {
                         alert('سيتم توجيهك إلى صفحة الشراكات قريباً');
@@ -1449,10 +1613,10 @@
         });
     </script>
 
-        <!-- Footer Section -->
+    <!-- Footer Section -->
     <footer class="footer-gradient-bg text-white pt-16 pb-8 px-4 md:px-8 ">
         <div class="footer-pattern"></div>
-        
+
         <div class="max-w-7xl mx-auto relative z-10">
             <!-- Main Footer Content -->
             <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-12">
@@ -1460,8 +1624,8 @@
                 <div class="animate-fadeInUp">
                     <div class="footer-card p-6 h-full">
                         <div class="flex items-center mb-6">
-                            <div class="footer-icon-circle">
-                               <img src="../asstes/img/logo-icon.png" alt="">
+                            <div class="">
+                                <img src="../asstes/img/logo-icon.png" alt="" class="w-16 h-16 object-contain">
                             </div>
                             <div class="mr-4">
                                 <h3 class="text-xl font-bold">درين للمقاولات</h3>
@@ -1469,7 +1633,8 @@
                             </div>
                         </div>
                         <p class="text-gray-300 mb-6 leading-relaxed">
-                            رائدة في مجال المقاولات والتشغيل والصيانة، تقدم خدمات عالية الجودة بمهنية واحترافية، وتساهم في تحقيق رؤية المملكة 2030.
+                            رائدة في مجال المقاولات والتشغيل والصيانة، تقدم خدمات عالية الجودة بمهنية واحترافية، وتساهم
+                            في تحقيق رؤية المملكة 2030.
                         </p>
                         <div class="flex space-x-4 space-x-reverse">
                             <a href="#" class="social-icon">
@@ -1490,7 +1655,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Quick Links -->
                 <div class="animate-fadeInUp" style="animation-delay: 0.1s">
                     <div class="footer-card p-6 h-full">
@@ -1517,22 +1682,22 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Contact Info -->
                 <div class="animate-fadeInUp" style="animation-delay: 0.2s">
                     <div class="footer-card p-6 h-full">
                         <h3 class="text-xl font-bold mb-6 pb-3 border-b border-gray-700">معلومات الاتصال</h3>
-                        
+
                         <div class="contact-info-item">
                             <div class="contact-icon">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div>
                                 <h4 class="font-bold mb-1">العنوان</h4>
-                                <p class="text-gray-300 text-sm">  عقارية الستين الملز الرياض</p>
+                                <p class="text-gray-300 text-sm"> عقارية الستين الملز الرياض</p>
                             </div>
                         </div>
-                        
+
                         <div class="contact-info-item">
                             <div class="contact-icon">
                                 <i class="fas fa-phone"></i>
@@ -1543,7 +1708,7 @@
                                 <p class="text-gray-300 text-sm">0508090790</p>
                             </div>
                         </div>
-                        
+
                         <div class="contact-info-item">
                             <div class="contact-icon">
                                 <i class="fas fa-envelope"></i>
@@ -1551,12 +1716,12 @@
                             <div>
                                 <h4 class="font-bold mb-1">البريد الإلكتروني</h4>
                                 <p class="text-gray-300 text-sm">info@dreen.com.sa</p>
-                                
+
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Newsletter & Map -->
                 <div class="animate-fadeInUp" style="animation-delay: 0.3s">
                     <div class="space-y-6">
@@ -1567,17 +1732,14 @@
                                 اشترك لتصلك آخر أخبارنا وعروضنا الخاصة
                             </p>
                             <form class="space-y-4">
-                                <input type="email" 
-                                       placeholder="بريدك الإلكتروني" 
-                                       class="subscribe-input" 
-                                       required>
+                                <input type="email" placeholder="بريدك الإلكتروني" class="subscribe-input" required>
                                 <button type="submit" class="subscribe-btn w-full">
                                     <i class="fas fa-paper-plane"></i>
                                     اشترك الآن
                                 </button>
                             </form>
                         </div>
-                        
+
                         <!-- Working Hours -->
                         <div class="footer-card p-6">
                             <h3 class="text-xl font-bold mb-4">ساعات العمل</h3>
@@ -1599,7 +1761,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Services Section -->
             <div class="mb-12 animate-fadeInUp" style="animation-delay: 0.4s">
                 <h3 class="text-xl font-bold mb-6 text-center">خدماتنا الرئيسية</h3>
@@ -1630,123 +1792,116 @@
                     </div>
                 </div>
             </div>
-            
-           <!-- Map Section -->
-<div class="mb-12 animate-fadeInUp" style="animation-delay: 0.5s">
-    <div class="footer-card p-6">
-        <h3 class="text-xl font-bold mb-4">موقعنا على الخريطة</h3>
+            <!-- Map Section -->
+            <div class="mb-12 animate-fadeInUp" style="animation-delay: 0.5s">
+                <div class="footer-card p-6">
+                    <h3 class="text-xl font-bold mb-4">موقعنا على الخريطة</h3>
 
-        <div class="map-container text-center">
-            <!-- Google Map -->
- <iframe
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.233541296735!2d46.7255228!3d24.6838665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f0475aace1c11%3A0xf60e31c67ae5ac17!2sAl-Sitteen%20Real%20Estate!5e0!3m2!1sar!2ssa!4v1734000000000"
-  class="w-full h-full border-0"
-  loading="lazy"
-  referrerpolicy="no-referrer-when-downgrade">
-</iframe>
-
-</div>
-
-
-           
-
-          
-        </div>
-    </div>
-</div>
-
-            
-    
-            
-            <!-- Bottom Footer -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-                <!-- Copyright -->
-                <div class="text-center md:text-right">
-                    <p class="text-gray-400">
-                        © 2024 درين للمقاولات. جميع الحقوق محفوظة.
-                    </p>
-                </div>
-                
-                <!-- Logo -->
-                <div class="text-center">
-                    <div class="inline-flex items-center">
-                        <div class="w-10 h-10   rounded-lg flex items-center justify-center ml-3">
-                            <img class="rounded-full" src="./asstes/img/logo-2.png" alt="">
-                        </div>
-                        <div class="text-right">
-                            <div class="font-bold text-xl">درين</div>
-                            <div class="text-gray-400 text-sm">للمقاولات</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Policies -->
-                <div class="text-center md:text-left">
-                    <div class="flex flex-wrap justify-center md:justify-start gap-4">
-                        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">
-                            سياسة الخصوصية
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">
-                            شروط الاستخدام
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">
-                            سياسة الاسترجاع
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">
-                            الأسئلة الشائعة
-                        </a>
-                    </div>
-                    
-                    <!-- Payment Methods -->
-                    <div class="payment-methods justify-center md:justify-start mt-4">
-                        <div class="payment-icon">
-                            <i class="fab fa-cc-visa"></i>
-                        </div>
-                        <div class="payment-icon">
-                            <i class="fab fa-cc-mastercard"></i>
-                        </div>
-                        <div class="payment-icon">
-                            <i class="fab fa-cc-paypal"></i>
-                        </div>
-                        <div class="payment-icon">
-                            <i class="fas fa-university"></i>
-                        </div>
+                    <div class="map-container text-center">
+                        <!-- Google Map -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.233541296735!2d46.7255228!3d24.6838665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f0475aace1c11%3A0xf60e31c67ae5ac17!2sAl-Sitteen%20Real%20Estate!5e0!3m2!1sar!2ssa!4v1734000000000"
+                            class="w-full h-full border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
                     </div>
                 </div>
             </div>
-            
-            <!-- WhatsApp Float -->
-            <div class="fixed bottom-30 left-20 z-50">
-                <a href="https://wa.me/966501234567" 
-                   target="_blank" 
-                   class="bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 animate-fadeInUp"
-                   style="animation-delay: 0.6s">
-                    <i class="fab fa-whatsapp text-2xl"></i>
+        </div>
+
+
+
+
+        <!-- Bottom Footer -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+            <!-- Copyright -->
+            <div class="text-center md:text-right">
+                <p class="text-gray-400">
+                    © 2024 درين للمقاولات. جميع الحقوق محفوظة.
+                </p>
+            </div>
+
+            <!-- Logo -->
+            <div class="text-center relative z-[9999]">
+                <a href="../index.html" class="inline-flex items-center cursor-pointer pointer-events-auto">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center ml-3">
+                        <img class="rounded-full" src="../asstes/img/logo-2.png" alt="درين للمقاولات">
+                    </div>
+                    <div class="text-right">
+                        <div class="font-bold text-xl">درين</div>
+                        <div class="text-gray-400 text-sm">للمقاولات</div>
+                    </div>
                 </a>
             </div>
+
+
+            <!-- Policies -->
+            <div class="text-center md:text-left">
+                <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">
+                        سياسة الخصوصية
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">
+                        شروط الاستخدام
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">
+                        سياسة الاسترجاع
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">
+                        الأسئلة الشائعة
+                    </a>
+                </div>
+
+                <!-- Payment Methods -->
+                <div class="payment-methods justify-center md:justify-start mt-4">
+                    <div class="payment-icon">
+                        <i class="fab fa-cc-visa"></i>
+                    </div>
+                    <div class="payment-icon">
+                        <i class="fab fa-cc-mastercard"></i>
+                    </div>
+                    <div class="payment-icon">
+                        <i class="fab fa-cc-paypal"></i>
+                    </div>
+                    <div class="payment-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- WhatsApp Float -->
+        <div class="fixed bottom-30 left-20 z-50">
+            <a href="https://wa.me/966501234567" target="_blank"
+                class="bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 animate-fadeInUp"
+                style="animation-delay: 0.6s">
+                <i class="fab fa-whatsapp text-2xl"></i>
+            </a>
+        </div>
         </div>
     </footer>
 
 
 
 
-<!-- Floating Call Button -->
-<div class="call-float">
-    <a href="tel:0508090790" title="اتصل بنا الآن">
-     <i class="fa-solid fa-phone" style="font-size: 25px; color: white;"></i>
+    <!-- Floating Call Button -->
+    <div class="call-float">
+        <a href="tel:0508090790" title="اتصل بنا الآن">
+            <i class="fa-solid fa-phone" style="font-size: 25px; color: white;"></i>
 
-    </a>
-</div>
+        </a>
+    </div>
 
     <!-- WhatsApp Float Button -->
     <div class="whatsapp-float">
         <a href="https://wa.me/966114770705">
-        <svg viewBox="0 0 32 32">
-            <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-4.713 1.262 1.262-4.669-0.292-0.508c-1.207-2.100-1.847-4.507-1.847-6.957 0-7.51 6.11-13.62 13.62-13.62s13.62 6.11 13.62 13.62-6.11 13.62-13.62 13.62zM21.305 19.26c-0.346-0.174-2.049-1.007-2.366-1.123-0.316-0.117-0.547 0.174-0.776 0.174s-0.892 1.123-1.094 1.347c-0.201 0.231-0.403 0.26-0.749 0.087s-1.46-0.538-2.779-1.715c-1.027-0.915-1.72-2.045-1.922-2.391s-0.022-0.536 0.152-0.709c0.156-0.155 0.346-0.403 0.518-0.605s0.231-0.346 0.346-0.577c0.116-0.231 0.058-0.433-0.028-0.605s-0.776-1.87-1.063-2.565c-0.28-0.672-0.56-0.58-0.776-0.591-0.2-0.010-0.431-0.012-0.661-0.012s-0.603 0.087-0.92 0.433c-0.316 0.346-1.206 1.179-1.206 2.873s1.235 3.333 1.406 3.561c0.172 0.231 2.395 3.654 5.799 5.125 0.811 0.352 1.445 0.562 1.938 0.719 0.814 0.257 1.555 0.221 2.141 0.134 0.653-0.097 2.049-0.831 2.337-1.636s0.289-1.494 0.202-1.636c-0.086-0.14-0.317-0.231-0.663-0.403z"/>
-        </svg>
+            <svg viewBox="0 0 32 32">
+                <path
+                    d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-4.713 1.262 1.262-4.669-0.292-0.508c-1.207-2.100-1.847-4.507-1.847-6.957 0-7.51 6.11-13.62 13.62-13.62s13.62 6.11 13.62 13.62-6.11 13.62-13.62 13.62zM21.305 19.26c-0.346-0.174-2.049-1.007-2.366-1.123-0.316-0.117-0.547 0.174-0.776 0.174s-0.892 1.123-1.094 1.347c-0.201 0.231-0.403 0.26-0.749 0.087s-1.46-0.538-2.779-1.715c-1.027-0.915-1.72-2.045-1.922-2.391s-0.022-0.536 0.152-0.709c0.156-0.155 0.346-0.403 0.518-0.605s0.231-0.346 0.346-0.577c0.116-0.231 0.058-0.433-0.028-0.605s-0.776-1.87-1.063-2.565c-0.28-0.672-0.56-0.58-0.776-0.591-0.2-0.010-0.431-0.012-0.661-0.012s-0.603 0.087-0.92 0.433c-0.316 0.346-1.206 1.179-1.206 2.873s1.235 3.333 1.406 3.561c0.172 0.231 2.395 3.654 5.799 5.125 0.811 0.352 1.445 0.562 1.938 0.719 0.814 0.257 1.555 0.221 2.141 0.134 0.653-0.097 2.049-0.831 2.337-1.636s0.289-1.494 0.202-1.636c-0.086-0.14-0.317-0.231-0.663-0.403z" />
+            </svg>
         </a>
     </div>
 
- 
+
 </body>
+
 </html>
