@@ -797,7 +797,7 @@
 
         .projects-hero-subtitle {
             font-size: 28px;
-            color: #d4af37;
+            color: #1670ee;
             font-weight: 700;
             margin-bottom: 30px;
             text-shadow: 1px 2px 4px rgba(0,0,0,0.3);
@@ -833,8 +833,8 @@
         }
 
         .projects-hero-btn-primary {
-            background: linear-gradient(135deg, #d4af37, #f4d03f);
-            color: #000;
+            background: linear-gradient(135deg, #1670ee, #1670ee);
+            color: white;
             box-shadow: 0 6px 25px rgba(212, 175, 55, 0.4);
         }
 
@@ -1010,12 +1010,12 @@
 
         .projects-thumbnail-item:hover {
             transform: translateY(-3px);
-            border-color: #d4af37;
+            border-color: #1670ee;
             box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
         }
 
         .projects-thumbnail-item.active {
-            border-color: #d4af37;
+            border-color: #1670ee;
             box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
             transform: translateY(-3px);
         }
