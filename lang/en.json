@@ -1,0 +1,535 @@
+{
+  "logo_title": "Dreen Contracting",
+  "logo_desc": "Professional expertise in facility management, operation and maintenance",
+  "logo_alt": "Dreen Facility Management",
+
+  "nav_home": "Home",
+  "nav_about": "About Us",
+  "nav_services": "Our Services",
+  "nav_request": "Service Request",
+  "nav_contact": "Contact Us",
+  "nav_call": "Call Now",
+
+
+
+
+
+
+  
+  "hero_slide1_title": "Private Contracting Works",
+  "hero_slide1_subtitle": "Excellence in Private Project Execution",
+  "hero_slide1_desc": "We execute private contracting projects with high precision and outstanding quality, from design to final delivery, adhering to the highest safety and quality standards.",
+  "hero_slide1_btn_primary": "Request Contracting Service ←",
+  "hero_slide1_btn_secondary": "WhatsApp",
+  "hero_slide1_card_title": "Private Contracting Works",
+  "hero_slide1_card_desc": "Execution of private contracting projects with the highest quality standards and professional efficiency, ensuring on-time delivery.",
+  "hero_slide1_img_alt": "Private Contracting Works",
+  "hero_slide1_thumb_title": "Private Contracting Works",
+  "hero_slide1_thumb_subtitle": "Quality & Precision",
+
+
+
+    "hero_slide2_title": "Infrastructure",
+  "hero_slide2_subtitle": "Building Strong Foundations for the Future",
+  "hero_slide2_desc": "We execute integrated infrastructure projects including roads, bridges, tunnels, and sewage networks using the latest technologies and approved materials.",
+  "hero_slide2_btn_primary": "Infrastructure Projects ←",
+  "hero_slide2_btn_secondary": "Contact Us",
+  "hero_slide2_card_title": "Infrastructure",
+  "hero_slide2_card_desc": "Execution of integrated infrastructure projects with global standards that contribute to building modern and sustainable communities.",
+  "hero_slide2_img_alt": "Infrastructure",
+  "hero_slide2_thumb_title": "Infrastructure",
+  "hero_slide2_thumb_subtitle": "Building the Future",
+
+
+
+    "hero_slide3_title": "Electrical Extensions",
+  "hero_slide3_subtitle": "Safe and Reliable Power",
+  "hero_slide3_desc": "We provide comprehensive electrical extension solutions for residential, commercial, and industrial buildings, ensuring full compliance with electrical safety standards.",
+  "hero_slide3_btn_primary": "Electrical Services ←",
+  "hero_slide3_btn_secondary": "Free Consultation",
+  "hero_slide3_card_title": "Electrical Extensions",
+  "hero_slide3_card_desc": "Execution of safe and reliable electrical installations using the latest technologies and international standards to ensure network efficiency and safety.",
+  "hero_slide3_img_alt": "Electrical Extensions",
+  "hero_slide3_thumb_title": "Electrical Extensions",
+  "hero_slide3_thumb_subtitle": "Safe Power",
+
+
+
+
+    "hero_slide4_title": "Mechanical Works",
+  "hero_slide4_subtitle": "Precision Mechanical Engineering",
+  "hero_slide4_desc": "We execute HVAC works, mechanical system installations, and industrial equipment maintenance with the highest quality standards.",
+  "hero_slide4_btn_primary": "Mechanical Works ←",
+  "hero_slide4_btn_secondary": "Contact Our Experts",
+  "hero_slide4_card_title": "Mechanical Works",
+  "hero_slide4_card_desc": "Design, execution, and maintenance of integrated mechanical systems using the latest technologies to ensure efficiency and reliability.",
+  "hero_slide4_img_alt": "Mechanical Works",
+  "hero_slide4_thumb_title": "Mechanical Works",
+  "hero_slide4_thumb_subtitle": "Precision Engineering",
+
+
+
+
+    "hero_slide5_title": "Operation & Maintenance",
+  "hero_slide5_subtitle": "Long-Term Sustainability & Efficiency",
+  "hero_slide5_desc": "We provide comprehensive operation and maintenance services for buildings and facilities, with preventive and proactive maintenance plans to ensure continuity and system efficiency.",
+  "hero_slide5_btn_primary": "Maintenance Contracts ←",
+  "hero_slide5_btn_secondary": "View Offers",
+  "hero_slide5_card_title": "Operation & Maintenance",
+  "hero_slide5_card_desc": "Integrated operation and maintenance services to ensure long-term sustainability and operational efficiency of facilities.",
+  "hero_slide5_img_alt": "Operation & Maintenance",
+  "hero_slide5_thumb_title": "Operation & Maintenance",
+  "hero_slide5_thumb_subtitle": "Sustainability & Efficiency",
+
+
+
+
+
+
+
+
+  "about_badge": "Leading Since 2005",
+  "about_title_highlight": "About Us",
+  "about_title_rest": "at Dreen Facilities Management",
+  "about_desc": "A team of experts and specialists in maintenance, cleaning, and government project operations",
+
+  "about_experience_title": "Our Extensive Experience",
+  "about_experience_desc": "Dreen Facilities Management has extensive experience in maintenance, cleaning, and operating government projects across many public and private sectors",
+
+  "about_stat_years": "Years of Experience",
+  "about_stat_workers": "Workers & Technicians",
+  "about_stat_projects": "Completed Projects",
+  "about_stat_satisfaction": "Customer Satisfaction",
+
+  "about_team_title": "Our Specialized Workforce",
+  "about_team_desc": "We employ more than (623) skilled workers and technicians specialized in:",
+
+  "about_skill_ac": "Air Conditioning & Cooling",
+  "about_skill_electric": "Electrical Works",
+  "about_skill_control": "Control Systems",
+  "about_skill_engineers": "Specialized Engineers",
+  "about_skill_mech": "Mechanical Department",
+  "about_skill_civil": "Civil Engineering",
+
+  "about_projects_title": "Our Key Projects",
+
+  "project_1_title": "Maintenance Services Project at Overseas Military Hospital",
+  "project_1_desc": "Comprehensive maintenance and cleaning services",
+
+  "project_2_title": "Sports City Operation & Cleaning – Wadi Al-Dawasir",
+  "project_2_desc": "Operation and maintenance of sports facilities",
+
+  "project_3_title": "Ras Al-Khair Port Maintenance & Cleaning",
+  "project_3_desc": "Integrated maintenance services",
+
+  "project_4_title": "Government Services Complex – Al-Kharj",
+  "project_4_desc": "Operation and maintenance of government facilities",
+
+  "project_5_title": "Al-Dilam Municipality Cleaning",
+  "project_5_desc": "Maintenance and cleaning services",
+
+  "about_partners_title": "Our Partners",
+
+  
+  "about_hero_title": "About Us",
+  "about_hero_company": "Dreen Contracting",
+  "about_hero_desc": "Dreen Contracting is a leading company in facility management, operation, and maintenance. We provide integrated solutions for construction and maintenance projects, ensuring the highest levels of quality, efficiency, and commitment to deadlines.",
+
+  "about_feature_1": "15+ Years of Contracting Experience",
+  "about_feature_2": "Specialized Engineering Team",
+  "about_feature_3": "Certified Execution Quality",
+  "about_feature_4": "Strict Commitment to Deadlines",
+
+  "about_hero_btn": "Contact Us Now",
+
+
+
+  "director_badge": "General Manager Message",
+  "director_title_1": "A Message From",
+  "director_title_2": "Our Leadership",
+  "director_subtitle": "A future vision and ambitious outlook for Dreen Contracting",
+
+  "director_opening": "What started as a dream has become a tangible reality through dedication and hard work, achieving successive successes in Dreen Contracting.",
+  "director_p1": "We spared no effort to maintain our leading position. In light of the economic growth and major urban development that the Kingdom is experiencing, and the distinguished geographical location, the Kingdom kept pace with modern and advanced economic movements that helped attract investors and increase economic activity in the country.",
+  "director_p2": "Therefore, we have been keen on continuous development to raise the efficiency of Darin Contracting, with policies and strategic plans through which we aspire to contribute effectively to enriching our fields and gaining the trust of our clients, by establishing the principles of credibility, professionalism and commitment.",
+  "director_p3": "Since we started practicing our business at Darin Contracting, our reputation has grown among our clients as one of the leading companies in the Kingdom in terms of quality of performance at all levels, which we see in the satisfaction of our clients, which is the basis of our success and the source of our pride.",
+  "director_p4": "Behind all of this stands a team working with one spirit, each member of which has a strong sense of responsibility and does everything possible to deliver the best that can be obtained.",
+
+  "director_signature": "General Manager",
+  "director_company": "Dreen Contracting",
+
+  "principle_1_title": "Credibility",
+  "principle_1_desc": "Transparency and honesty in all our dealings",
+
+  "principle_2_title": "Professionalism",
+  "principle_2_desc": "Expertise and specialization in project execution",
+
+  "principle_3_title": "Commitment",
+  "principle_3_desc": "Commitment to agreed timelines and quality",
+
+
+
+
+
+  "services_hero_title": "Services",
+  "services_hero_title_highlight": "Dreen Contracting",
+
+  "services_hero_desc": "Dreen Contracting provides a comprehensive range of engineering and contracting services to meet all your project needs. Our specialized team ensures quality and efficiency at every stage of execution.",
+
+  "services_hero_feature_1": "Project Management & Operation",
+  "services_hero_feature_2": "Maintenance & Facility Services",
+  "services_hero_feature_3": "Electrical & Mechanical Works",
+  "services_hero_feature_4": "Construction & Engineering Consultancy",
+
+  "services_hero_call_btn": "Call Now",
+  "services_hero_whatsapp_btn": "Chat on WhatsApp",
+
+
+
+  
+  "services_badge": "Extensive Experience Across Multiple Fields",
+  "services_title_main": "Our ervices",
+  "services_title_sub": "Integrated",
+  "services_desc": "At Dreen Contracting, we have extensive experience gained from executing many large-scale projects across various fields",
+
+  "services_fields_title": "Our areas of specialization",
+  "services_special_title": "Specialized Expertise in Operation & Maintenance",
+  "services_special_desc": "We have executed many specialized operation and maintenance projects, gaining strong experience in meeting post-handover building needs and ensuring continuous efficiency.",
+
+  "services_list_title": "Our Specialized Services",
+
+  
+  "service_cat_infra": "Infrastructure",
+  "service_cat_om": "Operation & Maintenance",
+  "service_cat_contracting": "Private Contracting Works",
+  "service_cat_buildings": "Residential & Commercial Buildings",
+  "service_cat_electric": "Electrical Installations",
+  "service_cat_mech": "Mechanical Works",
+
+  "service_baner_title": "Specialized expertise in operation and maintenance ",
+  "service_baner_sup":"We have carried out many specialized works in the field of operation and maintenance, which has given us great experience in meeting the needs of buildings after their handover and ensuring the continuity of their efficiency.",
+  "Our_specialized_services_title": "Our specialized services",
+
+  
+  "service1_type": "Government",
+  "service1_title": "Government Buildings",
+  "service1_sub": "Integrated Operation & Maintenance",
+  "service1_desc": "Operation and maintenance of government buildings according to the latest technical and engineering standards, ensuring high efficiency and safety compliance",
+
+  "service2_type": "Commercial",
+"service2_title": "Commercial Buildings",
+"service2_sub": "Continuous maintenance and efficient operation",
+"service2_desc": "Comprehensive services for operating and maintaining commercial buildings to ensure business continuity and enhance user and customer experience.",
+
+"service3_type": "Management",
+"service3_title": "Facility Management & Operation",
+"service3_sub": "Comprehensive maintenance and operation solutions",
+"service3_desc": "We provide facility management and operation services to the highest quality standards, from planning and feasibility studies, through daily operation and preventive maintenance, to emergency management, ensuring efficient and safe business continuity.",
+
+"service4_type": "Educational",
+"service4_title": "Educational Buildings",
+"service4_sub": "Safe learning environment",
+"service4_desc": "Operation and maintenance of educational facilities to provide a safe and suitable environment for the learning process across all its facilities.",
+
+"service5_type": "Operation & Maintenance",
+"service5_title": "Integrated Operation & Maintenance",
+"service5_sub": "Comprehensive services",
+"service5_desc": "Operation and maintenance of educational facilities to provide a safe and suitable environment for the learning process across all its facilities.",
+
+"service6_type": "Electrical",
+"service6_title": "Electrical Installations",
+"service6_sub": "Advanced and safe systems",
+"service6_desc": "Design and implementation of all types of electrical systems, ensuring safety, high operational efficiency, and compliance with standard specifications.",
+
+  "View_All_Services_Button":"  View all services button ",
+
+  "btn_call": "Call Us",
+  "btn_whatsapp": "WhatsApp",
+  "btn_call_now": "Call Us Now",
+  "btn_whatsapp_contact": "Contact via WhatsApp",
+
+  
+  "services_cta_title": "Do You Have a Project or Need Consultation?",
+  "services_cta_desc": "Our expert team is ready to help you find the right solutions for your project",
+
+
+
+  
+  "vision_badge": "Our Future Vision",
+  "vision_main_title": "Towards",
+  "vision_main_highlight": "Leadership",
+  "vision_main_suffix": "and Excellence",
+  "vision_subtitle": "We shape the future with confident steps toward achieving our ambitious goals",
+
+  "vision_image_alt": "Dreen Contracting Vision",
+  "vision_image_caption_title": "Ambition for the Future",
+  "vision_image_caption_desc": "Leadership in Contracting",
+
+  "vision_quote": "Success is not a coincidence, it is the result of strategic planning, hard work, and commitment to excellence.",
+  "vision_quote_author": "Leadership Team",
+  "vision_quote_company": "Dreen Contracting",
+
+  "vision_stat_years": "Years of Experience",
+  "vision_stat_staff": "Skilled Technicians",
+
+  "vision_section_title": "Our Vision",
+  "vision_intro": "We strive to be a distinguished company across the Kingdom with diversified investments and strong leadership capabilities.",
+
+  "vision_point_1_title": "Major Strategic Investments",
+  "vision_point_1_desc": "We aim to enter major strategic investments and lead the contracting, operation, and maintenance sector.",
+
+  "vision_point_2_title": "Quality & Innovation",
+  "vision_point_2_desc": "We aim to be leaders in delivering integrated maintenance services with the highest quality standards.",
+
+  "vision_point_3_title": "Client Trust",
+  "vision_point_3_desc": "To be the first choice in our field by gaining the trust of government and individuals.",
+
+  "vision_2030_title": "Our Contribution to Vision 2030",
+  "vision_2030_desc": "We aim to actively contribute to Saudi Arabia’s economic transformation under Vision 2030.",
+
+  "vision_stat_1_title": "Leadership",
+  "vision_stat_1_desc": "In Contracting",
+
+  "vision_stat_2_title": "Quality",
+  "vision_stat_2_desc": "Top Standards",
+
+  "vision_stat_3_title": "Innovation",
+  "vision_stat_3_desc": "Advanced Solutions",
+
+  "vision_stat_4_title": "Trust",
+  "vision_stat_4_desc": "Government & Clients Trust",
+
+  "vision_values_title": "Our Values Toward Vision",
+
+  "vision_value_1_title": "Strategic Focus",
+  "vision_value_1_desc": "We focus on areas where we have a strong competitive advantage.",
+
+  "vision_value_2_title": "Collaboration & Partnerships",
+  "vision_value_2_desc": "We believe in strategic partnerships to strengthen market impact.",
+
+  "vision_value_3_title": "Continuous Growth",
+  "vision_value_3_desc": "We continuously improve our performance to keep pace with industry developments.",
+
+
+
+  
+  "contact_title_1": "Contact",
+  "contact_title_2": "Dreen Contracting",
+
+  "contact_description": "We are here to serve you! Contact us directly via phone, WhatsApp, or our social media platforms. Our dedicated team is ready to answer your inquiries and support your projects.",
+
+  "contact_phone": "Call us directly at: 0508090790",
+  "contact_whatsapp": "Contact us via WhatsApp",
+  "contact_email": "Send emails directly",
+
+  "contact_btn_call": "Call Now",
+  "contact_btn_whatsapp": "Chat on WhatsApp",
+
+
+  
+  "contact_page_tag": "Direct Contact",
+  "contact_page_title_1": "Contact",
+  "contact_page_title_2": "Us",
+  "contact_page_subtitle": "We are here to answer your inquiries. Reach us through any method that suits you.",
+
+  "landline_title": "Landline",
+  "landline_label": "For general inquiries",
+  "landline_desc": "Company landline, available during working hours",
+
+  "mobile_title": "Mobile & Messages",
+  "mobile_label": "Instant communication",
+  "mobile_desc": "Available on WhatsApp for urgent inquiries",
+
+  "call_now": "Call Now",
+  "call_mobile": "Call Mobile",
+  "whatsapp_btn": "Chat on WhatsApp",
+
+  "contact_info_title": "Contact Information",
+  "email": "Email",
+  "address": "Address",
+    "address_company": " Al-Sitteen Real Estate - Al-Malaz - Riyadh",
+  "fax": "Fax",
+  "fax_note": "For written inquiries",
+
+
+
+  "work_hours_title": "Working Hours",
+  "work_days_week": "Sunday - Thursday",
+  "work_hours_week": "8:00 AM - 5:00 PM",
+  "work_day_friday": "Friday",
+  "work_hours_friday": "10:00 AM - 2:00 PM",
+  "work_day_saturday": "Saturday",
+  "work_day_off": "Closed",
+
+  "urgent_contact_title": "Construction Work Contact",
+  "urgent_contact_desc": "For urgent inquiries regarding construction projects and on-site execution",
+
+  "branches_title": "Our Branches",
+
+  "branch_riyadh_title": "Head Office - Riyadh",
+  "branch_riyadh_address": "Prince Mohammed Street, King Fahd District",
+
+  "branch_jeddah_title": "Projects Branch - Jeddah",
+  "branch_jeddah_address": "Al Sahafa District, King Fahd Road",
+
+  "branch_dammam_title": "Service Center - Dammam",
+  "branch_dammam_address": "Al Nakheel District, King Abdullah Road",
+
+
+
+  
+  "service_request_title": "Professional Contracting",
+  "service_request_highlight": "Service Request",
+
+  "service_request_desc": "Request your service now and get comprehensive contracting solutions with high quality and precise timelines. Our team of specialists is ready to execute your project efficiently and professionally.",
+
+  "service_feature_experience": "15+ Years of Experience",
+  "service_feature_team": "Specialized Engineering Team",
+  "service_feature_quality": "Certified Execution Quality",
+  "service_feature_time": "On-Time Commitment",
+
+  "service_request_btn": "Start Your Service Request Now",
+
+
+
+
+  "form_info_title": "Service Information",
+
+  "service_ops_title": "Operation & Maintenance",
+  "service_ops_desc": "Professional facility operation and maintenance services.",
+
+  "service_elec_title": "Electrical Works",
+  "service_elec_desc": "Complete electrical installations to international standards.",
+
+  "service_mech_title": "Mechanical Works",
+  "service_mech_desc": "HVAC, plumbing and ventilation systems.",
+
+  "service_build_title": "Construction & Building",
+  "service_build_desc": "Executing construction projects with modern techniques.",
+
+  "quick_contact": "Quick Contact",
+  "phone_label": "Phone",
+  "email_label": "Email",
+  "work_hours_label": "Working Hours",
+  "work_hours_label_time": " 8 AM - 5 PM",
+
+  "form_title": "Service Request",
+  "form_subtitle": "Fill the form and we will contact you within 24 hours",
+
+  "service_type": "Service Type",
+  "select_service": "Select service type",
+
+  "full_name_placeholder": "Enter full name",
+
+  "submit_request": "Submit Request",
+
+  "success_title": "Request Sent Successfully!",
+  "success_desc": "Thank you for contacting Dreen Contracting. We will get back to you shortly.",
+
+  "request_number": "Request Number:",
+  "request_date": "Request Date:",
+  "new_request": "Submit New Request",
+
+
+
+  "service_type_label": "Required Service",
+  "select_service_": "Select service",
+
+  "service_operation": "Operation Management",
+  "service_maintenance": "Maintenance & Facilities",
+  "service_electrical": "Electrical Works",
+  "service_mechanical": "Mechanical Works",
+  "service_construction": "Construction & Building",
+  "service_consulting": "Engineering Consulting",
+  "service_other": "Other Services",
+
+  "error_service_type": "Please select a service",
+
+  "client_type_label": "Client Type",
+  "select_client_type": "Select client type",
+  "client_company": "Company / Organization",
+  "client_individual": "Individual",
+  "client_government": "Government Entity",
+
+  "location_label": "Location / Area",
+  "select_location": "Select location",
+    "location_riyadh":"riyadh",
+  "location_dammam":"dammam",
+  "location_makkah":" makkah",
+  "location_madinah":" madinah",
+  "location_jeddah":"jeddah",
+  "location_khobar":"khobar",
+  "location_taif":"taif",
+  "location_other":"other",
+
+  "full_name_label": "Full Name",
+  "full_name_placeholder_": "Enter full name",
+  "error_full_name": "Please enter your full name",
+
+  "phone_label_": "Phone Number",
+  "phone_placeholder": "05XXXXXXXX",
+  "error_phone": "Please enter a valid phone number",
+
+  "email_label_": "Email Address",
+  "email_placeholder": "example@domain.com",
+  "error_email": "Please enter a valid email",
+
+  "message_label": "Additional Details (Optional)",
+  "message_placeholder": "Enter additional details about your request...",
+
+  "submit_request_": "Submit Request",
+
+
+
+
+
+
+
+
+
+
+
+  "footer_company_name": "Dreen Facility Management",
+  "footer_company_since": "Pioneering Since 2005",
+  "footer_company_desc": "A leader in facility management, operation, and maintenance, delivering high-quality services with professionalism and contributing to Saudi Vision 2030.",
+
+  "footer_quick_links": "Quick Links",
+  "footer_link_home": "Home",
+  "footer_link_about": "About Us",
+  "footer_link_services": "Services",
+  "footer_link_projects": "Projects",
+  "footer_link_vision": "Our Vision",
+  "footer_link_contact": "Contact Us",
+
+  "footer_contact_title": "Contact Information",
+  "footer_address_title": "Address",
+  "footer_address_text": "Al-Sitteen Real Estate, Al-Malaz, Riyadh",
+  "footer_phone_title": "Phone",
+  "footer_email_title": "Email",
+
+  "footer_newsletter_title": "Subscribe to Our Newsletter",
+  "footer_newsletter_desc": "Subscribe to receive our latest news and special offers",
+  "footer_newsletter_placeholder": "Your Email Address",
+  "footer_newsletter_btn": "Subscribe Now",
+
+  "footer_working_hours": "Working Hours",
+  "footer_workday_week": "Sunday - Thursday",
+  "footer_workday_week_time": "8:00 AM - 5:00 PM",
+  "footer_workday_friday": "Friday",
+  "footer_workday_friday_time": "10:00 AM - 2:00 PM",
+  "footer_workday_saturday": "Saturday",
+  "footer_workday_saturday_time": "Closed",
+
+  "footer_main_services": "Main Services",
+  "footer_service_infra": "Infrastructure",
+  "footer_service_facility": "Facility Management",
+  "footer_service_contracting": "Private Contracting",
+  "footer_service_buildings": "Residential Buildings",
+  "footer_service_electric": "Electrical Works",
+  "footer_service_mech": "Mechanical Works",
+
+  "footer_map_title": "Our Location on Map"
+
+
+
+}

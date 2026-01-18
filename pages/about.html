@@ -649,23 +649,27 @@
 </head>
 <body>
     
-     <!-- Navigation -->
+    <!-- Navigation -->
     <nav class="projects-nav" id="projectsNavbar">
         <div class="projects-nav-container">
-             <a href="../index.html" class="projects-logo flex items-center gap-3">
+            <a href="../index.html" class="projects-logo flex items-center gap-3">
                 
                 <!-- أيقونة اللوجو -->
                 <div>
-                    <img src="../asstes/img/logo-icon.png" alt="درين للمقاولات" class="w-16 h-16 object-contain">
+                <img src="../asstes/img/logo-icon.png"
+                    alt=""
+                    data-i18n-alt="logo_alt"
+                    class="w-16 h-16 object-contain">
                 </div>
 
                 <!-- اسم ال -->
                 <div class="projects-logo-text">
-                    <h1 class="logo-title text-3xl font-bold text-white leading-tight transition-colors duration-300">
-                        درين للمقاولات
+                   <h1 class="logo-title text-3xl font-bold text-white leading-tight transition-colors duration-300"
+                        data-i18n="logo_title">
                     </h1>
-                    <p class="logo-desc text-white text-sm transition-colors duration-300">
-                        خبرة احترافية في مجال ادارة المرافق صيانة وتشغيل 
+
+                    <p class="logo-desc text-white text-sm transition-colors duration-300"
+                    data-i18n="logo_desc">
                     </p>
                 </div>
             </a>
@@ -674,15 +678,25 @@
 
 
 
-            <ul class="projects-nav-links">
-                <li><a href="../index.html">الرئيسية</a></li>
-                  <li><a href="../pages/about.html">من نحن</a></li>
-                <li><a href="../pages/services.html">خدماتنا</a></li>
+          <ul class="projects-nav-links">
+            <li><a href="../index.html" data-i18n="nav_home"></a></li>
+            <li><a href="#" data-i18n="nav_about"></a></li>
+            <li><a href="../pages/services.html" data-i18n="nav_services"></a></li>
+            <li><a href="../pages/service-request.html" data-i18n="nav_request"></a></li>
+            <li><a href="../pages/contact-us.html" data-i18n="nav_contact"></a></li>
+            <li>
+                <a href="tel:0508090790"
+                class="projects-nav-cta"
+                data-i18n="nav_call">
+                </a>
+            </li>
+            <select class="langSelector px-3 py-1 border rounded ">
+            <option value="ar">العربية</option>
+            <option value="en">English</option>
+            </select>
 
-                <li><a href="../pages/service-request.html"> طلب خدمة</a></li>
-                <li><a href="../pages/contact-us.html">تواصل معنا</a></li>
-                <li><a href="tel:0508090790" class="projects-nav-cta">اتصل الآن</a></li>
-            </ul>
+        </ul>
+
 
             <div class="projects-hamburger" id="projectsHamburger">
                 <span></span>
@@ -697,15 +711,26 @@
         <button class="projects-mobile-close" id="projectsCloseMobile">
             <i class="fas fa-times"></i>
         </button>
-        <ul class="projects-mobile-nav-links">
-            <li><a href="#home">الرئيسية</a></li>
-              <li><a href="../pages/about.html">من نحن</a></li>
-            <li><a href="../pages/services.html">خدماتنا</a></li>
-            <li><a href="../pages/service-request.html"> طلب خدمة </a></li>
-            <li><a href="../pages/contact-us.html">تواصل معنا</a></li>
-            <li><a href="tel:0508090790" class="projects-mobile-nav-cta">اتصل الآن</a></li>
-        </ul>
+       <ul class="projects-mobile-nav-links">
+    <li><a href="#home" data-i18n="nav_home"></a></li>
+    <li><a href="#" data-i18n="nav_about"></a></li>
+    <li><a href="./pages/services.html" data-i18n="nav_services"></a></li>
+    <li><a href="./pages/service-request.html" data-i18n="nav_request"></a></li>
+    <li><a href="./pages/contact-us.html" data-i18n="nav_contact"></a></li>
+    <select class="langSelector px-3 py-1 border rounded ">
+    <option value="ar">العربية</option>
+    <option value="en">English</option>
+    </select>
+    <li>
+        <a href="tel:0508090790"
+           class="projects-mobile-nav-cta"
+           data-i18n="nav_call">
+        </a>
+    </li>
+</ul>
+
     </div>
+
 
 
 
@@ -810,7 +835,6 @@
         });
     </script>
 
-
     
 
 
@@ -820,39 +844,39 @@
     <div class="container mx-auto px-4">
         <div class="hero-content animate-fadeInUp">
             <h1 class="hero-title">
-                من نحن <span class="hero-highlight"> درين للمقاولات</span>
+                <span data-i18n="about_hero_title">من نحن</span>
+                <span class="hero-highlight" data-i18n="about_hero_company"> درين للمقاولات</span>
             </h1>
             
-            <p class="hero-description">
-                 درين للمقاولات هي  رائدة في ادارة المرافق صيانة وتشغيل ، تقدم حلول متكاملة لمشاريع البناء والصيانة.  
+            <p class="hero-description" data-i18n="about_hero_desc">
+                درين للمقاولات هي رائدة في ادارة المرافق صيانة وتشغيل ، تقدم حلول متكاملة لمشاريع البناء والصيانة.
                 نسعى لتقديم أعلى مستويات الجودة والكفاءة مع الالتزام بالمواعيد والتفاصيل الدقيقة لكل مشروع.
             </p>
             
             <div class="hero-features">
                 <div class="hero-feature animate-fadeInUp" style="animation-delay: 0.2s">
                     <i class="fas fa-building"></i>
-                    <span>خبرة 15+ سنة في المقاولات</span>
+                    <span data-i18n="about_feature_1">خبرة 15+ سنة في المقاولات</span>
                 </div>
                 <div class="hero-feature animate-fadeInUp" style="animation-delay: 0.3s">
                     <i class="fas fa-users"></i>
-                    <span>فريق هندسي متخصص</span>
+                    <span data-i18n="about_feature_2">فريق هندسي متخصص</span>
                 </div>
                 <div class="hero-feature animate-fadeInUp" style="animation-delay: 0.4s">
                     <i class="fas fa-medal"></i>
-                    <span>جودة تنفيذ معتمدة</span>
+                    <span data-i18n="about_feature_3">جودة تنفيذ معتمدة</span>
                 </div>
                 <div class="hero-feature animate-fadeInUp" style="animation-delay: 0.5s">
                     <i class="fas fa-clock"></i>
-                    <span>الالتزام بالمواعيد بدقة</span>
+                    <span data-i18n="about_feature_4">الالتزام بالمواعيد بدقة</span>
                 </div>
             </div>
             
             <div class="hero-buttons animate-fadeInUp animate-float" style="animation-delay: 0.6s">
                 <a href="tel:0508090790" class="hero-btn">
                     <i class="fas fa-phone"></i>
-                    تواصل معنا الآن
+                    <span data-i18n="about_hero_btn">تواصل معنا الآن</span>
                 </a>
-               
             </div>
         </div>
     </div>
@@ -860,20 +884,19 @@
 
 
 
+
         <!-- About Us Section -->
-    <section id="about" class="py-16 md:py-24 px-4 md:px-8">
+  <section id="about" class="py-16 md:py-24 px-4 md:px-8">
         <div class="max-w-7xl mx-auto">
             <!-- Section Header -->
             <div class="text-center mb-16 md:mb-20">
-                <span class="about-badge mb-4">
-                    <i class="fas fa-building mr-2"></i> رائدة منذ 2005
-                </span>
+               <span class="about-badge mb-4" data-i18n="about_badge"></span>
+
                 <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                    <span class="text-[#194480]">من نحن</span> في درين للمقاولات
+                    <span class="text-[#194480]" data-i18n="about_title_highlight"></span>
+                    <span data-i18n="about_title_rest"></span>
                 </h1>
-                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-                    نخبة من الخبراء والمتخصصين في مجال الصيانة والنظافة وتشغيل المشاريع الحكومية
-                </p>
+                <p data-i18n="about_desc"></p>
             </div>
 
             <!-- Main Content -->
@@ -885,77 +908,76 @@
                         <div class="about-icon-circle">
                             <i class="fas fa-award text-2xl text-white"></i>
                         </div>
-                        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4 about-accent-line">
-                            خبرتنا الواسعة
-                        </h2>
-                        <p class="text-gray-700 text-lg mb-6">
-                            نمتلك في درين للمقاولات خبرة واسعة وكبيرة في مجال الصيانة والنظافة، وتشغيل المشاريع الحكومية مع الكثير من القطاعات الحكومية والخاصة.
-                        </p>
-                        
+                       <h2 data-i18n="about_experience_title"></h2>
+
+                        <p data-i18n="about_experience_desc"></p>
+
+
                         <!-- Stats Grid -->
                         <div class="grid grid-cols-2 gap-4 mt-8">
                             <div class="about-stat-card animate-fadeInUp" style="animation-delay: 0.1s;">
                                 <div class="text-3xl md:text-4xl font-bold mb-2">+18</div>
-                                <div class="text-sm md:text-base">سنة خبرة</div>
+                                <div class="text-sm md:text-base" data-i18n="about_stat_years"></div>
                             </div>
                             <div class="about-stat-card animate-fadeInUp" style="animation-delay: 0.2s;">
                                 <div class="text-3xl md:text-4xl font-bold mb-2">623+</div>
-                                <div class="text-sm md:text-base">عامل وفني</div>
+                                <div class="text-sm md:text-base" data-i18n="about_stat_workers">عامل وفني</div>
                             </div>
                             <div class="about-stat-card animate-fadeInUp" style="animation-delay: 0.3s;">
                                 <div class="text-3xl md:text-4xl font-bold mb-2">50+</div>
-                                <div class="text-sm md:text-base">مشروع منجز</div>
+                                <div class="text-sm md:text-base" data-i18n="about_stat_projects">مشروع منجز</div>
                             </div>
                             <div class="about-stat-card animate-fadeInUp" style="animation-delay: 0.4s;">
                                 <div class="text-3xl md:text-4xl font-bold mb-2">100%</div>
-                                <div class="text-sm md:text-base">رضا العملاء</div>
+                                <div class="text-sm md:text-base" data-i18n="about_stat_satisfaction">رضا العملاء</div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Workforce Card -->
                     <div class="about-card-shadow bg-white rounded-2xl md:rounded-3xl p-6 md:p-8">
-                        <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-6">
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-6" data-i18n="about_team_title">
                             <i class="fas fa-users text-[#194480] ml-2"></i>
                             كوادرنا المتخصصة
                         </h3>
-                        <p class="text-gray-700 mb-6">
-                            نمتلك عمالة بعدد يتجاوز <span class="font-bold text-[#194480]">(623) عاملًا وفنيين</span> متخصصين في:
+                        <p class="text-gray-700 mb-6" data-i18n="about_team_desc">
+                            نمتلك عمالة بعدد يتجاوز <span class="font-bold text-[#194480]">(623) عاملًا وفنيين</span>
+                            متخصصين في:
                         </p>
                         <div class="grid grid-cols-2 gap-4">
                             <div class="bg-[#f8f9fa] rounded-xl p-4 border-r-4 border-[#194480]">
                                 <i class="fas fa-snowflake text-[#194480] mb-2"></i>
-                                <div class="font-semibold">التكييف والتبريد</div>
+                                <div class="font-semibold" data-i18n="about_skill_ac">التكييف والتبريد</div>
                             </div>
                             <div class="bg-[#f8f9fa] rounded-xl p-4 border-r-4 border-[#194480]">
                                 <i class="fas fa-bolt text-[#194480] mb-2"></i>
-                                <div class="font-semibold">الكهرباء</div>
+                                <div class="font-semibold" data-i18n="about_skill_electric">الكهرباء</div>
                             </div>
                             <div class="bg-[#f8f9fa] rounded-xl p-4 border-r-4 border-[#194480]">
                                 <i class="fas fa-laptop-house text-[#194480] mb-2"></i>
-                                <div class="font-semibold">أنظمة التحكم</div>
+                                <div class="font-semibold" data-i18n="about_skill_control">أنظمة التحكم</div>
                             </div>
                             <div class="bg-[#f8f9fa] rounded-xl p-4 border-r-4 border-[#194480]">
                                 <i class="fas fa-user-hard-hat text-[#194480] mb-2"></i>
-                                <div class="font-semibold">مهندسين متخصصين</div>
-                            </div>
-                             <div class="bg-[#f8f9fa] rounded-xl p-4 border-r-4 border-[#194480]">
-                                <i class="fas fa-user-hard-hat text-[#194480] mb-2"></i>
-                                <div class="font-semibold"> قسم الميكانيكا</div>
+                                <div class="font-semibold" data-i18n="about_skill_engineers">مهندسين متخصصين</div>
                             </div>
                             <div class="bg-[#f8f9fa] rounded-xl p-4 border-r-4 border-[#194480]">
                                 <i class="fas fa-user-hard-hat text-[#194480] mb-2"></i>
-                                <div class="font-semibold"> الهندسة المدنية</div>
+                                <div class="font-semibold" data-i18n="about_skill_mech"> قسم الميكانيكا</div>
+                            </div>
+                            <div class="bg-[#f8f9fa] rounded-xl p-4 border-r-4 border-[#194480]">
+                                <i class="fas fa-user-hard-hat text-[#194480] mb-2"></i>
+                                <div class="font-semibold" data-i18n="about_skill_civil"> الهندسة المدنية</div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Right Column - Projects & Timeline -->
-                    <div class="space-y-8">
-                    <!-- Major Projects -->
-                   <div class="about-card-shadow bg-white rounded-2xl md:rounded-3xl p-6 md:p-8">
-    <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-6">
+                <div class="space-y-8">
+                    <!-- Major Projects (Updated Design) -->
+<div class="about-card-shadow bg-white rounded-2xl md:rounded-3xl p-6 md:p-8">
+    <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-6" data-i18n="about_projects_title">
         <i class="fas fa-project-diagram text-[#194480] ml-2"></i>
         مشاريعنا البارزة
     </h3>
@@ -964,8 +986,8 @@
             <div class="flex items-start">
                 <i class="fas fa-hospital text-[#194480] text-xl mt-1 ml-3"></i>
                 <div>
-                    <h4 class="font-bold text-gray-900 mb-1">مشروع توفير خدمات الصيانة بالمستشفى العسكري بالخارج</h4>
-                    <p class="text-gray-600 text-sm">خدمات الصيانة والنظافة الشاملة</p>
+                    <h4 class="font-bold text-gray-900 mb-1" data-i18n="project_1_title">مشروع توفير خدمات الصيانة بالمستشفى العسكري بالخارج</h4>
+                    <p class="text-gray-600 text-sm" data-i18n="project_1_desc">خدمات الصيانة والنظافة الشاملة</p>
                 </div>
             </div>
         </div>
@@ -974,8 +996,8 @@
             <div class="flex items-start">
                 <i class="fas fa-futbol text-[#194480] text-xl mt-1 ml-3"></i>
                 <div>
-                    <h4 class="font-bold text-gray-900 mb-1">مشروع نظافة وتشغيل المدينة الرياضية بوادي الدواسر</h4>
-                    <p class="text-gray-600 text-sm">تشغيل وصيانة المرافق الرياضية</p>
+                    <h4 class="font-bold text-gray-900 mb-1" data-i18n="project_2_title">مشروع نظافة وتشغيل المدينة الرياضية بوادي الدواسر</h4>
+                    <p class="text-gray-600 text-sm" data-i18n="project_2_desc">تشغيل وصيانة المرافق الرياضية</p>
                 </div>
             </div>
         </div>
@@ -984,8 +1006,8 @@
             <div class="flex items-start">
                 <i class="fas fa-ship text-[#194480] text-xl mt-1 ml-3"></i>
                 <div>
-                    <h4 class="font-bold text-gray-900 mb-1">مشروع صيانة ونظافة ميناء راس الخبر</h4>
-                    <p class="text-gray-600 text-sm">خدمات الصيانة المتكاملة</p>
+                    <h4 class="font-bold text-gray-900 mb-1" data-i18n="project_3_title">مشروع صيانة ونظافة ميناء راس الخبر</h4>
+                    <p class="text-gray-600 text-sm" data-i18n="project_3_desc">خدمات الصيانة المتكاملة</p>
                 </div>
             </div>
         </div>
@@ -994,8 +1016,8 @@
             <div class="flex items-start">
                 <i class="fas fa-building text-[#194480] text-xl mt-1 ml-3"></i>
                 <div>
-                    <h4 class="font-bold text-gray-900 mb-1">مجمع المصالح الحكومية بالخرج</h4>
-                    <p class="text-gray-600 text-sm">تشغيل وصيانة المنشآت الحكومية</p>
+                    <h4 class="font-bold text-gray-900 mb-1" data-i18n="project_4_title">مجمع المصالح الحكومية بالخرج</h4>
+                    <p class="text-gray-600 text-sm" data-i18n="project_4_desc">تشغيل وصيانة المنشآت الحكومية</p>
                 </div>
             </div>
         </div>
@@ -1004,25 +1026,27 @@
             <div class="flex items-start">
                 <i class="fas fa-city text-[#194480] text-xl mt-1 ml-3"></i>
                 <div>
-                    <h4 class="font-bold text-gray-900 mb-1">نظافة بلدية الدلم</h4>
-                    <p class="text-gray-600 text-sm">خدمات الصيانة والنظافة</p>
+                    <h4 class="font-bold text-gray-900 mb-1" data-i18n="project_5_title">نظافة بلدية الدلم</h4>
+                    <p class="text-gray-600 text-sm" data-i18n="project_5_desc">خدمات الصيانة والنظافة</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
+
                   
                 </div>
             </div>
 
-        
 
-         
 
+
+
+                        <!-- Partners -->
             <!-- Partners -->
 <div class="about-card-shadow bg-white rounded-2xl md:rounded-3xl p-8 relative">
-    <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-10">
+    <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-10" data-i18n="about_partners_title">
         شركاؤنا
     </h2>
 
@@ -1083,7 +1107,7 @@
             <img src="../asstes/img/شعار وزارة المالية – SVG.svg" alt="">
          
         </div>
-                <div class="about-partner-logo min-w-[180px] text-center p-4 rounded-xl shadow hover:shadow-lg transition hover:scale-105">
+        <div class="about-partner-logo min-w-[180px] text-center p-4 rounded-xl shadow hover:shadow-lg transition hover:scale-105">
             <img src="../asstes/img/شعار الهيئة الملكية للجبيل وينبع الجديد بدقة عالي png – SVG.svg" alt="">
          
         </div>
@@ -1098,8 +1122,6 @@
 
     </div>
 </div>
-
-
 
         </div>
     </section>
@@ -1189,96 +1211,87 @@ function scrollPartners(value) {
         </div>
         
         <div class="max-w-5xl mx-auto relative z-10 ">
-            <!-- Section Header -->
-            <div class="text-center mb-12 md:mb-16">
-                <span class="director-title-badge">
-                    <i class="fas fa-user-tie mr-2"></i> كلمة المدير العام
-                </span>
-                <h1 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-                    رسالة من <span class="text-[#1b4680] section-title">قيادتنا</span>
-                </h1>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                    نظرة مستقبلية ورؤية طموحة لمسيرة درين للمقاولات
-                </p>
-            </div>
+             <!-- Section Header -->
+        <div class="text-center mb-12 md:mb-16">
+            <span class="director-title-badge">
+                <i class="fas fa-user-tie mr-2"></i>
+                <span data-i18n="director_badge">كلمة المدير العام</span>
+            </span>
+
+            <h1 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+                <span data-i18n="director_title_1">رسالة من</span>
+                <span class="text-[#1b4680] section-title" data-i18n="director_title_2">قيادتنا</span>
+            </h1>
+
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed"
+               data-i18n="director_subtitle">
+                نظرة مستقبلية ورؤية طموحة لمسيرة درين للمقاولات
+            </p>
+        </div>
 
             <!-- Main Message Card -->
             <div class="director-card bg-white p-8 md:p-12 animate-fadeInUp bg-[#1c508c] text-white">
                 <i class="fas fa-quote-right director-quote-icon"></i>
                 <div class="card-triangle-watermark"></div>
                 
-                <div class="relative z-10">
-                    <!-- Opening Statement -->
-                    <div class="director-highlight">
-                        <p class="text-xl md:text-2xl text-white leading-relaxed font-medium">
-                            <span class="font-bold text-white text-3xl">البداية كانت حلمًا،</span> ثم أصبحت – بفضل الله – واقعًا ملموسًا، وبجهد العاملين المخلصين، حيث عبرنا الصعاب في درين للمقاولات، وحققنا النجاحات تلو النجاحات، حتى وصلنا إلى مقدمة الصفوة من الشركات في المملكة.
-                        </p>
-                    </div>
-                    
-                    <!-- First Paragraph -->
-                    <div class="mb-8">
-                        <p class="text-white text-lg md:text-xl leading-relaxed mb-6">
-                            لم نألُ جهدًا حتى نحافظ على موقعنا في الصدارة، وفي ظل النمو الاقتصادي والنهضة العمرانية الكبرى التي تمر بها المملكة، والموقع الجغرافي المتميز، واكبت المملكة تحركات اقتصادية حديثة ومتطورة ساعدت على جذب المستثمرين وزيادة النشاط الاقتصادي في البلاد.
-                        </p>
-                    </div>
-                    
-                    <!-- Second Paragraph -->
-                    <div class="mb-8">
-                        <p class="text-white text-lg md:text-xl leading-relaxed mb-6">
-                            ولذلك فقد حرصنا على التطوير المستمر لرفع كفاءة درين للمقاولات، بسياسات وخطط استراتيجية نطمح من خلالها إلى المساهمة الفعّالة في إثراء مجالتنا، وكسب ثقة عملائنا، من خلال ترسيخ مبادئ المصداقية والمهنية والالتزام.
-                        </p>
-                    </div>
-                    
-                    <!-- Third Paragraph -->
-                    <div class="mb-8">
-                        <p class="text-white text-lg md:text-xl leading-relaxed mb-6">
-                            منذ أن بدأنا في درين للمقاولات ممارسة نشاطنا، ونمت سمعتنا لدى عملائنا كإحدى أبرز الشركات في المملكة في جودة الأداء على كافة الأصعدة، وهو ما نلمسه من رضا عملائنا، والذي يُعد أساس نجاحنا ومبعث فخرنا.
-                        </p>
-                    </div>
-                    
-                    <!-- Final Paragraph -->
-                    <div class="director-accent-border">
-                        <p class="text-white text-lg md:text-xl leading-relaxed">
-                            ويقف خلف كل ذلك فريق عمل يعمل بروح واحدة، لدى كل فرد منه إحساس قوي بالمسؤولية، ويبذل كل ما بوسعه ليقدم أفضل ما يمكن الحصول عليه.
-                        </p>
-                    </div>
-                    
-                    <!-- Signature -->
-                    <div class="text-left mt-12">
-                        <div class="director-signature text-white">
-                            المدير العام
-                        </div>
-                        <p class="text-white text-lg mt-3 font-medium">درين للمقاولات</p>
-                    </div>
+                  <!-- Message Card -->
+        <div class="director-card bg-[#1c508c] text-white p-8 md:p-12">
+            <div class="director-highlight">
+                <p class="text-xl md:text-2xl leading-relaxed font-medium"
+                   data-i18n="director_opening">
+                    البداية كانت حلمًا، ثم أصبحت – بفضل الله – واقعًا ملموسًا...
+                </p>
+            </div>
+
+            <p class="text-lg md:text-xl leading-relaxed mb-6"
+               data-i18n="director_p1">
+                لم نألُ جهدًا حتى نحافظ على موقعنا في الصدارة...
+            </p>
+
+            <p class="text-lg md:text-xl leading-relaxed mb-6"
+               data-i18n="director_p2">
+                ولذلك فقد حرصنا على التطوير المستمر لرفع كفاءة درين للمقاولات...
+            </p>
+
+            <p class="text-lg md:text-xl leading-relaxed mb-6"
+               data-i18n="director_p3">
+                منذ أن بدأنا في درين للمقاولات ممارسة نشاطنا...
+            </p>
+
+            <p class="text-lg md:text-xl leading-relaxed"
+               data-i18n="director_p4">
+                ويقف خلف كل ذلك فريق عمل يعمل بروح واحدة...
+            </p>
+
+            <div class="text-left mt-12">
+                <div class="director-signature" data-i18n="director_signature">
+                    المدير العام
                 </div>
+                <p class="text-lg mt-3 font-medium" data-i18n="director_company">
+                    درين للمقاولات
+                </p>
+            </div>
+        </div>
             </div>
             
             <!-- Key Principles -->
-            <div class="grid md:grid-cols-3 gap-8 mt-16">
-                <div class="principle-card rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-300">
-                    <div class="principle-icon-bg w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-handshake text-white text-3xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">المصداقية</h3>
-                    <p class="text-gray-600 text-lg leading-relaxed">الشفافية والصدق في جميع تعاملاتنا</p>
-                </div>
-                
-                <div class="principle-card rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-300">
-                    <div class="principle-icon-bg w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-medal text-white text-3xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">المهنية</h3>
-                    <p class="text-gray-600 text-lg leading-relaxed">التخصص والخبرة في تنفيذ المشاريع</p>
-                </div>
-                
-                <div class="principle-card rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-300">
-                    <div class="principle-icon-bg w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-clock text-white text-3xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">الالتزام</h3>
-                    <p class="text-gray-600 text-lg leading-relaxed">الالتزام بالمواعيد والجودة المتفق عليها</p>
-                </div>
+             <!-- Principles -->
+        <div class="grid md:grid-cols-3 gap-8 mt-16">
+            <div class="principle-card text-center p-8">
+                <h3 class="text-2xl font-bold" data-i18n="principle_1_title">المصداقية</h3>
+                <p data-i18n="principle_1_desc">الشفافية والصدق في جميع تعاملاتنا</p>
             </div>
+
+            <div class="principle-card text-center p-8">
+                <h3 class="text-2xl font-bold" data-i18n="principle_2_title">المهنية</h3>
+                <p data-i18n="principle_2_desc">التخصص والخبرة في تنفيذ المشاريع</p>
+            </div>
+
+            <div class="principle-card text-center p-8">
+                <h3 class="text-2xl font-bold" data-i18n="principle_3_title">الالتزام</h3>
+                <p data-i18n="principle_3_desc">الالتزام بالمواعيد والجودة المتفق عليها</p>
+            </div>
+        </div>
         </div>
     </section>
 
@@ -1376,209 +1389,209 @@ function scrollPartners(value) {
     </script>
 
 
-        <!-- Footer Section -->
-    <footer class="footer-gradient-bg text-white pt-16 pb-8 px-4 md:px-8 ">
+      
+ <!-- Footer Section -->
+    <footer class="footer-gradient-bg text-white pt-16 pb-8 px-4 md:px-8">
         <div class="footer-pattern"></div>
-        
+
         <div class="max-w-7xl mx-auto relative z-10">
             <!-- Main Footer Content -->
             <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-12">
                 <!-- Company Info -->
                 <div class="animate-fadeInUp">
                     <div class="footer-card p-6 h-full">
-                          <div class="flex items-center mb-6">
+                        <div class="flex items-center mb-6">
                             <div class="">
                                 <img src="../asstes/img/logo-icon.png" alt="" class="w-16 h-16 object-contain">
                             </div>
                             <div class="mr-4">
-                                <h3 class="text-xl font-bold">درين للمقاولات</h3>
-                                <p class="text-gray-300 text-sm"> رائدة منذ 2005</p>
+                                <h3 class="text-xl font-bold" data-i18n="footer_company_name">درين لادارة المرافق</h3>
+                                <p class="text-gray-300 text-sm" data-i18n="footer_company_since"> رائدة منذ 2005</p>
                             </div>
                         </div>
-                        <p class="text-gray-300 mb-6 leading-relaxed">
-                            رائدة في مجال المقاولات والتشغيل والصيانة، تقدم خدمات عالية الجودة بمهنية واحترافية، وتساهم في تحقيق رؤية المملكة 2030.
+                        <p class="text-gray-300 mb-6 leading-relaxed" data-i18n="footer_company_desc">
+                            رائدة في مجال ادارة المرافق والتشغيل والصيانة، تقدم خدمات عالية الجودة بمهنية واحترافية، وتساهم
+                            في تحقيق رؤية المملكة 2030.
                         </p>
                        
                     </div>
                 </div>
-                
+
                 <!-- Quick Links -->
                 <div class="animate-fadeInUp" style="animation-delay: 0.1s">
                     <div class="footer-card p-6 h-full">
-                        <h3 class="text-xl font-bold mb-6 pb-3 border-b border-gray-700">روابط سريعة</h3>
+                        <h3 class="text-xl font-bold mb-6 pb-3 border-b border-gray-700" data-i18n="footer_quick_links">روابط سريعة</h3>
                         <div class="space-y-3">
-                            <a href="#" class="footer-link block text-gray-300 hover:text-white">
-                                <i class="fas fa-home ml-2"></i> الصفحة الرئيسية
+                            <a href="#" class="footer-link block text-gray-300 hover:text-white " data-i18n="footer_link_home">
+                               
+                                 <i class="fas fa-home ml-2 "></i> الصفحة الرئيسية
+                               
                             </a>
-                            <a href="#" class="footer-link block text-gray-300 hover:text-white">
+                            <a href="#" class="footer-link block text-gray-300 hover:text-white" data-i18n="footer_link_about">
                                 <i class="fas fa-info-circle ml-2"></i> من نحن
                             </a>
-                            <a href="#" class="footer-link block text-gray-300 hover:text-white">
+                            <a href="#" class="footer-link block text-gray-300 hover:text-white" data-i18n="footer_link_services">
                                 <i class="fas fa-cogs ml-2"></i> خدماتنا
                             </a>
-                            <a href="#" class="footer-link block text-gray-300 hover:text-white">
+                            <a href="#" class="footer-link block text-gray-300 hover:text-white" data-i18n="footer_link_projects">
                                 <i class="fas fa-project-diagram ml-2"></i> مشاريعنا
                             </a>
-                            <a href="#" class="footer-link block text-gray-300 hover:text-white">
+                            <a href="#" class="footer-link block text-gray-300 hover:text-white" data-i18n="footer_link_vision">
                                 <i class="fas fa-eye ml-2"></i> رؤيتنا
                             </a>
-                            <a href="#" class="footer-link block text-gray-300 hover:text-white">
+                            <a href="#" class="footer-link block text-gray-300 hover:text-white" data-i18n="footer_link_contact">
                                 <i class="fas fa-phone ml-2"></i> اتصل بنا
                             </a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Contact Info -->
                 <div class="animate-fadeInUp" style="animation-delay: 0.2s">
                     <div class="footer-card p-6 h-full">
-                        <h3 class="text-xl font-bold mb-6 pb-3 border-b border-gray-700">معلومات الاتصال</h3>
-                        
+                        <h3 class="text-xl font-bold mb-6 pb-3 border-b border-gray-700" data-i18n="footer_contact_title">معلومات الاتصال</h3>
+
                         <div class="contact-info-item">
                             <div class="contact-icon">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold mb-1">العنوان</h4>
-                                <p class="text-gray-300 text-sm">  عقارية الستين الملز الرياض</p>
+                                <h4 class="font-bold mb-1" data-i18n="footer_address_title">العنوان</h4>
+                                <p class="text-gray-300 text-sm" data-i18n="footer_address_text"> عقارية الستين الملز الرياض</p>
                             </div>
                         </div>
-                        
+
                         <div class="contact-info-item">
                             <div class="contact-icon">
                                 <i class="fas fa-phone"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold mb-1">الهاتف</h4>
-                                <p class="text-gray-300 text-sm">966114770705+</p>
+                                <h4 class="font-bold mb-1" data-i18n="footer_phone_title">الهاتف</h4>
+                                <p class="text-gray-300 text-sm">114770705</p>
                                 <p class="text-gray-300 text-sm">0508090790</p>
                             </div>
                         </div>
-                        
+
                         <div class="contact-info-item">
                             <div class="contact-icon">
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold mb-1">البريد الإلكتروني</h4>
+                                <h4 class="font-bold mb-1" data-i18n="footer_email_title">البريد الإلكتروني</h4>
                                 <p class="text-gray-300 text-sm">info@dreen.com.sa</p>
-                                
+
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Newsletter & Map -->
                 <div class="animate-fadeInUp" style="animation-delay: 0.3s">
                     <div class="space-y-6">
                         <!-- Newsletter -->
                         <div class="footer-card p-6">
-                            <h3 class="text-xl font-bold mb-4">اشترك في نشرتنا</h3>
-                            <p class="text-gray-300 mb-4 text-sm">
+                            <h3 class="text-xl font-bold mb-4" data-i18n="footer_newsletter_title">اشترك في نشرتنا</h3>
+                            <p class="text-gray-300 mb-4 text-sm" data-i18n="footer_newsletter_desc">
                                 اشترك لتصلك آخر أخبارنا وعروضنا الخاصة
                             </p>
                             <form class="space-y-4">
-                                <input type="email" 
-                                       placeholder="بريدك الإلكتروني" 
-                                       class="subscribe-input" 
-                                       required>
-                                <button type="submit" class="subscribe-btn w-full">
+                                <input type="email" data-i18n-placeholder="footer_newsletter_placeholder" class="subscribe-input" required>
+                                <button type="submit" class="subscribe-btn w-full" data-i18n="footer_newsletter_btn">
                                     <i class="fas fa-paper-plane"></i>
                                     اشترك الآن
                                 </button>
                             </form>
                         </div>
-                        
+
                         <!-- Working Hours -->
                         <div class="footer-card p-6">
-                            <h3 class="text-xl font-bold mb-4">ساعات العمل</h3>
+                            <h3 class="text-xl font-bold mb-4" data-i18n="footer_working_hours">ساعات العمل</h3>
                             <div class="working-hours">
-                                <div class="hour-item">
-                                    <span>الأحد - الخميس</span>
-                                    <span class="text-gray-300">8:00 ص - 5:00 م</span>
+                                <div class="hour-item" data-i18n="footer_workday_week">
+                                     <span data-i18n="footer_workday_week"></span>
+                                     <span class="text-gray-300" data-i18n="footer_workday_week_time"></span>
                                 </div>
                                 <div class="hour-item">
-                                    <span>الجمعة</span>
-                                    <span class="text-gray-300">10:00 ص - 2:00 م</span>
+                                    <span  data-i18n="footer_workday_friday">الجمعة</span>
+                                    <span class="text-gray-300" data-i18n="footer_workday_friday_time">10:00 ص - 2:00 م</span>
                                 </div>
                                 <div class="hour-item">
-                                    <span>السبت</span>
-                                    <span class="text-gray-300">إجازة</span>
+                                    <span data-i18n="footer_workday_saturday">السبت</span>
+                                    <span class="text-gray-300"  data-i18n="footer_workday_saturday_time">إجازة</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Services Section -->
             <div class="mb-12 animate-fadeInUp" style="animation-delay: 0.4s">
-                <h3 class="text-xl font-bold mb-6 text-center">خدماتنا الرئيسية</h3>
+                <h3 class="text-xl font-bold mb-6 text-center"data-i18n="footer_main_services">خدماتنا الرئيسية</h3>
                 <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                    <div class="footer-card p-4 text-center">
+                    <div class="footer-card p-4 text-center" >
                         <i class="fas fa-road text-2xl mb-2 text-[#2a9d78]"></i>
-                        <div class="text-sm">البنية التحتية</div>
+                        <div class="text-sm"data-i18n="footer_service_infra" >البنية التحتية</div>
                     </div>
                     <div class="footer-card p-4 text-center">
                         <i class="fas fa-tools text-2xl mb-2 text-[#2a9d78]"></i>
-                        <div class="text-sm"> ادارة المرافق صيانة وتشغيل </div>
+                        <div class="text-sm" data-i18n="footer_service_facility"> ادارة المرافق صيانة وتشغيل </div>
                     </div>
                     <div class="footer-card p-4 text-center">
                         <i class="fas fa-hard-hat text-2xl mb-2 text-[#2a9d78]"></i>
-                        <div class="text-sm">مقاولات خاصة</div>
+                        <div class="text-sm" data-i18n="footer_service_contracting">مقاولات خاصة</div>
                     </div>
                     <div class="footer-card p-4 text-center">
                         <i class="fas fa-building text-2xl mb-2 text-[#2a9d78]"></i>
-                        <div class="text-sm">مباني سكنية</div>
+                        <div class="text-sm" data-i18n="footer_service_buildings">مباني سكنية</div>
                     </div>
                     <div class="footer-card p-4 text-center">
                         <i class="fas fa-bolt text-2xl mb-2 text-[#2a9d78]"></i>
-                        <div class="text-sm">تمديدات كهرباء</div>
+                        <div class="text-sm" data-i18n="footer_service_electric">تمديدات كهرباء</div>
                     </div>
                     <div class="footer-card p-4 text-center">
                         <i class="fas fa-cogs text-2xl mb-2 text-[#2a9d78]"></i>
-                        <div class="text-sm">أعمال ميكانيكية</div>
+                        <div class="text-sm" data-i18n="footer_service_mech">أعمال ميكانيكية</div>
                     </div>
-                    
                 </div>
             </div>
-            
-           <!-- Map Section -->
-<div class="mb-12 animate-fadeInUp" style="animation-delay: 0.5s">
-    <div class="footer-card p-6">
-        <h3 class="text-xl font-bold mb-4">موقعنا على الخريطة</h3>
 
-        <div class="map-container text-center">
-            <!-- Google Map -->
- <iframe
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.233541296735!2d46.7255228!3d24.6838665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f0475aace1c11%3A0xf60e31c67ae5ac17!2sAl-Sitteen%20Real%20Estate!5e0!3m2!1sar!2ssa!4v1734000000000"
-  class="w-full h-full border-0"
-  loading="lazy"
-  referrerpolicy="no-referrer-when-downgrade">
-</iframe>
+            <!-- Map Section -->
+            <div class="mb-12 animate-fadeInUp" style="animation-delay: 0.5s">
+                <div class="footer-card p-6">
+                    <h3 class="text-xl font-bold mb-4" data-i18n="footer_map_title">موقعنا على الخريطة</h3>
 
-</div>
+                    <div class="map-container text-center">
+                        <!-- Google Map -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.233541296735!2d46.7255228!3d24.6838665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f0475aace1c11%3A0xf60e31c67ae5ac17!2sAl-Sitteen%20Real%20Estate!5e0!3m2!1sar!2ssa!4v1734000000000"
+                            class="w-full h-full border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+
+                    </div>
 
 
-           
 
-          
-        </div>
-    </div>
-</div>
 
-            
-    
-        
-            <!-- WhatsApp Float -->
-            <div class="fixed bottom-30 left-20 z-50">
-                <a href="https://wa.me/966501234567" 
-                   target="_blank" 
-                   class="bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 animate-fadeInUp"
-                   style="animation-delay: 0.6s">
-                    <i class="fab fa-whatsapp text-2xl"></i>
-                </a>
+
+                </div>
             </div>
+        </div>
+
+
+        <!-- Footer Divider -->
+        <div class="footer-divider"></div>
+
+
+
+        <!-- WhatsApp Float -->
+        <div class="fixed bottom-30 left-20 z-50">
+            <a href="https://wa.me/966501234567" target="_blank"
+                class="bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 animate-fadeInUp"
+                style="animation-delay: 0.6s">
+                <i class="fab fa-whatsapp text-2xl"></i>
+            </a>
+        </div>
         </div>
     </footer>
 
@@ -1603,6 +1616,7 @@ function scrollPartners(value) {
         </a>
     </div>
 
- 
+ <script src="../asstes/js/script.js"></script>
+ <script src="../asstes/js/i18n.js"></script>
 </body>
 </html>

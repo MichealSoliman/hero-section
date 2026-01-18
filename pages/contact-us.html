@@ -652,20 +652,24 @@
     <!-- Navigation -->
     <nav class="projects-nav" id="projectsNavbar">
         <div class="projects-nav-container">
-             <a href="../index.html" class="projects-logo flex items-center gap-3">
+            <a href="../index.html" class="projects-logo flex items-center gap-3">
                 
                 <!-- أيقونة اللوجو -->
                 <div>
-                    <img src="../asstes/img/logo-icon.png" alt="درين للمقاولات" class="w-16 h-16 object-contain">
+                <img src="../asstes/img/logo-icon.png"
+                    alt=""
+                    data-i18n-alt="logo_alt"
+                    class="w-16 h-16 object-contain">
                 </div>
 
                 <!-- اسم ال -->
                 <div class="projects-logo-text">
-                    <h1 class="logo-title text-3xl font-bold text-white leading-tight transition-colors duration-300">
-                        درين للمقاولات
+                   <h1 class="logo-title text-3xl font-bold text-white leading-tight transition-colors duration-300"
+                        data-i18n="logo_title">
                     </h1>
-                    <p class="logo-desc text-white text-sm transition-colors duration-300">
-                        خبرة احترافية في مجال ادارة المرافق صيانة وتشغيل 
+
+                    <p class="logo-desc text-white text-sm transition-colors duration-300"
+                    data-i18n="logo_desc">
                     </p>
                 </div>
             </a>
@@ -674,14 +678,25 @@
 
 
 
-            <ul class="projects-nav-links">
-                <li><a href="../index.html">الرئيسية</a></li>
-                <li><a href="../pages/about.html">من نحن</a></li>
-                <li><a href="../pages/services.html">خدماتنا</a></li>
-                <li><a href="../pages/service-request.html"> طلب خدمة</a></li>
-                 <li><a href="../pages/contact-us.html">تواصل معنا</a></li>
-                <li><a href="tel:0508090790" class="projects-nav-cta">اتصل الآن</a></li>
-            </ul>
+          <ul class="projects-nav-links">
+            <li><a href="../index.html" data-i18n="nav_home"></a></li>
+            <li><a href="#" data-i18n="nav_about"></a></li>
+            <li><a href="../pages/services.html" data-i18n="nav_services"></a></li>
+            <li><a href="../pages/service-request.html" data-i18n="nav_request"></a></li>
+            <li><a href="../pages/contact-us.html" data-i18n="nav_contact"></a></li>
+            <li>
+                <a href="tel:0508090790"
+                class="projects-nav-cta"
+                data-i18n="nav_call">
+                </a>
+            </li>
+         <select class="langSelector px-3 py-1 border rounded ">
+        <option value="ar">العربية</option>
+        <option value="en">English</option>
+        </select>
+
+        </ul>
+
 
             <div class="projects-hamburger" id="projectsHamburger">
                 <span></span>
@@ -696,15 +711,26 @@
         <button class="projects-mobile-close" id="projectsCloseMobile">
             <i class="fas fa-times"></i>
         </button>
-        <ul class="projects-mobile-nav-links">
-            <li><a href="../index.html">الرئيسية</a></li>
-            <li><a href="../pages/about.html">من نحن</a></li>
-            <li><a href="../pages/services.html">خدماتنا</a></li>
-            <li><a href="../pages/service-request.html"> طلب خدمة </a></li>
-             <li><a href="../pages/contact-us.html">تواصل معنا</a></li>
-            <li><a href="tel:0508090790" class="projects-mobile-nav-cta">اتصل الآن</a></li>
-        </ul>
+       <ul class="projects-mobile-nav-links">
+    <li><a href="#home" data-i18n="nav_home"></a></li>
+    <li><a href="#" data-i18n="nav_about"></a></li>
+    <li><a href="./pages/services.html" data-i18n="nav_services"></a></li>
+    <li><a href="./pages/service-request.html" data-i18n="nav_request"></a></li>
+    <li><a href="./pages/contact-us.html" data-i18n="nav_contact"></a></li>
+    <select class="langSelector px-3 py-1 border rounded ">
+    <option value="ar">العربية</option>
+    <option value="en">English</option>
+    </select>
+    <li>
+        <a href="tel:0508090790"
+           class="projects-mobile-nav-cta"
+           data-i18n="nav_call">
+        </a>
+    </li>
+</ul>
+
     </div>
+
 
 
 
@@ -813,48 +839,56 @@
 <section class="hero-section mt-0">
     <div class="container mx-auto px-4">
         <div class="hero-content animate-fadeInUp">
+
             <h1 class="hero-title">
-                تواصل مع <span class="hero-highlight"> درين للمقاولات</span>
+                <span data-i18n="contact_title_1">تواصل مع</span>
+                <span class="hero-highlight" data-i18n="contact_title_2">درين للمقاولات</span>
             </h1>
             
-            <p class="hero-description">
-                نحن هنا لخدمتك! يمكنك التواصل معنا مباشرة عبر الهاتف، واتساب، أو حساباتنا على وسائل التواصل الاجتماعي.  
+            <p class="hero-description" data-i18n="contact_description">
+                نحن هنا لخدمتك! يمكنك التواصل معنا مباشرة عبر الهاتف، واتساب، أو حساباتنا على وسائل التواصل الاجتماعي.
                 فريقنا المختص جاهز للإجابة على استفساراتك وتقديم الدعم اللازم لمشاريعك.
             </p>
             
             <div class="hero-features">
                 <div class="hero-feature animate-fadeInUp" style="animation-delay: 0.2s">
                     <i class="fas fa-phone"></i>
-                    <span>اتصل بنا مباشرة على: 0508090790</span>
+                    <span data-i18n="contact_phone">
+                        اتصل بنا مباشرة على: 0508090790
+                    </span>
                 </div>
+
                 <div class="hero-feature animate-fadeInUp" style="animation-delay: 0.3s">
                     <i class="fab fa-whatsapp"></i>
-                    <span>تواصل معنا عبر واتساب</span>
+                    <span data-i18n="contact_whatsapp">
+                        تواصل معنا عبر واتساب
+                    </span>
                 </div>
-                <div class="hero-feature animate-fadeInUp" style="animation-delay: 0.4s">
-                    <a href="mailto:">
-                            <i class="fas fa-envelope"></i>
-                              <span>رسائل الايميل مباشرة</span>
-                        </a>
 
-                  
+                <div class="hero-feature animate-fadeInUp" style="animation-delay: 0.4s">
+                    <i class="fas fa-envelope"></i>
+                    <span data-i18n="contact_email">
+                        رسائل البريد الإلكتروني مباشرة
+                    </span>
                 </div>
-                
             </div>
             
             <div class="hero-buttons animate-fadeInUp animate-float" style="animation-delay: 0.6s">
                 <a href="tel:0508090790" class="hero-btn">
                     <i class="fas fa-phone"></i>
-                    اتصل الآن
+                    <span data-i18n="contact_btn_call">اتصل الآن</span>
                 </a>
+
                 <a href="https://wa.me/966508090790" target="_blank" class="hero-btn hero-whatsapp">
                     <i class="fab fa-whatsapp"></i>
-                    راسلنا على واتساب
+                    <span data-i18n="contact_btn_whatsapp">راسلنا على واتساب</span>
                 </a>
             </div>
+
         </div>
     </div>
 </section>
+
 
 
 
@@ -865,12 +899,18 @@
             <!-- Section Header -->
             <div class="text-center mb-16 md:mb-20">
                 <span class="connect-tag mb-4">
-                    <i class="fas fa-headset mr-2"></i> تواصل مباشر
+                    <i class="fas fa-headset mr-2"></i> 
+                    <span data-i18n="contact_page_tag">
+                    تواصل مباشر
+                    </span>
                 </span>
                 <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                    تواصل <span class="text-[#194480]">معنا</span>
+                    <span data-i18n="contact_page_title_1">
+                     تواصل  
+                    </span>
+                     <span class="text-[#194480]" data-i18n="contact_page_title_2">معنا</span>
                 </h1>
-                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="contact_page_subtitle">
                     نحن هنا للإجابة على استفساراتك. اتصل بنا بأي وسيلة تناسبك
                 </p>
             </div>
@@ -886,15 +926,17 @@
                             <div class="connect-icon-wrapper mx-auto">
                                 <i class="fas fa-phone-alt text-white text-2xl"></i>
                             </div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4">الهاتف الثابت</h3>
-                            <div class="connect-label">للاستفسارات العامة</div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="landline_title">الهاتف الثابت</h3>
+                            <div class="connect-label" data-i18n="landline_label">للاستفسارات العامة</div>
                             <div class="phone-display">+966 11 477 0705</div>
-                            <p class="text-gray-600 mb-6">
+                            <p class="text-gray-600 mb-6" data-i18n="landline_desc">
                                 الخط الأرضي للمؤسسة، متاح خلال ساعات العمل
                             </p>
                             <button onclick="dialNumber('+966114770705')" class="call-action">
                                 <i class="fas fa-phone"></i>
+                                <span data-i18n="call_now">
                                 اتصل الآن
+                                </span>
                             </button>
                         </div>
                     </div>
@@ -907,19 +949,23 @@
                             <div class="connect-icon-wrapper mx-auto">
                                 <i class="fab fa-whatsapp text-white text-2xl"></i>
                             </div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4">الجوال والرسائل</h3>
-                            <div class="connect-label">للتواصل الفوري</div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="mobile_title">الجوال والرسائل</h3>
+                            <div class="connect-label" data-i18n="mobile_label">للتواصل الفوري</div>
                             <div class="phone-display">+966 50 809 0790</div>
-                            <p class="text-gray-600 mb-6">
+                            <p class="text-gray-600 mb-6" data-i18n="mobile_desc">
                                 متاح على واتساب للرسائل والاستفسارات العاجلة
                             </p>
                             <button onclick="startWhatsApp()" class="whatsapp-action">
                                 <i class="fab fa-whatsapp"></i>
+                                <span data-i18n="whatsapp_btn">
                                 راسلنا على واتساب
+                                </span>
                             </button>
                             <button onclick="dialNumber('+966508090790')" class="call-action">
                                 <i class="fas fa-mobile-alt"></i>
+                                <span data-i18n="call_mobile">
                                 اتصل بالجوال
+                                </span>
                             </button>
                         </div>
                     </div>
@@ -928,14 +974,14 @@
                 <!-- معلومات التواصل -->
                 <div class="appear-animation" style="animation-delay: 0.6s">
                     <div class="connect-card">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-6 connect-heading">معلومات التواصل</h3>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6 connect-heading" data-i18n="contact_info_title">معلومات التواصل</h3>
                         
                         <div class="detail-item">
                             <div class="detail-icon">
                                 <i class="fas fa-envelope text-[#194480] text-xl"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-1">البريد الإلكتروني</h4>
+                                <h4 class="font-bold text-gray-900 mb-1"data-i18n="email">البريد الإلكتروني</h4>
                                 <p class="text-gray-600">info@dreen.com.sa</p>
                             
                             </div>
@@ -946,9 +992,9 @@
                                 <i class="fas fa-map-marker-alt text-[#194480] text-xl"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-1">العنوان</h4>
+                                <h4 class="font-bold text-gray-900 mb-1" data-i18n="address">العنوان</h4>
                                
-                                <p class="text-gray-600 text-sm">عقارية الستين الملز - الرياض</p>
+                                <p class="text-gray-600 text-sm" data-i18n="address_company">عقارية الستين الملز - الرياض</p>
                             </div>
                         </div>
                         
@@ -957,9 +1003,9 @@
                                 <i class="fas fa-fax text-[#194480] text-xl"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-1">الفاكس</h4>
+                                <h4 class="font-bold text-gray-900 mb-1" data-i18n="fax">الفاكس</h4>
                                 <p class="text-gray-600">+966 11 477 0706</p>
-                                <p class="text-gray-600 text-sm">للاستفسارات الكتابية</p>
+                                <p class="text-gray-600 text-sm" data-i18n="fax_note">للاستفسارات الكتابية</p>
                             </div>
                         </div>
                         
@@ -969,98 +1015,130 @@
             </div>
 
             <!-- Work Hours & Branches -->
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- أوقات الدوام -->
-                <div class="appear-animation" style="animation-delay: 0.8s">
-                    <div class="work-schedule">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-6">
-                            <i class="fas fa-clock text-[#194480] ml-2"></i>
-                            أوقات الدوام
-                        </h3>
-                        
-                        <div class="time-slot">
-                            <span class="font-bold text-gray-900">الأحد - الخميس</span>
-                            <span class="text-gray-700">8:00 صباحاً - 5:00 مساءً</span>
-                        </div>
-                        
-                        <div class="time-slot">
-                            <span class="font-bold text-gray-900">الجمعة</span>
-                            <span class="text-gray-700">10:00 صباحاً - 2:00 ظهراً</span>
-                        </div>
-                        
-                        <div class="time-slot">
-                            <span class="font-bold text-gray-900">السبت</span>
-                            <span class="text-gray-700">إجازة</span>
-                        </div>
-                        
-                      <div class="urgent-contact mt-8">
-    <div class="flex items-center justify-center mb-3">
-        <i class="fas fa-hard-hat text-xl text-[#194480] ml-2"></i>
-        <h4 class="font-bold text-gray-900">التواصل لأعمال المقاولات</h4>
-    </div>
+         <div class="grid md:grid-cols-2 gap-8">
 
-    <div class="phone-display" style="font-size: 20px;">
-        +966 50 809 0790
-    </div>
+    <!-- أوقات الدوام -->
+    <div class="appear-animation" style="animation-delay: 0.8s">
+        <div class="work-schedule">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">
+                <i class="fas fa-clock text-[#194480] ml-2"></i>
+                <span data-i18n="work_hours_title">أوقات الدوام</span>
+            </h3>
 
-    <p class="text-gray-600 text-sm mt-2">
-        للاستفسارات العاجلة بخصوص مشاريع المقاولات والتنفيذ الميداني
-    </p>
-</div>
+            <div class="time-slot">
+                <span class="font-bold text-gray-900"
+                      data-i18n="work_days_week">الأحد - الخميس</span>
+                <span class="text-gray-700"
+                      data-i18n="work_hours_week">8:00 صباحاً - 5:00 مساءً</span>
+            </div>
 
-                    </div>
+            <div class="time-slot">
+                <span class="font-bold text-gray-900"
+                      data-i18n="work_day_friday">الجمعة</span>
+                <span class="text-gray-700"
+                      data-i18n="work_hours_friday">10:00 صباحاً - 2:00 ظهراً</span>
+            </div>
+
+            <div class="time-slot">
+                <span class="font-bold text-gray-900"
+                      data-i18n="work_day_saturday">السبت</span>
+                <span class="text-gray-700"
+                      data-i18n="work_day_off">إجازة</span>
+            </div>
+
+            <div class="urgent-contact mt-8">
+                <div class="flex items-center justify-center mb-3">
+                    <i class="fas fa-hard-hat text-xl text-[#194480] ml-2"></i>
+                    <h4 class="font-bold text-gray-900"
+                        data-i18n="urgent_contact_title">
+                        التواصل لأعمال المقاولات
+                    </h4>
                 </div>
-                
-                <!-- فروعنا -->
-                <div class="appear-animation" style="animation-delay: 1s">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6 connect-heading">فروعنا</h3>
-                    
-                    <div class="branch-card">
-                        <div class="flex items-start mb-4">
-                            <div class="bg-[#194480] text-white w-10 h-10 rounded-full flex items-center justify-center ml-3 flex-shrink-0">
-                                <i class="fas fa-building"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-900 mb-1">المقر الرئيسي - الرياض</h4>
-                                <p class="text-gray-600 text-sm">شارع الأمير محمد، حي الملك فهد</p>
-                            </div>
-                        </div>
-                        <div class="text-sm text-gray-500">
-                            <i class="fas fa-phone ml-2"></i> +966 11 477 0705
-                        </div>
-                    </div>
-                    
-                    <div class="branch-card">
-                        <div class="flex items-start mb-4">
-                            <div class="bg-[#194480] text-white w-10 h-10 rounded-full flex items-center justify-center ml-3 flex-shrink-0">
-                                <i class="fas fa-hard-hat"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-900 mb-1">فرع المشاريع - جدة</h4>
-                                <p class="text-gray-600 text-sm">حي الصحافة، شارع الملك فهد</p>
-                            </div>
-                        </div>
-                        <div class="text-sm text-gray-500">
-                            <i class="fas fa-phone ml-2"></i> +966 12 345 6789
-                        </div>
-                    </div>
-                    
-                    <div class="branch-card">
-                        <div class="flex items-start mb-4">
-                            <div class="bg-[#194480] text-white w-10 h-10 rounded-full flex items-center justify-center ml-3 flex-shrink-0">
-                                <i class="fas fa-tools"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-900 mb-1">مركز الخدمة - الدمام</h4>
-                                <p class="text-gray-600 text-sm">حي النخيل، طريق الملك عبدالله</p>
-                            </div>
-                        </div>
-                        <div class="text-sm text-gray-500">
-                            <i class="fas fa-phone ml-2"></i> +966 13 987 6543
-                        </div>
-                    </div>
+
+                <div class="phone-display" style="font-size: 20px;">
+                    +966 50 809 0790
+                </div>
+
+                <p class="text-gray-600 text-sm mt-2"
+                   data-i18n="urgent_contact_desc">
+                    للاستفسارات العاجلة بخصوص مشاريع المقاولات والتنفيذ الميداني
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- فروعنا -->
+    <div class="appear-animation" style="animation-delay: 1s">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6 connect-heading"
+            data-i18n="branches_title">
+            فروعنا
+        </h3>
+
+        <div class="branch-card">
+            <div class="flex items-start mb-4">
+                <div class="bg-[#194480] text-white w-10 h-10 rounded-full flex items-center justify-center ml-3 flex-shrink-0">
+                    <i class="fas fa-building"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 mb-1"
+                        data-i18n="branch_riyadh_title">
+                        المقر الرئيسي - الرياض
+                    </h4>
+                    <p class="text-gray-600 text-sm"
+                       data-i18n="branch_riyadh_address">
+                        شارع الأمير محمد، حي الملك فهد
+                    </p>
                 </div>
             </div>
+            <div class="text-sm text-gray-500">
+                <i class="fas fa-phone ml-2"></i> +966 11 477 0705
+            </div>
+        </div>
+
+        <div class="branch-card">
+            <div class="flex items-start mb-4">
+                <div class="bg-[#194480] text-white w-10 h-10 rounded-full flex items-center justify-center ml-3 flex-shrink-0">
+                    <i class="fas fa-hard-hat"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 mb-1"
+                        data-i18n="branch_jeddah_title">
+                        فرع المشاريع - جدة
+                    </h4>
+                    <p class="text-gray-600 text-sm"
+                       data-i18n="branch_jeddah_address">
+                        حي الصحافة، شارع الملك فهد
+                    </p>
+                </div>
+            </div>
+            <div class="text-sm text-gray-500">
+                <i class="fas fa-phone ml-2"></i> +966 12 345 6789
+            </div>
+        </div>
+
+        <div class="branch-card">
+            <div class="flex items-start mb-4">
+                <div class="bg-[#194480] text-white w-10 h-10 rounded-full flex items-center justify-center ml-3 flex-shrink-0">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 mb-1"
+                        data-i18n="branch_dammam_title">
+                        مركز الخدمة - الدمام
+                    </h4>
+                    <p class="text-gray-600 text-sm"
+                       data-i18n="branch_dammam_address">
+                        حي النخيل، طريق الملك عبدالله
+                    </p>
+                </div>
+            </div>
+            <div class="text-sm text-gray-500">
+                <i class="fas fa-phone ml-2"></i> +966 13 987 6543
+            </div>
+        </div>
+    </div>
+</div>
+
         </div>
     </section>
 
@@ -1231,210 +1309,207 @@
         };
     </script>
 
-        <!-- Footer Section -->
-    <footer class="footer-gradient-bg text-white pt-16 pb-8 px-4 md:px-8 ">
+ <!-- Footer Section -->
+    <footer class="footer-gradient-bg text-white pt-16 pb-8 px-4 md:px-8">
         <div class="footer-pattern"></div>
-        
         <div class="max-w-7xl mx-auto relative z-10">
             <!-- Main Footer Content -->
             <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-12">
                 <!-- Company Info -->
                 <div class="animate-fadeInUp">
                     <div class="footer-card p-6 h-full">
-                         <div class="flex items-center mb-6">
+                        <div class="flex items-center mb-6">
                             <div class="">
                                 <img src="../asstes/img/logo-icon.png" alt="" class="w-16 h-16 object-contain">
                             </div>
                             <div class="mr-4">
-                                <h3 class="text-xl font-bold">درين للمقاولات</h3>
-                                <p class="text-gray-300 text-sm"> رائدة منذ 2005</p>
+                                <h3 class="text-xl font-bold" data-i18n="footer_company_name">درين لادارة المرافق</h3>
+                                <p class="text-gray-300 text-sm" data-i18n="footer_company_since"> رائدة منذ 2005</p>
                             </div>
                         </div>
-                        <p class="text-gray-300 mb-6 leading-relaxed">
-                            رائدة في مجال المقاولات والتشغيل والصيانة، تقدم خدمات عالية الجودة بمهنية واحترافية، وتساهم في تحقيق رؤية المملكة 2030.
+                        <p class="text-gray-300 mb-6 leading-relaxed" data-i18n="footer_company_desc">
+                            رائدة في مجال ادارة المرافق والتشغيل والصيانة، تقدم خدمات عالية الجودة بمهنية واحترافية، وتساهم
+                            في تحقيق رؤية المملكة 2030.
                         </p>
                        
                     </div>
                 </div>
-                
+
                 <!-- Quick Links -->
                 <div class="animate-fadeInUp" style="animation-delay: 0.1s">
                     <div class="footer-card p-6 h-full">
-                        <h3 class="text-xl font-bold mb-6 pb-3 border-b border-gray-700">روابط سريعة</h3>
+                        <h3 class="text-xl font-bold mb-6 pb-3 border-b border-gray-700" data-i18n="footer_quick_links">روابط سريعة</h3>
                         <div class="space-y-3">
-                            <a href="#" class="footer-link block text-gray-300 hover:text-white">
-                                <i class="fas fa-home ml-2"></i> الصفحة الرئيسية
+                            <a href="#" class="footer-link block text-gray-300 hover:text-white " data-i18n="footer_link_home">
+                               
+                                 <i class="fas fa-home ml-2 "></i> الصفحة الرئيسية
+                               
                             </a>
-                            <a href="#" class="footer-link block text-gray-300 hover:text-white">
+                            <a href="#" class="footer-link block text-gray-300 hover:text-white" data-i18n="footer_link_about">
                                 <i class="fas fa-info-circle ml-2"></i> من نحن
                             </a>
-                            <a href="#" class="footer-link block text-gray-300 hover:text-white">
+                            <a href="#" class="footer-link block text-gray-300 hover:text-white" data-i18n="footer_link_services">
                                 <i class="fas fa-cogs ml-2"></i> خدماتنا
                             </a>
-                            <a href="#" class="footer-link block text-gray-300 hover:text-white">
+                            <a href="#" class="footer-link block text-gray-300 hover:text-white" data-i18n="footer_link_projects">
                                 <i class="fas fa-project-diagram ml-2"></i> مشاريعنا
                             </a>
-                            <a href="#" class="footer-link block text-gray-300 hover:text-white">
+                            <a href="#" class="footer-link block text-gray-300 hover:text-white" data-i18n="footer_link_vision">
                                 <i class="fas fa-eye ml-2"></i> رؤيتنا
                             </a>
-                            <a href="#" class="footer-link block text-gray-300 hover:text-white">
+                            <a href="#" class="footer-link block text-gray-300 hover:text-white" data-i18n="footer_link_contact">
                                 <i class="fas fa-phone ml-2"></i> اتصل بنا
                             </a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Contact Info -->
                 <div class="animate-fadeInUp" style="animation-delay: 0.2s">
                     <div class="footer-card p-6 h-full">
-                        <h3 class="text-xl font-bold mb-6 pb-3 border-b border-gray-700">معلومات الاتصال</h3>
-                        
+                        <h3 class="text-xl font-bold mb-6 pb-3 border-b border-gray-700" data-i18n="footer_contact_title">معلومات الاتصال</h3>
+
                         <div class="contact-info-item">
                             <div class="contact-icon">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold mb-1">العنوان</h4>
-                                <p class="text-gray-300 text-sm">  عقارية الستين الملز الرياض</p>
+                                <h4 class="font-bold mb-1" data-i18n="footer_address_title">العنوان</h4>
+                                <p class="text-gray-300 text-sm" data-i18n="footer_address_text"> عقارية الستين الملز الرياض</p>
                             </div>
                         </div>
-                        
+
                         <div class="contact-info-item">
                             <div class="contact-icon">
                                 <i class="fas fa-phone"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold mb-1">الهاتف</h4>
-                                <p class="text-gray-300 text-sm">966114770705+</p>
+                                <h4 class="font-bold mb-1" data-i18n="footer_phone_title">الهاتف</h4>
+                                <p class="text-gray-300 text-sm">114770705</p>
                                 <p class="text-gray-300 text-sm">0508090790</p>
                             </div>
                         </div>
-                        
+
                         <div class="contact-info-item">
                             <div class="contact-icon">
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold mb-1">البريد الإلكتروني</h4>
+                                <h4 class="font-bold mb-1" data-i18n="footer_email_title">البريد الإلكتروني</h4>
                                 <p class="text-gray-300 text-sm">info@dreen.com.sa</p>
-                                
+
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Newsletter & Map -->
                 <div class="animate-fadeInUp" style="animation-delay: 0.3s">
                     <div class="space-y-6">
                         <!-- Newsletter -->
                         <div class="footer-card p-6">
-                            <h3 class="text-xl font-bold mb-4">اشترك في نشرتنا</h3>
-                            <p class="text-gray-300 mb-4 text-sm">
+                            <h3 class="text-xl font-bold mb-4" data-i18n="footer_newsletter_title">اشترك في نشرتنا</h3>
+                            <p class="text-gray-300 mb-4 text-sm" data-i18n="footer_newsletter_desc">
                                 اشترك لتصلك آخر أخبارنا وعروضنا الخاصة
                             </p>
                             <form class="space-y-4">
-                                <input type="email" 
-                                       placeholder="بريدك الإلكتروني" 
-                                       class="subscribe-input" 
-                                       required>
-                                <button type="submit" class="subscribe-btn w-full">
+                                <input type="email" data-i18n-placeholder="footer_newsletter_placeholder" class="subscribe-input" required>
+                                <button type="submit" class="subscribe-btn w-full" data-i18n="footer_newsletter_btn">
                                     <i class="fas fa-paper-plane"></i>
                                     اشترك الآن
                                 </button>
                             </form>
                         </div>
-                        
+
                         <!-- Working Hours -->
                         <div class="footer-card p-6">
-                            <h3 class="text-xl font-bold mb-4">ساعات العمل</h3>
+                            <h3 class="text-xl font-bold mb-4" data-i18n="footer_working_hours">ساعات العمل</h3>
                             <div class="working-hours">
-                                <div class="hour-item">
-                                    <span>الأحد - الخميس</span>
-                                    <span class="text-gray-300">8:00 ص - 5:00 م</span>
+                                <div class="hour-item" data-i18n="footer_workday_week">
+                                     <span data-i18n="footer_workday_week"></span>
+                                     <span class="text-gray-300" data-i18n="footer_workday_week_time"></span>
                                 </div>
                                 <div class="hour-item">
-                                    <span>الجمعة</span>
-                                    <span class="text-gray-300">10:00 ص - 2:00 م</span>
+                                    <span  data-i18n="footer_workday_friday">الجمعة</span>
+                                    <span class="text-gray-300" data-i18n="footer_workday_friday_time">10:00 ص - 2:00 م</span>
                                 </div>
                                 <div class="hour-item">
-                                    <span>السبت</span>
-                                    <span class="text-gray-300">إجازة</span>
+                                    <span data-i18n="footer_workday_saturday">السبت</span>
+                                    <span class="text-gray-300"  data-i18n="footer_workday_saturday_time">إجازة</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Services Section -->
             <div class="mb-12 animate-fadeInUp" style="animation-delay: 0.4s">
-                <h3 class="text-xl font-bold mb-6 text-center">خدماتنا الرئيسية</h3>
+                <h3 class="text-xl font-bold mb-6 text-center"data-i18n="footer_main_services">خدماتنا الرئيسية</h3>
                 <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                    <div class="footer-card p-4 text-center">
+                    <div class="footer-card p-4 text-center" >
                         <i class="fas fa-road text-2xl mb-2 text-[#2a9d78]"></i>
-                        <div class="text-sm">البنية التحتية</div>
+                        <div class="text-sm"data-i18n="footer_service_infra" >البنية التحتية</div>
                     </div>
                     <div class="footer-card p-4 text-center">
                         <i class="fas fa-tools text-2xl mb-2 text-[#2a9d78]"></i>
-                        <div class="text-sm"> ادارة المرافق صيانة وتشغيل </div>
+                        <div class="text-sm" data-i18n="footer_service_facility"> ادارة المرافق صيانة وتشغيل </div>
                     </div>
                     <div class="footer-card p-4 text-center">
                         <i class="fas fa-hard-hat text-2xl mb-2 text-[#2a9d78]"></i>
-                        <div class="text-sm">مقاولات خاصة</div>
+                        <div class="text-sm" data-i18n="footer_service_contracting">مقاولات خاصة</div>
                     </div>
                     <div class="footer-card p-4 text-center">
                         <i class="fas fa-building text-2xl mb-2 text-[#2a9d78]"></i>
-                        <div class="text-sm">مباني سكنية</div>
+                        <div class="text-sm" data-i18n="footer_service_buildings">مباني سكنية</div>
                     </div>
                     <div class="footer-card p-4 text-center">
                         <i class="fas fa-bolt text-2xl mb-2 text-[#2a9d78]"></i>
-                        <div class="text-sm">تمديدات كهرباء</div>
+                        <div class="text-sm" data-i18n="footer_service_electric">تمديدات كهرباء</div>
                     </div>
                     <div class="footer-card p-4 text-center">
                         <i class="fas fa-cogs text-2xl mb-2 text-[#2a9d78]"></i>
-                        <div class="text-sm">أعمال ميكانيكية</div>
+                        <div class="text-sm" data-i18n="footer_service_mech">أعمال ميكانيكية</div>
                     </div>
                 </div>
             </div>
-            
-           <!-- Map Section -->
-<div class="mb-12 animate-fadeInUp" style="animation-delay: 0.5s">
-    <div class="footer-card p-6">
-        <h3 class="text-xl font-bold mb-4">موقعنا على الخريطة</h3>
 
-        <div class="map-container text-center">
-            <!-- Google Map -->
- <iframe
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.233541296735!2d46.7255228!3d24.6838665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f0475aace1c11%3A0xf60e31c67ae5ac17!2sAl-Sitteen%20Real%20Estate!5e0!3m2!1sar!2ssa!4v1734000000000"
-  class="w-full h-full border-0"
-  loading="lazy"
-  referrerpolicy="no-referrer-when-downgrade">
-</iframe>
+            <!-- Map Section -->
+            <div class="mb-12 animate-fadeInUp" style="animation-delay: 0.5s">
+                <div class="footer-card p-6">
+                    <h3 class="text-xl font-bold mb-4" data-i18n="footer_map_title">موقعنا على الخريطة</h3>
 
-</div>
+                    <div class="map-container text-center">
+                        <!-- Google Map -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.233541296735!2d46.7255228!3d24.6838665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f0475aace1c11%3A0xf60e31c67ae5ac17!2sAl-Sitteen%20Real%20Estate!5e0!3m2!1sar!2ssa!4v1734000000000"
+                            class="w-full h-full border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+
+                    </div>
 
 
-           
 
-          
-        </div>
-    </div>
-</div>
 
-            
-    
-            
-         
-            
-            <!-- WhatsApp Float -->
-            <div class="fixed bottom-30 left-20 z-50">
-                <a href="https://wa.me/966501234567" 
-                   target="_blank" 
-                   class="bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 animate-fadeInUp"
-                   style="animation-delay: 0.6s">
-                    <i class="fab fa-whatsapp text-2xl"></i>
-                </a>
+
+                </div>
             </div>
+        </div>
+
+
+        <!-- Footer Divider -->
+        <div class="footer-divider"></div>
+
+
+
+        <!-- WhatsApp Float -->
+        <div class="fixed bottom-30 left-20 z-50">
+            <a href="https://wa.me/966501234567" target="_blank"
+                class="bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 animate-fadeInUp"
+                style="animation-delay: 0.6s">
+                <i class="fab fa-whatsapp text-2xl"></i>
+            </a>
+        </div>
         </div>
     </footer>
 
@@ -1458,6 +1533,7 @@
         </a>
     </div>
 
- 
+ <script src="../asstes/js/script.js"></script>
+ <script src="../asstes/js/i18n.js"></script>
 </body>
 </html>

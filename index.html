@@ -300,17 +300,20 @@
                 
                 <!-- أيقونة اللوجو -->
                 <div>
-                    <img src="./asstes/img/logo-icon.png" alt="درين لادارة المرافق" class="w-16 h-16 object-contain">
+                <img src="./asstes/img/logo-icon.png"
+                    alt=""
+                    data-i18n-alt="logo_alt"
+                    class="w-16 h-16 object-contain">
                 </div>
 
                 <!-- اسم ال -->
                 <div class="projects-logo-text">
-                    <h1 class="logo-title text-3xl font-bold text-white leading-tight transition-colors duration-300">
-                        درين للمقاولات
+                   <h1 class="logo-title text-3xl font-bold text-white leading-tight transition-colors duration-300"
+                        data-i18n="logo_title">
                     </h1>
-                    <p class="logo-desc text-white text-sm transition-colors duration-300">
-                        خبرة احترافية في مجال ادارة المرافق صيانة وتشغيل 
-                        
+
+                    <p class="logo-desc text-white text-sm transition-colors duration-300"
+                    data-i18n="logo_desc">
                     </p>
                 </div>
             </a>
@@ -319,14 +322,25 @@
 
 
 
-            <ul class="projects-nav-links">
-                <li><a href="#home">الرئيسية</a></li>
-                <li><a href="./pages/about.html">من نحن</a></li>
-                <li><a href="./pages/services.html">خدماتنا</a></li>
-                <li><a href="./pages/service-request.html"> طلب خدمة</a></li>
-                <li><a href="./pages/contact-us.html">تواصل معنا</a></li>
-                <li><a href="tel:0508090790" class="projects-nav-cta">اتصل الآن</a></li>
-            </ul>
+          <ul class="projects-nav-links">
+            <li><a href="#home" data-i18n="nav_home"></a></li>
+            <li><a href="./pages/about.html" data-i18n="nav_about"></a></li>
+            <li><a href="./pages/services.html" data-i18n="nav_services"></a></li>
+            <li><a href="./pages/service-request.html" data-i18n="nav_request"></a></li>
+            <li><a href="./pages/contact-us.html" data-i18n="nav_contact"></a></li>
+            <li>
+                <a href="tel:0508090790"
+                class="projects-nav-cta"
+                data-i18n="nav_call">
+                </a>
+            </li>
+           <select class="langSelector px-3 py-1 border rounded ">
+            <option value="ar">العربية</option>
+            <option value="en">English</option>
+            </select>
+
+        </ul>
+
 
             <div class="projects-hamburger" id="projectsHamburger">
                 <span></span>
@@ -341,15 +355,26 @@
         <button class="projects-mobile-close" id="projectsCloseMobile">
             <i class="fas fa-times"></i>
         </button>
-        <ul class="projects-mobile-nav-links">
-            <li><a href="#home">الرئيسية</a></li>
-            <li><a href="./pages/about.html">من نحن</a></li>
-            <li><a href="./pages/services.html">خدماتنا</a></li>
-            <li><a href="./pages/service-request.html"> طلب خدمة </a></li>
-            <li><a href="./pages/contact-us.html">تواصل معنا</a></li>
-            <li><a href="tel:0508090790" class="projects-mobile-nav-cta">اتصل الآن</a></li>
-        </ul>
+       <ul class="projects-mobile-nav-links">
+    <li><a href="#home" data-i18n="nav_home"></a></li>
+    <li><a href="./pages/about.html" data-i18n="nav_about"></a></li>
+    <li><a href="./pages/services.html" data-i18n="nav_services"></a></li>
+    <li><a href="./pages/service-request.html" data-i18n="nav_request"></a></li>
+    <li><a href="./pages/contact-us.html" data-i18n="nav_contact"></a></li>
+    <select class="langSelector px-3 py-1 border rounded ">
+    <option value="ar">العربية</option>
+    <option value="en">English</option>
+    </select>
+    <li>
+        <a href="tel:0508090790"
+           class="projects-mobile-nav-cta"
+           data-i18n="nav_call">
+        </a>
+    </li>
+</ul>
+
     </div>
+
 
 
 
@@ -462,179 +487,190 @@
             <div class="projects-progress-bar-fill" id="projectsProgressBar"></div>
         </div>
 
-        <!-- Slide 1 - أعمال المقاولات الخاصة -->
+<!-- Slide 1 - أعمال المقاولات الخاصة -->
         <div class="projects-hero-slide active" data-slide="0">
-            <div class="projects-hero-background" style="background-image: url('./asstes/img/contracting.jpg');"></div>
+    <div class="projects-hero-background" style="background-image: url('./asstes/img/contracting.jpg');"></div>
+    <div class="projects-hero-overlay"></div>
+    <div class="projects-hero-pattern"></div>
+    <div class="projects-hero-content">
+        <div class="projects-hero-text">
+            <h1 class="projects-hero-title" data-i18n="hero_slide1_title"></h1>
+            <p class="projects-hero-subtitle" data-i18n="hero_slide1_subtitle"></p>
+            <p class="projects-hero-description" data-i18n="hero_slide1_desc"></p>
+
+            <div class="projects-hero-buttons">
+                <a href="tel:0508090790"
+                class="projects-hero-btn projects-hero-btn-primary"
+                data-i18n="hero_slide1_btn_primary">
+                </a>
+                <a href="https://wa.me/966114770705"
+                    class="projects-hero-btn projects-hero-btn-secondary"
+                    data-i18n="hero_slide1_btn_secondary">
+                </a>
+            </div>
+
+        </div>
+        <div class="projects-hero-image-container">
+            <div class="projects-featured-card">
+                <img src="./asstes/img/contracting.jpg"
+                alt=""
+                data-i18n-alt="hero_slide1_img_alt"
+                class="projects-featured-image">
+                <h3 class="projects-featured-title" data-i18n="hero_slide1_card_title"></h3>
+                <p class="projects-featured-description" data-i18n="hero_slide1_card_desc"></p>
+
+            </div>
+        </div>
+    </div>
+        </div>
+        
+          <!-- Slide 2 - البنية التحتية -->
+        <div class="projects-hero-slide active" data-slide="0">
+            <div class="projects-hero-background" style="background-image: url('./asstes/img/infrastructure.jpg');"></div>
             <div class="projects-hero-overlay"></div>
             <div class="projects-hero-pattern"></div>
             <div class="projects-hero-content">
                 <div class="projects-hero-text">
-                    <h1 class="projects-hero-title">أعمال المقاولات الخاصة</h1>
-                    <p class="projects-hero-subtitle">تميز في تنفيذ المشاريع الخاصة</p>
-                    <p class="projects-hero-description">
-                        ننفذ مشاريع المقاولات الخاصة بدقة عالية وجودة ممتازة، بدءًا من التصميم وحتى التسليم النهائي، مع
-                        الالتزام بأعلى معايير السلامة والجودة.
-                    </p>
+                    <h1 class="projects-hero-title" data-i18n="hero_slide2_title"></h1>
+                    <p class="projects-hero-subtitle" data-i18n="hero_slide2_subtitle"></p>
+                    <p class="projects-hero-description" data-i18n="hero_slide2_desc"></p>
+
                     <div class="projects-hero-buttons">
-                        <a href="tel:0508090790" class="projects-hero-btn projects-hero-btn-primary">
-                            طلب خدمة مقاولات ←
+                        <a href="tel:0508090790"
+                        class="projects-hero-btn projects-hero-btn-primary"
+                        data-i18n="hero_slide2_btn_primary">
                         </a>
-                        <a href="https://wa.me/966114770705" class="projects-hero-btn projects-hero-btn-secondary">
-                            واتساب
+                        <a href="https://wa.me/966114770705"
+                            class="projects-hero-btn projects-hero-btn-secondary"
+                            data-i18n="hero_slide2_btn_secondary">
                         </a>
                     </div>
 
                 </div>
                 <div class="projects-hero-image-container">
                     <div class="projects-featured-card">
-                        <img src="./asstes/img/contracting.jpg" alt="أعمال المقاولات الخاصة"
-                            class="projects-featured-image">
-                        <h3 class="projects-featured-title">أعمال المقاولات الخاصة</h3>
-                        <p class="projects-featured-description">تنفيذ مشاريع المقاولات الخاصة بأعلى معايير الجودة
-                            والكفاءة المهنية، مع ضمان التسليم في الوقت المحدد</p>
+                       <img src="./asstes/img/infrastructure.jpg"
+                        alt=""
+                        data-i18n-alt="hero_slide2_img_alt"
+                        class="projects-featured-image">
+                        <h3 class="projects-featured-title" data-i18n="hero_slide2_card_title"></h3>
+                        <p class="projects-featured-description" data-i18n="hero_slide2_card_desc"></p>
+
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Slide 2 - البنية التحتية -->
-        <div class="projects-hero-slide" data-slide="1">
-            <div class="projects-hero-background" style="background-image: url('./asstes/img/infrastructure.jpg');">
-            </div>
-            <div class="projects-hero-overlay"></div>
-            <div class="projects-hero-pattern"></div>
-            <div class="projects-hero-content">
-                <div class="projects-hero-text">
-                    <h1 class="projects-hero-title">البنية التحتية</h1>
-                    <p class="projects-hero-subtitle">بناء أسس المستقبل المتين</p>
-                    <p class="projects-hero-description">
-                        ننفذ مشاريع البنية التحتية المتكاملة بما في ذلك الطرق، الجسور، الأنفاق، وشبكات الصرف الصحي
-                        باستخدام أحدث التقنيات والمواد المعتمدة.
-                    </p>
-                    <div class="projects-hero-buttons">
-                        <a href="tel:0508090790" class="projects-hero-btn projects-hero-btn-primary">
-                            مشاريع البنية التحتية ←
-                        </a>
-                        <a href="https://wa.me/966114770705" class="projects-hero-btn projects-hero-btn-secondary">
-                            تواصل معنا
-                        </a>
-                    </div>
 
-                </div>
-                <div class="projects-hero-image-container">
-                    <div class="projects-featured-card">
-                        <img src="./asstes/img/infrastructure.jpg" alt="البنية التحتية" class="projects-featured-image">
-                        <h3 class="projects-featured-title">البنية التحتية</h3>
-                        <p class="projects-featured-description">تنفيذ مشاريع البنية التحتية المتكاملة بمعايير عالمية
-                            تساهم في بناء المجتمعات الحديثة والمستدامة</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+       
+       
 
         <!-- Slide 3 - أعمال تمديدات الكهرباء -->
-        <div class="projects-hero-slide" data-slide="2">
-            <div class="projects-hero-background"
-                style="background-image: url('./asstes/img/electricity-extensions.jpg');"></div>
+        <div class="projects-hero-slide active" data-slide="0">
+            <div class="projects-hero-background" style="background-image: url('./asstes/img/electricity-extensions.jpg');"></div>
             <div class="projects-hero-overlay"></div>
             <div class="projects-hero-pattern"></div>
             <div class="projects-hero-content">
                 <div class="projects-hero-text">
-                    <h1 class="projects-hero-title">أعمال تمديدات الكهرباء</h1>
-                    <p class="projects-hero-subtitle">طاقة آمنة وموثوقة</p>
-                    <p class="projects-hero-description">
-                        نقدم حلولاً شاملة لتمديدات الكهرباء للمباني السكنية والتجارية والصناعية، مع ضمان الامتثال الكامل
-                        لأنظمة السلامة الكهربائية.
-                    </p>
+                    <h1 class="projects-hero-title" data-i18n="hero_slide3_title"></h1>
+                    <p class="projects-hero-subtitle" data-i18n="hero_slide3_subtitle"></p>
+                    <p class="projects-hero-description" data-i18n="hero_slide3_desc"></p>
+
                     <div class="projects-hero-buttons">
-                        <a href="tel:0508090790" class="projects-hero-btn ">
-                            خدمات الكهرباء ←
+                        <a href="tel:0508090790"
+                        class="projects-hero-btn projects-hero-btn-primary"
+                        data-i18n="hero_slide3_btn_primary">
                         </a>
-                        <a href="https://wa.me/966114770705" class="projects-hero-btn projects-hero-btn-secondary">
-                            طلب استشارة مجانية
+                        <a href="https://wa.me/966114770705"
+                            class="projects-hero-btn projects-hero-btn-secondary"
+                            data-i18n="hero_slide3_btn_secondary">
                         </a>
                     </div>
 
                 </div>
                 <div class="projects-hero-image-container">
                     <div class="projects-featured-card">
-                        <img src="./asstes/img/electricity-extensions.jpg" alt="أعمال تمديدات الكهرباء"
-                            class="projects-featured-image">
-                        <h3 class="projects-featured-title">أعمال تمديدات الكهرباء</h3>
-                        <p class="projects-featured-description">تنفيذ تمديدات كهربائية آمنة وموثوقة باستخدام أحدث
-                            التقنيات والمعايير العالمية لضمان كفاءة وأمان الشبكات الكهربائية</p>
+                       <img src="./asstes/img/electricity-extensions.jpg"
+                        alt=""
+                        data-i18n-alt="hero_slide3_img_alt"
+                        class="projects-featured-image">
+                        <h3 class="projects-featured-title" data-i18n="hero_slide3_card_title"></h3>
+                        <p class="projects-featured-description" data-i18n="hero_slide3_card_desc"></p>
+
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Slide 4 - الأعمال الميكانيكية -->
-        <div class="projects-hero-slide" data-slide="3">
-            <div class="projects-hero-background" style="background-image: url('./asstes/img/mechanical-works.jpg');">
-            </div>
+        <div class="projects-hero-slide active" data-slide="0">
+            <div class="projects-hero-background" style="background-image: url('./asstes/img/mechanical-works.jpg');"></div>
             <div class="projects-hero-overlay"></div>
             <div class="projects-hero-pattern"></div>
             <div class="projects-hero-content">
                 <div class="projects-hero-text">
-                    <h1 class="projects-hero-title">الأعمال الميكانيكية</h1>
-                    <p class="projects-hero-subtitle">هندسة ميكانيكية دقيقة</p>
-                    <p class="projects-hero-description">
-                        ننفذ أعمال التكييف والتهوية والتدفئة (HVAC)، وتركيب الأنظمة الميكانيكية، وصيانة المعدات الصناعية
-                        بأعلى معايير الجودة.
-                    </p>
+                    <h1 class="projects-hero-title" data-i18n="hero_slide4_title"></h1>
+                    <p class="projects-hero-subtitle" data-i18n="hero_slide4_subtitle"></p>
+                    <p class="projects-hero-description" data-i18n="hero_slide4_desc"></p>
+
                     <div class="projects-hero-buttons">
-                        <a href="tel:0508090790" class="projects-hero-btn projects-hero-btn-primary">
-                            الأعمال الميكانيكية ←
+                        <a href="tel:0508090790"
+                        class="projects-hero-btn projects-hero-btn-primary"
+                        data-i18n="hero_slide4_btn_primary">
                         </a>
-                        <a href="https://wa.me/966114770705" class="projects-hero-btn projects-hero-btn-secondary">
-                            تواصل مع خبرائنا
+                        <a href="https://wa.me/966114770705"
+                            class="projects-hero-btn projects-hero-btn-secondary"
+                            data-i18n="hero_slide4_btn_secondary">
                         </a>
                     </div>
 
                 </div>
                 <div class="projects-hero-image-container">
                     <div class="projects-featured-card">
-                        <img src="./asstes/img/mechanical-works.jpg" alt="الأعمال الميكانيكية"
-                            class="projects-featured-image">
-                        <h3 class="projects-featured-title">الأعمال الميكانيكية</h3>
-                        <p class="projects-featured-description">تصميم وتنفيذ وصيانة الأنظمة الميكانيكية المتكاملة
-                            باستخدام أحدث التقنيات لضمان الكفاءة والموثوقية</p>
+                       <img src="./asstes/img/mechanical-works.jpg"
+                        alt=""
+                        data-i18n-alt="hero_slide4_img_alt"
+                        class="projects-featured-image">
+                        <h3 class="projects-featured-title" data-i18n="hero_slide4_card_title"></h3>
+                        <p class="projects-featured-description" data-i18n="hero_slide4_card_desc"></p>
+
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Slide 5 - التشغيل والصيانة -->
-        <div class="projects-hero-slide" data-slide="4">
-            <div class="projects-hero-background"
-                style="background-image: url('./asstes/img/operation-and-maintenance.jpg');"></div>
+         <div class="projects-hero-slide active" data-slide="0">
+            <div class="projects-hero-background" style="background-image: url('./asstes/img/operation-and-maintenance.jpg');"></div>
             <div class="projects-hero-overlay"></div>
             <div class="projects-hero-pattern"></div>
             <div class="projects-hero-content">
                 <div class="projects-hero-text">
-                    <h1 class="projects-hero-title">التشغيل والصيانة</h1>
-                    <p class="projects-hero-subtitle">استدامة وكفاءة طويلة الأمد</p>
-                    <p class="projects-hero-description">
-                        نقدم خدمات التشغيل والصيانة الشاملة للمباني والمنشآت، مع خطط صيانة وقائية واستباقية لضمان
-                        استمرارية العمل وكفاءة الأنظمة.
-                    </p>
+                    <h1 class="projects-hero-title" data-i18n="hero_slide5_title"></h1>
+                    <p class="projects-hero-subtitle" data-i18n="hero_slide5_subtitle"></p>
+                    <p class="projects-hero-description" data-i18n="hero_slide5_desc"></p>
+
                     <div class="projects-hero-buttons">
-                        <a href="tel:0508090790" class="projects-hero-btn projects-hero-btn-primary">
-                            عقود الصيانة ←
+                        <a href="tel:0508090790"
+                        class="projects-hero-btn projects-hero-btn-primary"
+                        data-i18n="hero_slide5_btn_primary">
                         </a>
-                        <a href="https://wa.me/966114770705" class="projects-hero-btn projects-hero-btn-secondary">
-                            عرض العروض
+                        <a href="https://wa.me/966114770705"
+                            class="projects-hero-btn projects-hero-btn-secondary"
+                            data-i18n="hero_slide5_btn_secondary">
                         </a>
                     </div>
 
                 </div>
                 <div class="projects-hero-image-container">
                     <div class="projects-featured-card">
-                        <img src="./asstes/img/operation-and-maintenance.jpg" alt="التشغيل والصيانة"
-                            class="projects-featured-image">
-                        <h3 class="projects-featured-title">التشغيل والصيانة</h3>
-                        <p class="projects-featured-description">خدمات تشغيل وصيانة متكاملة لضمان الاستدامة والكفاءة
-                            التشغيلية للمنشآت على المدى الطويل</p>
+                       <img src="./asstes/img/operation-and-maintenance.jpg"
+                        alt=""
+                        data-i18n-alt="hero_slide5_img_alt"
+                        class="projects-featured-image">
+                        <h3 class="projects-featured-title" data-i18n="hero_slide5_card_title"></h3>
+                        <p class="projects-featured-description" data-i18n="hero_slide5_card_desc"></p>
+
                     </div>
                 </div>
             </div>
@@ -649,39 +685,43 @@
                     <img src="./asstes/img/contracting.jpg" alt="أعمال المقاولات الخاصة"
                         class="projects-thumbnail-image">
                     <div class="projects-thumbnail-overlay">
-                        <div class="projects-thumbnail-title">أعمال المقاولات الخاصة</div>
-                        <div class="projects-thumbnail-subtitle">جودة ودقة في التنفيذ</div>
+                       <div class="projects-thumbnail-title" data-i18n="hero_slide1_thumb_title"></div>
+                        <div class="projects-thumbnail-subtitle" data-i18n="hero_slide1_thumb_subtitle"></div>
+
                     </div>
                 </div>
-                <div class="projects-thumbnail-item" onclick="goToProjectSlide(1)">
-                    <img src="./asstes/img/infrastructure.jpg" alt="البنية التحتية" class="projects-thumbnail-image">
+                <div class="projects-thumbnail-item active" onclick="goToProjectSlide(0)">
+                    <img src="./asstes/img/infrastructure.jpg" alt="البنية التحتية"
+                        class="projects-thumbnail-image">
                     <div class="projects-thumbnail-overlay">
-                        <div class="projects-thumbnail-title">البنية التحتية</div>
-                        <div class="projects-thumbnail-subtitle">بناء أسس المستقبل</div>
+                       <div class="projects-thumbnail-title" data-i18n="hero_slide2_thumb_title"></div>
+                        <div class="projects-thumbnail-subtitle" data-i18n="hero_slide2_thumb_subtitle"></div>
+
                     </div>
                 </div>
+               
                 <div class="projects-thumbnail-item" onclick="goToProjectSlide(2)">
                     <img src="./asstes/img/electricity-extensions.jpg" alt="أعمال تمديدات الكهرباء"
                         class="projects-thumbnail-image">
                     <div class="projects-thumbnail-overlay">
-                        <div class="projects-thumbnail-title">تمديدات الكهرباء</div>
-                        <div class="projects-thumbnail-subtitle">طاقة آمنة وموثوقة</div>
+                         <div class="projects-thumbnail-title" data-i18n="hero_slide3_thumb_title"></div>
+                        <div class="projects-thumbnail-subtitle" data-i18n="hero_slide3_thumb_subtitle"></div>
                     </div>
                 </div>
                 <div class="projects-thumbnail-item" onclick="goToProjectSlide(3)">
                     <img src="./asstes/img/mechanical-works.jpg" alt="الأعمال الميكانيكية"
                         class="projects-thumbnail-image">
                     <div class="projects-thumbnail-overlay">
-                        <div class="projects-thumbnail-title">الأعمال الميكانيكية</div>
-                        <div class="projects-thumbnail-subtitle">هندسة ميكانيكية دقيقة</div>
+                         <div class="projects-thumbnail-title" data-i18n="hero_slide4_thumb_title"></div>
+                        <div class="projects-thumbnail-subtitle" data-i18n="hero_slide4_thumb_subtitle"></div>
                     </div>
                 </div>
                 <div class="projects-thumbnail-item" onclick="goToProjectSlide(4)">
                     <img src="./asstes/img/operation-and-maintenance.jpg" alt="التشغيل والصيانة"
                         class="projects-thumbnail-image">
                     <div class="projects-thumbnail-overlay">
-                        <div class="projects-thumbnail-title">التشغيل والصيانة</div>
-                        <div class="projects-thumbnail-subtitle">استدامة وكفاءة</div>
+                        <div class="projects-thumbnail-title" data-i18n="hero_slide5_thumb_title"></div>
+                        <div class="projects-thumbnail-subtitle" data-i18n="hero_slide5_thumb_subtitle"></div>
                     </div>
                 </div>
             </div>
@@ -850,15 +890,13 @@
         <div class="max-w-7xl mx-auto">
             <!-- Section Header -->
             <div class="text-center mb-16 md:mb-20">
-                <span class="about-badge mb-4">
-                    <i class="fas fa-building mr-2"></i> رائدة منذ 2005
-                </span>
+               <span class="about-badge mb-4" data-i18n="about_badge"></span>
+
                 <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                    <span class="text-[#194480]">من نحن</span> في درين لادارة المرافق
+                    <span class="text-[#194480]" data-i18n="about_title_highlight"></span>
+                    <span data-i18n="about_title_rest"></span>
                 </h1>
-                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-                    نخبة من الخبراء والمتخصصين في مجال الصيانة والنظافة وتشغيل المشاريع الحكومية
-                </p>
+                <p data-i18n="about_desc"></p>
             </div>
 
             <!-- Main Content -->
@@ -870,69 +908,66 @@
                         <div class="about-icon-circle">
                             <i class="fas fa-award text-2xl text-white"></i>
                         </div>
-                        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4 about-accent-line">
-                            خبرتنا الواسعة
-                        </h2>
-                        <p class="text-gray-700 text-lg mb-6">
-                            نمتلك في درين لادارة المرافق خبرة واسعة وكبيرة في مجال الصيانة والنظافة، وتشغيل المشاريع الحكومية
-                            مع الكثير من القطاعات الحكومية والخاصة.
-                        </p>
+                       <h2 data-i18n="about_experience_title"></h2>
+
+                        <p data-i18n="about_experience_desc"></p>
+
 
                         <!-- Stats Grid -->
                         <div class="grid grid-cols-2 gap-4 mt-8">
                             <div class="about-stat-card animate-fadeInUp" style="animation-delay: 0.1s;">
                                 <div class="text-3xl md:text-4xl font-bold mb-2">+18</div>
-                                <div class="text-sm md:text-base">سنة خبرة</div>
+                                <div class="text-sm md:text-base" data-i18n="about_stat_years"></div>
                             </div>
                             <div class="about-stat-card animate-fadeInUp" style="animation-delay: 0.2s;">
                                 <div class="text-3xl md:text-4xl font-bold mb-2">623+</div>
-                                <div class="text-sm md:text-base">عامل وفني</div>
+                                <div class="text-sm md:text-base" data-i18n="about_stat_workers">عامل وفني</div>
                             </div>
                             <div class="about-stat-card animate-fadeInUp" style="animation-delay: 0.3s;">
                                 <div class="text-3xl md:text-4xl font-bold mb-2">50+</div>
-                                <div class="text-sm md:text-base">مشروع منجز</div>
+                                <div class="text-sm md:text-base" data-i18n="about_stat_projects">مشروع منجز</div>
                             </div>
                             <div class="about-stat-card animate-fadeInUp" style="animation-delay: 0.4s;">
                                 <div class="text-3xl md:text-4xl font-bold mb-2">100%</div>
-                                <div class="text-sm md:text-base">رضا العملاء</div>
+                                <div class="text-sm md:text-base" data-i18n="about_stat_satisfaction">رضا العملاء</div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Workforce Card -->
                     <div class="about-card-shadow bg-white rounded-2xl md:rounded-3xl p-6 md:p-8">
-                        <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-6">
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-6" data-i18n="about_team_title">
                             <i class="fas fa-users text-[#194480] ml-2"></i>
                             كوادرنا المتخصصة
                         </h3>
-                        <p class="text-gray-700 mb-6">
+                        <p class="text-gray-700 mb-6" data-i18n="about_team_desc">
                             نمتلك عمالة بعدد يتجاوز <span class="font-bold text-[#194480]">(623) عاملًا وفنيين</span>
                             متخصصين في:
                         </p>
                         <div class="grid grid-cols-2 gap-4">
                             <div class="bg-[#f8f9fa] rounded-xl p-4 border-r-4 border-[#194480]">
                                 <i class="fas fa-snowflake text-[#194480] mb-2"></i>
-                                <div class="font-semibold">التكييف والتبريد</div>
+                                <div class="font-semibold" data-i18n="about_skill_ac">التكييف والتبريد</div>
                             </div>
                             <div class="bg-[#f8f9fa] rounded-xl p-4 border-r-4 border-[#194480]">
                                 <i class="fas fa-bolt text-[#194480] mb-2"></i>
-                                <div class="font-semibold">الكهرباء</div>
+                                <div class="font-semibold" data-i18n="about_skill_electric">الكهرباء</div>
                             </div>
                             <div class="bg-[#f8f9fa] rounded-xl p-4 border-r-4 border-[#194480]">
                                 <i class="fas fa-laptop-house text-[#194480] mb-2"></i>
-                                <div class="font-semibold">أنظمة التحكم</div>
+                                <div class="font-semibold" data-i18n="about_skill_control">أنظمة التحكم</div>
                             </div>
                             <div class="bg-[#f8f9fa] rounded-xl p-4 border-r-4 border-[#194480]">
                                 <i class="fas fa-user-hard-hat text-[#194480] mb-2"></i>
-                                <div class="font-semibold">مهندسين متخصصين</div>
+                                <div class="font-semibold" data-i18n="about_skill_engineers">مهندسين متخصصين</div>
                             </div>
                             <div class="bg-[#f8f9fa] rounded-xl p-4 border-r-4 border-[#194480]">
                                 <i class="fas fa-user-hard-hat text-[#194480] mb-2"></i>
-                                <div class="font-semibold"> قسم الميكانيكا</div>
+                                <div class="font-semibold" data-i18n="about_skill_mech"> قسم الميكانيكا</div>
                             </div>
                             <div class="bg-[#f8f9fa] rounded-xl p-4 border-r-4 border-[#194480]">
                                 <i class="fas fa-user-hard-hat text-[#194480] mb-2"></i>
-                                <div class="font-semibold"> الهندسة المدنية</div>
+                                <div class="font-semibold" data-i18n="about_skill_civil"> الهندسة المدنية</div>
                             </div>
                         </div>
                     </div>
@@ -942,7 +977,7 @@
                 <div class="space-y-8">
                     <!-- Major Projects (Updated Design) -->
 <div class="about-card-shadow bg-white rounded-2xl md:rounded-3xl p-6 md:p-8">
-    <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-6">
+    <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-6" data-i18n="about_projects_title">
         <i class="fas fa-project-diagram text-[#194480] ml-2"></i>
         مشاريعنا البارزة
     </h3>
@@ -951,8 +986,8 @@
             <div class="flex items-start">
                 <i class="fas fa-hospital text-[#194480] text-xl mt-1 ml-3"></i>
                 <div>
-                    <h4 class="font-bold text-gray-900 mb-1">مشروع توفير خدمات الصيانة بالمستشفى العسكري بالخارج</h4>
-                    <p class="text-gray-600 text-sm">خدمات الصيانة والنظافة الشاملة</p>
+                    <h4 class="font-bold text-gray-900 mb-1" data-i18n="project_1_title">مشروع توفير خدمات الصيانة بالمستشفى العسكري بالخارج</h4>
+                    <p class="text-gray-600 text-sm" data-i18n="project_1_desc">خدمات الصيانة والنظافة الشاملة</p>
                 </div>
             </div>
         </div>
@@ -961,8 +996,8 @@
             <div class="flex items-start">
                 <i class="fas fa-futbol text-[#194480] text-xl mt-1 ml-3"></i>
                 <div>
-                    <h4 class="font-bold text-gray-900 mb-1">مشروع نظافة وتشغيل المدينة الرياضية بوادي الدواسر</h4>
-                    <p class="text-gray-600 text-sm">تشغيل وصيانة المرافق الرياضية</p>
+                    <h4 class="font-bold text-gray-900 mb-1" data-i18n="project_2_title">مشروع نظافة وتشغيل المدينة الرياضية بوادي الدواسر</h4>
+                    <p class="text-gray-600 text-sm" data-i18n="project_2_desc">تشغيل وصيانة المرافق الرياضية</p>
                 </div>
             </div>
         </div>
@@ -971,8 +1006,8 @@
             <div class="flex items-start">
                 <i class="fas fa-ship text-[#194480] text-xl mt-1 ml-3"></i>
                 <div>
-                    <h4 class="font-bold text-gray-900 mb-1">مشروع صيانة ونظافة ميناء راس الخبر</h4>
-                    <p class="text-gray-600 text-sm">خدمات الصيانة المتكاملة</p>
+                    <h4 class="font-bold text-gray-900 mb-1" data-i18n="project_3_title">مشروع صيانة ونظافة ميناء راس الخبر</h4>
+                    <p class="text-gray-600 text-sm" data-i18n="project_3_desc">خدمات الصيانة المتكاملة</p>
                 </div>
             </div>
         </div>
@@ -981,8 +1016,8 @@
             <div class="flex items-start">
                 <i class="fas fa-building text-[#194480] text-xl mt-1 ml-3"></i>
                 <div>
-                    <h4 class="font-bold text-gray-900 mb-1">مجمع المصالح الحكومية بالخرج</h4>
-                    <p class="text-gray-600 text-sm">تشغيل وصيانة المنشآت الحكومية</p>
+                    <h4 class="font-bold text-gray-900 mb-1" data-i18n="project_4_title">مجمع المصالح الحكومية بالخرج</h4>
+                    <p class="text-gray-600 text-sm" data-i18n="project_4_desc">تشغيل وصيانة المنشآت الحكومية</p>
                 </div>
             </div>
         </div>
@@ -991,8 +1026,8 @@
             <div class="flex items-start">
                 <i class="fas fa-city text-[#194480] text-xl mt-1 ml-3"></i>
                 <div>
-                    <h4 class="font-bold text-gray-900 mb-1">نظافة بلدية الدلم</h4>
-                    <p class="text-gray-600 text-sm">خدمات الصيانة والنظافة</p>
+                    <h4 class="font-bold text-gray-900 mb-1" data-i18n="project_5_title">نظافة بلدية الدلم</h4>
+                    <p class="text-gray-600 text-sm" data-i18n="project_5_desc">خدمات الصيانة والنظافة</p>
                 </div>
             </div>
         </div>
@@ -1011,7 +1046,7 @@
                         <!-- Partners -->
             <!-- Partners -->
 <div class="about-card-shadow bg-white rounded-2xl md:rounded-3xl p-8 relative">
-    <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-10">
+    <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-10" data-i18n="about_partners_title">
         شركاؤنا
     </h2>
 
@@ -1136,24 +1171,24 @@ function scrollPartners(value) {
     <section id="services" class="py-16 md:py-20 px-4 md:px-8">
         <div class="max-w-7xl mx-auto">
             <!-- Section Header -->
-            <div class="text-center mb-16">
-                <span class="service-badge mb-4">
-                    <i class="fas fa-cogs ml-2"></i> خبرة واسعة في مجالات متعددة
+        <div class="text-center mb-16 md:mb-20">
+                <span class="service-badge mb-4" data-i18n="services_badge">
+                    <i class="fas fa-cogs mr-2"></i> خبرة واسعة في مجالات متعددة
                 </span>
                 <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 section-title">
-                    <span class="text-[#194480]">خدماتنا</span> المتكاملة
+                      <span  class="text-[#194480]" data-i18n="services_title_main"></span>
+                     <span data-i18n="services_title_sub"></span>
                 </h1>
-                <p class="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto">
-                    نتمتع في درين لادارة المرافق بخبرة واسعة اكتسبناها من خلال تنفيذنا للعديد من المشاريع الضخمة في مجالات
+                <p class="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto" data-i18n="services_desc">
+                    نتمتع في درين للمقاولات بخبرة واسعة اكتسبناها من خلال تنفيذنا للعديد من المشاريع الضخمة في مجالات
                     متعددة
                 </p>
             </div>
 
             <!-- Featured Services - 3 Services Only -->
             <div class="mb-16">
-                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 text-center featured-title">
-                    خدماتنا الرئيسية
-                </h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-12 text-center" data-i18n="Our_specialized_services_title">خدماتنا المتخصصة</h2>
+
 
                 <!-- Services Grid (3 Services Only) -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="services-grid">
@@ -1162,32 +1197,37 @@ function scrollPartners(value) {
                     <div class="service-card animate-fadeInUp" style="animation-delay: 0.1s">
                         <div class="service-image-container">
                             <div class="service-number">01</div>
-
+                           
+                            <!-- هنا ضع رابط الصورة الفعلية -->
                             <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
                                 alt="المباني الحكومية" class="service-image">
                             <div class="service-overlay">
                                 <div class="text-right">
-                                    <h4 class="text-white text-xl font-bold mb-2">المباني الحكومية</h4>
-                                    <p class="text-white text-sm opacity-90">تشغيل وصيانة متكاملة</p>
+                                    <h4 class="text-white text-xl font-bold mb-2" data-i18n="service1_title" >المباني الحكومية</h4>
+                                    <p class="text-white text-sm opacity-90" data-i18n="service1_sub">تشغيل وصيانة متكاملة</p>
                                 </div>
                             </div>
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-900 mb-3">المباني الحكومية</h3>
-                            <p class="text-gray-600 mb-6 leading-relaxed">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="service1_title" >المباني الحكومية</h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed" data-i18n="service1_desc" >
                                 تشغيل وصيانة المباني الحكومية وفق أحدث المعايير الفنية والهندسية المعتمدة، مع ضمان
                                 الكفاءة التشغيلية العالية والالتزام بمواصفات السلامة.
                             </p>
-                            <div class="flex space-x-4 space-x-reverse">
-                                <a href="tel:0508090790" class="btn-call flex-1">
-                                    <i class="fas fa-phone ml-2"></i>
-                                    إتصل بنا
-                                </a>
-                                <a href="https://wa.me/966114770705" class="btn-whatsapp flex-1">
-                                    <i class="fab fa-whatsapp ml-2"></i>
-                                    واتساب
-                                </a>
-                            </div>
+                             <div class="flex space-x-4 space-x-reverse">
+                        <a href="tel:0508090790" class="btn-call flex-1" >
+                            <i class="fas fa-phone ml-2"></i>
+                            <span class=" px-2" data-i18n="btn_call">
+                             إتصل بنا
+                            </span>
+                        </a>
+                        <a href="https://wa.me/966114770705" class="btn-whatsapp flex-1" >
+                            <i class="fab fa-whatsapp ml-2"></i>
+                            <span class=" px-2 " data-i18n="btn_whatsapp">
+                            واتساب
+                            </span>
+                        </a>
+                    </div>
                         </div>
                     </div>
 
@@ -1195,74 +1235,83 @@ function scrollPartners(value) {
                     <div class="service-card animate-fadeInUp" style="animation-delay: 0.2s">
                         <div class="service-image-container">
                             <div class="service-number">02</div>
-
-                            <img src="./asstes/img/commercial-buildings.jpg"
+                            
+                            <!-- هنا ضع رابط الصورة الفعلية -->
+                            <img src="../asstes/img/commercial-buildings.jpg"
                                 alt="المباني التجارية" class="service-image">
                             <div class="service-overlay">
                                 <div class="text-right">
-                                    <h4 class="text-white text-xl font-bold mb-2">المباني التجارية</h4>
-                                    <p class="text-white text-sm opacity-90">صيانة مستمرة وتشغيل فعال</p>
+                                    <h4 class="text-white text-xl font-bold mb-2" data-i18n="service2_title">المباني التجارية</h4>
+                                    <p class="text-white text-sm opacity-90" data-i18n="service2_sub">صيانة مستمرة وتشغيل فعال</p>
                                 </div>
                             </div>
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-900 mb-3">المباني التجارية</h3>
-                            <p class="text-gray-600 mb-6 leading-relaxed">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="service2_title">المباني التجارية</h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed"data-i18n="service2_desc" >
                                 خدمات متكاملة لتشغيل وصيانة المباني التجارية لضمان استمرارية العمل وتحسين تجربة
                                 المستخدمين والعملاء.
                             </p>
-                            <div class="flex space-x-4 space-x-reverse">
-                                <a href="tel:0508090790" class="btn-call flex-1">
-                                    <i class="fas fa-phone ml-2"></i>
-                                    إتصل بنا
-                                </a>
-                                <a href="https://wa.me/966114770705" class="btn-whatsapp flex-1">
-                                    <i class="fab fa-whatsapp ml-2"></i>
-                                    واتساب
-                                </a>
-                            </div>
+                             <div class="flex space-x-4 space-x-reverse">
+                        <a href="tel:0508090790" class="btn-call flex-1" >
+                            <i class="fas fa-phone ml-2"></i>
+                            <span class=" px-2" data-i18n="btn_call">
+                             إتصل بنا
+                            </span>
+                        </a>
+                        <a href="https://wa.me/966114770705" class="btn-whatsapp flex-1" >
+                            <i class="fab fa-whatsapp ml-2"></i>
+                            <span class=" px-2 " data-i18n="btn_whatsapp">
+                            واتساب
+                            </span>
+                        </a>
+                    </div>
                         </div>
                     </div>
 
                     <!-- Service 3: Operation & Maintenance -->
                     <div class="service-card animate-fadeInUp" style="animation-delay: 0.3s">
-                        <div class="service-image-container">
-                            <div class="service-number">03</div>
-
-                            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                                alt="إدارة وتشغيل المرافق" class="service-image">
-                            <div class="service-overlay">
-                                <div class="text-right">
-                                    <h4 class="text-white text-xl font-bold mb-2">إدارة وتشغيل المرافق</h4>
-                                    <p class="text-white text-sm opacity-90">حلول شاملة للصيانة والتشغيل</p>
-                                </div>
-                            </div>
+                    <div class="service-image-container">
+                    <div class="service-number">03</div>
+                     
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                        alt="إدارة وتشغيل المرافق" class="service-image">
+                    <div class="service-overlay">
+                        <div class="text-right">
+                            <h4 class="text-white text-xl font-bold mb-2" data-i18n="service3_title">إدارة وتشغيل المرافق</h4>
+                            <p class="text-white text-sm opacity-90" data-i18n="service3_sub">حلول شاملة للصيانة والتشغيل</p>
                         </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-900 mb-3">ادارة المرافق تشغيل وصيانة</h3>
-                            <p class="text-gray-600 mb-6 leading-relaxed">
-                                نقدم خدمات إدارة وتشغيل المرافق بأعلى معايير الجودة، بدءًا من التخطيط ودراسة الجدوى،
-                                مرورًا بالتشغيل اليومي والصيانة الوقائية، وصولاً إلى إدارة الطوارئ لضمان استمرارية العمل
-                                بكفاءة وأمان.
-                            </p>
-                            <div class="flex space-x-4 space-x-reverse">
-                                <a href="tel:0508090790" class="btn-call flex-1">
-                                    <i class="fas fa-phone ml-2"></i>
-                                    إتصل بنا
-                                </a>
-                                <a href="https://wa.me/966114770705" class="btn-whatsapp flex-1">
-                                    <i class="fab fa-whatsapp ml-2"></i>
-                                    واتساب
-                                </a>
-                            </div>
-                        </div>
+                    </div>
+                    </div>
+                    <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="service3_title"> ادارة المرافق تشغيل وصيانة     </h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed" data-i18n="service3_desc" >
+                        نقدم خدمات إدارة وتشغيل المرافق بأعلى معايير الجودة، بدءًا من التخطيط ودراسة الجدوى،
+                        مرورًا بالتشغيل اليومي والصيانة الوقائية، وصولاً إلى إدارة الطوارئ لضمان استمرارية العمل
+                        بكفاءة وأمان.
+                    </p>
+                    <div class="flex space-x-4 space-x-reverse">
+                        <a href="tel:0508090790" class="btn-call flex-1" >
+                            <i class="fas fa-phone ml-2"></i>
+                            <span class=" px-2" data-i18n="btn_call">
+                             إتصل بنا
+                            </span>
+                        </a>
+                        <a href="https://wa.me/966114770705" class="btn-whatsapp flex-1" >
+                            <i class="fab fa-whatsapp ml-2"></i>
+                            <span class=" px-2 " data-i18n="btn_whatsapp">
+                            واتساب
+                            </span>
+                        </a>
+                    </div>
+                    </div>
                     </div>
 
                 </div>
 
                 <!-- View All Services Button -->
                 <div class="text-center mt-12">
-                    <a href="./pages/services.html" class="btn-view-all animate-fadeInUp" style="animation-delay: 0.4s">
+                    <a href="./pages/services.html" class="btn-view-all animate-fadeInUp" style="animation-delay: 0.4s"data-i18n="View_All_Services_Button">
                         <span>عرض جميع الخدمات</span>
                         <i class="fas fa-arrow-left"></i>
                     </a>
@@ -1275,20 +1324,25 @@ function scrollPartners(value) {
 
 
             <!-- Call to Action -->
-            <div class="mt-20 text-center">
+             <div class="mt-20 text-center">
                 <div class="bg-gradient-to-r from-[#194480] to-[#194480] rounded-2xl p-10 text-white">
-                    <h3 class="text-2xl md:text-3xl font-bold mb-6">هل لديك مشروع أو تحتاج إلى استشارة؟</h3>
-                    <p class="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
+                    <h3 class="text-2xl md:text-3xl font-bold mb-6" data-i18n="services_cta_title">هل لديك مشروع أو تحتاج إلى استشارة؟</h3>
+                    <p class="text-lg mb-8 opacity-90 max-w-2xl mx-auto" data-i18n="services_cta_desc">
                         فريقنا من الخبراء جاهز لمساعدتك في تقديم الحلول المناسبة لمشروعك
                     </p>
                     <div class="flex flex-col sm:flex-row justify-center gap-4">
-                        <a href="tel:0508090790" class="btn-call px-10 py-4 text-lg">
+                        <a href="tel:0508090790" class="btn-call px-10 py-4 text-lg" >
                             <i class="fas fa-phone ml-3"></i>
+                            <span class=" px-2 " data-i18n="btn_call_now">
                             إتصل بنا الآن
+
+                            </span>
                         </a>
-                        <a href="https://wa.me/966114770705" class="btn-whatsapp px-10 py-4 text-lg">
+                        <a href="https://wa.me/966114770705" class="btn-whatsapp text-lg" >
                             <i class="fab fa-whatsapp ml-3"></i>
+                           <span class=" px-2 " data-i18n="btn_whatsapp_contact">
                             تواصل عبر واتساب
+                            </span>
                         </a>
                     </div>
                 </div>
@@ -1398,11 +1452,11 @@ function scrollPartners(value) {
                                 <img src="./asstes/img/logo-icon.png" alt="" class="w-16 h-16 object-contain">
                             </div>
                             <div class="mr-4">
-                                <h3 class="text-xl font-bold">درين لادارة المرافق</h3>
-                                <p class="text-gray-300 text-sm"> رائدة منذ 2005</p>
+                                <h3 class="text-xl font-bold" data-i18n="footer_company_name">درين لادارة المرافق</h3>
+                                <p class="text-gray-300 text-sm" data-i18n="footer_company_since"> رائدة منذ 2005</p>
                             </div>
                         </div>
-                        <p class="text-gray-300 mb-6 leading-relaxed">
+                        <p class="text-gray-300 mb-6 leading-relaxed" data-i18n="footer_company_desc">
                             رائدة في مجال ادارة المرافق والتشغيل والصيانة، تقدم خدمات عالية الجودة بمهنية واحترافية، وتساهم
                             في تحقيق رؤية المملكة 2030.
                         </p>
@@ -1413,24 +1467,24 @@ function scrollPartners(value) {
                 <!-- Quick Links -->
                 <div class="animate-fadeInUp" style="animation-delay: 0.1s">
                     <div class="footer-card p-6 h-full">
-                        <h3 class="text-xl font-bold mb-6 pb-3 border-b border-gray-700">روابط سريعة</h3>
+                        <h3 class="text-xl font-bold mb-6 pb-3 border-b border-gray-700" data-i18n="footer_quick_links">روابط سريعة</h3>
                         <div class="space-y-3">
-                            <a href="#" class="footer-link block text-gray-300 hover:text-white">
+                            <a href="#" class="footer-link block text-gray-300 hover:text-white" data-i18n="footer_link_home">
                                 <i class="fas fa-home ml-2"></i> الصفحة الرئيسية
                             </a>
-                            <a href="#" class="footer-link block text-gray-300 hover:text-white">
+                            <a href="#" class="footer-link block text-gray-300 hover:text-white" data-i18n="footer_link_about">
                                 <i class="fas fa-info-circle ml-2"></i> من نحن
                             </a>
-                            <a href="#" class="footer-link block text-gray-300 hover:text-white">
+                            <a href="#" class="footer-link block text-gray-300 hover:text-white" data-i18n="footer_link_services">
                                 <i class="fas fa-cogs ml-2"></i> خدماتنا
                             </a>
-                            <a href="#" class="footer-link block text-gray-300 hover:text-white">
+                            <a href="#" class="footer-link block text-gray-300 hover:text-white" data-i18n="footer_link_projects">
                                 <i class="fas fa-project-diagram ml-2"></i> مشاريعنا
                             </a>
-                            <a href="#" class="footer-link block text-gray-300 hover:text-white">
+                            <a href="#" class="footer-link block text-gray-300 hover:text-white" data-i18n="footer_link_vision">
                                 <i class="fas fa-eye ml-2"></i> رؤيتنا
                             </a>
-                            <a href="#" class="footer-link block text-gray-300 hover:text-white">
+                            <a href="#" class="footer-link block text-gray-300 hover:text-white" data-i18n="footer_link_contact">
                                 <i class="fas fa-phone ml-2"></i> اتصل بنا
                             </a>
                         </div>
@@ -1440,15 +1494,15 @@ function scrollPartners(value) {
                 <!-- Contact Info -->
                 <div class="animate-fadeInUp" style="animation-delay: 0.2s">
                     <div class="footer-card p-6 h-full">
-                        <h3 class="text-xl font-bold mb-6 pb-3 border-b border-gray-700">معلومات الاتصال</h3>
+                        <h3 class="text-xl font-bold mb-6 pb-3 border-b border-gray-700" data-i18n="footer_contact_title">معلومات الاتصال</h3>
 
                         <div class="contact-info-item">
                             <div class="contact-icon">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold mb-1">العنوان</h4>
-                                <p class="text-gray-300 text-sm"> عقارية الستين الملز الرياض</p>
+                                <h4 class="font-bold mb-1" data-i18n="footer_address_title">العنوان</h4>
+                                <p class="text-gray-300 text-sm" data-i18n="footer_address_text"> عقارية الستين الملز الرياض</p>
                             </div>
                         </div>
 
@@ -1457,7 +1511,7 @@ function scrollPartners(value) {
                                 <i class="fas fa-phone"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold mb-1">الهاتف</h4>
+                                <h4 class="font-bold mb-1" data-i18n="footer_phone_title">الهاتف</h4>
                                 <p class="text-gray-300 text-sm">114770705</p>
                                 <p class="text-gray-300 text-sm">0508090790</p>
                             </div>
@@ -1468,7 +1522,7 @@ function scrollPartners(value) {
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold mb-1">البريد الإلكتروني</h4>
+                                <h4 class="font-bold mb-1" data-i18n="footer_email_title">البريد الإلكتروني</h4>
                                 <p class="text-gray-300 text-sm">info@dreen.com.sa</p>
 
                             </div>
@@ -1481,13 +1535,13 @@ function scrollPartners(value) {
                     <div class="space-y-6">
                         <!-- Newsletter -->
                         <div class="footer-card p-6">
-                            <h3 class="text-xl font-bold mb-4">اشترك في نشرتنا</h3>
-                            <p class="text-gray-300 mb-4 text-sm">
+                            <h3 class="text-xl font-bold mb-4" data-i18n="footer_newsletter_title">اشترك في نشرتنا</h3>
+                            <p class="text-gray-300 mb-4 text-sm" data-i18n="footer_newsletter_desc">
                                 اشترك لتصلك آخر أخبارنا وعروضنا الخاصة
                             </p>
                             <form class="space-y-4">
-                                <input type="email" placeholder="بريدك الإلكتروني" class="subscribe-input" required>
-                                <button type="submit" class="subscribe-btn w-full">
+                                <input type="email" data-i18n-placeholder="footer_newsletter_placeholder" class="subscribe-input" required>
+                                <button type="submit" class="subscribe-btn w-full" data-i18n="footer_newsletter_btn">
                                     <i class="fas fa-paper-plane"></i>
                                     اشترك الآن
                                 </button>
@@ -1496,19 +1550,19 @@ function scrollPartners(value) {
 
                         <!-- Working Hours -->
                         <div class="footer-card p-6">
-                            <h3 class="text-xl font-bold mb-4">ساعات العمل</h3>
+                            <h3 class="text-xl font-bold mb-4" data-i18n="footer_working_hours">ساعات العمل</h3>
                             <div class="working-hours">
-                                <div class="hour-item">
-                                    <span>الأحد - الخميس</span>
-                                    <span class="text-gray-300">8:00 ص - 5:00 م</span>
+                                <div class="hour-item" data-i18n="footer_workday_week">
+                                     <span data-i18n="footer_workday_week"></span>
+                                     <span class="text-gray-300" data-i18n="footer_workday_week_time"></span>
                                 </div>
                                 <div class="hour-item">
-                                    <span>الجمعة</span>
-                                    <span class="text-gray-300">10:00 ص - 2:00 م</span>
+                                    <span  data-i18n="footer_workday_friday">الجمعة</span>
+                                    <span class="text-gray-300" data-i18n="footer_workday_friday_time">10:00 ص - 2:00 م</span>
                                 </div>
                                 <div class="hour-item">
-                                    <span>السبت</span>
-                                    <span class="text-gray-300">إجازة</span>
+                                    <span data-i18n="footer_workday_saturday">السبت</span>
+                                    <span class="text-gray-300"  data-i18n="footer_workday_saturday_time">إجازة</span>
                                 </div>
                             </div>
                         </div>
@@ -1518,31 +1572,31 @@ function scrollPartners(value) {
 
             <!-- Services Section -->
             <div class="mb-12 animate-fadeInUp" style="animation-delay: 0.4s">
-                <h3 class="text-xl font-bold mb-6 text-center">خدماتنا الرئيسية</h3>
+                <h3 class="text-xl font-bold mb-6 text-center"data-i18n="footer_main_services">خدماتنا الرئيسية</h3>
                 <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                    <div class="footer-card p-4 text-center">
+                    <div class="footer-card p-4 text-center" >
                         <i class="fas fa-road text-2xl mb-2 text-[#2a9d78]"></i>
-                        <div class="text-sm">البنية التحتية</div>
+                        <div class="text-sm"data-i18n="footer_service_infra" >البنية التحتية</div>
                     </div>
                     <div class="footer-card p-4 text-center">
                         <i class="fas fa-tools text-2xl mb-2 text-[#2a9d78]"></i>
-                        <div class="text-sm"> ادارة المرافق صيانة وتشغيل </div>
+                        <div class="text-sm" data-i18n="footer_service_facility"> ادارة المرافق صيانة وتشغيل </div>
                     </div>
                     <div class="footer-card p-4 text-center">
                         <i class="fas fa-hard-hat text-2xl mb-2 text-[#2a9d78]"></i>
-                        <div class="text-sm">مقاولات خاصة</div>
+                        <div class="text-sm" data-i18n="footer_service_contracting">مقاولات خاصة</div>
                     </div>
                     <div class="footer-card p-4 text-center">
                         <i class="fas fa-building text-2xl mb-2 text-[#2a9d78]"></i>
-                        <div class="text-sm">مباني سكنية</div>
+                        <div class="text-sm" data-i18n="footer_service_buildings">مباني سكنية</div>
                     </div>
                     <div class="footer-card p-4 text-center">
                         <i class="fas fa-bolt text-2xl mb-2 text-[#2a9d78]"></i>
-                        <div class="text-sm">تمديدات كهرباء</div>
+                        <div class="text-sm" data-i18n="footer_service_electric">تمديدات كهرباء</div>
                     </div>
                     <div class="footer-card p-4 text-center">
                         <i class="fas fa-cogs text-2xl mb-2 text-[#2a9d78]"></i>
-                        <div class="text-sm">أعمال ميكانيكية</div>
+                        <div class="text-sm" data-i18n="footer_service_mech">أعمال ميكانيكية</div>
                     </div>
                 </div>
             </div>
@@ -1550,7 +1604,7 @@ function scrollPartners(value) {
             <!-- Map Section -->
             <div class="mb-12 animate-fadeInUp" style="animation-delay: 0.5s">
                 <div class="footer-card p-6">
-                    <h3 class="text-xl font-bold mb-4">موقعنا على الخريطة</h3>
+                    <h3 class="text-xl font-bold mb-4" data-i18n="footer_map_title">موقعنا على الخريطة</h3>
 
                     <div class="map-container text-center">
                         <!-- Google Map -->
@@ -1669,6 +1723,9 @@ function scrollPartners(value) {
             });
         });
     </script>
+  
+  <script src="./asstes/js/script.js"></script>
+    <script src="./asstes/js/i18n.js"></script>
 </body>
 
 
