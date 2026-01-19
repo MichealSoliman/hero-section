@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,14 +10,14 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/emailjs@4/dist/email.min.js"></script>
     <link rel="stylesheet" href="../asstes/css/style.css">
-    
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap');
-        
+
         * {
             font-family: 'Cairo', sans-serif;
         }
-        
+
         /* Header Styles */
         .header {
             background: white;
@@ -28,13 +29,13 @@
             z-index: 1000;
             padding: 15px 0;
         }
-        
+
         .logo-container {
             display: flex;
             align-items: center;
             gap: 10px;
         }
-        
+
         .logo {
             width: 45px;
             height: 45px;
@@ -43,30 +44,30 @@
             align-items: center;
             justify-content: center;
         }
-        
+
         .logo i {
             color: white;
             font-size: 20px;
         }
-        
+
         .logo-text h2 {
             color: #194480;
             font-weight: 800;
             font-size: 20px;
             margin: 0;
         }
-        
+
         .logo-text p {
             color: #666;
             font-size: 12px;
             margin: 0;
         }
-        
+
         .header-buttons {
             display: flex;
             gap: 15px;
         }
-        
+
         .btn-home {
             background: #f8fafc;
             color: #194480;
@@ -79,13 +80,13 @@
             align-items: center;
             gap: 8px;
         }
-        
+
         .btn-home:hover {
             background: #194480;
             color: white;
             border-color: #194480;
         }
-        
+
         .btn-contact {
             background: linear-gradient(135deg, #194480, #0f2f5f);
             color: white;
@@ -98,12 +99,12 @@
             align-items: center;
             gap: 8px;
         }
-        
+
         .btn-contact:hover {
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(25, 68, 128, 0.3);
         }
-        
+
         /* Hero Section - Simplified */
         .hero-section {
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(25, 68, 128, 0.8)), url('../asstes/img/about.png');
@@ -116,13 +117,13 @@
             margin-top: 80px;
             padding: 40px 0;
         }
-        
+
         .hero-content {
             position: relative;
             z-index: 2;
             max-width: 800px;
         }
-        
+
         .hero-title {
             color: white;
             font-size: 32px;
@@ -130,26 +131,26 @@
             line-height: 1.4;
             margin-bottom: 20px;
         }
-        
+
         .hero-highlight {
             color: #1670ee;
             font-weight: 800;
         }
-        
+
         .hero-description {
             color: rgba(255, 255, 255, 0.9);
             font-size: 18px;
             line-height: 1.6;
             margin-bottom: 30px;
         }
-        
+
         .hero-features {
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
             margin-bottom: 30px;
         }
-        
+
         .hero-feature {
             background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(10px);
@@ -162,16 +163,16 @@
             gap: 8px;
             transition: all 0.3s;
         }
-        
+
         .hero-feature:hover {
             background: rgba(255, 255, 255, 0.25);
             transform: translateY(-2px);
         }
-        
+
         .hero-feature i {
             color: #1670ee;
         }
-        
+
         .hero-btn {
             background: linear-gradient(135deg, #1670ee, #1670ee);
             color: #f8fafc;
@@ -187,12 +188,12 @@
             gap: 10px;
             box-shadow: 0 10px 25px rgba(36, 6, 206, 0.3);
         }
-        
+
         .hero-btn:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 35px rgba(255, 215, 0, 0.4);
         }
-        
+
         /* Form Section with Background */
         .form-section {
             background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.98)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
@@ -202,7 +203,7 @@
             padding: 60px 0;
             position: relative;
         }
-        
+
         /* Main Content */
         .main-content {
             display: grid;
@@ -212,14 +213,14 @@
             margin: 0 auto;
             padding: 0 20px;
         }
-        
+
         @media (max-width: 1024px) {
             .main-content {
                 grid-template-columns: 1fr;
                 gap: 30px;
             }
         }
-        
+
         /* Info Section */
         .info-section {
             padding: 30px;
@@ -229,7 +230,7 @@
             height: fit-content;
             backdrop-filter: blur(5px);
         }
-        
+
         .info-title {
             color: #194480;
             font-size: 24px;
@@ -241,7 +242,7 @@
             justify-content: center;
             gap: 10px;
         }
-        
+
         .info-card {
             background: white;
             border-radius: 15px;
@@ -251,13 +252,13 @@
             transition: all 0.3s ease;
             border-right: 4px solid transparent;
         }
-        
+
         .info-card:hover {
             transform: translateY(-5px);
             border-right-color: #194480;
             box-shadow: 0 15px 30px rgba(25, 68, 128, 0.1);
         }
-        
+
         .info-icon {
             width: 50px;
             height: 50px;
@@ -270,20 +271,20 @@
             font-size: 20px;
             margin-bottom: 15px;
         }
-        
+
         .info-card h3 {
             color: #1e293b;
             font-size: 18px;
             font-weight: 700;
             margin-bottom: 10px;
         }
-        
+
         .info-card p {
             color: #64748b;
             line-height: 1.6;
             font-size: 15px;
         }
-        
+
         /* Form Styles */
         .form-container {
             background: white;
@@ -293,28 +294,28 @@
             border-top: 8px solid #194480;
             height: fit-content;
         }
-        
+
         .form-header {
             background: linear-gradient(135deg, #194480, #0f2f5f);
             color: white;
             padding: 25px;
             text-align: center;
         }
-        
+
         .form-header h1 {
             font-size: 24px;
             font-weight: 700;
             margin-bottom: 10px;
         }
-        
+
         .form-body {
             padding: 25px;
         }
-        
+
         .form-group {
             margin-bottom: 20px;
         }
-        
+
         .form-label {
             display: block;
             font-size: 16px;
@@ -324,14 +325,16 @@
             display: flex;
             align-items: center;
         }
-        
+
         .form-label i {
             margin-left: 8px;
             color: #194480;
             font-size: 16px;
         }
-        
-        .form-input, .form-select, .form-textarea {
+
+        .form-input,
+        .form-select,
+        .form-textarea {
             width: 100%;
             padding: 14px 16px;
             border: 2px solid #e2e8f0;
@@ -340,41 +343,43 @@
             transition: all 0.3s ease;
             background: #f8fafc;
         }
-        
-        .form-input:focus, .form-select:focus, .form-textarea:focus {
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
             outline: none;
             border-color: #194480;
             background: white;
             box-shadow: 0 0 0 3px rgba(25, 68, 128, 0.1);
         }
-        
+
         .form-textarea {
             min-height: 120px;
             resize: vertical;
         }
-        
+
         .required-star {
             color: #ef4444;
             margin-right: 5px;
         }
-        
+
         .form-error {
             color: #ef4444;
             font-size: 13px;
             margin-top: 5px;
             display: none;
         }
-        
+
         .form-group.error .form-input,
         .form-group.error .form-select,
         .form-group.error .form-textarea {
             border-color: #ef4444;
         }
-        
+
         .form-group.error .form-error {
             display: block;
         }
-        
+
         .submit-btn {
             width: 100%;
             padding: 16px;
@@ -391,32 +396,32 @@
             justify-content: center;
             margin-top: 10px;
         }
-        
+
         .submit-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 25px rgba(25, 68, 128, 0.3);
         }
-        
+
         .submit-btn:disabled {
             opacity: 0.6;
             cursor: not-allowed;
             transform: none;
             box-shadow: none;
         }
-        
+
         /* Success Message */
         .success-message {
             display: none;
             text-align: center;
             padding: 30px 25px;
         }
-        
+
         .success-icon {
             font-size: 60px;
             color: #10b981;
             margin-bottom: 20px;
         }
-        
+
         /* Contact Info */
         .contact-info {
             background: #f8fafc;
@@ -425,7 +430,7 @@
             margin-top: 20px;
             border-right: 4px solid #194480;
         }
-        
+
         .contact-info h3 {
             color: #194480;
             font-size: 18px;
@@ -435,17 +440,17 @@
             align-items: center;
             gap: 10px;
         }
-        
+
         .info-item {
             display: flex;
             align-items: center;
             margin-bottom: 12px;
         }
-        
+
         .info-item:last-child {
             margin-bottom: 0;
         }
-        
+
         .info-icon-small {
             width: 40px;
             height: 40px;
@@ -458,18 +463,18 @@
             font-size: 16px;
             margin-left: 12px;
         }
-        
+
         .info-item div p:first-child {
             color: #1e293b;
             font-weight: 600;
             font-size: 14px;
         }
-        
+
         .info-item div p:last-child {
             color: #64748b;
             font-size: 14px;
         }
-        
+
         /* Footer */
         .footer {
             background: #194480;
@@ -477,13 +482,13 @@
             padding: 30px 0 20px;
             text-align: center;
         }
-        
+
         .footer-content {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
+
         .footer-logo {
             display: flex;
             align-items: center;
@@ -491,20 +496,20 @@
             gap: 10px;
             margin-bottom: 20px;
         }
-        
+
         .footer-logo h3 {
             color: white;
             font-size: 20px;
             font-weight: 700;
             margin: 0;
         }
-        
+
         .footer-logo p {
             color: rgba(255, 255, 255, 0.8);
             font-size: 12px;
             margin: 0;
         }
-        
+
         .footer-copyright {
             color: rgba(255, 255, 255, 0.7);
             font-size: 14px;
@@ -512,7 +517,7 @@
             padding-top: 20px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
+
         /* Floating Button */
         .floating-button {
             position: fixed;
@@ -533,87 +538,93 @@
             transition: all 0.3s ease;
             border: none;
         }
-        
+
         .floating-button:hover {
             transform: scale(1.1);
             box-shadow: 0 15px 35px rgba(25, 68, 128, 0.4);
         }
-        
+
         /* Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
+
         .animate-fadeInUp {
             animation: fadeInUp 0.6s ease forwards;
         }
-        
+
         @keyframes float {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0);
             }
+
             50% {
                 transform: translateY(-10px);
             }
         }
-        
+
         .animate-float {
             animation: float 3s ease-in-out infinite;
         }
-        
+
         /* Mobile Responsive */
         @media (max-width: 768px) {
             .header {
                 padding: 12px 0;
             }
-            
+
             .header-buttons {
                 gap: 10px;
             }
-            
-            .btn-home, .btn-contact {
+
+            .btn-home,
+            .btn-contact {
                 padding: 8px 15px;
                 font-size: 14px;
             }
-            
+
             .hero-section {
                 min-height: 50vh;
                 margin-top: 70px;
                 padding: 30px 0;
             }
-            
+
             .hero-title {
                 font-size: 24px;
             }
-            
+
             .hero-description {
                 font-size: 16px;
             }
-            
+
             .hero-feature {
                 font-size: 13px;
                 padding: 10px 15px;
             }
-            
+
             .main-content {
                 padding: 0 15px;
             }
-            
-            .info-section, .form-body {
+
+            .info-section,
+            .form-body {
                 padding: 20px;
             }
-            
+
             .form-header {
                 padding: 20px;
             }
-            
+
             .floating-button {
                 width: 50px;
                 height: 50px;
@@ -622,54 +633,54 @@
                 left: 20px;
             }
         }
-        
+
         /* Extra Small Screens */
         @media (max-width: 576px) {
             .logo-text h2 {
                 font-size: 18px;
             }
-            
-            .btn-home span, .btn-contact span {
+
+            .btn-home span,
+            .btn-contact span {
                 display: none;
             }
-            
-            .btn-home, .btn-contact {
+
+            .btn-home,
+            .btn-contact {
                 width: 40px;
                 height: 40px;
                 border-radius: 50%;
                 padding: 0;
                 justify-content: center;
             }
-            
+
             .hero-features {
                 flex-direction: column;
             }
         }
     </style>
 </head>
+
 <body>
-    
+
     <!-- Navigation -->
     <nav class="projects-nav" id="projectsNavbar">
         <div class="projects-nav-container">
             <a href="../index.html" class="projects-logo flex items-center gap-3">
-                
+
                 <!-- أيقونة اللوجو -->
                 <div>
-                <img src="../asstes/img/logo-icon.png"
-                    alt=""
-                    data-i18n-alt="logo_alt"
-                    class="w-16 h-16 object-contain">
+                    <img src="../asstes/img/logo-icon.png" alt="" data-i18n-alt="logo_alt"
+                        class="w-16 h-16 object-contain">
                 </div>
 
                 <!-- اسم ال -->
                 <div class="projects-logo-text">
-                   <h1 class="logo-title text-3xl font-bold text-white leading-tight transition-colors duration-300"
+                    <h1 class="logo-title text-3xl font-bold text-white leading-tight transition-colors duration-300"
                         data-i18n="logo_title">
                     </h1>
 
-                    <p class="logo-desc text-white text-sm transition-colors duration-300"
-                    data-i18n="logo_desc">
+                    <p class="logo-desc text-white text-sm transition-colors duration-300" data-i18n="logo_desc">
                     </p>
                 </div>
             </a>
@@ -678,24 +689,22 @@
 
 
 
-          <ul class="projects-nav-links">
-            <li><a href="../index.html" data-i18n="nav_home"></a></li>
-            <li><a href="#" data-i18n="nav_about"></a></li>
-            <li><a href="../pages/services.html" data-i18n="nav_services"></a></li>
-            <li><a href="../pages/service-request.html" data-i18n="nav_request"></a></li>
-            <li><a href="../pages/contact-us.html" data-i18n="nav_contact"></a></li>
-            <li>
-                <a href="tel:0508090790"
-                class="projects-nav-cta"
-                data-i18n="nav_call">
-                </a>
-            </li>
-            <select class="langSelector px-3 py-1 border rounded ">
-            <option value="ar">العربية</option>
-            <option value="en">English</option>
-            </select>
+            <ul class="projects-nav-links">
+                <li><a href="../index.html" data-i18n="nav_home"></a></li>
+                <li><a href="#" data-i18n="nav_about"></a></li>
+                <li><a href="../pages/services.html" data-i18n="nav_services"></a></li>
+                <li><a href="../pages/service-request.html" data-i18n="nav_request"></a></li>
+                <li><a href="../pages/contact-us.html" data-i18n="nav_contact"></a></li>
+                <li>
+                    <a href="tel:0508090790" class="projects-nav-cta" data-i18n="nav_call">
+                    </a>
+                </li>
+                <select class="langSelector px-3 py-1 border rounded ">
+                    <option value="ar">العربية</option>
+                    <option value="en">English</option>
+                </select>
 
-        </ul>
+            </ul>
 
 
             <div class="projects-hamburger" id="projectsHamburger">
@@ -711,23 +720,21 @@
         <button class="projects-mobile-close" id="projectsCloseMobile">
             <i class="fas fa-times"></i>
         </button>
-       <ul class="projects-mobile-nav-links">
-    <li><a href="#home" data-i18n="nav_home"></a></li>
-    <li><a href="#" data-i18n="nav_about"></a></li>
-    <li><a href="./pages/services.html" data-i18n="nav_services"></a></li>
-    <li><a href="./pages/service-request.html" data-i18n="nav_request"></a></li>
-    <li><a href="./pages/contact-us.html" data-i18n="nav_contact"></a></li>
-    <select class="langSelector px-3 py-1 border rounded ">
-    <option value="ar">العربية</option>
-    <option value="en">English</option>
-    </select>
-    <li>
-        <a href="tel:0508090790"
-           class="projects-mobile-nav-cta"
-           data-i18n="nav_call">
-        </a>
-    </li>
-</ul>
+        <ul class="projects-mobile-nav-links">
+            <li><a href="#home" data-i18n="nav_home"></a></li>
+            <li><a href="#" data-i18n="nav_about"></a></li>
+            <li><a href="./pages/services.html" data-i18n="nav_services"></a></li>
+            <li><a href="./pages/service-request.html" data-i18n="nav_request"></a></li>
+            <li><a href="./pages/contact-us.html" data-i18n="nav_contact"></a></li>
+            <select class="langSelector px-3 py-1 border rounded ">
+                <option value="ar">العربية</option>
+                <option value="en">English</option>
+            </select>
+            <li>
+                <a href="tel:0508090790" class="projects-mobile-nav-cta" data-i18n="nav_call">
+                </a>
+            </li>
+        </ul>
 
     </div>
 
@@ -835,62 +842,62 @@
         });
     </script>
 
-    
 
 
-<!-- Hero Section -->
 
-<section class="hero-section mt-0">
-    <div class="container mx-auto px-4">
-        <div class="hero-content animate-fadeInUp">
-            <h1 class="hero-title">
-                <span data-i18n="about_hero_title">من نحن</span>
-                <span  data-i18n="about_hero_company"> درين للمقاولات</span>
-            </h1>
-            
-            <p class="hero-description" data-i18n="about_hero_desc">
-                درين للمقاولات هي رائدة في ادارة المرافق صيانة وتشغيل ، تقدم حلول متكاملة لمشاريع البناء والصيانة.
-                نسعى لتقديم أعلى مستويات الجودة والكفاءة مع الالتزام بالمواعيد والتفاصيل الدقيقة لكل مشروع.
-            </p>
-            
-            <div class="hero-features">
-                <div class="hero-feature animate-fadeInUp" style="animation-delay: 0.2s">
-                    <i class="fas fa-building"></i>
-                    <span data-i18n="about_feature_1">خبرة 15+ سنة في المقاولات</span>
+    <!-- Hero Section -->
+
+    <section class="hero-section mt-0">
+        <div class="container mx-auto px-4">
+            <div class="hero-content animate-fadeInUp">
+                <h1 class="hero-title">
+                    <span data-i18n="about_hero_title">من نحن</span>
+                    <span data-i18n="about_hero_company"> درين للمقاولات</span>
+                </h1>
+
+                <p class="hero-description" data-i18n="about_hero_desc">
+                    درين للمقاولات هي رائدة في ادارة المرافق صيانة وتشغيل ، تقدم حلول متكاملة لمشاريع البناء والصيانة.
+                    نسعى لتقديم أعلى مستويات الجودة والكفاءة مع الالتزام بالمواعيد والتفاصيل الدقيقة لكل مشروع.
+                </p>
+
+                <div class="hero-features">
+                    <div class="hero-feature animate-fadeInUp" style="animation-delay: 0.2s">
+                        <i class="fas fa-building"></i>
+                        <span data-i18n="about_feature_1">خبرة 15+ سنة في المقاولات</span>
+                    </div>
+                    <div class="hero-feature animate-fadeInUp" style="animation-delay: 0.3s">
+                        <i class="fas fa-users"></i>
+                        <span data-i18n="about_feature_2">فريق هندسي متخصص</span>
+                    </div>
+                    <div class="hero-feature animate-fadeInUp" style="animation-delay: 0.4s">
+                        <i class="fas fa-medal"></i>
+                        <span data-i18n="about_feature_3">جودة تنفيذ معتمدة</span>
+                    </div>
+                    <div class="hero-feature animate-fadeInUp" style="animation-delay: 0.5s">
+                        <i class="fas fa-clock"></i>
+                        <span data-i18n="about_feature_4">الالتزام بالمواعيد بدقة</span>
+                    </div>
                 </div>
-                <div class="hero-feature animate-fadeInUp" style="animation-delay: 0.3s">
-                    <i class="fas fa-users"></i>
-                    <span data-i18n="about_feature_2">فريق هندسي متخصص</span>
+
+                <div class="hero-buttons animate-fadeInUp animate-float" style="animation-delay: 0.6s">
+                    <a href="tel:0508090790" class="hero-btn">
+                        <i class="fas fa-phone"></i>
+                        <span data-i18n="about_hero_btn">تواصل معنا الآن</span>
+                    </a>
                 </div>
-                <div class="hero-feature animate-fadeInUp" style="animation-delay: 0.4s">
-                    <i class="fas fa-medal"></i>
-                    <span data-i18n="about_feature_3">جودة تنفيذ معتمدة</span>
-                </div>
-                <div class="hero-feature animate-fadeInUp" style="animation-delay: 0.5s">
-                    <i class="fas fa-clock"></i>
-                    <span data-i18n="about_feature_4">الالتزام بالمواعيد بدقة</span>
-                </div>
-            </div>
-            
-            <div class="hero-buttons animate-fadeInUp animate-float" style="animation-delay: 0.6s">
-                <a href="tel:0508090790" class="hero-btn">
-                    <i class="fas fa-phone"></i>
-                    <span data-i18n="about_hero_btn">تواصل معنا الآن</span>
-                </a>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
 
 
-        <!-- About Us Section -->
-  <section id="about" class="py-16 md:py-24 px-4 md:px-8">
+    <!-- About Us Section -->
+    <section id="about" class="py-16 md:py-24 px-4 md:px-8">
         <div class="max-w-7xl mx-auto">
             <!-- Section Header -->
             <div class="text-center mb-16 md:mb-20">
-               <span class="about-badge mb-4" data-i18n="about_badge"></span>
+                <span class="about-badge mb-4" data-i18n="about_badge"></span>
 
                 <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                     <span class="text-[#194480]" data-i18n="about_title_highlight"></span>
@@ -908,7 +915,7 @@
                         <div class="about-icon-circle">
                             <i class="fas fa-award text-2xl text-white"></i>
                         </div>
-                       <h2 data-i18n="about_experience_title"></h2>
+                        <h2 data-i18n="about_experience_title"></h2>
 
                         <p data-i18n="about_experience_desc"></p>
 
@@ -976,166 +983,146 @@
                 <!-- Right Column - Projects & Timeline -->
                 <div class="space-y-8">
                     <!-- Major Projects (Updated Design) -->
-<div class="about-card-shadow bg-white rounded-2xl md:rounded-3xl p-6 md:p-8">
-    <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-6" data-i18n="about_projects_title">
-        <i class="fas fa-project-diagram text-[#194480] ml-2"></i>
-        مشاريعنا البارزة
-    </h3>
-    <div class="space-y-4">
-        <div class="about-achievement-card">
-            <div class="flex items-start gap-3">
-                <i class="fas fa-hospital text-[#194480] text-xl mt-1 flex-shrink-0"></i>
-                <div>
-                    <h4 class="font-bold text-gray-900 mb-1" data-i18n="project_1_title">مشروع توفير خدمات الصيانة بالمستشفى العسكري بالخارج</h4>
-                    <p class="text-gray-600 text-sm" data-i18n="project_1_desc">خدمات الصيانة والنظافة الشاملة</p>
+                    <div class="about-card-shadow bg-white rounded-2xl md:rounded-3xl p-6 md:p-8">
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-6" data-i18n="about_projects_title">
+                            <i class="fas fa-project-diagram text-[#194480] ml-2"></i>
+                            مشاريعنا البارزة
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="about-achievement-card">
+                                <div class="flex items-start gap-3">
+                                    <i class="fas fa-hospital text-[#194480] text-xl mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900 mb-1" data-i18n="project_1_title">مشروع توفير
+                                            خدمات الصيانة بالمستشفى العسكري بالخارج</h4>
+                                        <p class="text-gray-600 text-sm" data-i18n="project_1_desc">خدمات الصيانة
+                                            والنظافة الشاملة</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="about-achievement-card">
+                                <div class="flex items-start gap-3">
+                                    <i class="fas fa-futbol text-[#194480] text-xl mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900 mb-1" data-i18n="project_2_title">مشروع نظافة
+                                            وتشغيل المدينة الرياضية بوادي الدواسر</h4>
+                                        <p class="text-gray-600 text-sm" data-i18n="project_2_desc">تشغيل وصيانة المرافق
+                                            الرياضية</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="about-achievement-card">
+                                <div class="flex items-start gap-3">
+                                    <i class="fas fa-ship text-[#194480] text-xl mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900 mb-1" data-i18n="project_3_title">مشروع صيانة
+                                            ونظافة ميناء راس الخبر</h4>
+                                        <p class="text-gray-600 text-sm" data-i18n="project_3_desc">خدمات الصيانة
+                                            المتكاملة</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="about-achievement-card">
+                                <div class="flex items-start gap-3">
+                                    <i class="fas fa-building text-[#194480] text-xl mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900 mb-1" data-i18n="project_4_title">مجمع
+                                            المصالح الحكومية بالخرج</h4>
+                                        <p class="text-gray-600 text-sm" data-i18n="project_4_desc">تشغيل وصيانة المنشآت
+                                            الحكومية</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="about-achievement-card">
+                                <div class="flex items-start gap-3">
+                                    <i class="fas fa-city text-[#194480] text-xl mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900 mb-1" data-i18n="project_5_title">نظافة بلدية
+                                            الدلم</h4>
+                                        <p class="text-gray-600 text-sm" data-i18n="project_5_desc">خدمات الصيانة
+                                            والنظافة</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
                 </div>
             </div>
-        </div>
 
-        <div class="about-achievement-card">
-            <div class="flex items-start gap-3">
-                <i class="fas fa-futbol text-[#194480] text-xl mt-1 flex-shrink-0"></i>
-                <div>
-                    <h4 class="font-bold text-gray-900 mb-1" data-i18n="project_2_title">مشروع نظافة وتشغيل المدينة الرياضية بوادي الدواسر</h4>
-                    <p class="text-gray-600 text-sm" data-i18n="project_2_desc">تشغيل وصيانة المرافق الرياضية</p>
+
+
+
+
+              <!-- Partners with Side Content -->
+            <div class="bg-gray-50 rounded-3xl p-8 md:p-12 flex flex-col lg:flex-row items-center gap-12">
+
+                <!-- Side Content -->
+                <div class="lg:w-1/3 text-start">
+                    <span class="content-badge" data-i18n="about_partners_title">شركاؤنا</span>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="about_partners_sup_title">نتعاون مع الأفضل عالمياً</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed" data-i18n="about_partners_p">
+                        نحن فخورون بشراكتنا مع نخبة من العلامات التجارية الرائدة التي تضمن لعملائنا الحصول على أعلى
+                        معايير الجودة والمتانة في كل منتج نقدمه.
+                    </p>
                 </div>
-            </div>
-        </div>
 
-        <div class="about-achievement-card">
-            <div class="flex items-start gap-3">
-                <i class="fas fa-ship text-[#194480] text-xl mt-1 flex-shrink-0"></i>
-                <div>
-                    <h4 class="font-bold text-gray-900 mb-1" data-i18n="project_3_title">مشروع صيانة ونظافة ميناء راس الخبر</h4>
-                    <p class="text-gray-600 text-sm" data-i18n="project_3_desc">خدمات الصيانة المتكاملة</p>
+                <!-- Infinite Slider -->
+                <div class="lg:w-2/3 w-full">
+                    <div class="partners-container">
+                        <div class="partners-fade-overlay fade-right"></div>
+                        <div class="partners-fade-overlay fade-left"></div>
+
+                        <div class="partners-track">
+                            <!-- Original Logos -->
+                            <div class="partner-item"><img src="../asstes/img/شعار الهيئة العامة للموانئ – SVG.svg" alt="Brand A"></div>
+                            <div class="partner-item"><img src="../asstes/img/شعار جامعة الأمير سطام بن عبد العزيز  – SVG.svg" alt="Brand B"></div>
+                            <div class="partner-item"><img src="../asstes/img//شعار جامعة نجران – SVG.svg" alt="Brand C"></div>
+                            <div class="partner-item"><img src="../asstes/img/شعار هيئة الأمر بالمعروف والنهي عن المنكر – SVG.svg" alt="Brand D"></div>
+                            <div class="partner-item"><img src="../asstes/img/شعار هيئة حقوق الإنسان – Human Rights commission Logo – PNG – SVG.svg" alt="Brand E"></div>
+                            <div class="partner-item"><img src="../asstes/img/شعار وزارة الدفاع – SVG.svg" alt="Brand F"></div>
+                            <div class="partner-item"><img src="../asstes/img/شعار وزارة الرياضة – SVG.svg" alt="Brand F"></div>
+                            <div class="partner-item"><img src="../asstes/img/شعار وزارة العدل السعودية –  SVG.svg" alt="Brand F"></div>
+                            <div class="partner-item"><img src="../asstes/img/شعار وزارة المالية – SVG.svg" alt="Brand F"></div>
+                            <div class="partner-item"><img src="../asstes/img/شعار منصة بلدي – SVG.svg" alt="Brand F"></div>
+                            <div class="partner-item"><img src="../asstes/img/شعار_قوات_أمن_المنشآت_السعودية_(2020).png" alt="Brand F"></div>
+
+                            <!-- Duplicated Logos for Seamless Loop -->
+                            <div class="partner-item"><img src="../asstes/img/شعار الهيئة العامة للموانئ – SVG.svg" alt="Brand A"></div>
+                            <div class="partner-item"><img src="../asstes/img/شعار جامعة الأمير سطام بن عبد العزيز  – SVG.svg" alt="Brand B"></div>
+                            <div class="partner-item"><img src="../asstes/img//شعار جامعة نجران – SVG.svg" alt="Brand C"></div>
+                            <div class="partner-item"><img src="../asstes/img/شعار هيئة الأمر بالمعروف والنهي عن المنكر – SVG.svg" alt="Brand D"></div>
+                            <div class="partner-item"><img src="../asstes/img/شعار هيئة حقوق الإنسان – Human Rights commission Logo – PNG – SVG.svg" alt="Brand E"></div>
+                            <div class="partner-item"><img src="../asstes/img/شعار وزارة الدفاع – SVG.svg" alt="Brand F"></div>
+                            <div class="partner-item"><img src="../asstes/img/شعار وزارة الرياضة – SVG.svg" alt="Brand F"></div>
+                            <div class="partner-item"><img src="../asstes/img/شعار وزارة العدل السعودية –  SVG.svg" alt="Brand F"></div>
+                            <div class="partner-item"><img src="../asstes/img/شعار وزارة المالية – SVG.svg" alt="Brand F"></div>
+                            <div class="partner-item"><img src="../asstes/img/شعار_قوات_أمن_المنشآت_السعودية_(2020).png" alt="Brand F"></div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
-        </div>
-
-        <div class="about-achievement-card">
-            <div class="flex items-start gap-3">
-                <i class="fas fa-building text-[#194480] text-xl mt-1 flex-shrink-0"></i>
-                <div>
-                    <h4 class="font-bold text-gray-900 mb-1" data-i18n="project_4_title">مجمع المصالح الحكومية بالخرج</h4>
-                    <p class="text-gray-600 text-sm" data-i18n="project_4_desc">تشغيل وصيانة المنشآت الحكومية</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="about-achievement-card">
-            <div class="flex items-start gap-3">
-                <i class="fas fa-city text-[#194480] text-xl mt-1 flex-shrink-0"></i>
-                <div>
-                    <h4 class="font-bold text-gray-900 mb-1" data-i18n="project_5_title">نظافة بلدية الدلم</h4>
-                    <p class="text-gray-600 text-sm" data-i18n="project_5_desc">خدمات الصيانة والنظافة</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-                  
-                </div>
-            </div>
-
-
-
-
-
-                        <!-- Partners -->
-            <!-- Partners -->
-<div class="about-card-shadow bg-white rounded-2xl md:rounded-3xl p-8 relative">
-    <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-10" data-i18n="about_partners_title">
-        شركاؤنا
-    </h2>
-
-    <!-- سهم شمال -->
-    <button onclick="scrollPartners(-300)"
-        class="absolute right-2 top-1/2 -translate-y-1/2 bg-white shadow-lg w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-100 z-10">
-        <i class="fas fa-chevron-right text-[#194480]"></i>
-    </button>
-
-    <!-- سهم يمين -->
-    <button onclick="scrollPartners(300)"
-        class="absolute left-2 top-1/2 -translate-y-1/2 bg-white shadow-lg w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-100 z-10">
-        <i class="fas fa-chevron-left text-[#194480]"></i>
-    </button>
-
-    <!-- الشركاء -->
-    <div id="partnersScroll"
-        class="flex gap-6 overflow-x-hidden scroll-smooth px-12 py-16">
-
-        <div class="about-partner-logo min-w-[180px] text-center p-4 rounded-xl shadow hover:shadow-lg transition hover:scale-105">
-            <img src="../asstes/img/شعار الهيئة العامة للموانئ – SVG.svg" alt="">
-           
-        </div>
-
-        <div class="about-partner-logo min-w-[180px] text-center p-4 rounded-xl shadow hover:shadow-lg transition hover:scale-105">
-            <img src="../asstes/img/شعار جامعة الأمير سطام بن عبد العزيز  – SVG.svg" alt="">
-          
-        </div>
-
-        <div class="about-partner-logo min-w-[180px] text-center p-4 rounded-xl shadow hover:shadow-lg transition hover:scale-105">
-            <img src="../asstes/img//شعار جامعة نجران – SVG.svg" alt="">
-           
-        </div>
-
-        <div class="about-partner-logo min-w-[180px] text-center p-4 rounded-xl shadow hover:shadow-lg transition hover:scale-105">
-            <img src="../asstes/img/شعار هيئة الأمر بالمعروف والنهي عن المنكر – SVG.svg" alt="">
-            
-        </div>
-
-        <div class="about-partner-logo min-w-[180px] text-center p-4 rounded-xl shadow hover:shadow-lg transition hover:scale-105">
-            <img src="../asstes/img/شعار هيئة حقوق الإنسان – Human Rights commission Logo – PNG – SVG.svg" alt="">
-           
-        </div>
-
-        <div class="about-partner-logo min-w-[180px] text-center p-4 rounded-xl shadow hover:shadow-lg transition hover:scale-105">
-            <img src="../asstes/img/شعار وزارة الدفاع – SVG.svg" alt="">
-         
-        </div>
-        <div class="about-partner-logo min-w-[180px] text-center p-4 rounded-xl shadow hover:shadow-lg transition hover:scale-105">
-            <img src="../asstes/img/شعار وزارة الرياضة – SVG.svg" alt="">
-         
-        </div>
-        <div class="about-partner-logo min-w-[180px] text-center p-4 rounded-xl shadow hover:shadow-lg transition hover:scale-105">
-            <img src="../asstes/img/شعار وزارة العدل السعودية –  SVG.svg" alt="">
-         
-        </div>
-        <div class="about-partner-logo min-w-[180px] text-center p-4 rounded-xl shadow hover:shadow-lg transition hover:scale-105">
-            <img src="../asstes/img/شعار وزارة المالية – SVG.svg" alt="">
-         
-        </div>
-        <div class="about-partner-logo min-w-[180px] text-center p-4 rounded-xl shadow hover:shadow-lg transition hover:scale-105">
-            <img src="../asstes/img/شعار الهيئة الملكية للجبيل وينبع الجديد بدقة عالي png – SVG.svg" alt="">
-         
-        </div>
-        <div class="about-partner-logo min-w-[180px] text-center p-4 rounded-xl shadow hover:shadow-lg transition hover:scale-105">
-            <img src="../asstes/img/شعار منصة بلدي – SVG.svg" alt="">
-         
-        </div>
-        <div class="about-partner-logo min-w-[180px] text-center p-4 rounded-xl shadow hover:shadow-lg transition hover:scale-105">
-            <img src="../asstes/img/شعار_قوات_أمن_المنشآت_السعودية_(2020).png" alt="">
-         
-        </div>
-
-    </div>
-</div>
 
         </div>
     </section>
 
     <script>
-function scrollPartners(value) {
-    document.getElementById('partnersScroll')
-        .scrollBy({ left: value, behavior: 'smooth' });
-}
-</script>
+        function scrollPartners(value) {
+            document.getElementById('partnersScroll')
+                .scrollBy({ left: value, behavior: 'smooth' });
+        }
+    </script>
 
     <script>
         // Animation on scroll
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Add animation class to elements when they come into view
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -1156,21 +1143,139 @@ function scrollPartners(value) {
 
             // Add hover effects
             document.querySelectorAll('.about-card-shadow').forEach(card => {
-                card.addEventListener('mouseenter', function() {
+                card.addEventListener('mouseenter', function () {
                     this.style.transform = 'translateY(-10px)';
                 });
-                
-                card.addEventListener('mouseleave', function() {
+
+                card.addEventListener('mouseleave', function () {
                     this.style.transform = 'translateY(0)';
                 });
             });
         });
     </script>
+       <!-- style Partners-->
+   <style>
+     
+
+        /* Unique namespace */
+        .final-stats-section {
+            background-color: #ffffff;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+
+        .final-stat-number {
+            color: #194480;
+            font-weight: 800;
+            font-size: 3rem;
+            line-height: 1;
+        }
+
+        .final-stat-label {
+            color: #6b7280;
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Seamless Infinite Scroll */
+        @keyframes infiniteScrollLTR {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes infiniteScrollRTL {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(50%);
+    }
+}
+
+/* الافتراضي LTR */
+html[dir="ltr"] .partners-track {
+    animation: infiniteScrollLTR 20s linear infinite;
+}
+
+/* العربي RTL */
+html[dir="rtl"] .partners-track {
+    animation: infiniteScrollRTL 20s linear infinite;
+}
+
+
+        .partners-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding: 1rem 0;
+        }
+
+        .partners-track {
+            display: flex;
+            width: max-content;
+           
+            gap: 3rem;
+            padding: 20px;
+        }
+
+        .partner-item {
+            flex-shrink: 0;
+            width: 140px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+           
+            transition: all 0.3s ease;
+        }
+
+        .partner-item:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        /* Gradient Overlays for smooth edges */
+        .partners-fade-overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100px;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .fade-right {
+            right: 0;
+            background: linear-gradient(to left, white, transparent);
+        }
+
+        .fade-left {
+            left: 0;
+            background: linear-gradient(to right, white, transparent);
+        }
+
+        .content-badge {
+            background-color: #fef2f2;
+            color: #194480;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+    </style>
 
 
     <!-- Director's Message Section -->
     <section id="director-message" class="py-16 md:py-24 px-4 md:px-8  brand-pattern-container">
-        
+
         <!-- Large Background Triangles -->
         <div class="triangle-bg-pattern">
             <div class="triangle-large tri-top-right-1"></div>
@@ -1180,7 +1285,7 @@ function scrollPartners(value) {
             <div class="triangle-large tri-center-1"></div>
             <div class="triangle-large tri-center-2"></div>
         </div>
-        
+
         <!-- Small Animated Triangles Pattern - كثافة عالية -->
         <div class="triangle-small-pattern">
             <!-- المثلثات الكبيرة والصغيرة -->
@@ -1194,13 +1299,13 @@ function scrollPartners(value) {
             <div class="triangle-small tri-small-blue-8"></div>
             <div class="triangle-small tri-small-blue-9"></div>
             <div class="triangle-small tri-small-blue-10"></div>
-            
+
             <!-- المثلثات المقلوبة -->
             <div class="triangle-small tri-inverted-1"></div>
             <div class="triangle-small tri-inverted-2"></div>
             <div class="triangle-small tri-inverted-3"></div>
             <div class="triangle-small tri-inverted-4"></div>
-            
+
             <!-- المثلثات الصغيرة جداً (نقاط زخرفية) -->
             <div class="triangle-small tri-tiny-1"></div>
             <div class="triangle-small tri-tiny-2"></div>
@@ -1209,107 +1314,101 @@ function scrollPartners(value) {
             <div class="triangle-small tri-tiny-5"></div>
             <div class="triangle-small tri-tiny-6"></div>
         </div>
-        
+
         <div class="max-w-5xl mx-auto relative z-10 ">
-             <!-- Section Header -->
-        <div class="text-center mb-12 md:mb-16">
-            <span class="director-title-badge">
-                <i class="fas fa-user-tie mr-2"></i>
-                <span data-i18n="director_badge">كلمة المدير العام</span>
-            </span>
+            <!-- Section Header -->
+            <div class="text-center mb-12 md:mb-16">
+                <span class="director-title-badge">
+                    <i class="fas fa-user-tie mr-2"></i>
+                    <span data-i18n="director_badge">كلمة المدير العام</span>
+                </span>
 
-            <h1 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-                <span data-i18n="director_title_1">رسالة من</span>
-                <span class="text-[#1b4680] section-title" data-i18n="director_title_2">قيادتنا</span>
-            </h1>
+                <h1 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+                    <span data-i18n="director_title_1">رسالة من</span>
+                    <span class="text-[#1b4680] section-title" data-i18n="director_title_2">قيادتنا</span>
+                </h1>
 
-            <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed"
-               data-i18n="director_subtitle">
-                نظرة مستقبلية ورؤية طموحة لمسيرة درين للمقاولات
-            </p>
-        </div>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed" data-i18n="director_subtitle">
+                    نظرة مستقبلية ورؤية طموحة لمسيرة درين للمقاولات
+                </p>
+            </div>
 
             <!-- Main Message Card -->
             <div class="director-card bg-white p-8 md:p-12 animate-fadeInUp bg-[#1c508c] text-white">
                 <i class="fas fa-quote-right director-quote-icon"></i>
                 <div class="card-triangle-watermark"></div>
-                
-                  <!-- Message Card -->
-        <div class="director-card bg-[#1c508c] text-white p-8 md:p-12">
-            <div class="director-highlight">
-                <p class="text-xl md:text-2xl leading-relaxed font-medium"
-                   data-i18n="director_opening">
-                    البداية كانت حلمًا، ثم أصبحت – بفضل الله – واقعًا ملموسًا...
-                </p>
-            </div>
 
-            <p class="text-lg md:text-xl leading-relaxed mb-6"
-               data-i18n="director_p1">
-                لم نألُ جهدًا حتى نحافظ على موقعنا في الصدارة...
-            </p>
+                <!-- Message Card -->
+                <div class="director-card bg-[#1c508c] text-white p-8 md:p-12">
+                    <div class="director-highlight">
+                        <p class="text-xl md:text-2xl leading-relaxed font-medium" data-i18n="director_opening">
+                            البداية كانت حلمًا، ثم أصبحت – بفضل الله – واقعًا ملموسًا...
+                        </p>
+                    </div>
 
-            <p class="text-lg md:text-xl leading-relaxed mb-6"
-               data-i18n="director_p2">
-                ولذلك فقد حرصنا على التطوير المستمر لرفع كفاءة درين للمقاولات...
-            </p>
+                    <p class="text-lg md:text-xl leading-relaxed mb-6" data-i18n="director_p1">
+                        لم نألُ جهدًا حتى نحافظ على موقعنا في الصدارة...
+                    </p>
 
-            <p class="text-lg md:text-xl leading-relaxed mb-6"
-               data-i18n="director_p3">
-                منذ أن بدأنا في درين للمقاولات ممارسة نشاطنا...
-            </p>
+                    <p class="text-lg md:text-xl leading-relaxed mb-6" data-i18n="director_p2">
+                        ولذلك فقد حرصنا على التطوير المستمر لرفع كفاءة درين للمقاولات...
+                    </p>
 
-            <p class="text-lg md:text-xl leading-relaxed"
-               data-i18n="director_p4">
-                ويقف خلف كل ذلك فريق عمل يعمل بروح واحدة...
-            </p>
+                    <p class="text-lg md:text-xl leading-relaxed mb-6" data-i18n="director_p3">
+                        منذ أن بدأنا في درين للمقاولات ممارسة نشاطنا...
+                    </p>
 
-            <div class="text-left mt-12">
-                <div class="director-signature" data-i18n="director_signature">
-                    المدير العام
+                    <p class="text-lg md:text-xl leading-relaxed" data-i18n="director_p4">
+                        ويقف خلف كل ذلك فريق عمل يعمل بروح واحدة...
+                    </p>
+
+                    <div class="text-left mt-12">
+                        <div class="director-signature" data-i18n="director_signature">
+                            المدير العام
+                        </div>
+                        <p class="text-lg mt-3 font-medium" data-i18n="director_company">
+                            درين للمقاولات
+                        </p>
+                    </div>
                 </div>
-                <p class="text-lg mt-3 font-medium" data-i18n="director_company">
-                    درين للمقاولات
-                </p>
             </div>
-        </div>
-            </div>
-            
+
             <!-- Key Principles -->
-             <!-- Principles -->
-        <div class="grid md:grid-cols-3 gap-8 mt-16">
-            <div class="principle-card text-center p-8">
-                <h3 class="text-2xl font-bold" data-i18n="principle_1_title">المصداقية</h3>
-                <p data-i18n="principle_1_desc">الشفافية والصدق في جميع تعاملاتنا</p>
-            </div>
+            <!-- Principles -->
+            <div class="grid md:grid-cols-3 gap-8 mt-16">
+                <div class="principle-card text-center p-8">
+                    <h3 class="text-2xl font-bold" data-i18n="principle_1_title">المصداقية</h3>
+                    <p data-i18n="principle_1_desc">الشفافية والصدق في جميع تعاملاتنا</p>
+                </div>
 
-            <div class="principle-card text-center p-8">
-                <h3 class="text-2xl font-bold" data-i18n="principle_2_title">المهنية</h3>
-                <p data-i18n="principle_2_desc">التخصص والخبرة في تنفيذ المشاريع</p>
-            </div>
+                <div class="principle-card text-center p-8">
+                    <h3 class="text-2xl font-bold" data-i18n="principle_2_title">المهنية</h3>
+                    <p data-i18n="principle_2_desc">التخصص والخبرة في تنفيذ المشاريع</p>
+                </div>
 
-            <div class="principle-card text-center p-8">
-                <h3 class="text-2xl font-bold" data-i18n="principle_3_title">الالتزام</h3>
-                <p data-i18n="principle_3_desc">الالتزام بالمواعيد والجودة المتفق عليها</p>
+                <div class="principle-card text-center p-8">
+                    <h3 class="text-2xl font-bold" data-i18n="principle_3_title">الالتزام</h3>
+                    <p data-i18n="principle_3_desc">الالتزام بالمواعيد والجودة المتفق عليها</p>
+                </div>
             </div>
-        </div>
         </div>
     </section>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Enhanced hover effects
             const cards = document.querySelectorAll('.director-card, .principle-card');
-            
+
             cards.forEach(card => {
-                card.addEventListener('mouseenter', function() {
+                card.addEventListener('mouseenter', function () {
                     this.style.transform = 'translateY(-10px) scale(1.02)';
                 });
-                
-                card.addEventListener('mouseleave', function() {
+
+                card.addEventListener('mouseleave', function () {
                     this.style.transform = 'translateY(0) scale(1)';
                 });
             });
-            
+
             // Scroll animation with stagger effect
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry, index) => {
@@ -1320,52 +1419,52 @@ function scrollPartners(value) {
                     }
                 });
             }, { threshold: 0.1 });
-            
+
             document.querySelectorAll('.principle-card').forEach((el) => {
                 observer.observe(el);
             });
-            
+
             // Parallax effect for triangles on scroll
-            window.addEventListener('scroll', function() {
+            window.addEventListener('scroll', function () {
                 const scrolled = window.pageYOffset;
                 const triangles = document.querySelectorAll('.triangle-large, .triangle-small');
-                
+
                 triangles.forEach((triangle, index) => {
                     const speed = 0.3 + (index * 0.05);
                     const yOffset = scrolled * speed * 0.3;
                     triangle.style.transform = `translateY(${yOffset}px) rotate(${scrolled * 0.001}deg)`;
                 });
             });
-            
+
             // Add dynamic triangle creation for more density
             function addRandomTriangles() {
                 const container = document.querySelector('.triangle-small-pattern');
                 if (!container) return;
-                
+
                 const colors = ['#1b4680', '#2486c7'];
                 const sizes = [10, 12, 15, 18, 20, 25, 30];
-                
+
                 // Add 5 more random small triangles
                 for (let i = 0; i < 5; i++) {
                     const triangle = document.createElement('div');
                     triangle.className = 'triangle-small';
-                    
+
                     // Random position
                     const top = Math.random() * 100;
                     const left = Math.random() * 100;
-                    
+
                     // Random size
                     const size = sizes[Math.floor(Math.random() * sizes.length)];
-                    
+
                     // Random color
                     const color = colors[Math.floor(Math.random() * colors.length)];
-                    
+
                     // Random animation delay
                     const delay = -(Math.random() * 10);
-                    
+
                     // Random direction (up or down)
                     const isInverted = Math.random() > 0.5;
-                    
+
                     if (isInverted) {
                         triangle.style.borderWidth = `${size}px ${size}px 0 ${size}px`;
                         triangle.style.borderColor = `${color} transparent transparent transparent`;
@@ -1373,24 +1472,24 @@ function scrollPartners(value) {
                         triangle.style.borderWidth = `0 ${size}px ${size * 1.73}px ${size}px`;
                         triangle.style.borderColor = `transparent transparent ${color} transparent`;
                     }
-                    
+
                     triangle.style.top = `${top}%`;
                     triangle.style.left = `${left}%`;
                     triangle.style.opacity = 0.15 + Math.random() * 0.2;
                     triangle.style.animationDelay = `${delay}s`;
-                    
+
                     container.appendChild(triangle);
                 }
             }
-            
+
             // Add random triangles after page load
             setTimeout(addRandomTriangles, 500);
         });
     </script>
 
 
-      
- <!-- Footer Section -->
+
+    <!-- Footer Section -->
     <footer class="footer-gradient-bg text-white pt-16 pb-8 px-4 md:px-8">
         <div class="footer-pattern"></div>
 
@@ -1410,36 +1509,44 @@ function scrollPartners(value) {
                             </div>
                         </div>
                         <p class="text-gray-300 mb-6 leading-relaxed" data-i18n="footer_company_desc">
-                            رائدة في مجال ادارة المرافق والتشغيل والصيانة، تقدم خدمات عالية الجودة بمهنية واحترافية، وتساهم
+                            رائدة في مجال ادارة المرافق والتشغيل والصيانة، تقدم خدمات عالية الجودة بمهنية واحترافية،
+                            وتساهم
                             في تحقيق رؤية المملكة 2030.
                         </p>
-                       
+
                     </div>
                 </div>
 
                 <!-- Quick Links -->
                 <div class="animate-fadeInUp" style="animation-delay: 0.1s">
                     <div class="footer-card p-6 h-full">
-                        <h3 class="text-xl font-bold mb-6 pb-3 border-b border-gray-700" data-i18n="footer_quick_links">روابط سريعة</h3>
+                        <h3 class="text-xl font-bold mb-6 pb-3 border-b border-gray-700" data-i18n="footer_quick_links">
+                            روابط سريعة</h3>
                         <div class="space-y-3">
-                            <a href="#" class="footer-link block text-gray-300 hover:text-white " data-i18n="footer_link_home">
-                               
-                                 <i class="fas fa-home ml-2 "></i> الصفحة الرئيسية
-                               
+                            <a href="#" class="footer-link block text-gray-300 hover:text-white "
+                                data-i18n="footer_link_home">
+
+                                <i class="fas fa-home ml-2 "></i> الصفحة الرئيسية
+
                             </a>
-                            <a href="#" class="footer-link block text-gray-300 hover:text-white" data-i18n="footer_link_about">
+                            <a href="#" class="footer-link block text-gray-300 hover:text-white"
+                                data-i18n="footer_link_about">
                                 <i class="fas fa-info-circle ml-2"></i> من نحن
                             </a>
-                            <a href="#" class="footer-link block text-gray-300 hover:text-white" data-i18n="footer_link_services">
+                            <a href="#" class="footer-link block text-gray-300 hover:text-white"
+                                data-i18n="footer_link_services">
                                 <i class="fas fa-cogs ml-2"></i> خدماتنا
                             </a>
-                            <a href="#" class="footer-link block text-gray-300 hover:text-white" data-i18n="footer_link_projects">
+                            <a href="#" class="footer-link block text-gray-300 hover:text-white"
+                                data-i18n="footer_link_projects">
                                 <i class="fas fa-project-diagram ml-2"></i> مشاريعنا
                             </a>
-                            <a href="#" class="footer-link block text-gray-300 hover:text-white" data-i18n="footer_link_vision">
+                            <a href="#" class="footer-link block text-gray-300 hover:text-white"
+                                data-i18n="footer_link_vision">
                                 <i class="fas fa-eye ml-2"></i> رؤيتنا
                             </a>
-                            <a href="#" class="footer-link block text-gray-300 hover:text-white" data-i18n="footer_link_contact">
+                            <a href="#" class="footer-link block text-gray-300 hover:text-white"
+                                data-i18n="footer_link_contact">
                                 <i class="fas fa-phone ml-2"></i> اتصل بنا
                             </a>
                         </div>
@@ -1449,7 +1556,8 @@ function scrollPartners(value) {
                 <!-- Contact Info -->
                 <div class="animate-fadeInUp" style="animation-delay: 0.2s">
                     <div class="footer-card p-6 h-full">
-                        <h3 class="text-xl font-bold mb-6 pb-3 border-b border-gray-700" data-i18n="footer_contact_title">معلومات الاتصال</h3>
+                        <h3 class="text-xl font-bold mb-6 pb-3 border-b border-gray-700"
+                            data-i18n="footer_contact_title">معلومات الاتصال</h3>
 
                         <div class="contact-info-item flex items-start gap-3">
                             <div class="contact-icon flex-shrink-0">
@@ -1504,7 +1612,8 @@ function scrollPartners(value) {
                                 اشترك لتصلك آخر أخبارنا وعروضنا الخاصة
                             </p>
                             <form class="space-y-4">
-                                <input type="email" data-i18n-placeholder="footer_newsletter_placeholder" class="subscribe-input" required>
+                                <input type="email" data-i18n-placeholder="footer_newsletter_placeholder"
+                                    class="subscribe-input" required>
                                 <button type="submit" class="subscribe-btn w-full" data-i18n="footer_newsletter_btn">
                                     <i class="fas fa-paper-plane"></i>
                                     اشترك الآن
@@ -1517,13 +1626,13 @@ function scrollPartners(value) {
                             <h3 class="text-xl font-bold mb-4" data-i18n="footer_working_hours">ساعات العمل</h3>
                             <div class="working-hours">
                                 <div class="hour-item" data-i18n="footer_workday_week">
-                                     <span data-i18n="footer_workday_week"></span>
-                                     <span class="text-gray-300" data-i18n="footer_workday_week_time"></span>
+                                    <span data-i18n="footer_workday_week"></span>
+                                    <span class="text-gray-300" data-i18n="footer_workday_week_time"></span>
                                 </div>
-                               
+
                                 <div class="hour-item">
                                     <span data-i18n="footer_workday_saturday">السبت</span>
-                                    <span class="text-gray-300"  data-i18n="footer_workday_saturday_time">إجازة</span>
+                                    <span class="text-gray-300" data-i18n="footer_workday_saturday_time">إجازة</span>
                                 </div>
                             </div>
                         </div>
@@ -1533,11 +1642,11 @@ function scrollPartners(value) {
 
             <!-- Services Section -->
             <div class="mb-12 animate-fadeInUp" style="animation-delay: 0.4s">
-                <h3 class="text-xl font-bold mb-6 text-center"data-i18n="footer_main_services">خدماتنا الرئيسية</h3>
+                <h3 class="text-xl font-bold mb-6 text-center" data-i18n="footer_main_services">خدماتنا الرئيسية</h3>
                 <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                    <div class="footer-card p-4 text-center" >
+                    <div class="footer-card p-4 text-center">
                         <i class="fas fa-road text-2xl mb-2 text-[#2a9d78]"></i>
-                        <div class="text-sm"data-i18n="footer_service_infra" >البنية التحتية</div>
+                        <div class="text-sm" data-i18n="footer_service_infra">البنية التحتية</div>
                     </div>
                     <div class="footer-card p-4 text-center">
                         <i class="fas fa-tools text-2xl mb-2 text-[#2a9d78]"></i>
@@ -1604,25 +1713,27 @@ function scrollPartners(value) {
 
 
 
- 
-   <!-- Floating Call Button -->
-<div class="call-float">
-    <a href="tel:0508090790" title="اتصل بنا الآن">
-     <i class="fa-solid fa-phone" style="font-size: 25px; color: white;"></i>
 
-    </a>
-</div>
+    <!-- Floating Call Button -->
+    <div class="call-float">
+        <a href="tel:0508090790" title="اتصل بنا الآن">
+            <i class="fa-solid fa-phone" style="font-size: 25px; color: white;"></i>
+
+        </a>
+    </div>
 
     <!-- WhatsApp Float Button -->
     <div class="whatsapp-float">
         <a href="https://wa.me/966114770705">
-        <svg viewBox="0 0 32 32">
-            <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-4.713 1.262 1.262-4.669-0.292-0.508c-1.207-2.100-1.847-4.507-1.847-6.957 0-7.51 6.11-13.62 13.62-13.62s13.62 6.11 13.62 13.62-6.11 13.62-13.62 13.62zM21.305 19.26c-0.346-0.174-2.049-1.007-2.366-1.123-0.316-0.117-0.547 0.174-0.776 0.174s-0.892 1.123-1.094 1.347c-0.201 0.231-0.403 0.26-0.749 0.087s-1.46-0.538-2.779-1.715c-1.027-0.915-1.72-2.045-1.922-2.391s-0.022-0.536 0.152-0.709c0.156-0.155 0.346-0.403 0.518-0.605s0.231-0.346 0.346-0.577c0.116-0.231 0.058-0.433-0.028-0.605s-0.776-1.87-1.063-2.565c-0.28-0.672-0.56-0.58-0.776-0.591-0.2-0.010-0.431-0.012-0.661-0.012s-0.603 0.087-0.92 0.433c-0.316 0.346-1.206 1.179-1.206 2.873s1.235 3.333 1.406 3.561c0.172 0.231 2.395 3.654 5.799 5.125 0.811 0.352 1.445 0.562 1.938 0.719 0.814 0.257 1.555 0.221 2.141 0.134 0.653-0.097 2.049-0.831 2.337-1.636s0.289-1.494 0.202-1.636c-0.086-0.14-0.317-0.231-0.663-0.403z"/>
-        </svg>
+            <svg viewBox="0 0 32 32">
+                <path
+                    d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-4.713 1.262 1.262-4.669-0.292-0.508c-1.207-2.100-1.847-4.507-1.847-6.957 0-7.51 6.11-13.62 13.62-13.62s13.62 6.11 13.62 13.62-6.11 13.62-13.62 13.62zM21.305 19.26c-0.346-0.174-2.049-1.007-2.366-1.123-0.316-0.117-0.547 0.174-0.776 0.174s-0.892 1.123-1.094 1.347c-0.201 0.231-0.403 0.26-0.749 0.087s-1.46-0.538-2.779-1.715c-1.027-0.915-1.72-2.045-1.922-2.391s-0.022-0.536 0.152-0.709c0.156-0.155 0.346-0.403 0.518-0.605s0.231-0.346 0.346-0.577c0.116-0.231 0.058-0.433-0.028-0.605s-0.776-1.87-1.063-2.565c-0.28-0.672-0.56-0.58-0.776-0.591-0.2-0.010-0.431-0.012-0.661-0.012s-0.603 0.087-0.92 0.433c-0.316 0.346-1.206 1.179-1.206 2.873s1.235 3.333 1.406 3.561c0.172 0.231 2.395 3.654 5.799 5.125 0.811 0.352 1.445 0.562 1.938 0.719 0.814 0.257 1.555 0.221 2.141 0.134 0.653-0.097 2.049-0.831 2.337-1.636s0.289-1.494 0.202-1.636c-0.086-0.14-0.317-0.231-0.663-0.403z" />
+            </svg>
         </a>
     </div>
 
- <script src="../asstes/js/script.js"></script>
- <script src="../asstes/js/i18n.js"></script>
+    <script src="../asstes/js/script.js"></script>
+    <script src="../asstes/js/i18n.js"></script>
 </body>
+
 </html>
