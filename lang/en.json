@@ -130,6 +130,9 @@
 
   "about_partners_title": "Our Partners",
 
+ "about_partners_sup_title":"We collaborate with the best in the world",
+  "about_partners_p":"We are proud of our partnership with a select group of leading brands that ensure our customers receive the highest standards of quality and durability in every product we offer.",
+
   
   "about_hero_title": "About Us",
   "about_hero_company": "Dreen Contracting",
@@ -356,9 +359,8 @@
   "work_hours_title": "Working Hours",
   "work_days_week": "Sunday - Thursday",
   "work_hours_week": "8:00 AM - 5:00 PM",
-  "work_day_friday": "Friday",
-  "work_hours_friday": "10:00 AM - 2:00 PM",
-  "work_day_saturday": "Saturday",
+  
+  "work_day_saturday": "Friday - Saturday",
   "work_day_off": "Closed",
 
   "urgent_contact_title": "Construction Work Contact",
@@ -515,9 +517,8 @@
   "footer_working_hours": "Working Hours",
   "footer_workday_week": "Sunday - Thursday",
   "footer_workday_week_time": "8:00 AM - 5:00 PM",
-  "footer_workday_friday": "Friday",
-  "footer_workday_friday_time": "10:00 AM - 2:00 PM",
-  "footer_workday_saturday": "Saturday",
+
+  "footer_workday_saturday": "Friday - Saturday",
   "footer_workday_saturday_time": "Closed",
 
   "footer_main_services": "Main Services",
